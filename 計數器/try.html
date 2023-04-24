@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #CCC;
+        }
+        .box_container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+        .demo_container{
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+        .num_box{
+            width: 34px;
+            height: 49px;
+            /* border: 1px solid red; */
+            margin: 3px;
+        }
+        .colon{
+            font-size: 25px;
+            margin: 10px;
+        }
+        .title{
+            width: 300px;
+            position: absolute;
+            top: 30px;
+            left: 79px;
+        }
+        #myCanvas{
+            margin-top: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box_container">
+        <p class="title">真實之房倒數計數器</p>
+        <div class="num_box">
+            <img id="min_ten" src="" alt="分-十位數">
+        </div>
+        <div class="num_box">
+            <img id="min_dit" src="" alt="分-個位數">
+        </div>
+        <div class="colon">:</div>
+        <div class="num_box">
+            <img id="sec_ten" src="" alt="秒-十位數">
+        </div>
+        <div class="num_box">
+            <img id="sec_dit" src="" alt="秒-個位數">
+        </div>
+        
+
+    </div>
+    <!-- <button id="btn">開始/停止計時器</button>
+    <p id="status">狀態: 停止!</p> -->
+    <!-- <div class="demo_container">
+        <span>參考數字圖:</span>
+
+        <img class="num_demo" src="./numimg.jpg" alt="">
+    </div> -->
+    <!-- <canvas id="myCanvas" width="34" height="49"></canvas> -->
+    <script src="./JS/try.js"></script>
+</body>
+
+</html>
+
