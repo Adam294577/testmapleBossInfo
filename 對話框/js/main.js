@@ -34,26 +34,7 @@ window.onload = () =>{
        
 
 
-        const btnMousein = ( item ) => {
-            
-            let txt_src = item.target.src.slice(-6,-4);
-            let idx = txt_src.slice(1) -1; 
-            if (txt_src === "c" + (idx + 1) ){
-                item.target.src = btn_obj.hover[idx];
-                return
-            }
-            
-        }
-        const btnMouseout = ( item ) => {
-            let txt_src = item.target.src.slice(-8,-6);
-            let idx = txt_src.slice(1) -1;
-            if (txt_src === "c" + (idx + 1) ){
-                item.target.src = btn_obj.normal[idx];
-                return
-            }
-           
 
-        }
         const Openchatclass = () =>{
             List.style['display'] = 'block';
             btn.removeEventListener("mouseleave",btnMouseout)
@@ -99,8 +80,8 @@ window.onload = () =>{
         
         }
 
-        btn.addEventListener("mouseenter",btnMousein)
-        btn.addEventListener("mouseleave",btnMouseout)
+        // btn.addEventListener("mouseenter",btnMousein)
+        // btn.addEventListener("mouseleave",btnMouseout)
         btn.addEventListener("click",Openchatclass)
         btn_obj.list[0].addEventListener("click",Selectchatclass)
         btn_obj.list[1].addEventListener("click",Selectchatclass)
@@ -234,17 +215,50 @@ window.onload = () =>{
 
 
 
-    const {createApp, ref } = Vue
+    const {createApp, ref, reactive } = Vue
     const App = {
         setup(){
-
-
-
-            
             const ChatContent = ref("")
             const game_id = ref("")
+            const BtnObj = reactive({
+                normal:[
+                    "./img/chat_class_c1.png",
+                    "./img/chat_class_c2.png",
+                    "./img/chat_class_c3.png",
+                    "./img/chat_class_c4.png",
+                    "./img/chat_class_c5.png"
+                ],
+                hover :[
+                    "./img/chat_class_c1_h.png",
+                    "./img/chat_class_c2_h.png",
+                    "./img/chat_class_c3_h.png",
+                    "./img/chat_class_c4_h.png",
+                    "./img/chat_class_c5_h.png"
+                ],
+            })
+            const btnMousein = ( item ) => {
+            
+                let txt_src = item.target.src.slice(-6,-4);
+                let idx = txt_src.slice(1) -1; 
+                if (txt_src === "c" + (idx + 1) ){
+                    item.target.src = BtnObj.hover[idx];
+                    return
+                }
+                
+            }
+            const btnMouseout = ( item ) => {
+                let txt_src = item.target.src.slice(-8,-6);
+                let idx = txt_src.slice(1) -1;
+                if (txt_src === "c" + (idx + 1) ){
+                    item.target.src = BtnObj.normal[idx];
+                    return
+                }
+               
+    
+            }
+            
             const isShow = ref(false);
-            return{ChatContent , game_id}   
+            return{ChatContent , game_id , btnMousein, btnMouseout , BtnObj}   
         }
     }
 
