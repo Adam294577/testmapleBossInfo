@@ -172,7 +172,7 @@
             top: 2px;
             margin-left: 3px;
             .class_ch_list{
-                display: none;
+                // display: none;
                 list-style-type: none;
                 user-select: none;
                 position: absolute;
@@ -234,6 +234,9 @@
             }
         }
     }
+  }
+  #noinput{
+    opacity: 0;
   }
 
 }

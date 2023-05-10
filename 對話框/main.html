@@ -43,7 +43,7 @@
             <div class="txt_container">
                 <div class="content">
                     <span id="game_id">{{game_id}}</span> 
-                    <span class="txt">{{ChatContent}}</span>
+                    <span class="txt">{{inputmsg}}</span>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
 
         <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱">
         <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容">
-        <div class="ChatSyscontainer">
+        <div @click = "clearfn" class="ChatSyscontainer">
             <div class="ChatBoxContainer">
               <div class="outline">
                   <div class="contentBox">
@@ -74,16 +74,24 @@
              <div class="ChatBarContainer">
               <div class="outline">
                   <div class="ChatClass">
-                      <img @mouseenter="btnMousein" @mouseleave="btnMouseout" id="ChatClassBtn" src="./img/chat_class_c1.png" alt="">
-                      <ul id="ChatClassList" class="class_ch_list">
-                         <li id="class_item_c1" class="item">對好友<span>(/f)</span></li> 
-                         <li id="class_item_c2" class="item">對組隊<span>(/p)</span></li> 
-                         <li id="class_item_c3" class="item">對公會<span>(/g)</span></li> 
-                         <li id="class_item_c4" class="item">對聯盟<span>(/u)</span></li> 
-                         <li id="class_item_c5" class="item">對所有人<span>(/e)</span></li> 
+                      <img 
+                      @mouseenter = "btnMousein" 
+                      @mouseleave = "btnMouseout" 
+                      @click.stop = "Openchatclass" 
+                      id="ChatClassBtn" :src= "chatChannelSrc" alt="">
+                      <ul 
+                      v-show= "ListisShow"
+                      id="ChatClassList" 
+                      class=" class_ch_list" 
+                      >
+                         <li @click = "ClickChangeSrc" class="item">對好友<span>(/f)</span></li> 
+                         <li @click = "ClickChangeSrc" class="item">對組隊<span>(/p)</span></li> 
+                         <li @click = "ClickChangeSrc" class="item">對公會<span>(/g)</span></li> 
+                         <li @click = "ClickChangeSrc" class="item">對聯盟<span>(/u)</span></li> 
+                         <li @click = "ClickChangeSrc" class="item">對所有人<span>(/e)</span></li> 
                       </ul>
                   </div>
-                  <input id="userinput" type="text">
+                  <input @keyup= "txtSummit" id="userinput" type="text">
                   <div class="ChatImg">
                    <img src="./img/bar_icon_01.png" alt="01" class="Imgitem">
                    <img src="./img/bar_icon_02.png" alt="02" class="Imgitem">
@@ -95,8 +103,9 @@
                   </div>
               </div>
              </div>
-        
+        <input id="noinput" type="text" >
         </div>
+        <!-- <h1>test : {{chatChannelSrc}}</h1> -->
 
 
     </div>
