@@ -77,10 +77,10 @@
                       <img 
                       @mouseenter = "btnMousein" 
                       @mouseleave = "btnMouseout" 
-                      @click.stop = "Openchatclass" 
+                      @click.stop = "handchatChannel" 
                       id="ChatClassBtn" :src= "chatChannelSrc" alt="">
                       <ul 
-                      v-show= "ListisShow"
+                      v-show= "ChannelListisShow"
                       id="ChatClassList" 
                       class=" class_ch_list" 
                       >
