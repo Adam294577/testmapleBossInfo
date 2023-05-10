@@ -172,7 +172,6 @@
 }
 
 .ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list {
-  display: none;
   list-style-type: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -237,5 +236,9 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-left: 3px;
+}
+
+.ChatSyscontainer #noinput {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
