@@ -48,6 +48,16 @@
             </div>
         </div>
         </div>
+        <div id="chat_box_catmode">
+        <div class="chat_outline">
+            <div class="txt_container">
+                <div class="content">
+                    <span id="game_id2">{{game_id}}</span> 
+                    <span class="txt">{{inputmsg}}</span>
+                </div>
+            </div>
+        </div>
+        </div>
 
         <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱">
         <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容">
@@ -103,7 +113,7 @@
                   </div>
               </div>
              </div>
-        <input id="noinput" type="text" >
+        <input id="noinput" type="hidden" >
         </div>
         <!-- <h1>test : {{chatChannelSrc}}</h1> -->
 
