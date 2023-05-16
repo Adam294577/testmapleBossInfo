@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="searchbox">
+            <input type="text">
+            <div class="searchItem">
+                <div class="item"></div>
+            </div>
+
+        </div>
+        
+        <div class="imgbox">
+            <div class="imgResult">
+                <img id="primaryColorImg" src="./testimg/01.jpg" alt="">
+                <img id="mixedColorImg" src="./testimg/02.jpg" alt="混色">
+
+            </div>
+        </div>
+
+
+        <div class="controlbox">
+            <div class="colorControl">
+                <div class="primaryControl">
+                    <h1>基本顏色</h1>
+                    <ul class="blockBox">
+                        <li class="block black act">
+                            <img src="./testimg/c1_act.png" alt="">
+                        </li>
+                        <li class="block red dis">
+                            <img src="./testimg/c2_dis.png" alt="">
+                        </li>
+                        <li class="block green">
+                            <img :src="blockImg.normal[2]" alt="綠色">
+                        </li>
+                        <li class="block yellow">
+                            <img src="./testimg/c4.png" alt="">
+                        </li>
+                        <li class="block orange">
+                            <img src="./testimg/c5.png" alt="">
+                        </li>
+                        <li class="block blue">
+                            <img src="./testimg/c6.png" alt="">
+                        </li>
+                        <li class="block purple">
+                            <img src="./testimg/c7.png" alt="">
+                        </li>
+                        <li class="block brown">
+                            <img src="./testimg/c8.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="mixedControl">
+                    <h1>混合顏色</h1>
+                    <ul class="blockBox">
+                        <li class="block black dis">
+                            <img src="./testimg/c1_dis.png" alt="">
+                        </li>
+                        <li class="block red act">
+                            <img src="./testimg/c2_act.png" alt="">
+                        </li>
+                        <li class="block green">
+                            <img src="./testimg/c3.png" alt="">
+                        </li>
+                        <li class="block yellow">
+                            <img src="./testimg/c4.png" alt="">
+                        </li>
+                        <li class="block orange">
+                            <img src="./testimg/c5.png" alt="">
+                        </li>
+                        <li class="block blue">
+                            <img src="./testimg/c6.png" alt="">
+                        </li>
+                        <li class="block purple">
+                            <img src="./testimg/c7.png" alt="">
+                        </li>
+                        <li class="block brown">
+                            <img src="./testimg/c8.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="opacityControl">
+                <div class="titlebox">
+                    <img id="primaryselected" src="./testimg/c1.png" alt="">
+                    <h1>比例調整</h1>
+                    <img id="mixedselected" src="./testimg/c2.png" alt="">
+                </div>
+                <div class="ratioBox">
+                    <span id="primaryNum">50%</span>
+                    <span id="mixedNum">50%</span>
+                </div>
+                <div class="controlbox">
+                    <div id="opacityRemoveBtn"></div>
+                    <input id="opacityBar" type="range" min="1" max="99">
+                    <div id="opacityAddBtn"></div>                    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="otherMixbox">
+
+            <div class="title">
+                <h2>其他混染參考</h2>
+                <span>均50%</span>
+            </div>
+            <div class="colorRow">
+                <li class="block black"></li>
+                <li class="block red"></li>
+                <li class="block green"></li>
+                <li class="block yellow"></li>
+                <li class="block orange"></li>
+                <li class="block blue"></li>
+                <li class="block purple"></li>
+                <li class="block brown"></li>
+            </div>
+            <div class="colorCol">
+                <li class="block black"></li>
+                <li class="block red"></li>
+                <li class="block green"></li>
+                <li class="block yellow"></li>
+                <li class="block orange"></li>
+                <li class="block blue"></li>
+                <li class="block purple"></li>
+                <li class="block brown"></li>
+            </div>
+            <div class="otherDisplay">
+                
+                <div class="blackRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="黑+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="黑+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="黑+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="黑+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="黑+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="黑+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="黑+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="黑+褐色">
+                    </div>
+                </div>
+                <div class="redRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="紅+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="紅+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="紅+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="紅+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="紅+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="紅+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="紅+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="紅+褐色">
+                    </div>
+                </div>
+                <div class="greenRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="綠+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="綠+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="綠+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="綠+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="綠+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="綠+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="綠+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="綠+褐色">
+                    </div>
+                </div>
+                <div class="yellowRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="黃+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="黃+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="黃+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="黃+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="黃+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="黃+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="黃+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="黃+褐色">
+                    </div>
+                </div>
+                <div class="orangeRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="橘+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="橘+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="橘+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="橘+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="橘+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="橘+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="橘+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="橘+褐色">
+                    </div>
+                </div>
+                <div class="blueRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="藍+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="藍+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="藍+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="藍+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="藍+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="藍+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="藍+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="藍+褐色">
+                    </div>
+                </div>
+                <div class="purpleRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="紫+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="紫+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="紫+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="紫+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="紫+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="紫+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="紫+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="紫+褐色">
+                    </div>
+                </div>
+                <div class="brownRow row">
+                    <div class="imgitem"> 
+                        <img src="./testimg/01.jpg" alt="褐+黑色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/02.jpg" alt="褐+紅色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/03.jpg" alt="褐+綠色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/04.jpg" alt="褐+黃色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/05.jpg" alt="褐+橘色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/06.jpg" alt="褐+藍色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/07.jpg" alt="褐+紫色">
+                    </div>
+                    <div class="imgitem"> 
+                        <img src="./testimg/08.jpg" alt="褐+褐色">
+                    </div>
+                </div>
+      
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/main.js"></script>
+    <script></script>
+</body>
+</html>
+

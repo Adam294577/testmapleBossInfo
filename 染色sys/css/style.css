@@ -1,0 +1,496 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: #CCC;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app {
+  position: relative;
+  background-color: #fff;
+  width: 420px;
+  padding-bottom: 30px;
+}
+
+.searchbox {
+  display: none;
+}
+
+.imgbox {
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  margin: auto;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imgbox #primaryColorImg, .imgbox #mixedColorImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgbox .imgResult {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.imgbox .imgResult::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../testimg/02.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.imgbox .imgResult #primaryColorImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.imgbox #mixedColorImg {
+  opacity: 0.5;
+}
+
+.controlbox .colorControl {
+  position: relative;
+  left: 3%;
+  top: 10px;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.controlbox .colorControl .primaryControl, .controlbox .colorControl .mixedControl {
+  padding: 3px 0;
+  width: 70px;
+  border-radius: 3px;
+  background-color: #EEE;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.controlbox .colorControl .primaryControl h1, .controlbox .colorControl .mixedControl h1 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.controlbox .colorControl .primaryControl .blockBox, .controlbox .colorControl .mixedControl .blockBox {
+  width: 48px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.controlbox .colorControl .primaryControl .block, .controlbox .colorControl .mixedControl .block {
+  cursor: pointer;
+  position: relative;
+  width: 19px;
+  height: 19px;
+  margin-bottom: 3px;
+}
+
+.controlbox .colorControl .primaryControl .block.act, .controlbox .colorControl .primaryControl .block.dis, .controlbox .colorControl .mixedControl .block.act, .controlbox .colorControl .mixedControl .block.dis {
+  cursor: default;
+}
+
+.controlbox .opacityControl {
+  position: relative;
+  left: 3%;
+  margin-top: 30px;
+  border-radius: 3px;
+  width: 45%;
+  background-color: #EEE;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.controlbox .opacityControl .titlebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.controlbox .opacityControl .titlebox h1 {
+  font-size: 14px;
+  text-align: center;
+  padding: 7px 0;
+  position: relative;
+  font-size: 15px;
+  top: 5px;
+}
+
+.controlbox .opacityControl .titlebox img {
+  width: 19px;
+  height: 19px;
+}
+
+.controlbox .opacityControl .ratioBox {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.controlbox .opacityControl .ratioBox #primaryNum, .controlbox .opacityControl .ratioBox #mixedNum {
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.controlbox .opacityControl .ratioBox #primaryNum {
+  right: 78%;
+}
+
+.controlbox .opacityControl .ratioBox #mixedNum {
+  right: 4%;
+}
+
+.controlbox .opacityControl .controlbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0 20px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.controlbox .opacityControl .controlbox #opacityRemoveBtn {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 9px 15.6px 9px 0;
+  border-color: transparent transparent transparent transparent;
+  position: relative;
+}
+
+.controlbox .opacityControl .controlbox #opacityRemoveBtn::after {
+  cursor: pointer;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url(../testimg/removebtn.png);
+  background-size: cover;
+  top: -10px;
+}
+
+.controlbox .opacityControl .controlbox #opacityRemoveBtn:hover::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url(../testimg/removebtn_h.png);
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.controlbox .opacityControl .controlbox #opacityBar {
+  position: relative;
+  background: transparent;
+  margin: 0px 15px;
+  width: 100px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.controlbox .opacityControl .controlbox #opacityBar::-webkit-slider-runnable-track {
+  position: relative;
+  top: 3px;
+  border-radius: 3px;
+  background-color: #243fbb;
+  height: 0.3rem;
+}
+
+.controlbox .opacityControl .controlbox #opacityBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #FFF;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: -5px;
+  -webkit-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.28);
+}
+
+.controlbox .opacityControl .controlbox #opacityAddBtn {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 0 9px 15.6px;
+  border-color: transparent transparent transparent transparent;
+  position: relative;
+}
+
+.controlbox .opacityControl .controlbox #opacityAddBtn::after {
+  cursor: pointer;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url(../testimg/addbtn.png);
+  background-size: cover;
+  top: -10px;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.controlbox .opacityControl .controlbox #opacityAddBtn:hover::after {
+  content: '';
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url(../testimg/addbtn_h.png);
+  background-size: cover;
+}
+
+.otherMixbox {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+.otherMixbox .title {
+  margin-bottom: 10px;
+}
+
+.otherMixbox .colorRow, .otherMixbox .colorCol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.otherMixbox .colorRow .block, .otherMixbox .colorCol .block {
+  width: 19px;
+  height: 19px;
+  margin-left: 27px;
+}
+
+.otherMixbox .colorRow .block.black, .otherMixbox .colorCol .block.black {
+  background: url("../testimg/c1.png");
+}
+
+.otherMixbox .colorRow .block.red, .otherMixbox .colorCol .block.red {
+  background: url("../testimg/c2.png");
+}
+
+.otherMixbox .colorRow .block.green, .otherMixbox .colorCol .block.green {
+  background: url("../testimg/c3.png");
+}
+
+.otherMixbox .colorRow .block.yellow, .otherMixbox .colorCol .block.yellow {
+  background: url("../testimg/c4.png");
+}
+
+.otherMixbox .colorRow .block.orange, .otherMixbox .colorCol .block.orange {
+  background: url("../testimg/c5.png");
+}
+
+.otherMixbox .colorRow .block.blue, .otherMixbox .colorCol .block.blue {
+  background: url("../testimg/c6.png");
+}
+
+.otherMixbox .colorRow .block.purple, .otherMixbox .colorCol .block.purple {
+  background: url("../testimg/c7.png");
+}
+
+.otherMixbox .colorRow .block.brown, .otherMixbox .colorCol .block.brown {
+  background: url("../testimg/c8.png");
+}
+
+.otherMixbox .colorRow {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.otherMixbox .colorRow .block {
+  margin-right: 1px;
+}
+
+.otherMixbox .colorRow .block.brown {
+  margin-right: 19px;
+}
+
+.otherMixbox .colorCol {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  position: relative;
+  left: -20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.otherMixbox .colorCol .block {
+  margin-top: 45px;
+}
+
+.otherMixbox .otherDisplay {
+  top: 110px;
+  left: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 520px;
+  display: none;
+}
+
+.otherMixbox .otherDisplay .row {
+  width: 370px;
+}
+
+.otherMixbox .otherDisplay .blackRow, .otherMixbox .otherDisplay .redRow, .otherMixbox .otherDisplay .greenRow, .otherMixbox .otherDisplay .yellowRow, .otherMixbox .otherDisplay .orangeRow, .otherMixbox .otherDisplay .blueRow, .otherMixbox .otherDisplay .purpleRow, .otherMixbox .otherDisplay .brownRow {
+  margin-top: 8px;
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.otherMixbox .otherDisplay .blackRow .imgitem, .otherMixbox .otherDisplay .redRow .imgitem, .otherMixbox .otherDisplay .greenRow .imgitem, .otherMixbox .otherDisplay .yellowRow .imgitem, .otherMixbox .otherDisplay .orangeRow .imgitem, .otherMixbox .otherDisplay .blueRow .imgitem, .otherMixbox .otherDisplay .purpleRow .imgitem, .otherMixbox .otherDisplay .brownRow .imgitem {
+  position: relative;
+  margin-left: 7px;
+  width: 40px;
+  height: 54px;
+}
+
+.otherMixbox .otherDisplay .blackRow .imgitem::after, .otherMixbox .otherDisplay .redRow .imgitem::after, .otherMixbox .otherDisplay .greenRow .imgitem::after, .otherMixbox .otherDisplay .yellowRow .imgitem::after, .otherMixbox .otherDisplay .orangeRow .imgitem::after, .otherMixbox .otherDisplay .blueRow .imgitem::after, .otherMixbox .otherDisplay .purpleRow .imgitem::after, .otherMixbox .otherDisplay .brownRow .imgitem::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../testimg/01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+}
+
+.otherMixbox .otherDisplay .blackRow .imgitem img, .otherMixbox .otherDisplay .redRow .imgitem img, .otherMixbox .otherDisplay .greenRow .imgitem img, .otherMixbox .otherDisplay .yellowRow .imgitem img, .otherMixbox .otherDisplay .orangeRow .imgitem img, .otherMixbox .otherDisplay .blueRow .imgitem img, .otherMixbox .otherDisplay .purpleRow .imgitem img, .otherMixbox .otherDisplay .brownRow .imgitem img {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 54px;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.otherMixbox .otherDisplay .redRow {
+  margin-top: 15px;
+}
+
+.otherMixbox .otherDisplay .redRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/02.jpg");
+}
+
+.otherMixbox .otherDisplay .greenRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/03.jpg");
+}
+
+.otherMixbox .otherDisplay .yellowRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/04.jpg");
+}
+
+.otherMixbox .otherDisplay .orangeRow {
+  margin-top: 16px;
+}
+
+.otherMixbox .otherDisplay .orangeRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/05.jpg");
+}
+
+.otherMixbox .otherDisplay .blueRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/06.jpg");
+}
+
+.otherMixbox .otherDisplay .purpleRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/07.jpg");
+}
+
+.otherMixbox .otherDisplay .brownRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/08.jpg");
+}
+/*# sourceMappingURL=style.css.map */
