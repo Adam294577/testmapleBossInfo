@@ -8,7 +8,6 @@
 
 body {
   background-color: #CCC;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,18 +24,15 @@ body {
   background-color: #fff;
   width: 420px;
   padding-bottom: 30px;
-}
-
-.searchbox {
-  display: none;
+  margin-top: 30px;
 }
 
 .imgbox {
   position: absolute;
   right: 3%;
-  top: 10%;
   margin: auto;
   width: 45%;
+  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,38 +50,14 @@ body {
   z-index: 3;
 }
 
-.imgbox .imgResult {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  margin-top: 30px;
-}
-
-.imgbox .imgResult::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  display: none;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../testimg/02.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.imgbox .imgResult #primaryColorImg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .imgbox #mixedColorImg {
   opacity: 0.5;
+}
+
+.imgbox #otherMixBtn {
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
 }
 
 .controlbox .colorControl {
@@ -321,7 +293,6 @@ body {
   position: relative;
   text-align: center;
   margin-top: 20px;
-  display: none;
 }
 
 .otherMixbox .title {
@@ -377,9 +348,7 @@ body {
 
 .otherMixbox .colorRow {
   position: relative;
-  width: 100%;
   height: 30px;
-  border: 1px solid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -400,9 +369,9 @@ body {
   position: relative;
   left: -20px;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .otherMixbox .colorCol .block {
@@ -410,6 +379,7 @@ body {
 }
 
 .otherMixbox .otherDisplay {
+  position: absolute;
   top: 110px;
   left: 38px;
   display: -webkit-box;
@@ -419,17 +389,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 520px;
-  display: none;
-}
-
-.otherMixbox .otherDisplay .row {
-  width: 370px;
 }
 
 .otherMixbox .otherDisplay .blackRow, .otherMixbox .otherDisplay .redRow, .otherMixbox .otherDisplay .greenRow, .otherMixbox .otherDisplay .yellowRow, .otherMixbox .otherDisplay .orangeRow, .otherMixbox .otherDisplay .blueRow, .otherMixbox .otherDisplay .purpleRow, .otherMixbox .otherDisplay .brownRow {
   margin-top: 8px;
-  width: 370px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,7 +411,6 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../testimg/01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -464,6 +426,15 @@ body {
   height: 54px;
   z-index: 2;
   opacity: 0.5;
+}
+
+.otherMixbox .otherDisplay .blackRow {
+  margin-top: 15px;
+}
+
+.otherMixbox .otherDisplay .blackRow .imgitem::after {
+  content: '';
+  background-image: url("../testimg/01.jpg");
 }
 
 .otherMixbox .otherDisplay .redRow {

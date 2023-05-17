@@ -88,6 +88,11 @@ window.onload = () =>{
             const ratioPrimNum = ref(50)
             const ratioMixNum = ref(50)
 
+            const showOtherMix = ref(false)
+            const handOtherMix = ()=>{
+                showOtherMix.value = !showOtherMix.value
+            }
+
 
             // 紀錄原本點選前的active、disable
             let blockStatus = {
@@ -307,13 +312,6 @@ window.onload = () =>{
 
             })
 
-       
-
-            
-            
-            
-            
-
             onMounted(() => {
    
             })
@@ -331,6 +329,8 @@ window.onload = () =>{
                 HairMixedColor,
                 BtnControlRatio,
                 resetRatioFn,
+                showOtherMix,
+                handOtherMix
 
             }
         }
