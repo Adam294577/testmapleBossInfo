@@ -43,6 +43,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
 }
 
 .imgbox #primaryColorImg, .imgbox #mixedColorImg {
@@ -89,6 +90,10 @@ body {
 }
 
 .controlbox .colorControl {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   left: 3%;
   top: 10px;

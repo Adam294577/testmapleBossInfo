@@ -35,7 +35,7 @@ body{
     // border: 1px solid;
     display: flex;
     justify-content: center;
-    // display: none;
+    display: none;
     #primaryColorImg,#mixedColorImg{
         position: absolute;
         top: 50%;
@@ -85,6 +85,7 @@ body{
 
 .controlbox{
     .colorControl{
+        user-select: none;
         // border: 1px solid #F00;
         position: relative;
         left: 3%;

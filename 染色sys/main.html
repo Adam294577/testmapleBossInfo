@@ -31,67 +31,33 @@
                 <div class="primaryControl">
                     <h1>基本顏色</h1>
                     <ul class="blockBox">
-                        <li class="block black act">
-                            <img src="./testimg/c1_act.png" alt="">
-                        </li>
-                        <li class="block red dis">
-                            <img src="./testimg/c2_dis.png" alt="">
-                        </li>
-                        <li class="block green">
-                            <img :src="blockImg.normal[2]" alt="綠色">
-                        </li>
-                        <li class="block yellow">
-                            <img src="./testimg/c4.png" alt="">
-                        </li>
-                        <li class="block orange">
-                            <img src="./testimg/c5.png" alt="">
-                        </li>
-                        <li class="block blue">
-                            <img src="./testimg/c6.png" alt="">
-                        </li>
-                        <li class="block purple">
-                            <img src="./testimg/c7.png" alt="">
-                        </li>
-                        <li class="block brown">
-                            <img src="./testimg/c8.png" alt="">
+                        <li class="block"
+                        v-for= " list in primaryListArr "
+                        :key= "list.name"
+                        @click= "blockColorCh"
+                        >
+                        <img :src= "list.url" :alt= "list.name">
                         </li>
                     </ul>
                 </div>
                 <div class="mixedControl">
                     <h1>混合顏色</h1>
                     <ul class="blockBox">
-                        <li class="block black dis">
-                            <img src="./testimg/c1_dis.png" alt="">
-                        </li>
-                        <li class="block red act">
-                            <img src="./testimg/c2_act.png" alt="">
-                        </li>
-                        <li class="block green">
-                            <img src="./testimg/c3.png" alt="">
-                        </li>
-                        <li class="block yellow">
-                            <img src="./testimg/c4.png" alt="">
-                        </li>
-                        <li class="block orange">
-                            <img src="./testimg/c5.png" alt="">
-                        </li>
-                        <li class="block blue">
-                            <img src="./testimg/c6.png" alt="">
-                        </li>
-                        <li class="block purple">
-                            <img src="./testimg/c7.png" alt="">
-                        </li>
-                        <li class="block brown">
-                            <img src="./testimg/c8.png" alt="">
+                        <li class="block"
+                        v-for= " list in mixedListArr "
+                        :key= "list.name"
+                        @click= "blockColorCh"
+                        >
+                        <img :src= "list.url" :alt= "list.name">
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="opacityControl">
                 <div class="titlebox">
-                    <img id="primaryselected" src="./testimg/c1.png" alt="">
+                    <img id="primaryselected" :src= "ratioPrimImg" alt="">
                     <h1>比例調整</h1>
-                    <img id="mixedselected" src="./testimg/c2.png" alt="">
+                    <img id="mixedselected" :src= "ratioMixImg" alt="">
                 </div>
                 <div class="ratioBox">
                     <span id="primaryNum">50%</span>
