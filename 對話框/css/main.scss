@@ -8,7 +8,7 @@
   user-select: none;
   position: absolute;
   top: 100px;
-  left: 200px;
+  left: 300px;
 
 
 
@@ -35,7 +35,17 @@
               .txt{
                   display: inline-block;
                   text-align: center;
-              }    
+              }  
+              #game_id{
+                /* border: 1px solid #000; */
+                display: block;
+                position: relative;
+              }
+              #game_id::after{
+                  content: ":";
+                  position: absolute;
+                  right: 5px;
+              }                     
           }
       }  
       .txt_container::before{
@@ -76,20 +86,117 @@
       background: url(../img/chat_borer/down.png) no-repeat;
       
   }   
-  #game_id{
-      /* border: 1px solid #000; */
-      display: block;
-      position: relative;
-  }
-  #game_id::after{
-      content: ":";
-      position: absolute;
-      right: 5px;
-  }     
+
 
       
 
 }   
+
+#chat_box_catmode{
+  // display: none;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 153px;
+  position: relative;
+  user-select: none;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+
+
+
+  .chat_outline{
+      // display: none;
+      position: relative;
+      .txt_container{
+          position: relative;
+          /* left: -3px; */
+          overflow: hidden;
+          // background-color: #5f96be;
+          .content{
+              
+              text-align: center;
+              display: inline-block;
+              // word-wrap: break-word;
+              word-break: break-all;
+              font-size: 11px;
+              background-color: #5f96be;
+              // background-color: #FFF;
+              width: 60%;
+              min-height: 30px;
+              margin-left: 15px;
+              position: relative;
+              padding: 4px 20px 10px 20px;
+              .txt{
+                  text-align: center;
+              }  
+              #game_id2{
+                position: relative;
+                margin-right: 15px;
+              }
+              #game_id2::after{
+                  content: ":";
+                  position: absolute;
+                  right: -8px;
+                  top: -1px;
+                  
+              }    
+              .txt,#game_id2,#game_id2::after{
+                color: #884400;
+                font-weight: 500;
+                text-shadow: 0 0 0 #884400,0 0 0 #884400,0 0 0 #884400;
+                
+              }              
+          }
+      }  
+      .txt_container::before{
+          position: absolute;
+          left: 7px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 300px;
+          background: url(../img/catmode/left_border.png) repeat-y;
+          background-position: 0 0;
+
+      }      
+      .txt_container::after{
+          position: absolute;
+          right: -6px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 300px;
+          background: url(../img/catmode/right_border.png) repeat-y;
+          background-position: -2px 0;
+
+      }    
+      }
+  .chat_outline::before{
+      content: '';
+      display: block;
+      height: 31px;
+      background: url(../img/catmode/up.png) no-repeat;
+  }    
+  .chat_outline::after{
+      content: '';
+      display: block;
+      height: 22px;
+      position: relative;
+      left: 6px;
+      top: -7px;
+      background: url(../img/catmode/down.png) no-repeat;
+      
+  }   
+
+
+      
+
+}  
+
+
 
 .ChatSyscontainer{
   position: relative;
