@@ -35,7 +35,7 @@ body{
     // border: 1px solid;
     display: flex;
     justify-content: center;
-    display: none;
+    // display: none;
     #primaryColorImg,#mixedColorImg{
         position: absolute;
         top: 50%;
@@ -79,7 +79,6 @@ body{
 
     #mixedColorImg{
         opacity: 0.5;
-
     }
 }
 
@@ -150,7 +149,9 @@ body{
                 padding: 7px 0;
                 position: relative;
                 font-size: 15px;
-                top: 5px;
+                top: 0px;
+
+      
             }
             img{
                 width: 19px;
@@ -172,6 +173,15 @@ body{
             #mixedNum{
                 right: 4%;
             }
+            #resetRatio{
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+            }            
         }
         .controlbox{
             display: flex;

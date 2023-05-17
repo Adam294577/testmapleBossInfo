@@ -19,8 +19,8 @@
         
         <div class="imgbox">
             <div class="imgResult">
-                <img id="primaryColorImg" src="./testimg/01.jpg" alt="">
-                <img id="mixedColorImg" src="./testimg/02.jpg" alt="混色">
+                <img id="primaryColorImg" :src="HairPrimaryColor" alt="">
+                <img id="mixedColorImg" :src="HairMixedColor" alt="混色">
 
             </div>
         </div>
@@ -60,13 +60,14 @@
                     <img id="mixedselected" :src= "ratioMixImg" alt="">
                 </div>
                 <div class="ratioBox">
-                    <span id="primaryNum">50%</span>
-                    <span id="mixedNum">50%</span>
+                    <span id="primaryNum">{{ratioPrimNum}}%</span>
+                    <img @click= "resetRatioFn" id="resetRatio" src="./testimg/reset.png" alt="重設">
+                    <span id="mixedNum">{{ratioMixNum}}%</span>
                 </div>
                 <div class="controlbox">
-                    <div id="opacityRemoveBtn"></div>
-                    <input id="opacityBar" type="range" min="1" max="99">
-                    <div id="opacityAddBtn"></div>                    
+                    <div @click= "BtnControlRatio" id="opacityRemoveBtn"></div>
+                    <input id="opacityBar" type="range" min="1" max="99" v-model = "ratioMixNum">
+                    <div @click= "BtnControlRatio" id="opacityAddBtn"></div>                    
                 </div>
 
             </div>

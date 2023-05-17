@@ -1,5 +1,5 @@
 window.onload = () =>{
-    const {createApp, ref, reactive, onMounted } = Vue
+    const {createApp, ref, reactive, onMounted, watch } = Vue
 
     const App = {
         setup(){
@@ -63,8 +63,31 @@ window.onload = () =>{
                 {name: "紫色mix", url: blockImg.normal[6] },
                 {name: "褐色mix", url: blockImg.normal[7] },
             ])
+
+            const HairObj = reactive({
+                "米蘭達" : {
+                    black: "./testimg/01.jpg",
+                    red: "./testimg/02.jpg",
+                    green: "./testimg/03.jpg",
+                    yellow: "./testimg/04.jpg",
+                    orange: "./testimg/05.jpg",
+                    bluer: "./testimg/06.jpg",
+                    purple: "./testimg/07.jpg",
+                    brownr: "./testimg/08.jpg",
+                },
+            })
+
+            
             const ratioPrimImg = ref(blockImg.normal[0])
             const ratioMixImg = ref(blockImg.normal[1])
+
+            const HairPrimaryColor = ref(HairObj["米蘭達"].black)
+            const HairMixedColor = ref(HairObj["米蘭達"].red)
+
+
+            const ratioPrimNum = ref(50)
+            const ratioMixNum = ref(50)
+
 
             // 紀錄原本點選前的active、disable
             let blockStatus = {
@@ -115,6 +138,7 @@ window.onload = () =>{
                 });                
 
             }
+            
             const  blockColorCh = (el) =>{
                 let Color = el.target.alt
                 let ColorIdx = el.target.src.slice(-9,-8)
@@ -232,6 +256,13 @@ window.onload = () =>{
                     ratioBlockCh()                    
 
                     const HairColorCh = () => {
+                        let primUrl = ""
+                        let mixUrl = ""
+                        blockStatusRecord()
+                        primUrl = `./testimg/0${ blockStatus.primActId + 1}.jpg`
+                        mixUrl = `./testimg/0${ blockStatus.mixActId + 1}.jpg`
+                        HairPrimaryColor.value = primUrl
+                        HairMixedColor.value = mixUrl
 
                     }
                     HairColorCh()
@@ -241,12 +272,50 @@ window.onload = () =>{
                
 
             }
+
+            const BtnControlRatio = (el) =>{
+                let id = el.target.id 
+
+                if(ratioMixNum.value >= 99 & id === "opacityAddBtn" ){
+                    return
+                }
+                if(ratioPrimNum.value >= 99 & id === "opacityRemoveBtn" ){
+                    return
+                }
+                if (id === "opacityAddBtn"){
+                    ratioMixNum.value++;
+                    ratioPrimNum.value--;
+                }
+                if (id === "opacityRemoveBtn"){
+                    ratioMixNum.value--;
+                    ratioPrimNum.value++;                    
+                }
+                    
+            }
+            const resetRatioFn = () =>{
+                ratioMixNum.value = 50;
+                ratioPrimNum.value = 50;
+                    
+            }
+   
+            watch(ratioMixNum,(newVal)=>{
+                let Opacity = newVal *0.01;
+                console.log(Opacity);
+                let mixImg = document.getElementById("mixedColorImg");
+                mixImg.style["opacity"] = Opacity;
+                ratioPrimNum.value = 100 - newVal;
+
+            })
+
+       
+
+            
             
             
             
 
             onMounted(() => {
-                
+   
             })
 
             return{
@@ -255,7 +324,14 @@ window.onload = () =>{
                 mixedListArr,
                 blockColorCh,
                 ratioPrimImg,
-                ratioMixImg
+                ratioMixImg,
+                ratioPrimNum,
+                ratioMixNum,
+                HairPrimaryColor,
+                HairMixedColor,
+                BtnControlRatio,
+                resetRatioFn,
+
             }
         }
     }
