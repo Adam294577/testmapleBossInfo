@@ -1,5 +1,5 @@
 window.onload = () =>{
-    const {createApp, ref, reactive, onMounted, watch } = Vue
+    const {createApp, ref, reactive, onMounted, watch , computed} = Vue
 
     const App = {
         setup(){
@@ -89,9 +89,87 @@ window.onload = () =>{
             const ratioMixNum = ref(50)
 
             const showOtherMix = ref(false)
-            const handOtherMix = ()=>{
-                showOtherMix.value = !showOtherMix.value
+            const showPreviewResult = ref(true)
+            let  PreviewResultFn = document.getElementById("PreviewBtn")
+            const handPreviewResult = () =>{
+                PreviewResultFn = !PreviewResultFn
             }
+            
+            const handOtherMix = ()=>{
+                showOtherMix.value = !showOtherMix.value;
+            }
+            const previewData = reactive({
+                hair: [
+                    {key : '髮型黑'},
+                    {key : '髮型紅'},
+                    {key : '髮型綠'},
+                    {key : '髮型黃'},
+                    {key : '髮型橘'},
+                    {key : '髮型藍'},
+                    {key : '髮型紫'},
+                    {key : '髮型褐'},
+                ]
+
+            })
+            let filterResult = reactive([])
+
+
+            let test = ref(0)
+            
+            
+
+            const searchFn = (el) =>{
+                
+
+                let key = el.target.value
+                let keyCode = el.keyCode
+
+                if(!PreviewResultFn){
+                    showPreviewResult.value = false
+                    return;
+                }
+
+                if(key === ""){
+                    showPreviewResult.value = false
+                    return;
+                }
+
+                if(PreviewResultFn){
+                    
+                    showPreviewResult.value = true
+
+                    const ans = previewData.hair.filter(item=>{
+                        return item.key.indexOf(key) !== -1
+                    })
+                          
+                   
+                    
+                    if(keyCode === 13 | keyCode === 8){
+                        test.value ++;
+                       
+                        filterResult = computed(()=>{
+                            const Map = ans.map(item=>{
+                                item
+                            })
+                            return Map
+                        })
+                        console.log(filterResult);
+                        
+                        
+                        
+                    }
+                }
+
+          
+            }
+
+           watch(filterResult, (newval)=>{
+            console.log(newval);
+           },
+           { deep: true }
+           )
+   
+         
 
 
             // 紀錄原本點選前的active、disable
@@ -330,7 +408,12 @@ window.onload = () =>{
                 BtnControlRatio,
                 resetRatioFn,
                 showOtherMix,
-                handOtherMix
+                handOtherMix,
+                showPreviewResult,
+                handPreviewResult,
+                searchFn,
+                filterResult
+
 
             }
         }
