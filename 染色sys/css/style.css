@@ -27,6 +27,131 @@ body {
   margin-top: 30px;
 }
 
+.searchbox .searchBar {
+  position: relative;
+  margin: 10px 0 20px 10px;
+}
+
+.searchbox .searchBar #searchBar {
+  width: 60%;
+  padding: 7px;
+  position: relative;
+  font-size: 16px;
+  z-index: 3;
+}
+
+.searchbox .searchBar::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../testimg/search.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+  left: -30px;
+  top: 7px;
+  z-index: 3;
+}
+
+.searchbox .searchBar .PreviewBtn {
+  position: absolute;
+  right: 3%;
+  top: 7px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchbox .searchBar .PreviewBtn #PreviewBtn {
+  position: relative;
+}
+
+.searchbox .resultPreview {
+  position: absolute;
+  width: 60%;
+  z-index: 4;
+  top: 100%;
+  left: 0;
+}
+
+.searchbox .resultPreview ul {
+  background-color: #ffffffc2;
+  border: 1px solid #CCC;
+  border-radius: 0 0 7px 7px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 7px;
+  min-height: 25px;
+  max-height: 150px;
+}
+
+.searchbox .resultPreview ul .previewItem {
+  position: relative;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-top: 7px;
+  letter-spacing: 0.07rem;
+}
+
+.searchbox .resultPreview ul .previewItem:last-child:hover::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  display: block;
+  width: 120%;
+  height: 10px;
+  background-color: #fff5a0a2;
+}
+
+.searchbox .resultPreview ul .previewItem:hover {
+  background-color: #fff5a0a2;
+}
+
+.searchbox .resultPreview ul::-webkit-scrollbar {
+  display: none;
+}
+
+.searchbox .searchResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #CCC;
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 7px;
+}
+
+.searchbox .searchResult .item {
+  width: 33%;
+  position: relative;
+  height: 6rem;
+}
+
+.searchbox .searchResult .item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.searchbox .searchResult .item span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  bottom: 3px;
+}
+
 .imgbox {
   position: absolute;
   right: 3%;
