@@ -86,31 +86,28 @@ body {
   border-radius: 0 0 7px 7px;
   overflow: hidden;
   overflow-y: scroll;
-  padding-bottom: 7px;
-  min-height: 25px;
-  max-height: 150px;
+  min-height: 0px;
 }
 
 .searchbox .resultPreview ul .previewItem {
+  display: none;
   position: relative;
   font-size: 13px;
-  padding-left: 10px;
-  padding-top: 7px;
-  letter-spacing: 0.07rem;
+  padding: 10px 10px;
+  height: 30px;
 }
 
-.searchbox .resultPreview ul .previewItem:last-child:hover::after {
-  content: "";
-  position: absolute;
-  left: -10%;
+.searchbox .resultPreview ul .previewItem.open {
   display: block;
-  width: 120%;
-  height: 10px;
+}
+
+.searchbox .resultPreview ul .previewItem.act {
   background-color: #fff5a0a2;
 }
 
-.searchbox .resultPreview ul .previewItem:hover {
-  background-color: #fff5a0a2;
+.searchbox .resultPreview ul .previewItem span {
+  position: relative;
+  top: -3px;
 }
 
 .searchbox .resultPreview ul::-webkit-scrollbar {
@@ -121,18 +118,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: 1px solid #CCC;
   width: 95%;
   margin: 20px auto;
   border-radius: 7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .searchbox .searchResult .item {
   width: 33%;
   position: relative;
   height: 6rem;
+  cursor: pointer;
 }
 
 .searchbox .searchResult .item img {
@@ -153,14 +156,15 @@ body {
 }
 
 .imgbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
   position: absolute;
   right: 3%;
   margin: auto;
   width: 45%;
   height: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -183,6 +187,14 @@ body {
   position: absolute;
   bottom: 0;
   font-weight: bold;
+}
+
+.controlbox {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .controlbox .colorControl {
@@ -316,6 +328,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .controlbox .opacityControl .controlbox #opacityRemoveBtn {
@@ -379,6 +395,10 @@ body {
           box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.28);
 }
 
+.controlbox .opacityControl .controlbox #opacityBar:focus {
+  outline: none;
+}
+
 .controlbox .opacityControl .controlbox #opacityAddBtn {
   width: 0;
   height: 0;
@@ -415,6 +435,7 @@ body {
 }
 
 .otherMixbox {
+  display: none;
   position: relative;
   text-align: center;
   margin-top: 20px;

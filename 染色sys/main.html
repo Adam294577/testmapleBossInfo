@@ -14,29 +14,30 @@
             <div class="searchBar">
                 <input 
                 @keyup= "searchFn" 
+                @keydown= "searchItemMove"
                 id="searchBar" 
                 type="text" 
                 placeholder="輸入髮型"
+                
                 
                 >
                 <div class="PreviewBtn">
                     <input @click= "handPreviewResult" id="PreviewBtn" type="checkbox" ><span>收尋預覽</span>
                 </div>
-                <div class="resultPreview">
-                    <ul>
+                <div v-show= "PreviewResultFn" class="resultPreview" >
+                    <ul @wheel= "searchWheelFn" id="searchlist">
                         <li 
-                        class="previewItem"
+                        v-for=" list in PreviewResult"
+                        :key= "list.key"
+                        :class="['previewItem', {act: list.status} ,{open: previewItem}]"
+                        @mouseover= "listIshover"
+                        @mouseleave= "listNothover"
+                        @click= "PushResultFn"
                         >
-                        <span>{{}}</span>
+                        <span>{{list.key}}</span>
                     </li>
-                        <!-- <li class="previewItem"><span>髮型紅</span></li>
-                        <li class="previewItem"><span>髮型綠</span></li>
-                        <li class="previewItem"><span>髮型黃</span></li>
-                        <li class="previewItem"><span>髮型橘</span></li>
-                        <li class="previewItem"><span>髮型藍</span></li>
-                        <li class="previewItem"><span>髮型紫</span></li>
-                        <li class="previewItem"><span>髮型褐</span></li> -->
                     </ul>
+                    
                 </div>
             </div>
 

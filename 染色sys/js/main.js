@@ -64,25 +64,34 @@ window.onload = () =>{
                 {name: "褐色mix", url: blockImg.normal[7] },
             ])
 
-            const HairObj = reactive({
-                "米蘭達" : {
-                    black: "./testimg/01.jpg",
-                    red: "./testimg/02.jpg",
-                    green: "./testimg/03.jpg",
-                    yellow: "./testimg/04.jpg",
-                    orange: "./testimg/05.jpg",
-                    bluer: "./testimg/06.jpg",
-                    purple: "./testimg/07.jpg",
-                    brownr: "./testimg/08.jpg",
+            const searchData = reactive({
+                hair:{
+                    "米蘭達": [
+                        {key : '米蘭達黑',url : "./testimg/01.jpg"},
+                        {key : '米蘭達紅',url : "./testimg/02.jpg"},
+                        {key : '米蘭達綠',url : "./testimg/03.jpg"},
+                        {key : '米蘭達黃',url : "./testimg/04.jpg"},
+                        {key : '米蘭達橘',url : "./testimg/05.jpg"},
+                        {key : '米蘭達藍',url : "./testimg/06.jpg"},
+                        {key : '米蘭達紫',url : "./testimg/07.jpg"},
+                        {key : '米蘭達褐',url : "./testimg/08.jpg"},
+                    ],
+
                 },
+                face:{
+
+                },
+              
+
+
             })
 
             
             const ratioPrimImg = ref(blockImg.normal[0])
             const ratioMixImg = ref(blockImg.normal[1])
 
-            const HairPrimaryColor = ref(HairObj["米蘭達"].black)
-            const HairMixedColor = ref(HairObj["米蘭達"].red)
+            const HairPrimaryColor = ref(searchData.hair["米蘭達"][0].url)
+            const HairMixedColor = ref(searchData.hair["米蘭達"][1].url)
 
 
             const ratioPrimNum = ref(50)
@@ -90,86 +99,163 @@ window.onload = () =>{
 
             const showOtherMix = ref(false)
             const showPreviewResult = ref(true)
-            let  PreviewResultFn = document.getElementById("PreviewBtn")
+            const PreviewResultFn = ref(false)
+            const previewItem = ref(true)
             const handPreviewResult = () =>{
-                PreviewResultFn = !PreviewResultFn
+                PreviewResultFn.value = !PreviewResultFn.value
+                document.getElementById("searchBar").focus()
             }
             
             const handOtherMix = ()=>{
                 showOtherMix.value = !showOtherMix.value;
             }
-            const previewData = reactive({
-                hair: [
-                    {key : '髮型黑'},
-                    {key : '髮型紅'},
-                    {key : '髮型綠'},
-                    {key : '髮型黃'},
-                    {key : '髮型橘'},
-                    {key : '髮型藍'},
-                    {key : '髮型紫'},
-                    {key : '髮型褐'},
-                ]
 
-            })
-            let filterResult = reactive([])
+            const searchKey = ref("")
+            const searchHoverKey = ref("")
+            const searchIdx = ref(0)
+            const PreviewResultIshover = ref(false)
 
 
-            let test = ref(0)
+
+            const searchWheelFn = (el) =>{
+                let list = document.getElementById("searchlist")
+                
+                
+                let scrolldistance = 30
+                el.preventDefault();
+               
+                if(el.deltaY < 0){
+                    // console.log(el.target.getBoundingClientRect());
+                    list.scrollBy(0, -scrolldistance)
+                    // console.log(el.target.offsetHeight);
+                    // console.log(el.target.offsetTop);
+                }else{
+                    // console.log(el.target.getBoundingClientRect());
+                    list.scrollBy(0, scrolldistance)
+                    // console.log(el.target.offsetHeight);
+                    // console.log(el.target.offsetTop);
+                }
+            }
             
-            
+
+
 
             const searchFn = (el) =>{
                 
 
-                let key = el.target.value
-                let keyCode = el.keyCode
+                searchKey.value = el.target.value
+                previewItem.value = true
 
-                if(!PreviewResultFn){
-                    showPreviewResult.value = false
-                    return;
+                console.log(searchKey.value);
+
+
+                // console.log(PreviewResult.value.length);
+                if(searchKey.value === ""){
+                    searchIdx.value = -1
+
                 }
 
-                if(key === ""){
-                    showPreviewResult.value = false
-                    return;
+                if(el.keyCode === 13){
+                    // console.log(searchHoverKey.value);
+                    searchKey.value = searchHoverKey.value
+                    document.getElementById("searchBar").value = searchHoverKey.value
+                    document.getElementById("searchBar").focus()
+                    previewItem.value = false
                 }
+               
+            }
+            const searchItemMove = (el) =>{
 
-                if(PreviewResultFn){
+                searchKey.value = el.target.value
+                previewItem.value = true
+
+                if(el.keyCode === 40){
+                    el.preventDefault()
+                    searchIdx.value++;
                     
-                    showPreviewResult.value = true
-
-                    const ans = previewData.hair.filter(item=>{
-                        return item.key.indexOf(key) !== -1
-                    })
-                          
-                   
                     
-                    if(keyCode === 13 | keyCode === 8){
-                        test.value ++;
-                       
-                        filterResult = computed(()=>{
-                            const Map = ans.map(item=>{
-                                item
-                            })
-                            return Map
-                        })
-                        console.log(filterResult);
-                        
-                        
-                        
-                    }
+                    
+                }
+                if(el.keyCode === 38){
+                    el.preventDefault()
+                    searchIdx.value--;
                 }
 
-          
+                if(searchIdx.value < 0 & el.keyCode === 38){
+                    searchIdx.value = 0;
+                    // console.log(searchIdx.value);
+                }
+                if(searchIdx.value >= PreviewResult.value.length   & el.keyCode === 40){
+                    searchIdx.value = PreviewResult.value.length -1
+                }
+
+                if(PreviewResultIshover.value === true & el.keyCode === 40){
+                    PreviewResultIshover.value = false
+                    searchIdx.value++;
+                }
+                if(PreviewResultIshover.value === true & el.keyCode === 38){
+                    PreviewResultIshover.value = false
+                    searchIdx.value--;
+                }
+            }
+            const PushResultFn = (el) =>{
+                // console.log(el.target.innerText);
+                searchKey.value = el.target.innerText
+                document.getElementById("searchBar").value = el.target.innerText
+                document.getElementById("searchBar").focus()
+                previewItem.value = false
+                console.log(searchKey);
+            }
+            const listIshover = (el) =>{
+                searchHoverKey.value = el.target.innerText
+                PreviewResultIshover.value = true
+                // console.log(PreviewResultIshover.value);
+            }
+            const listNothover = () =>{
+                PreviewResultIshover.value = false
+                // console.log(PreviewResultIshover.value);
             }
 
-           watch(filterResult, (newval)=>{
-            console.log(newval);
-           },
-           { deep: true }
-           )
-   
-         
+
+            const PreviewResult = computed(()=>{
+                let idx = -1;
+                if(searchKey.value === ""){
+                    return ;
+                }
+
+                if(PreviewResultFn.value){
+                    const filter = searchData.hair["米蘭達"].filter(item=>{
+                        if(item.key.indexOf(searchKey.value) !== -1){
+                            return item.key
+                        }
+                      
+                    })
+                    const Map  = filter.map(item=>{
+                        idx ++;
+                        return {key: `${item.key}`, "idx": idx, "status" : false}
+                    })
+                    if(PreviewResultIshover.value){
+                        Map.forEach(item=>{
+                            if(searchHoverKey.value === item.key){
+                                searchIdx.value = item.idx
+                                item.status = true
+                            }
+                        })
+                    }
+
+                    Map.forEach(item=>{
+                        // item.status = false
+                        if(searchIdx.value === item.idx){
+                            item.status = true
+                            searchHoverKey.value = item.key
+                        }
+                    })
+                    // console.log(Map);
+                    return Map
+                }else{
+                    return "無收尋結果"
+                }
+            })
 
 
             // 紀錄原本點選前的active、disable
@@ -411,8 +497,16 @@ window.onload = () =>{
                 handOtherMix,
                 showPreviewResult,
                 handPreviewResult,
+                PreviewResultFn,
                 searchFn,
-                filterResult
+                PreviewResult,
+                previewItem,
+                PushResultFn,
+                listIshover,
+                listNothover,
+                searchWheelFn,
+                searchItemMove
+                
 
 
             }
