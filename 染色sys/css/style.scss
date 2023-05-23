@@ -104,6 +104,11 @@ body{
                     position: relative;
                     top: -3px;
                 }
+                .mark{
+                    position: relative;
+                    top: 0px;
+                    color: #F00;
+                }
             }
         }
         ul::-webkit-scrollbar{
@@ -114,7 +119,7 @@ body{
     }
     .searchResult{
         display: flex;
-        display: none;
+        // display: none;
         flex-wrap: wrap;
         border: 1px solid #CCC;
         width: 95%;

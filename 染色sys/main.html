@@ -33,49 +33,22 @@
                         @mouseover= "listIshover"
                         @mouseleave= "listNothover"
                         @click= "PushResultFn"
-                        >
-                        <span>{{list.key}}</span>
+                        v-html= "list.Html">
                     </li>
                     </ul>
                     
                 </div>
             </div>
 
-
             <div class="searchResult">
-                <div class="item">
-                    <img src="./testimg/01.jpg" alt="髮型01">
-                    <span>髮型黑</span>
+                <div class="item"
+                v-for= "list in showImgResult"
+                :key= "list.key"
+                >
+                <img :src="list.url" :alt="list.key">
+                    <span>{{list.key}}</span>
                 </div>
-                <div class="item">
-                    <img src="./testimg/02.jpg" alt="髮型02">
-                    <span>髮型紅</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/03.jpg" alt="髮型03">
-                    <span>髮型綠</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/04.jpg" alt="髮型03">
-                    <span>髮型黃</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/05.jpg" alt="髮型04">
-                    <span>髮型橘</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/06.jpg" alt="髮型04">
-                    <span>髮型藍</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/07.jpg" alt="髮型04">
-                    <span>髮型紫</span>
-                </div>
-                <div class="item">
-                    <img src="./testimg/08.jpg" alt="髮型04">
-                    <span>髮型褐</span>
-                </div>
-            </div>
+
 
         </div>
         
@@ -294,7 +267,6 @@
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
-    <script></script>
 </body>
 </html>
 

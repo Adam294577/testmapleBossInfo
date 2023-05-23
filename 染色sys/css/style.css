@@ -110,6 +110,12 @@ body {
   top: -3px;
 }
 
+.searchbox .resultPreview ul .previewItem .mark {
+  position: relative;
+  top: 0px;
+  color: #F00;
+}
+
 .searchbox .resultPreview ul::-webkit-scrollbar {
   display: none;
 }
@@ -118,7 +124,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: 1px solid #CCC;

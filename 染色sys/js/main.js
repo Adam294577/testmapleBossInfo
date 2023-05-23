@@ -101,6 +101,8 @@ window.onload = () =>{
             const showPreviewResult = ref(true)
             const PreviewResultFn = ref(false)
             const previewItem = ref(true)
+            const previewArrLength = ref(0)
+
             const handPreviewResult = () =>{
                 PreviewResultFn.value = !PreviewResultFn.value
                 document.getElementById("searchBar").focus()
@@ -111,12 +113,13 @@ window.onload = () =>{
             }
 
             const searchKey = ref("")
+            const searchImgKey = ref("")
             const searchHoverKey = ref("")
             const searchIdx = ref(0)
             const PreviewResultIshover = ref(false)
 
 
-
+            // 目前並沒有寫死高度 不會有滾輪
             const searchWheelFn = (el) =>{
                 let list = document.getElementById("searchlist")
                 
@@ -145,18 +148,16 @@ window.onload = () =>{
 
                 searchKey.value = el.target.value
                 previewItem.value = true
+                
 
-                console.log(searchKey.value);
 
 
-                // console.log(PreviewResult.value.length);
                 if(searchKey.value === ""){
                     searchIdx.value = -1
 
                 }
 
                 if(el.keyCode === 13){
-                    // console.log(searchHoverKey.value);
                     searchKey.value = searchHoverKey.value
                     document.getElementById("searchBar").value = searchHoverKey.value
                     document.getElementById("searchBar").focus()
@@ -183,10 +184,10 @@ window.onload = () =>{
 
                 if(searchIdx.value < 0 & el.keyCode === 38){
                     searchIdx.value = 0;
-                    // console.log(searchIdx.value);
                 }
-                if(searchIdx.value >= PreviewResult.value.length   & el.keyCode === 40){
-                    searchIdx.value = PreviewResult.value.length -1
+
+                if(searchIdx.value >= previewArrLength.value   & el.keyCode === 40){
+                    searchIdx.value = previewArrLength.value -1
                 }
 
                 if(PreviewResultIshover.value === true & el.keyCode === 40){
@@ -198,31 +199,31 @@ window.onload = () =>{
                     searchIdx.value--;
                 }
             }
+
             const PushResultFn = (el) =>{
-                // console.log(el.target.innerText);
                 searchKey.value = el.target.innerText
                 document.getElementById("searchBar").value = el.target.innerText
                 document.getElementById("searchBar").focus()
                 previewItem.value = false
-                console.log(searchKey);
             }
             const listIshover = (el) =>{
                 searchHoverKey.value = el.target.innerText
+                console.log(searchHoverKey.value);
                 PreviewResultIshover.value = true
-                // console.log(PreviewResultIshover.value);
             }
             const listNothover = () =>{
                 PreviewResultIshover.value = false
-                // console.log(PreviewResultIshover.value);
             }
 
 
             const PreviewResult = computed(()=>{
                 let idx = -1;
                 if(searchKey.value === ""){
+                    previewArrLength.value = 0
                     return ;
                 }
 
+                // 預覽功能有開啟才顯示
                 if(PreviewResultFn.value){
                     const filter = searchData.hair["米蘭達"].filter(item=>{
                         if(item.key.indexOf(searchKey.value) !== -1){
@@ -232,7 +233,8 @@ window.onload = () =>{
                     })
                     const Map  = filter.map(item=>{
                         idx ++;
-                        return {key: `${item.key}`, "idx": idx, "status" : false}
+                        let replaceTxt = item.key.replace(searchKey.value, `<span class="mark">${searchKey.value}</span>`)
+                        return {"key": item.key, "idx": idx, "status" : false, "Html": replaceTxt }
                     })
                     if(PreviewResultIshover.value){
                         Map.forEach(item=>{
@@ -243,6 +245,7 @@ window.onload = () =>{
                         })
                     }
 
+         
                     Map.forEach(item=>{
                         // item.status = false
                         if(searchIdx.value === item.idx){
@@ -250,12 +253,37 @@ window.onload = () =>{
                             searchHoverKey.value = item.key
                         }
                     })
-                    // console.log(Map);
+                    previewArrLength.value = Map.length
+                    console.log(Map);
+                    
                     return Map
                 }else{
-                    return "無收尋結果"
+                    previewArrLength.value = 0
+                    return "沒有開啟預覽功能"
                 }
             })
+
+
+
+            const showImgResult = computed(()=>{
+                const filter = searchData.hair["米蘭達"].filter(item=>{
+                    if(item.key.indexOf(searchKey.value) !== -1){
+                        return item.key
+                    }
+                  
+                })
+                const Map  = filter.map(item=>{
+                    return {key: `${item.key}`, "url": `${item.url}` }
+                })
+ 
+                return Map
+
+            })
+
+
+
+       
+
 
 
             // 紀錄原本點選前的active、disable
@@ -505,7 +533,8 @@ window.onload = () =>{
                 listIshover,
                 listNothover,
                 searchWheelFn,
-                searchItemMove
+                searchItemMove,
+                showImgResult
                 
 
 
