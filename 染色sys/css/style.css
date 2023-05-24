@@ -164,7 +164,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   position: absolute;
   right: 3%;
   margin: auto;
@@ -195,7 +194,6 @@ body {
 }
 
 .controlbox {
-  display: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -440,7 +438,6 @@ body {
 }
 
 .otherMixbox {
-  display: none;
   position: relative;
   text-align: center;
   margin-top: 20px;
@@ -540,6 +537,24 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.otherMixbox .otherDisplay .row span {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  white-space: nowrap;
+  padding: 3px 5px;
+  font-size: 11px;
+  border-radius: 3px;
+  z-index: 3;
+  background-color: #000;
+  color: #FFF;
+}
+
+.otherMixbox .otherDisplay .row span.open {
+  display: block;
 }
 
 .otherMixbox .otherDisplay .blackRow, .otherMixbox .otherDisplay .redRow, .otherMixbox .otherDisplay .greenRow, .otherMixbox .otherDisplay .yellowRow, .otherMixbox .otherDisplay .orangeRow, .otherMixbox .otherDisplay .blueRow, .otherMixbox .otherDisplay .purpleRow, .otherMixbox .otherDisplay .brownRow {

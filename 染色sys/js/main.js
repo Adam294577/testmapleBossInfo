@@ -35,12 +35,6 @@ window.onload = () =>{
                     "./testimg/c7_act.png",
                     "./testimg/c8_act.png",                       
                 ],
-                black:{
-                    normal: "./testimg/c1.png",
-                    active: "./testimg/c1_act.png",
-                    disable: "./testimg/c1_dis.png"
-
-                },
             })
 
             const primaryListArr  = reactive([
@@ -67,14 +61,14 @@ window.onload = () =>{
             const searchData = reactive({
                 hair:{
                     "米蘭達": [
-                        {key : '米蘭達黑',url : "./testimg/01.jpg"},
-                        {key : '米蘭達紅',url : "./testimg/02.jpg"},
-                        {key : '米蘭達綠',url : "./testimg/03.jpg"},
-                        {key : '米蘭達黃',url : "./testimg/04.jpg"},
-                        {key : '米蘭達橘',url : "./testimg/05.jpg"},
-                        {key : '米蘭達藍',url : "./testimg/06.jpg"},
-                        {key : '米蘭達紫',url : "./testimg/07.jpg"},
-                        {key : '米蘭達褐',url : "./testimg/08.jpg"},
+                        {key : '米蘭達黑',url : "./testimg/01.jpg" ,color:"黑"},
+                        {key : '米蘭達紅',url : "./testimg/02.jpg" ,color:"紅"},
+                        {key : '米蘭達綠',url : "./testimg/03.jpg" ,color:"綠"},
+                        {key : '米蘭達黃',url : "./testimg/04.jpg" ,color:"黃"},
+                        {key : '米蘭達橘',url : "./testimg/05.jpg" ,color:"橘"},
+                        {key : '米蘭達藍',url : "./testimg/06.jpg" ,color:"藍"},
+                        {key : '米蘭達紫',url : "./testimg/07.jpg" ,color:"紫"},
+                        {key : '米蘭達褐',url : "./testimg/08.jpg" ,color:"褐"},
                     ],
 
                 },
@@ -113,35 +107,11 @@ window.onload = () =>{
             }
 
             const searchKey = ref("")
-            const searchImgKey = ref("")
             const searchHoverKey = ref("")
             const searchIdx = ref(0)
             const PreviewResultIshover = ref(false)
 
-
-            // 目前並沒有寫死高度 不會有滾輪
-            const searchWheelFn = (el) =>{
-                let list = document.getElementById("searchlist")
-                
-                
-                let scrolldistance = 30
-                el.preventDefault();
-               
-                if(el.deltaY < 0){
-                    // console.log(el.target.getBoundingClientRect());
-                    list.scrollBy(0, -scrolldistance)
-                    // console.log(el.target.offsetHeight);
-                    // console.log(el.target.offsetTop);
-                }else{
-                    // console.log(el.target.getBoundingClientRect());
-                    list.scrollBy(0, scrolldistance)
-                    // console.log(el.target.offsetHeight);
-                    // console.log(el.target.offsetTop);
-                }
-            }
             
-
-
 
             const searchFn = (el) =>{
                 
@@ -233,7 +203,8 @@ window.onload = () =>{
                     })
                     const Map  = filter.map(item=>{
                         idx ++;
-                        let replaceTxt = item.key.replace(searchKey.value, `<span class="mark">${searchKey.value}</span>`)
+                        let str = searchKey.value
+                        let replaceTxt = item.key.replace( str , `<span class="mark">${str}</span>`)
                         return {"key": item.key, "idx": idx, "status" : false, "Html": replaceTxt }
                     })
                     if(PreviewResultIshover.value){
@@ -492,17 +463,147 @@ window.onload = () =>{
             const resetRatioFn = () =>{
                 ratioMixNum.value = 50;
                 ratioPrimNum.value = 50;
-                    
             }
    
             watch(ratioMixNum,(newVal)=>{
                 let Opacity = newVal *0.01;
-                console.log(Opacity);
                 let mixImg = document.getElementById("mixedColorImg");
                 mixImg.style["opacity"] = Opacity;
                 ratioPrimNum.value = 100 - newVal;
 
             })
+
+
+            
+            
+            const altVal = ref("")
+            const hoverRowAlt = (el)=>{
+                altVal.value = el.target.alt
+            }
+            const leaveRowAlt = ()=>{
+                altVal.value = ""
+            }
+
+
+            const brownRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+褐色`, "showAlt" : false}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2
+            })
+
+            const purpleRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+紫色`}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,7)
+            })
+            const blueRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+藍色`}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,6)
+            })
+            const orangeRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+橘色`}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,5)
+            })
+            const yellowRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+黃色`}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,4)
+            })
+            const greenRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+綠色`}
+                });
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+
+                return Map2.slice(0,3)
+            })
+            const redRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+紅色`}
+                });
+
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,2)
+            })
+            const blackRowImg = computed(()=>{
+                
+                 const Map = searchData.hair["米蘭達"].map(item => {
+                    return {"url" : item.url , "alt" : `${item.color}+黑色`}
+                });
+
+                const Map2 =  Map.map(item=>{
+                    if(altVal.value !== item.alt){
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : false}
+                    }else{
+                        return {"url" : item.url , "alt" : item.alt, "showAlt" : true}
+                    }
+                })
+                return Map2.slice(0,1)
+            })
+
+
+
 
             onMounted(() => {
    
@@ -532,9 +633,19 @@ window.onload = () =>{
                 PushResultFn,
                 listIshover,
                 listNothover,
-                searchWheelFn,
                 searchItemMove,
-                showImgResult
+                showImgResult,
+                brownRowImg,
+                purpleRowImg,
+                blueRowImg,
+                orangeRowImg,
+                yellowRowImg,
+                greenRowImg,
+                redRowImg,
+                blackRowImg,
+                hoverRowAlt,
+                leaveRowAlt,
+                
                 
 
 

@@ -153,7 +153,7 @@ body{
 
 .imgbox{
     display: flex;
-    display: none;
+    // display: none;
     position: absolute;
     right: 3%;
     margin: auto;
@@ -184,7 +184,7 @@ body{
 }
 
 .controlbox{
-    display: none;
+    // display: none;
     user-select: none;
     .colorControl{
         user-select: none;
@@ -400,7 +400,7 @@ body{
 
 
 .otherMixbox{
-    display: none;
+    // display: none;
     position: relative;
     text-align: center;
     margin-top: 20px;
@@ -472,6 +472,27 @@ body{
         display: flex;
         flex-direction: column;
         // display: none;
+        .row{
+            span{
+                display: none;
+                position: absolute;
+                top: 0;
+                right: -40px;
+                // display: inline-block;
+                // width: 40px;
+                white-space: nowrap;
+                padding: 3px 5px;
+                font-size: 11px;
+                border-radius: 3px;
+                z-index: 3;
+                background-color: #000;
+                color: #FFF;
+                &.open{
+                    display: block;
+                }
+
+            }
+        }
         .blackRow,.redRow,.greenRow,.yellowRow,.orangeRow,.blueRow,.purpleRow,.brownRow{
             margin-top: 8px;
             // width: 370px;
