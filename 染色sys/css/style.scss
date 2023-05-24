@@ -23,16 +23,143 @@ body{
 }
 .searchbox{
     // display: none;
+    .searchBar{
+        position: relative;
+        // border: 1px solid #F00;
+        margin: 10px 0 20px 10px ; 
+
+        #searchBar{
+            width: 60%;
+            padding: 7px;
+            position: relative;
+            font-size: 16px;
+            z-index: 3;
+
+        }
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(../testimg/search.png);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            position: relative;
+            left: -30px;
+            top: 7px;
+            z-index: 3;
+        }
+        .PreviewBtn{
+            position: absolute;
+            right: 3%;
+            top: 7px;
+            width: 100px;
+            // border: 1px solid;
+            display: flex;
+            align-items: center;
+            #PreviewBtn{
+                position: relative;
+            }
+        }
+
+    }
+    .resultPreview{
+        position: absolute;
+        // border: 1px solid;
+        width: 60%;
+        z-index: 4;
+        top: 100%;
+        left: 0;  
+        // display: none;
+        // background: #000;
+        
+ 
+
+        ul{
+            background-color: #ffffffc2;
+            border: 1px solid #CCC;
+            border-radius: 0 0 7px 7px;
+            overflow: hidden;
+            overflow-y: scroll;
+            // padding-bottom: 7px;
+            min-height: 0px;
+            // max-height: 150px;
+    
+
+            .previewItem{
+                display: none;
+                position: relative;
+                font-size: 13px;
+                padding: 10px 10px;
+                height: 30px;
+                // letter-spacing: 0.07rem;
+                &.open{
+                    display: block;
+                }    
+                &.act{
+                    background-color: #fff5a0a2;
+                }
+                span{
+                    position: relative;
+                    top: -3px;
+                }
+                .mark{
+                    position: relative;
+                    top: 0px;
+                    color: #F00;
+                }
+            }
+        }
+        ul::-webkit-scrollbar{
+            display: none;
+        }
+
+
+    }
+    .searchResult{
+        display: flex;
+        // display: none;
+        flex-wrap: wrap;
+        border: 1px solid #CCC;
+        width: 95%;
+        margin: 20px auto;
+        border-radius: 7px;
+        user-select: none;
+        
+        .item{
+            width: 33%;
+            // border: 1px solid;
+            position: relative;
+            height: 6rem;
+            cursor: pointer;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            span{
+                position: absolute;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                bottom: 3px;
+            }
+        }
+    }
 }
 
 .imgbox{
+    display: flex;
+    // display: none;
     position: absolute;
     right: 3%;
     margin: auto;
     width: 45%;
     height: 250px;
     // border: 1px solid;
-    display: flex;
     justify-content: center;
     // display: none;
     #primaryColorImg,#mixedColorImg{
@@ -57,6 +184,8 @@ body{
 }
 
 .controlbox{
+    // display: none;
+    user-select: none;
     .colorControl{
         user-select: none;
         // border: 1px solid #F00;
@@ -162,6 +291,7 @@ body{
             padding: 20px 0 20px 0;
             justify-content: center;
             // border: 1px solid;
+            user-select: none;
             
             #opacityRemoveBtn{
                 width: 0px;
@@ -203,6 +333,7 @@ body{
                 margin: 0px 15px;
                 width: 100px;
                 appearance: none;
+                
                 &::-webkit-slider-runnable-track{
                     position: relative;
                     top: 3px;
@@ -219,6 +350,10 @@ body{
                     border-radius: 50%;
                     margin-top: -5px;
                     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.28);
+                }
+                &:focus{
+                    outline: none;
+                   
                 }
                 
             }
@@ -265,6 +400,7 @@ body{
 
 
 .otherMixbox{
+    // display: none;
     position: relative;
     text-align: center;
     margin-top: 20px;
@@ -337,7 +473,25 @@ body{
         flex-direction: column;
         // display: none;
         .row{
-            // width: 370px;
+            span{
+                display: none;
+                position: absolute;
+                top: 0;
+                right: -40px;
+                // display: inline-block;
+                // width: 40px;
+                white-space: nowrap;
+                padding: 3px 5px;
+                font-size: 11px;
+                border-radius: 3px;
+                z-index: 3;
+                background-color: #000;
+                color: #FFF;
+                &.open{
+                    display: block;
+                }
+
+            }
         }
         .blackRow,.redRow,.greenRow,.yellowRow,.orangeRow,.blueRow,.purpleRow,.brownRow{
             margin-top: 8px;

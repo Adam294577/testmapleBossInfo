@@ -9,21 +9,46 @@
 </head>
 <body>
     <div id="app">
+        
         <div class="searchbox">
             <div class="searchBar">
-                <input type="text" placeholder="輸入髮型">
+                <input 
+                @keyup= "searchFn" 
+                @keydown= "searchItemMove"
+                id="searchBar" 
+                type="text" 
+                placeholder="輸入髮型"
+                
+                
+                >
+                <div class="PreviewBtn">
+                    <input @click= "handPreviewResult" id="PreviewBtn" type="checkbox" ><span>收尋預覽</span>
+                </div>
+                <div v-show= "PreviewResultFn" class="resultPreview" >
+                    <ul @wheel= "searchWheelFn" id="searchlist">
+                        <li 
+                        v-for=" list in PreviewResult"
+                        :key= "list.key"
+                        :class="['previewItem', {act: list.status} ,{open: previewItem}]"
+                        @mouseover= "listIshover"
+                        @mouseleave= "listNothover"
+                        @click= "PushResultFn"
+                        v-html= "list.Html">
+                    </li>
+                    </ul>
+                    
+                </div>
             </div>
 
             <div class="searchResult">
-                <div class="item">
-                    <img src="" alt="髮型01">
-                    <span>髮型01</span>
+                <div class="item"
+                v-for= "list in showImgResult"
+                :key= "list.key"
+                >
+                <img :src="list.url" :alt="list.key">
+                    <span>{{list.key}}</span>
                 </div>
-                <div class="item">
-                    <img src="" alt="髮型01">
-                    <span>髮型01</span>
-                </div>
-            </div>
+
 
         </div>
         
@@ -84,7 +109,7 @@
             </div>
         </div>
 
-        <div class="otherMixbox" v-show= "showOtherMix">
+        <div class="otherMixbox" v-if= "showOtherMix">
 
             <div class="title">
                 <h2>其他混染參考</h2>
@@ -112,128 +137,87 @@
             </div>
             <div class="otherDisplay">
                 <div class="brownRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="褐+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="褐+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="褐+綠色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/04.jpg" alt="褐+黃色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/05.jpg" alt="褐+橘色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/06.jpg" alt="褐+藍色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/07.jpg" alt="褐+紫色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/08.jpg" alt="褐+褐色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in brownRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
                 <div class="purpleRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="紫+黑色">
+
+                    <div 
+                    class="imgitem"
+                    v-for= "list in purpleRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="紫+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="紫+綠色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/04.jpg" alt="紫+黃色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/05.jpg" alt="紫+橘色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/06.jpg" alt="紫+藍色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/07.jpg" alt="紫+紫色">
-                    </div>
+
                 </div>
                 <div class="blueRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="藍+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="藍+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="藍+綠色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/04.jpg" alt="藍+黃色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/05.jpg" alt="藍+橘色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/06.jpg" alt="藍+藍色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in blueRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
                 <div class="orangeRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="橘+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="橘+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="橘+綠色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/04.jpg" alt="橘+黃色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/05.jpg" alt="橘+橘色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in orangeRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
                 <div class="yellowRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="黃+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="黃+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="黃+綠色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/04.jpg" alt="黃+黃色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in yellowRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
                 <div class="greenRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="綠+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="綠+紅色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/03.jpg" alt="綠+綠色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in greenRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                         <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
                 <div class="redRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="紅+黑色">
-                    </div>
-                    <div class="imgitem"> 
-                        <img src="./testimg/02.jpg" alt="紅+紅色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in redRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                        <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
+                        
                     </div>
                 </div>
                 
                 <div class="blackRow row">
-                    <div class="imgitem"> 
-                        <img src="./testimg/01.jpg" alt="黑+黑色">
+                    <div 
+                    class="imgitem"
+                    v-for= "list in blackRowImg"
+                    :key = "list.url"
+                    > 
+                        <img :src="list.url" :alt="list.alt" @mouseover= "hoverRowAlt" @mouseleave= "leaveRowAlt">
+                        <span :class="[{open: list.showAlt}]">{{list.alt}}</span>
                     </div>
                 </div>
             </div>
@@ -242,7 +226,6 @@
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
-    <script></script>
 </body>
 </html>
 
