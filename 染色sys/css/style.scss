@@ -7,25 +7,27 @@
 }
 body{
     
-    background-color: #CCC;
+    // background-color: #CCC;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#app{
-    position: relative;
-    background-color: #fff;
-    width: 420px;
-    padding-bottom: 30px;
-    margin-top: 30px;
-
-
+::-webkit-scrollbar{
+    display: none;
 }
+#app{
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 20px;
+}  
+
+
 .searchbox{
-    // display: none;
+    max-width: 800px;
+    margin: auto;
+    // border: 1px solid;
     .searchBar{
         position: relative;
-        // border: 1px solid #F00;
         margin: 10px 0 20px 10px ; 
 
         #searchBar{
@@ -123,13 +125,13 @@ body{
         flex-wrap: wrap;
         border: 1px solid #CCC;
         width: 95%;
+        min-height: 200px;
         margin: 20px auto;
         border-radius: 7px;
         user-select: none;
         
         .item{
-            width: 33%;
-            // border: 1px solid;
+            width: 20%;
             position: relative;
             height: 6rem;
             cursor: pointer;
@@ -151,48 +153,21 @@ body{
     }
 }
 
-.imgbox{
-    display: flex;
-    // display: none;
-    position: absolute;
-    right: 3%;
-    margin: auto;
-    width: 45%;
-    height: 250px;
-    // border: 1px solid;
-    justify-content: center;
-    // display: none;
-    #primaryColorImg,#mixedColorImg{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 3;
-        // opacity: 0.5;
-        // display: none;
 
-    }
-    #mixedColorImg{
-        opacity: 0.5;
-    }
-    #otherMixBtn{
-        position: absolute;
-        bottom: 0;
-        font-weight: bold;
-
-    }
-}
 
 .controlbox{
-    // display: none;
+    position: relative;
     user-select: none;
+    max-width: 800px;
+    margin: auto;
+    // border: 1px solid #F00;
+    // left: 0.5rem;
     .colorControl{
-        user-select: none;
-        // border: 1px solid #F00;
+        width: 200px;
+        // margin: auto;
         position: relative;
-        left: 3%;
         top: 10px;
-        width: 45%;
+        left: 1rem;
         display: flex;
         justify-content: space-between;
         .primaryControl,.mixedControl{
@@ -232,12 +207,14 @@ body{
         }
     }
     .opacityControl{
+        width: 200px;
+        // margin: auto;
         position: relative;
-        left: 3%;
+        left: 1rem;
         margin-top: 30px;
         // border: 1px solid #777;
         border-radius: 3px;
-        width: 45%;
+        
         background-color: #EEE;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
         .titlebox{
@@ -262,6 +239,7 @@ body{
             }
         }
         .ratioBox{
+            width: 100%;
             border-bottom: 1px solid #CCC;
             padding-bottom: 20px;
             position: relative;
@@ -288,7 +266,10 @@ body{
         }
         .controlbox{
             display: flex;
-            padding: 20px 0 20px 0;
+            // display: none;
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
             justify-content: center;
             // border: 1px solid;
             user-select: none;
@@ -331,7 +312,7 @@ body{
                 position: relative;
                 background: transparent;
                 margin: 0px 15px;
-                width: 100px;
+                width: 100%;
                 appearance: none;
                 
                 &::-webkit-slider-runnable-track{
@@ -395,22 +376,67 @@ body{
         }
 
 
-    }    
+    }   
+    .colorControl,.opacityControl{
+        margin-left: 2rem;
+    }
+    .demoImg{
+        // border: 1px solid;
+        display: flex;
+        // display: none;
+        position: absolute;
+        right: 3%;
+        top: 0;
+        // background-color: #EEE;
+        border: 1px solid #EEE;
+        border-radius: 10px;
+        margin: auto;
+        width: 200px;
+        height: 250px;
+        // border: 1px solid;
+        justify-content: center;
+        // display: none;
+        #primaryColorImg,#mixedColorImg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 3;
+            // opacity: 0.5;
+            // display: none;
+    
+        }
+        #mixedColorImg{
+            opacity: 0.5;
+        }
+        #otherMixBtn{
+            position: absolute;
+            bottom: -20px;
+            font-weight: bold;
+    
+        }
+    }     
 }
 
 
 .otherMixbox{
-    // display: none;
+    max-width: 600px;
+    margin: auto;
     position: relative;
     text-align: center;
     margin-top: 20px;
+    height: 800px;
+    padding-bottom: 10px;
+    background-color: #eeeeee;
     // display: none;
+    // border: 1px solid;
+    border-radius: 10px;
     .title{
         margin-bottom: 10px;
     }
     .colorRow,.colorCol{
         display: flex;
-        justify-content: end;
+        justify-content: center;
         .block{
             width: 19px;
             height: 19px;
@@ -447,8 +473,10 @@ body{
         position: relative;
         height: 30px;
         align-items: center;
+        // border: 1px solid;
+        // margin-left: 6%;
         .block{
-            margin-right: 1px;
+            margin-right: 15px;
         }
         .block.brown{
          margin-right: 19px;   
@@ -456,18 +484,36 @@ body{
         
     }
     .colorCol{
+        // border: 1px solid;
         align-items: start;
-        position: relative;
-        left: -20px;
+        position: absolute;
+        left: -0.5rem;
         flex-direction: column-reverse;
         .block{
-            margin-top: 45px;
+            position: relative;
+            margin-top: 62px;
+        }
+        .block.brown{
+            margin-top: 57px;
+        }
+        .block.blue{
+            position: relative;
+            margin-top: 59px;
+        }
+        .block.red{
+            margin-top: 68px;
+        }
+        .block.black{
+            margin-top: 70px;
         }
     }
+
+    
     .otherDisplay{
         position: absolute;
         top: 110px;
-        left: 38px;
+        left: 50%;
+        transform: translateX(-50%);
         // border: 1px solid;
         display: flex;
         flex-direction: column;
@@ -500,8 +546,8 @@ body{
             .imgitem{
                 position: relative;
                 margin-left: 7px;
-                width: 40px;
-                height: 54px;
+                width: 54px;
+                height: 73px;
                 // border: 1px solid #F00;
                 &::after{
                     content: '';
@@ -519,8 +565,8 @@ body{
                     left: 50%;
                     transform: translateX(-50%);
                     // display: none;
-                    width: 40px;
-                    height: 54px;     
+                    width: 54px;
+                    height: 73px;     
                     z-index: 2;       
                     opacity: 0.5;
                 }                
@@ -590,12 +636,183 @@ body{
                 &::after{
                     content: '';
                     background-image: url("../testimg/08.jpg");
+                    
+                }
+            }
+        }
+    }
+    
+}  
+
+
+@media screen and (max-width: 600px) {
+    .searchbox{  
+        .searchResult{
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #CCC;
+            width: 95%;
+            margin: 20px auto;
+            border-radius: 7px;
+            user-select: none;
+            
+            .item{
+                width: 33%;
+                position: relative;
+                height: 6rem;
+                cursor: pointer;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                span{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 12px;
+                    bottom: 3px;
+                }
+            }
+        }          
+
+    }  
+    .otherMixbox{
+        height: 650px;
+        .colorRow{
+            .block{
+                margin-right: 1px;
+            }
+            
+        }        
+        
+        .colorCol{
+            position: relative;
+            left: 0px;
+            
+            .block{
+                position: relative;
+                margin-top: 45px;
+            }
+            .block.brown{
+                margin-top: 45px;
+            }
+            .block.blue{
+                position: relative;
+                margin-top: 45px;
+            }
+            .block.red{
+                margin-top: 45px;
+            }
+            .block.black{
+                margin-top: 45px;
+            }            
+        }
+
+
+        .otherDisplay{
+            .blackRow,.redRow,.greenRow,.yellowRow,.orangeRow,.blueRow,.purpleRow,.brownRow{
+                display: flex;
+                // border: 1px solid;
+    
+                .imgitem{
+                    // display: none;
+                    position: relative;
+                    width: 40px;
+                    height: 54px;
+                    // border: 1px solid #F00;
+                    img{
+                        // display: none;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        // display: none;
+                        width: 40px;
+                        height: 54px;     
+                        z-index: 2;       
+                        opacity: 0.5;
+                    }                
+                }
+            }
+        }   
+
+    }  
+     
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    .controlbox{
+
+        .colorControl,.opacityControl{
+            margin-left: 0.5rem;
+        }
+        .demoImg{
+            border: none;
+        }
+    }  
+    .otherMixbox{
+        height: 550px;
+        .colorRow{
+            .block{
+                margin-right: 0px;
+                margin-left: 19px;
+            }                
+        }
+        .colorCol{
+            position: relative;
+            left: -10px;
+            .block{
+                position: relative;
+                margin-top: 35px;
+            }
+            .block.brown{
+                margin-top: 35px;
+            }
+            .block.blue{
+                position: relative;
+                margin-top: 35px;
+            }
+            .block.red{
+                margin-top: 35px;
+            }
+            .block.black{
+                margin-top: 35px;
+            }             
+        }
+        .otherDisplay{
+            .blackRow,.redRow,.greenRow,.yellowRow,.orangeRow,.blueRow,.purpleRow,.brownRow{
+                display: flex;
+                // border: 1px solid;
+    
+                .imgitem{
+                    // display: none;
+                    position: relative;
+                    width: 32px;
+                    height: 43px;
+                    // border: 1px solid #F00;
+                    img{
+                        // display: none;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        // display: none;
+                        width: 32px;
+                        height: 43px;     
+                        z-index: 2;       
+                        opacity: 0.5;
+                    }                
                 }
             }
         }
 
 
 
+      
     }
-    
 }

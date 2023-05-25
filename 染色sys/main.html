@@ -11,6 +11,7 @@
     <div id="app">
         
         <div class="searchbox">
+            
             <div class="searchBar">
                 <input 
                 @keyup= "searchFn" 
@@ -18,14 +19,18 @@
                 id="searchBar" 
                 type="text" 
                 placeholder="輸入髮型"
-                
-                
                 >
+                
                 <div class="PreviewBtn">
-                    <input @click= "handPreviewResult" id="PreviewBtn" type="checkbox" ><span>收尋預覽</span>
+                    <span>夜景模式</span>
+                    <input @click= "handPreviewResult" id="PreviewBtn" type="checkbox" >
+                    <span>收尋預覽</span>
+
+                   
                 </div>
+                
                 <div v-show= "PreviewResultFn" class="resultPreview" >
-                    <ul @wheel= "searchWheelFn" id="searchlist">
+                    <ul id="searchlist">
                         <li 
                         v-for=" list in PreviewResult"
                         :key= "list.key"
@@ -50,19 +55,14 @@
                 </div>
 
 
+            </div>
         </div>
-        
-        <div class="imgbox">
-                <img id="primaryColorImg" :src="HairPrimaryColor" alt="">
-                <img id="mixedColorImg" :src="HairMixedColor" alt="混色">
-                <div id="otherMixBtn">
-                    <input @click = "handOtherMix" type="checkbox" v-model= "showOtherMix">
-                    其他混染參考
-                </div>
-        </div>
+
 
 
         <div class="controlbox">
+
+
             <div class="colorControl">
                 <div class="primaryControl">
                     <h1>基本顏色</h1>
@@ -106,6 +106,17 @@
                     <div @click= "BtnControlRatio" id="opacityAddBtn"></div>                    
                 </div>
 
+            </div>
+            <div class="demoImg">
+                <div class="showImg">
+                    <img id="primaryColorImg" :src="HairPrimaryColor" alt="">
+                    <img id="mixedColorImg" :src="HairMixedColor" alt="混色">
+                </div>
+                <div id="otherMixBtn">
+                    <div class="demotxt">其他混染參考
+                        <input @click = "handOtherMix" type="checkbox" v-model= "showOtherMix">
+                    </div>
+               </div>
             </div>
         </div>
 

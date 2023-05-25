@@ -190,9 +190,13 @@ window.onload = () =>{
                 let idx = -1;
                 if(searchKey.value === ""){
                     previewArrLength.value = 0
-                    return ;
+                    return "";
                 }
-
+                // 沒有開啟預覽功能
+                if(!PreviewResultFn.value){
+                    previewArrLength.value = 0
+                    return ""
+                }
                 // 預覽功能有開啟才顯示
                 if(PreviewResultFn.value){
                     const filter = searchData.hair["米蘭達"].filter(item=>{
@@ -215,8 +219,6 @@ window.onload = () =>{
                             }
                         })
                     }
-
-         
                     Map.forEach(item=>{
                         // item.status = false
                         if(searchIdx.value === item.idx){
@@ -226,11 +228,7 @@ window.onload = () =>{
                     })
                     previewArrLength.value = Map.length
                     console.log(Map);
-                    
                     return Map
-                }else{
-                    previewArrLength.value = 0
-                    return "沒有開啟預覽功能"
                 }
             })
 
@@ -246,9 +244,13 @@ window.onload = () =>{
                 const Map  = filter.map(item=>{
                     return {key: `${item.key}`, "url": `${item.url}` }
                 })
- 
-                return Map
-
+                if(Map.length === 0){
+                    let innerError = "查詢結果錯誤"
+                    console.log("查詢結果錯誤");
+                    return  {"Html": innerError }
+                }else{
+                    return Map
+                }
             })
 
 

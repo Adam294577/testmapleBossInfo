@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #CCC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,12 +18,19 @@ body {
           align-items: center;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #app {
-  position: relative;
+  width: 100%;
   background-color: #fff;
-  width: 420px;
-  padding-bottom: 30px;
-  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.searchbox {
+  max-width: 800px;
+  margin: auto;
 }
 
 .searchbox .searchBar {
@@ -128,6 +134,7 @@ body {
       flex-wrap: wrap;
   border: 1px solid #CCC;
   width: 95%;
+  min-height: 200px;
   margin: 20px auto;
   border-radius: 7px;
   -webkit-user-select: none;
@@ -137,7 +144,7 @@ body {
 }
 
 .searchbox .searchResult .item {
-  width: 33%;
+  width: 20%;
   position: relative;
   height: 6rem;
   cursor: pointer;
@@ -160,55 +167,21 @@ body {
   bottom: 3px;
 }
 
-.imgbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  right: 3%;
-  margin: auto;
-  width: 45%;
-  height: 250px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.imgbox #primaryColorImg, .imgbox #mixedColorImg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-.imgbox #mixedColorImg {
-  opacity: 0.5;
-}
-
-.imgbox #otherMixBtn {
-  position: absolute;
-  bottom: 0;
-  font-weight: bold;
-}
-
 .controlbox {
+  position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  max-width: 800px;
+  margin: auto;
 }
 
 .controlbox .colorControl {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  width: 200px;
   position: relative;
-  left: 3%;
   top: 10px;
-  width: 45%;
+  left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,11 +230,11 @@ body {
 }
 
 .controlbox .opacityControl {
+  width: 200px;
   position: relative;
-  left: 3%;
+  left: 1rem;
   margin-top: 30px;
   border-radius: 3px;
-  width: 45%;
   background-color: #EEE;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
@@ -293,6 +266,7 @@ body {
 }
 
 .controlbox .opacityControl .ratioBox {
+  width: 100%;
   border-bottom: 1px solid #CCC;
   padding-bottom: 20px;
   position: relative;
@@ -327,7 +301,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 0 20px 0;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -373,7 +349,7 @@ body {
   position: relative;
   background: transparent;
   margin: 0px 15px;
-  width: 100px;
+  width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -437,10 +413,56 @@ body {
   background-size: cover;
 }
 
+.controlbox .colorControl, .controlbox .opacityControl {
+  margin-left: 2rem;
+}
+
+.controlbox .demoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 3%;
+  top: 0;
+  border: 1px solid #EEE;
+  border-radius: 10px;
+  margin: auto;
+  width: 200px;
+  height: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.controlbox .demoImg #primaryColorImg, .controlbox .demoImg #mixedColorImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.controlbox .demoImg #mixedColorImg {
+  opacity: 0.5;
+}
+
+.controlbox .demoImg #otherMixBtn {
+  position: absolute;
+  bottom: -20px;
+  font-weight: bold;
+}
+
 .otherMixbox {
+  max-width: 600px;
+  margin: auto;
   position: relative;
   text-align: center;
   margin-top: 20px;
+  height: 800px;
+  padding-bottom: 10px;
+  background-color: #eeeeee;
+  border-radius: 10px;
 }
 
 .otherMixbox .title {
@@ -451,9 +473,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .otherMixbox .colorRow .block, .otherMixbox .colorCol .block {
@@ -503,7 +525,7 @@ body {
 }
 
 .otherMixbox .colorRow .block {
-  margin-right: 1px;
+  margin-right: 15px;
 }
 
 .otherMixbox .colorRow .block.brown {
@@ -514,8 +536,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  position: relative;
-  left: -20px;
+  position: absolute;
+  left: -0.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -523,13 +545,33 @@ body {
 }
 
 .otherMixbox .colorCol .block {
-  margin-top: 45px;
+  position: relative;
+  margin-top: 62px;
+}
+
+.otherMixbox .colorCol .block.brown {
+  margin-top: 57px;
+}
+
+.otherMixbox .colorCol .block.blue {
+  position: relative;
+  margin-top: 59px;
+}
+
+.otherMixbox .colorCol .block.red {
+  margin-top: 68px;
+}
+
+.otherMixbox .colorCol .block.black {
+  margin-top: 70px;
 }
 
 .otherMixbox .otherDisplay {
   position: absolute;
   top: 110px;
-  left: 38px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,8 +609,8 @@ body {
 .otherMixbox .otherDisplay .blackRow .imgitem, .otherMixbox .otherDisplay .redRow .imgitem, .otherMixbox .otherDisplay .greenRow .imgitem, .otherMixbox .otherDisplay .yellowRow .imgitem, .otherMixbox .otherDisplay .orangeRow .imgitem, .otherMixbox .otherDisplay .blueRow .imgitem, .otherMixbox .otherDisplay .purpleRow .imgitem, .otherMixbox .otherDisplay .brownRow .imgitem {
   position: relative;
   margin-left: 7px;
-  width: 40px;
-  height: 54px;
+  width: 54px;
+  height: 73px;
 }
 
 .otherMixbox .otherDisplay .blackRow .imgitem::after, .otherMixbox .otherDisplay .redRow .imgitem::after, .otherMixbox .otherDisplay .greenRow .imgitem::after, .otherMixbox .otherDisplay .yellowRow .imgitem::after, .otherMixbox .otherDisplay .orangeRow .imgitem::after, .otherMixbox .otherDisplay .blueRow .imgitem::after, .otherMixbox .otherDisplay .purpleRow .imgitem::after, .otherMixbox .otherDisplay .brownRow .imgitem::after {
@@ -588,8 +630,8 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40px;
-  height: 54px;
+  width: 54px;
+  height: 73px;
   z-index: 2;
   opacity: 0.5;
 }
@@ -644,5 +686,150 @@ body {
 .otherMixbox .otherDisplay .brownRow .imgitem::after {
   content: '';
   background-image: url("../testimg/08.jpg");
+}
+
+@media screen and (max-width: 600px) {
+  .searchbox .searchResult {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border: 1px solid #CCC;
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 7px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .searchbox .searchResult .item {
+    width: 33%;
+    position: relative;
+    height: 6rem;
+    cursor: pointer;
+  }
+  .searchbox .searchResult .item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .searchbox .searchResult .item span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    bottom: 3px;
+  }
+  .otherMixbox {
+    height: 650px;
+  }
+  .otherMixbox .colorRow .block {
+    margin-right: 1px;
+  }
+  .otherMixbox .colorCol {
+    position: relative;
+    left: 0px;
+  }
+  .otherMixbox .colorCol .block {
+    position: relative;
+    margin-top: 45px;
+  }
+  .otherMixbox .colorCol .block.brown {
+    margin-top: 45px;
+  }
+  .otherMixbox .colorCol .block.blue {
+    position: relative;
+    margin-top: 45px;
+  }
+  .otherMixbox .colorCol .block.red {
+    margin-top: 45px;
+  }
+  .otherMixbox .colorCol .block.black {
+    margin-top: 45px;
+  }
+  .otherMixbox .otherDisplay .blackRow, .otherMixbox .otherDisplay .redRow, .otherMixbox .otherDisplay .greenRow, .otherMixbox .otherDisplay .yellowRow, .otherMixbox .otherDisplay .orangeRow, .otherMixbox .otherDisplay .blueRow, .otherMixbox .otherDisplay .purpleRow, .otherMixbox .otherDisplay .brownRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .otherMixbox .otherDisplay .blackRow .imgitem, .otherMixbox .otherDisplay .redRow .imgitem, .otherMixbox .otherDisplay .greenRow .imgitem, .otherMixbox .otherDisplay .yellowRow .imgitem, .otherMixbox .otherDisplay .orangeRow .imgitem, .otherMixbox .otherDisplay .blueRow .imgitem, .otherMixbox .otherDisplay .purpleRow .imgitem, .otherMixbox .otherDisplay .brownRow .imgitem {
+    position: relative;
+    width: 40px;
+    height: 54px;
+  }
+  .otherMixbox .otherDisplay .blackRow .imgitem img, .otherMixbox .otherDisplay .redRow .imgitem img, .otherMixbox .otherDisplay .greenRow .imgitem img, .otherMixbox .otherDisplay .yellowRow .imgitem img, .otherMixbox .otherDisplay .orangeRow .imgitem img, .otherMixbox .otherDisplay .blueRow .imgitem img, .otherMixbox .otherDisplay .purpleRow .imgitem img, .otherMixbox .otherDisplay .brownRow .imgitem img {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 40px;
+    height: 54px;
+    z-index: 2;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .controlbox .colorControl, .controlbox .opacityControl {
+    margin-left: 0.5rem;
+  }
+  .controlbox .demoImg {
+    border: none;
+  }
+  .otherMixbox {
+    height: 550px;
+  }
+  .otherMixbox .colorRow .block {
+    margin-right: 0px;
+    margin-left: 19px;
+  }
+  .otherMixbox .colorCol {
+    position: relative;
+    left: -10px;
+  }
+  .otherMixbox .colorCol .block {
+    position: relative;
+    margin-top: 35px;
+  }
+  .otherMixbox .colorCol .block.brown {
+    margin-top: 35px;
+  }
+  .otherMixbox .colorCol .block.blue {
+    position: relative;
+    margin-top: 35px;
+  }
+  .otherMixbox .colorCol .block.red {
+    margin-top: 35px;
+  }
+  .otherMixbox .colorCol .block.black {
+    margin-top: 35px;
+  }
+  .otherMixbox .otherDisplay .blackRow, .otherMixbox .otherDisplay .redRow, .otherMixbox .otherDisplay .greenRow, .otherMixbox .otherDisplay .yellowRow, .otherMixbox .otherDisplay .orangeRow, .otherMixbox .otherDisplay .blueRow, .otherMixbox .otherDisplay .purpleRow, .otherMixbox .otherDisplay .brownRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .otherMixbox .otherDisplay .blackRow .imgitem, .otherMixbox .otherDisplay .redRow .imgitem, .otherMixbox .otherDisplay .greenRow .imgitem, .otherMixbox .otherDisplay .yellowRow .imgitem, .otherMixbox .otherDisplay .orangeRow .imgitem, .otherMixbox .otherDisplay .blueRow .imgitem, .otherMixbox .otherDisplay .purpleRow .imgitem, .otherMixbox .otherDisplay .brownRow .imgitem {
+    position: relative;
+    width: 32px;
+    height: 43px;
+  }
+  .otherMixbox .otherDisplay .blackRow .imgitem img, .otherMixbox .otherDisplay .redRow .imgitem img, .otherMixbox .otherDisplay .greenRow .imgitem img, .otherMixbox .otherDisplay .yellowRow .imgitem img, .otherMixbox .otherDisplay .orangeRow .imgitem img, .otherMixbox .otherDisplay .blueRow .imgitem img, .otherMixbox .otherDisplay .purpleRow .imgitem img, .otherMixbox .otherDisplay .brownRow .imgitem img {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 32px;
+    height: 43px;
+    z-index: 2;
+    opacity: 0.5;
+  }
 }
 /*# sourceMappingURL=style.css.map */
