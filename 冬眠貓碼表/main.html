@@ -13,32 +13,44 @@
 <body>
     <div class="container">
         <div class="catbody">
+            <div class="cathead">
+                <div class="eyes"></div>
+                <div class="bread">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="mouth">
+                    <div class="water"></div>
+                </div>
+                
+            </div>
             <div class="cattail happy">
                 <!-- <img src="./img/happyTail.png" alt=""> -->
             </div>
-        </div>
-        
-        <div class="counterFn">
-            <div class="title">我是碼表</div>
-            <h1 id="counter">
-                <img class="numImg" src="" alt="h">
-                :
-                <img class="numImg" src="" alt="M">
-                <img class="numImg" src="" alt="m">
-                :
-                <img class="numImg" src="" alt="S">
-                <img class="numImg" src="" alt="s">
-             </h1>
-             <div class="btnBox">
-                <button id="StartBtn">Start</button>
-                <button id="StopBtn">Stop</button>
-                <button id="clearBtn">clear</button>
+
+            <div class="counterBox" id="counter">
+                    <img  src="./img/n0.png" alt="H">
+                    <img  src="./img/n0.png" alt="h">
+                    <img  src="./img/colon.png" alt="冒號">
+                    <img  src="./img/n0.png" alt="M">
+                    <img  src="./img/n0.png" alt="m">
+                    <img  src="./img/colon.png" alt="冒號">
+                    <img  src="./img/n0.png" alt="S">
+                    <img  src="./img/n0.png" alt="s">
+            </div>
+            <div class="btnBox">
+                <div class="btnItem" id="StartBtn">
+                        <img src="./img/start.png" alt="">
+                </div>
+                <div class="btnItem" id="StopBtn">
+                        <img src="./img/stop.png" alt="">
+                </div>
+                <div class="btnItem" id="ClearBtn">
+                        <img src="./img/clear.png" alt="">
+                </div>
              </div>
+
         </div>
-        <div class="testDelay">123</div>
-
-     
-
     </div>
     
 
@@ -47,154 +59,5 @@
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-<script>
-
-
-    const counterFn = () =>{
-        let eventDateProvided = '2023-12-25T00:00:00';
-        let convertEventDate = moment.utc(eventDateProvided)
-        
-
-        let counter = document.getElementById("counter")
-        let StartBtn = document.getElementById("StartBtn")
-        let StopBtn =document.getElementById("StopBtn")
-        let clearBtn = document.getElementById("clearBtn")
-        let stopT1 = null
-        let stopT2 = null
-        let Timearr  = []
-        let NumImg={
-            "img0" : "",
-        }
-        const clockRunner = (arr) =>{
-        arr = []
-        convertEventDate.add(1,'s');
-        counter.innerHTML = convertEventDate.format('H:mm:ss')
-        arr[0] = convertEventDate.format('H')
-        arr[1] = convertEventDate.format('mm').slice(0,1)
-        arr[2] = convertEventDate.format('mm').slice(1)
-        arr[3] = convertEventDate.format('ss').slice(0,1)
-        arr[4] = convertEventDate.format('ss').slice(1)
-        // console.log(arr);
-        Timearr  = arr
-        return Timearr
-        }
-        counter.innerHTML = convertEventDate.format('H:mm:ss')
-
-        const numTranImgFn = (arr) =>{
-                arr = Timearr
-                // console.log(Timearr);
-                let ImgArr = arr.map(url => {
-                    if(url === "0") {
-                        return url = "轉成0圖檔"
-                    }
-                    if(url === "1") {
-                        return url = "轉成1圖檔"
-                    }
-                    if(url === "2") {
-                        return url = "轉成2圖檔"
-                    }
-                    if(url === "3") {
-                        return url = "轉成3圖檔"
-                    }
-                    if(url === "4") {
-                        return url = "轉成4圖檔"
-                    }
-                    if(url === "5") {
-                        return url = "轉成5圖檔"
-                    }
-                    if(url === "6") {
-                        return url = "轉成6圖檔"
-                    }
-                    if(url === "7") {
-                        return url = "轉成7圖檔"
-                    }
-                    if(url === "8") {
-                        return url = "轉成8圖檔"
-                    }
-                    if(url === "9") {
-                        return url = "轉成9圖檔"
-                    }
-                
-                });
-                const randerImg = ()=>{
-                    let html = ''
-                    ImgArr.forEach(url => {
-                        html += `
-                        <img src="" alt="${url}">
-                        `
-                    });
-                
-                    counter.innerHTML = html
-                }
-                randerImg()
-
-            }
-        
-        
-        const clearzero = () =>{
-            eventDateProvided = '2023-12-25T00:00:00';
-            convertEventDate = moment.utc(eventDateProvided)
-            let html  = ''
-            html += `
-            <img class="numImg" src="" alt="hr">
-            <img class="numImg" src="" alt="M">
-            <img class="numImg" src="" alt="m">
-            <img class="numImg" src="" alt="S">
-            <img class="numImg" src="" alt="s">
-            `
-            counter.innerHTML = html
-            counter.innerHTML = convertEventDate.format('H:mm:ss')
-        }
-        const runFn = ()=>{
-            stopT1 = setInterval(clockRunner, 1000);
-            // stopT2 = setInterval(numTranImgFn, 1000);
-            StartBtn.removeEventListener("click",runFn)
-            clearBtn.removeEventListener("click",clearzero)
-        
-        
-        
-        }
-        const stopFn = () =>{
-            StartBtn.addEventListener("click",runFn)
-            clearBtn.addEventListener("click",clearzero)
-            clearInterval(stopT1)
-            clearInterval(stopT2)
-        }
-        StartBtn.addEventListener("click",runFn)
-        StopBtn.addEventListener("click",stopFn)
-        clearBtn.addEventListener("click",clearzero)
-
-}
-
-    const CatStatusFn = () =>{
-        let tail = document.getElementsByClassName("cattail")[0]
-        let catbody = document.getElementsByClassName("catbody")[0]
-        const tailHappytoAngry = () =>{
-            console.log(5207);
-            tail.classList.remove("happy")
-            tail.classList.add("angry")
-        }
-        const tailAngrytoHappy = () =>{
-            console.log(5207);
-            tail.classList.remove("angry")
-            tail.classList.add("happy")
-        }
-        catbody.addEventListener("mouseover",tailHappytoAngry)
-        catbody.addEventListener("mouseleave",tailAngrytoHappy)
-    }
-    CatStatusFn()
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
+<script src="./JS/main.js" ></script>
 </html>

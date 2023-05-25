@@ -6,19 +6,20 @@
 }
 body{
     background: #CCC;
-    height: 100vh;
     position: relative;
 }
 
 .container{
+    margin-top: 300px;
+    width: 100%;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 800px) {
         .catbody{
             position: absolute;
-            width: 500px;
-            height: 311px;
-            border: 1px solid #F00;
-            left: 3%;
+            width: 725px;
+            height: 380px;
+            // border: 1px solid #F00;
+            left: 10%;
             top: 3%;
             &::after{
                 content: '';
@@ -29,64 +30,86 @@ body{
                 height: 100%;
                 // height: 1px;
                 // border: 1px solid #F00;
-                background-image: url("../img/neko_s.png");
+                background-image: url("../img/body.png");
                 background-size: contain;
                 background-repeat: no-repeat;
-            }        
-            .cattail{
+            }   
+            .cathead{
+                z-index: 2;
+                width: 463px;
+                height: 395px;
+                // border: 1px solid;
                 position: absolute;
-                display: block;
-                left: 57%;
-                bottom: 0;
-                width: 216px;
-                height: 200px;
-                border: 1px solid;
-                background-image: url("../img/tailangry_s.png");
-                background-image: url("../img/tailsleep_s.png");
-                background-image: url("../img/tailhappy_s.png");
+                left: -4%;
+                top: -63%;
+                background-image: url("../img/head.png");
+                background-size: contain;
                 background-repeat: no-repeat;
-          
-    
-            }
-        }        
+                .eyes{
+                    // border: 1px solid #00F;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 207px;
+                    height: 61px;
+                    background-image: url("../img/eyes_h.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;                    
+                }
+                .bread{
+                    position: absolute;
+                    width: 100%;
+                    height: 67px;
+                    // border: 1px solid #00F;
+                    top: 63%;
+                    .left,.right{
+                        position: absolute;
+                        height: 67px;
+                        width: 98px;
+                        background-size: contain;
+                        background-repeat: no-repeat;      
+                    }
+                    .left{
+                        // border: 1px solid #FF0;
+                        background-image: url("../img/bread_l.png");
+                        
+                    }
+                    .right{
+                        right: 0;
+                        background-image: url("../img/bread_r.png");
+                    }
+                }
+                .mouth{
+                    position: absolute;
+                    left: 50%;
+                    top: 67%;
+                    transform: translateX(-50%);
+                    width: 66px;
+                    height: 67px;
+                    background-image: url("../img/mouth_h.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;                    
+                }
 
-    }
-    @media screen and (min-width: 1200px) {
-        .catbody{
-            position: absolute;
-            width: 1107px;
-            height: 688px;
-            border: 1px solid #F00;
-            left: 3%;
-            top: 3%;
-            &::after{
-                content: '';
-                position: absolute;
-                top: 0;
-                display: block;
-                width: 100%;
-                height: 100%;
-                // height: 1px;
-                // border: 1px solid #F00;
-                background-image: url("../img/neko.png");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }        
+            }     
             .cattail{
                 position: absolute;
+                // z-index: 2;
                 display: block;
-                left: 57%;
-                bottom: 0;
-                width: 477px;
-                height: 441px;
-                border: 1px solid;
-                background-image: url("../img/tailangry.png");
-                background-image: url("../img/tailsleep.png");
-                background-image: url("../img/tailhappy.png");
+                top: -3%;
+                left: 85%;
+                width: 414px;
+                height: 379px;
+                // border: 1px solid;
+                background-image: url("../img/tail_a.png");
+                background-image: url("../img/tail_h.png");
+                background-image: url("../img/tail_s.png");
+                background-position: cover;
                 background-repeat: no-repeat;
                 &.happy{
                     animation: tailHappy 2s linear infinite;
-                    // animation-delay: 0.5s;
+                    animation-delay: 0.5s;
                 }
                 &.angry{
                       animation: tailAngry 2s linear infinite;
@@ -99,95 +122,95 @@ body{
             }
             @keyframes tailHappy {
                 0%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 42%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 43%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 57%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 58%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 71%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 72%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 85%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 86%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 100%{
-                    background-image: url("../img/tailsleep.png");
+                    background-image: url("../img/tail_s.png");
                 }
                 
             }
             @keyframes tailAngry {
                 0%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 1%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
 
 
                 8%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 9%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
 
                 27%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 28%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 35%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 36%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
 
                 57%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 58%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 65%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
 
                 66%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
 
                 90%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
                 91%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 98%{
-                    background-image: url("../img/tailangry.png");
+                    background-image: url("../img/tail_a.png");
                 }
                 99%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
 
                 100%{
-                    background-image: url("../img/tailhappy.png");
+                    background-image: url("../img/tail_h.png");
                 }
 
 
@@ -200,54 +223,85 @@ body{
 
     }
 
-    .counterFn{
-        display: none;
-        .title{
-            padding-top: 30px;
-            width: 300px;
-            text-align: center;
-        }
-        #counter{
-            display: flex;
-            width: 90%;
-            margin: 0 auto;
-            margin-top: 70px;
-            /* margin-left: 20px; */
-            justify-content: space-around;
-            /* border: 1px solid #F00; */
-            .numImg{
-                border: 1px solid;
-            }
-        }    
-        .btnBox{
-            position: relative;
-            margin-top: 30px;
-            left: 50px;
-            button{
-                padding: 7px;
-                margin: 10px;
-            }
-            
-        }        
-
-    }
-
-    // 模擬happy轉生氣的狀態變化
-    .testDelay{
+    .counterBox{
         position: absolute;
-        right: 10%;
-        width: 300px;
-        height: 300px;
-        background-color: #F00;
-        transition: 0.5s;
-        transition-delay: 0s;
-        transform-origin: top;
+        bottom: 60px;
+        left: 80px;
+        border: 1px solid;
+        height: 80px;
+        width: 320px;
+        z-index: 3;
+        // display: none;
+        background-color: #d9d9d9;
+        border: 7px solid #000;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    .testDelay:hover{
-        background-color: aqua;
-        transform: scale(0.1);
-        // transition-delay: 1s;
+    .btnBox{
+        z-index: 3;
+        // border: 1px solid;
+        height: 200px;
+        width: 350px;
+        position: absolute;
+        right: -15px;
+        top: 18%;
+        .btnItem{
+            height: 70px;
+            width: 120px;
+            border: 7px solid #000;
+            background-color: #d9d9d9;
+            border-radius: 15px;
+            transition: 0.5s;
+            &.act{
+                background: #ffe574;
+            }
+            span{
+                display: inline-block;
+                width: 108px;
+                height: 45px;
+            }
+        }
+        .btnItem:nth-child(1){
+            margin-left: 10px;
+        }
+        .btnItem:nth-child(2){
+            margin-left: 90px;
+            margin-top: 7px;
+        }
+        .btnItem:nth-child(3){
+            margin-left: 170px;
+            margin-top: 14px;
+        }
+        // .btnItem:hover{
+        //     background: #ffe574;
+        //     transition: 0.5s;
+        // }
+        #StartBtn,#StopBtn,#ClearBtn{
+            position: relative;
+        }
+        #StartBtn{
+            img{
+                position: relative;
+                top: 5px;
+                left: -2px;
+            }
+        }
+        #StopBtn{
+            img{
+                position: relative;
+                top: 7px;
+                left: 2px;
+            }
+        }
+        #ClearBtn{
+            img{
+                position: relative;
+                top: 9px;
+            }
+        }
         
-    }
-
+    }   
 }
