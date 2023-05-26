@@ -8,10 +8,17 @@
 body {
   background: #CCC;
   position: relative;
+  height: 100vh;
 }
 
 .container {
-  margin-top: 300px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  left: 10%;
+  top: 30%;
   width: 100%;
 }
 
@@ -20,8 +27,6 @@ body {
     position: absolute;
     width: 725px;
     height: 380px;
-    left: 10%;
-    top: 3%;
   }
   .container .catbody::after {
     content: '';
@@ -359,93 +364,147 @@ body {
       background-image: url("../img/tail_h.png");
     }
   }
-}
-
-.container .counterBox {
-  position: absolute;
-  bottom: 60px;
-  left: 80px;
-  border: 1px solid;
-  height: 80px;
-  width: 320px;
-  z-index: 3;
-  background-color: #d9d9d9;
-  border: 7px solid #000;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.container .btnBox {
-  z-index: 3;
-  height: 200px;
-  width: 350px;
-  position: absolute;
-  right: -15px;
-  top: 18%;
-}
-
-.container .btnBox .btnItem {
-  height: 70px;
-  width: 120px;
-  border: 7px solid #000;
-  background-color: #d9d9d9;
-  border-radius: 15px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.container .btnBox .btnItem.act {
-  background: #ffe574;
-}
-
-.container .btnBox .btnItem span {
-  display: inline-block;
-  width: 108px;
-  height: 45px;
-}
-
-.container .btnBox .btnItem:nth-child(1) {
-  margin-left: 10px;
-}
-
-.container .btnBox .btnItem:nth-child(2) {
-  margin-left: 90px;
-  margin-top: 7px;
-}
-
-.container .btnBox .btnItem:nth-child(3) {
-  margin-left: 170px;
-  margin-top: 14px;
-}
-
-.container .btnBox #StartBtn, .container .btnBox #StopBtn, .container .btnBox #ClearBtn {
-  position: relative;
-}
-
-.container .btnBox #StartBtn img {
-  position: relative;
-  top: 5px;
-  left: -2px;
-}
-
-.container .btnBox #StopBtn img {
-  position: relative;
-  top: 7px;
-  left: 2px;
-}
-
-.container .btnBox #ClearBtn img {
-  position: relative;
-  top: 9px;
+  .container .catbody .stopwatchBox, .container .catbody .counterBox {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    height: 100px;
+    width: 320px;
+    z-index: 3;
+    background-color: #d9d9d9;
+    border: 7px solid #000;
+    border-radius: 15px;
+  }
+  .container .catbody .stopwatchBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .container .catbody .counterBox {
+    overflow: hidden;
+    display: block;
+  }
+  .container .catbody .counterBox .nowNum, .container .catbody .counterBox .nextNum, .container .catbody .counterBox .lastNum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: absolute;
+  }
+  .container .catbody .counterBox .nowNum {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .container .catbody .counterBox .nextNum {
+    top: -20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
+  }
+  .container .catbody .counterBox .lastNum {
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .container .catbody .counterBox .nextNum, .container .catbody .counterBox .lastNum {
+    display: none;
+  }
+  .container .catbody .counterBox .nextNum img[alt="colon"], .container .catbody .counterBox .lastNum img[alt="colon"] {
+    opacity: 0;
+  }
+  .container .catbody .counterBox .nextNum img, .container .catbody .counterBox .lastNum img {
+    opacity: 0.1;
+  }
+  .container .catbody .btnBox {
+    z-index: 3;
+    height: 200px;
+    width: 350px;
+    position: absolute;
+    right: -15px;
+    top: 18%;
+  }
+  .container .catbody .btnBox .btnItem {
+    height: 70px;
+    width: 120px;
+    border: 7px solid #000;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .container .catbody .btnBox .btnItem.act {
+    background: #ffe574;
+  }
+  .container .catbody .btnBox .btnItem span {
+    display: inline-block;
+    width: 108px;
+    height: 45px;
+  }
+  .container .catbody .btnBox .btnItem:nth-child(1) {
+    margin-left: 10px;
+  }
+  .container .catbody .btnBox .btnItem:nth-child(2) {
+    margin-left: 90px;
+    margin-top: 7px;
+  }
+  .container .catbody .btnBox .btnItem:nth-child(3) {
+    margin-left: 170px;
+    margin-top: 14px;
+  }
+  .container .catbody .btnBox #StartBtn, .container .catbody .btnBox #StopBtn, .container .catbody .btnBox #ClearBtn {
+    position: relative;
+  }
+  .container .catbody .btnBox #StartBtn img, .container .catbody .btnBox #MinBtn img {
+    position: relative;
+    top: 5px;
+    left: -2px;
+  }
+  .container .catbody .btnBox #StopBtn img, .container .catbody .btnBox #SecBtn img {
+    position: relative;
+    top: 7px;
+    left: 2px;
+  }
+  .container .catbody .btnBox #ClearBtn img, .container .catbody .btnBox #countClearBtn img {
+    position: relative;
+    top: 9px;
+  }
+  .container .catbody .funtionchoice {
+    text-align: center;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border: 1px solid #333;
+    border-radius: 7px;
+    width: 250px;
+  }
+  .container .catbody .funtionchoice button {
+    width: 70px;
+    border: none;
+    padding: 7px;
+    margin: 15px 7px;
+  }
+  .container .catbody .funtionchoice button.act {
+    background-color: #ffdc69;
+  }
 }
 /*# sourceMappingURL=style.css.map */

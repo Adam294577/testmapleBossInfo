@@ -1,11 +1,29 @@
 window.onload = ()=>{
 
+const changeFn = () =>{
+    let stopwatch = document.getElementById("stopwatchBtn")
+    let counterBtn = document.getElementById("counterBtn")
 
+    const ActstopwatchFn = () =>{
+        stopwatch.classList.add("act")
+        counterBtn.classList.remove("act")
 
-const counterFn = () =>{
+    }
+    const ActcounterFn = () =>{
+        stopwatch.classList.remove("act")
+        counterBtn.classList.add("act")
+    }
+
+    stopwatch.addEventListener("click",ActstopwatchFn)
+    counterBtn.addEventListener("click",ActcounterFn)
+    
+}
+changeFn()
+
+const stopwatchFn = () =>{
     let eventDateProvided = '2077-12-25T00:00:00';
     let convertEventDate = moment.utc(eventDateProvided)
-    let counter = document.getElementById("counter")
+    let stopwatch = document.getElementById("stopwatch")
     let StartBtn = document.getElementById("StartBtn")
     let StopBtn =document.getElementById("StopBtn")
     let clearBtn = document.getElementById("ClearBtn")
@@ -120,7 +138,7 @@ const counterFn = () =>{
                 `
             });
         
-            counter.innerHTML = html
+            stopwatch.innerHTML = html
         }
         imgOnload()
         randerImg()
@@ -129,7 +147,6 @@ const counterFn = () =>{
     numTranImgFn() 
     }
 
-    // counter.innerHTML = convertEventDate.format('HH:mm:ss')
     const Sleepstatus = () =>{
 
         if (eyes.classList.contains("sleep")){
@@ -219,8 +236,7 @@ const counterFn = () =>{
                 <img  src="./img/n0.png" alt="S">
                 <img  src="./img/n0.png" alt="s">
         `
-        counter.innerHTML = html
-        // counter.innerHTML = convertEventDate.format('HH:mm:ss')
+        stopwatch.innerHTML = html
     }
     const runFn = (el)=>{
         btnClickTransition(el.currentTarget)
@@ -258,14 +274,11 @@ const counterFn = () =>{
     }
 
 }
+stopwatchFn()
 
-    
+const counterFn = ()=>{
 
-
-
-
-
-    counterFn()
-  
+}   
+counterFn()
 
 }
