@@ -1,3 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 120vh;
+}
+
+body::-webkit-scrollbar {
+  width: 70px;
+}
+
 #chat_box {
   margin-left: 20px;
   margin-top: 20px;
@@ -218,13 +233,27 @@
   background-color: #344146a1;
 }
 
-.ChatSyscontainer .ChatBoxContainer .outline .contentBox .DragIcon #DragIcon {
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox {
+  position: relative;
+}
+
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox .iconBar {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  overflow: hidden;
+  background: #000;
+  z-index: 2;
+}
+
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox .iconBar .DragIcon #DragIcon {
   position: absolute;
   left: 3px;
   top: 4px;
 }
 
-.ChatSyscontainer .ChatBoxContainer .outline .contentBox .ZoomOutIcon #ZoomOutBtn {
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox .iconBar .ZoomOutIcon #ZoomOutBtn {
   position: absolute;
   right: 3px;
   top: 4px;
@@ -236,8 +265,27 @@
   padding-left: 7px;
   color: #FFF;
   font-weight: lighter;
-  font-size: 17px;
-  letter-spacing: 0.1px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: 1px solid #FF0;
+  position: relative;
+  height: 250px;
+  top: -150px;
+  overflow-y: overlay;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox .UserTxt span {
+  position: relative;
+  padding-left: 3px;
+  display: block;
+}
+
+.ChatSyscontainer .ChatBoxContainer .outline .contentBox ::-webkit-scrollbar {
+  display: block;
 }
 
 .ChatSyscontainer .ChatBarContainer {
