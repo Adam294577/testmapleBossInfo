@@ -2,11 +2,9 @@ window.onload = ()=>{
 
 
 
-    const counterFn = () =>{
+const counterFn = () =>{
     let eventDateProvided = '2077-12-25T00:00:00';
     let convertEventDate = moment.utc(eventDateProvided)
-    
-
     let counter = document.getElementById("counter")
     let StartBtn = document.getElementById("StartBtn")
     let StopBtn =document.getElementById("StopBtn")
@@ -48,6 +46,13 @@ window.onload = ()=>{
         "alt" : "colon"
     },
     ]
+    
+    let tail = document.getElementsByClassName("cattail")[0]
+    let eyes = document.getElementsByClassName("eyes")[0]
+    let mouth = document.getElementsByClassName("mouth")[0]
+    let catbody = document.getElementsByClassName("catbody")[0]
+    let water = document.getElementsByClassName("water")[0]
+
     const imgOnload= () =>{
         let loadImg = new Image()
         NumImg.forEach(item =>{
@@ -59,7 +64,6 @@ window.onload = ()=>{
 
     const clockRunner = () =>{
     convertEventDate.add(1,'s');
-    counter.innerHTML = convertEventDate.format('HH:mm:ss')
     Timearr[0] = convertEventDate.format('HH').slice(0,1)
     Timearr[1] = convertEventDate.format('HH').slice(1)
     Timearr[2] = "colon"
@@ -68,11 +72,9 @@ window.onload = ()=>{
     Timearr[5] = "colon"
     Timearr[6] = convertEventDate.format('ss').slice(0,1)
     Timearr[7] = convertEventDate.format('ss').slice(1)
-    console.log(Timearr);
-        console.log();
-    const numTranImgFn = (arr) =>{
-        arr = Timearr
-        let ImgArr = arr.map(url => {
+    // console.log(Timearr);
+    const numTranImgFn = () =>{
+        let ImgArr = Timearr.map(url => {
             if(url === "colon"){
                 return {"url" : NumImg[10].url, "alt" : NumImg[10].alt}
             }
@@ -108,8 +110,9 @@ window.onload = ()=>{
             }
         
         });
-        console.log(ImgArr);
+        // console.log(ImgArr);
         const randerImg = ()=>{
+            
             let html = ''
             ImgArr.forEach(item => {
                 html += `
@@ -119,6 +122,7 @@ window.onload = ()=>{
         
             counter.innerHTML = html
         }
+        imgOnload()
         randerImg()
 
     }   
@@ -126,6 +130,75 @@ window.onload = ()=>{
     }
 
     // counter.innerHTML = convertEventDate.format('HH:mm:ss')
+    const Sleepstatus = () =>{
+
+        if (eyes.classList.contains("sleep")){
+
+            water.style.display  = "block"
+            water.style.opacity  = 0.1
+
+            if( mouth.classList.contains("sleep") & tail.classList.contains("sleep")){
+                water.style.opacity  = 0.5
+            }
+
+
+            setTimeout(()=>{
+                water.style.opacity = 0.5
+            },500)
+
+            tail.classList.remove("happy")
+            mouth.classList.remove("happy")
+            tail.classList.remove("angry")
+            mouth.classList.remove("angry")
+
+            mouth.classList.add("sleep")
+            tail.classList.add("sleep")
+
+
+
+
+            
+            
+
+
+            catbody.removeEventListener("mouseover",HappytoAngry)
+            catbody.removeEventListener("mouseleave",AngrytoHappy)
+
+        }else{
+            water.style.display  = "none"
+
+            catbody.addEventListener("mouseover",HappytoAngry)
+            catbody.addEventListener("mouseleave",AngrytoHappy)
+        }
+
+ 
+    }
+    
+    const HappytoAngry = () =>{
+        tail.classList.remove("happy")
+        tail.classList.remove("sleep")
+        tail.classList.add("angry")
+        eyes.classList.remove("happy")
+        eyes.classList.remove("sleep")
+        eyes.classList.add("angry")
+        mouth.classList.remove("happy")
+        mouth.classList.remove("sleep")
+        mouth.classList.add("angry")
+    }
+    const AngrytoHappy = () =>{
+        tail.classList.remove("angry")
+        tail.classList.remove("sleep")
+        tail.classList.add("happy")
+        eyes.classList.remove("sleep")
+        eyes.classList.remove("angry")
+        eyes.classList.add("happy")
+        mouth.classList.remove("angry")
+        mouth.classList.remove("sleep")
+        mouth.classList.add("happy")
+    }
+    catbody.addEventListener("mouseover",HappytoAngry)
+    catbody.addEventListener("mouseleave",AngrytoHappy)
+    Sleepstatus()
 
 
     
@@ -133,7 +206,7 @@ window.onload = ()=>{
 
     const clearzero = (el) =>{
         btnClickTransition(el.currentTarget)
-        eventDateProvided = '2023-12-25T00:00:00';
+        eventDateProvided = '2077-12-25T00:00:00';
         convertEventDate = moment.utc(eventDateProvided)
         let html  = ''
         html += `
@@ -151,7 +224,12 @@ window.onload = ()=>{
     }
     const runFn = (el)=>{
         btnClickTransition(el.currentTarget)
+        eyes.classList.remove("sleep")
+        Sleepstatus()
+        AngrytoHappy()
+        
         stopT1 = setInterval(clockRunner, 1000);
+
         StartBtn.removeEventListener("click",runFn)
         clearBtn.removeEventListener("click",clearzero)
     
@@ -160,6 +238,8 @@ window.onload = ()=>{
     }
     const stopFn = (el) =>{
         btnClickTransition(el.currentTarget)
+        eyes.classList.add("sleep")
+        Sleepstatus()
         StartBtn.addEventListener("click",runFn)
         clearBtn.addEventListener("click",clearzero)
         clearInterval(stopT1)
@@ -170,7 +250,7 @@ window.onload = ()=>{
     clearBtn.addEventListener("click",clearzero)
 
     const btnClickTransition = (btn)=>{
-        console.log(btn);
+        // console.log(btn);
         btn.classList.add("act")
         setTimeout(()=>{
             btn.classList.remove("act")
@@ -179,21 +259,13 @@ window.onload = ()=>{
 
 }
 
-    const CatStatusFn = () =>{
-    let tail = document.getElementsByClassName("cattail")[0]
-    let catbody = document.getElementsByClassName("catbody")[0]
-    const tailHappytoAngry = () =>{
-        tail.classList.remove("happy")
-        tail.classList.add("angry")
-    }
-    const tailAngrytoHappy = () =>{
-        tail.classList.remove("angry")
-        tail.classList.add("happy")
-    }
-    catbody.addEventListener("mouseover",tailHappytoAngry)
-    catbody.addEventListener("mouseleave",tailAngrytoHappy)
-}
+    
+
+
+
+
+
     counterFn()
-    CatStatusFn()
+  
 
 }

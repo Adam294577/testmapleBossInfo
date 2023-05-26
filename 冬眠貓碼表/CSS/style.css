@@ -53,9 +53,22 @@ body {
             transform: translateX(-50%);
     width: 207px;
     height: 61px;
+    background-image: url("../img/eyes_a.png");
     background-image: url("../img/eyes_h.png");
+    background-image: url("../img/eyes_s.png");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  .container .catbody .cathead .eyes.happy {
+    background-image: url("../img/eyes_h.png");
+  }
+  .container .catbody .cathead .eyes.angry {
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+    background-image: url("../img/eyes_a.png");
+  }
+  .container .catbody .cathead .eyes.sleep {
+    background-image: url("../img/eyes_s.png");
   }
   .container .catbody .cathead .bread {
     position: absolute;
@@ -85,9 +98,68 @@ body {
             transform: translateX(-50%);
     width: 66px;
     height: 67px;
+    background-image: url("../img/mouth_s.png");
     background-image: url("../img/mouth_h.png");
+    background-image: url("../img/mouth_a.png");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  .container .catbody .cathead .mouth.happy {
+    background-image: url("../img/mouth_h.png");
+  }
+  .container .catbody .cathead .mouth.angry {
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+    background-image: url("../img/mouth_a.png");
+  }
+  .container .catbody .cathead .mouth.sleep {
+    background-image: url("../img/mouth_s.png");
+  }
+  .container .catbody .cathead .mouth.sleep .water {
+    position: absolute;
+    width: 14px;
+    height: 33px;
+    background-image: url("../img/water.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 60%;
+    bottom: -18px;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-animation: nekowater 5s linear infinite;
+            animation: nekowater 5s linear infinite;
+  }
+  @-webkit-keyframes nekowater {
+    0% {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+    50% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+  }
+  @keyframes nekowater {
+    0% {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+    50% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
   }
   .container .catbody .cattail {
     position: absolute;
@@ -113,6 +185,9 @@ body {
             animation: tailAngry 2s linear infinite;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+  }
+  .container .catbody .cattail.sleep {
+    background-image: url("../img/tail_s.png");
   }
   @-webkit-keyframes tailHappy {
     0% {

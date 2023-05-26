@@ -53,9 +53,24 @@ body{
                     transform: translateX(-50%);
                     width: 207px;
                     height: 61px;
+                    background-image: url("../img/eyes_a.png");
                     background-image: url("../img/eyes_h.png");
+                    background-image: url("../img/eyes_s.png");
                     background-size: contain;
-                    background-repeat: no-repeat;                    
+                    background-repeat: no-repeat;       
+                    &.happy{
+                        background-image: url("../img/eyes_h.png");
+                        
+                    }             
+                    &.angry{
+                        transition: 0.15s;
+                        background-image: url("../img/eyes_a.png");
+
+                    }             
+                    &.sleep{
+                        background-image: url("../img/eyes_s.png");
+
+                    }             
                 }
                 .bread{
                     position: absolute;
@@ -87,9 +102,52 @@ body{
                     transform: translateX(-50%);
                     width: 66px;
                     height: 67px;
+                    background-image: url("../img/mouth_s.png");
                     background-image: url("../img/mouth_h.png");
+                    background-image: url("../img/mouth_a.png");
                     background-size: contain;
-                    background-repeat: no-repeat;                    
+                    background-repeat: no-repeat;     
+                    &.happy{
+                        background-image: url("../img/mouth_h.png");
+                    }             
+                    &.angry{
+                        transition: 0.15s;
+                        background-image: url("../img/mouth_a.png");
+                    }             
+                    &.sleep{
+                        background-image: url("../img/mouth_s.png");
+                        .water{
+                            position: absolute;
+                            width: 14px;
+                            height: 33px;
+                            background-image: url("../img/water.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;     
+                            left: 60%;
+                            bottom: -18px;
+                            transform-origin: top;
+                            transition: 0.5s;
+                            transform: scale(0.8);
+                            animation: nekowater 5s linear infinite;
+                        }  
+
+                    }   
+   
+                    // .water:hover{
+                    //     transition: 0.5s;
+                    //     transform: scale(1);
+                    // }   
+                    @keyframes nekowater {
+                        0%{
+                            transform: scale(0.8);
+                        }
+                        50%{
+                            transform: scale(1);
+                        }
+                        100%{
+                            transform: scale(0.8);
+                        }
+                    }                  
                 }
 
             }     
@@ -117,7 +175,7 @@ body{
                       animation-delay: 1s;
                 }
                 &.sleep{
-
+                    background-image: url("../img/tail_s.png");
                 }
             }
             @keyframes tailHappy {
