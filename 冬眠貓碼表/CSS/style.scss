@@ -7,11 +7,19 @@
 body{
     background: #CCC;
     position: relative;
+    height: 100vh;
+    
 }
 
 .container{
-    margin-top: 300px;
+    user-select: none;
+    position: absolute;
+    // border: 1px solid #F00;
+    left: 10%;
+    top: 30%;
+    // transform: translate(-50%,-50%);
     width: 100%;
+
 
     @media screen and (min-width: 800px) {
         .catbody{
@@ -19,8 +27,8 @@ body{
             width: 725px;
             height: 380px;
             // border: 1px solid #F00;
-            left: 10%;
-            top: 3%;
+            // left: 10%;
+            // top: 3%;
             &::after{
                 content: '';
                 position: absolute;
@@ -276,90 +284,156 @@ body{
 
                 
             }
+            .stopwatchBox,.counterBox{
+                position: absolute;
+                bottom: 50px;
+                left: 80px;
+                // height: 120px;
+                height: 100px;
+                width: 320px;
+                z-index: 3;
+                // display: none;
+                background-color: #d9d9d9;
+                border: 7px solid #000;
+                border-radius: 15px;
 
-        }        
+            }
+            .stopwatchBox{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+            .counterBox{
+                // border: 7px solid #F00;
+                overflow: hidden;
+                display: block;
+                .nowNum,.nextNum,.lastNum{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    // border: 1px solid;
+                    position: absolute;
+
+                }
+                .nowNum{
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                .nextNum{
+                    top: -20%;
+                    left: 50%;
+                    transform: translate(-50%,10%);                    
+                }
+                .lastNum{
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);      
+                }
+                .nextNum,.lastNum{    
+                    display: none;
+                    img[alt ="colon"]{
+                        opacity: 0;
+                    }
+                    img{
+                        opacity: 0.1;
+                    }
+                }
+                
+
+
+            }
+            .btnBox{
+                z-index: 3;
+                // border: 1px solid;
+                height: 200px;
+                width: 350px;
+                position: absolute;
+                right: -15px;
+                top: 18%;
+                .btnItem{
+                    height: 70px;
+                    width: 120px;
+                    border: 7px solid #000;
+                    background-color: #d9d9d9;
+                    border-radius: 15px;
+                    transition: 0.5s;
+                    &.act{
+                        background: #ffe574;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 108px;
+                        height: 45px;
+                    }
+                }
+                .btnItem:nth-child(1){
+                    margin-left: 10px;
+                }
+                .btnItem:nth-child(2){
+                    margin-left: 90px;
+                    margin-top: 7px;
+                }
+                .btnItem:nth-child(3){
+                    margin-left: 170px;
+                    margin-top: 14px;
+                }
+                // .btnItem:hover{
+                //     background: #ffe574;
+                //     transition: 0.5s;
+                // }
+                #StartBtn,#StopBtn,#ClearBtn{
+                    position: relative;
+                }
+                #StartBtn,#MinBtn{
+                    img{
+                        position: relative;
+                        top: 5px;
+                        left: -2px;
+                    }
+                }
+                #StopBtn,#SecBtn{
+                    img{
+                        position: relative;
+                        top: 7px;
+                        left: 2px;
+                    }
+                }
+                #ClearBtn,#countClearBtn{
+                    img{
+                        position: relative;
+                        top: 9px;
+                    }
+                }
+                
+            }  
+            .funtionchoice{
+                text-align: center;
+                position: absolute;
+                bottom: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+                // height: 300px;
+                border: 1px solid #333;
+                border-radius: 7px;
+                width: 250px;
+                button{
+                    width: 70px;
+                    border: none;
+                    padding: 7px;
+                    margin: 15px 7px;
+                    &.act{
+                        background-color: #ffdc69;
+                    }
+                
+                }
+            }            
+
+        } 
 
     }
 
-    .counterBox{
-        position: absolute;
-        bottom: 60px;
-        left: 80px;
-        border: 1px solid;
-        height: 80px;
-        width: 320px;
-        z-index: 3;
-        // display: none;
-        background-color: #d9d9d9;
-        border: 7px solid #000;
-        border-radius: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-    .btnBox{
-        z-index: 3;
-        // border: 1px solid;
-        height: 200px;
-        width: 350px;
-        position: absolute;
-        right: -15px;
-        top: 18%;
-        .btnItem{
-            height: 70px;
-            width: 120px;
-            border: 7px solid #000;
-            background-color: #d9d9d9;
-            border-radius: 15px;
-            transition: 0.5s;
-            &.act{
-                background: #ffe574;
-            }
-            span{
-                display: inline-block;
-                width: 108px;
-                height: 45px;
-            }
-        }
-        .btnItem:nth-child(1){
-            margin-left: 10px;
-        }
-        .btnItem:nth-child(2){
-            margin-left: 90px;
-            margin-top: 7px;
-        }
-        .btnItem:nth-child(3){
-            margin-left: 170px;
-            margin-top: 14px;
-        }
-        // .btnItem:hover{
-        //     background: #ffe574;
-        //     transition: 0.5s;
-        // }
-        #StartBtn,#StopBtn,#ClearBtn{
-            position: relative;
-        }
-        #StartBtn{
-            img{
-                position: relative;
-                top: 5px;
-                left: -2px;
-            }
-        }
-        #StopBtn{
-            img{
-                position: relative;
-                top: 7px;
-                left: 2px;
-            }
-        }
-        #ClearBtn{
-            img{
-                position: relative;
-                top: 9px;
-            }
-        }
-        
-    }   
+ 
 }
