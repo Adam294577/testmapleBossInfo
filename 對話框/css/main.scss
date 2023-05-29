@@ -11,14 +11,14 @@ body::-webkit-scrollbar{
   width: 70px;
 }
 #chat_box{
-  // display: none;
+  display: none;
   margin-left: 20px;
   margin-top: 20px;
-  width: 100px;
+  width: 110px;
   position: relative;
   user-select: none;
   position: absolute;
-  top: 100px;
+  top: 105px;
   left: 300px;
 
 
@@ -30,6 +30,8 @@ body::-webkit-scrollbar{
           position: relative;
           /* left: -3px; */
           overflow: hidden;
+          background-color: #EEE;
+          width: 96px; 
           .content{
               text-align: center;
               display: inline-block;
@@ -37,12 +39,13 @@ body::-webkit-scrollbar{
               word-break: break-all;
               font-size: 11px;
               background-color: #EEE;
-              width: 80%;
+              // width: 9px;
               margin-left: 3px;
               padding-bottom: 2px;
               position: relative;
               padding-left: 3px;
               padding-right: 7px;
+              
               .txt{
                   display: inline-block;
                   text-align: center;
@@ -73,8 +76,8 @@ body::-webkit-scrollbar{
       }      
       .txt_container::after{
           position: absolute;
-          right: -2px;
-          top: 0;
+          right: -7px;
+          top: 0px;
           content: '';
           display: inline-block;
           width: 10px;
@@ -104,10 +107,10 @@ body::-webkit-scrollbar{
 }   
 
 #chat_box_catmode{
-  // display: none;
+  display: none;
   margin-left: 20px;
   margin-top: 20px;
-  width: 153px;
+  width: 220px;
   position: relative;
   user-select: none;
   position: absolute;
@@ -174,7 +177,7 @@ body::-webkit-scrollbar{
       }      
       .txt_container::after{
           position: absolute;
-          right: -6px;
+          right: 61px;
           top: 0;
           content: '';
           display: inline-block;
@@ -215,123 +218,93 @@ body::-webkit-scrollbar{
   height: 400px;
   margin-top: 30px;
   margin-left: 30px;
-  padding-left: 7px;
+  padding-left: 70px;
   border: 1px solid #F00;
-  .ChatBoxContainer{
-    // display: none;
-    // border: 1px solid #000;
-    margin-top: 100px;
-    // margin-left: 30px;
-    border-radius: 7px 7px 0  0 ;
-    position: absolute;
-    bottom: 50px;
-    // left: 10px;
-    width: 410px;
-    height: 100px;
-    // padding-top: 200px;
-    background: #0000007b;
-    // opacity: 0.5;
-    // top: -145px;
-    .outline{
-      
-      border-radius: 1px;
-      
-      height: 4px;
-      background-color: #344146a1;
-      .contentBox{
-        position: relative;
-        .iconBar{
-          top: 0;
-          position: absolute;
-          width: 100%;
-          height: 15px;
-          // border: 1px solid #F00;
-          overflow: hidden;
-          // background: #6b6b6b;
-          background: #000;
-          z-index: 2;
-          .DragIcon{
-            #DragIcon{
-              // display: none;
-              position: absolute;
-              left: 3px;
-              top: 4px;
-            }
-          }
-          .ZoomOutIcon{
-            #ZoomOutBtn{
-              position: absolute;
-              right: 3px;
-              top: 4px;
-            }
-          }
-
-        }
-   
-
-
-        .UserTxt{
-          opacity: 1;
-          padding-top: 20px;
-          padding-left: 7px;
-          color: #FFF;
-          font-weight: lighter;
-          font-size: 12px;
-          letter-spacing: 0.5px;
-          border: 1px solid #FF0;
-          position: relative;
-          height: 250px;
-          top: -150px;
-          overflow-y: overlay;
-          user-select: none;
-
-          
-          span{
-            position: relative;
-            padding-left: 3px;
-            display: block;
-          }
-          
-        }
-        
-        ::-webkit-scrollbar{
-          display: block;
-        }
-    
-        .UserTxt::-webkit-scrollbar-button{
-
-        }
-        // .UserTxt::-webkit-scrollbar-track-piece{
-        //   background: transparent;
-        // }
-        // .UserTxt::-webkit-scrollbar-button{
-        //   background: transparent;
-        // }
-        // .UserTxt::-webkit-scrollbar-thumb{
-        //   background: transparent;
-        // }
 
   
-      }
-    }
-  }
-  
-  
-  .ChatBarContainer{
+  .ChatContainer{
     position: absolute;
     bottom: 20px;
     user-select: none;
     z-index: 3;
     margin-top: 0px;
-    // margin-left: 7px;
-    width: 408px;
-    // height: 70px;
+    width: calc(var(--chatW) * 1px);
+    min-width: 407px;
     border: 1px solid #000;
-    .outline{
+    .baroutline{
         height: 30px;
         display: flex;
         align-items: center;
         background: linear-gradient(180deg, rgba(49,52,53,1) 0%, rgba(69,71,72,1) 100%);
+
+
+        .msgContent{
+          position: absolute;
+          width: calc(var(--chatW) * 1px);
+          min-width: 407px;
+          top: calc(var(--chatH) * -20px - 20px);
+          left: -1px;
+          background: #FFF;
+          background: #333333d7;
+          height: calc(var(--chatH) + 20px);
+          .dargbar{
+            position: absolute;
+            z-index: 2;
+            height: 20px;
+            width: calc(var(--chatW) * 1px);
+            min-width: 407px;
+            background-color: #222222a9;
+            top: 0;
+            .dragImg{
+              position: absolute;
+              top: 5px;
+              left: 3px;
+            }
+            .zoomoutImg{
+              position: absolute;
+              top: 5px;
+              right: 5px;
+            }
+          }
+          .txtContent{
+            margin-top: 20px;
+            padding-left: 3px;
+            font-size: 11px;
+            // height: $txt_height;
+            height: calc( var(--chatH) * 20px );
+            // border: 1px solid #F00;
+            overflow-y: scroll;
+            span{
+              display: block;
+              height: 20px;
+              line-height: 20px;
+              color: #FFF;
+              padding-left: 5px;
+            }
+          }
+          .txtContent::-webkit-scrollbar{
+            width: 7px;
+            background-color: #797979;
+            background-color: transparent;
+          }
+          .txtContent::-webkit-scrollbar-button{
+            // display: none;
+          }
+          .txtContent::-webkit-scrollbar-button:start:decrement{
+
+          }
+          .txtContent::-webkit-scrollbar-button:end:increment{
+
+          }
+          .txtContent::-webkit-scrollbar-thumb{
+            background-color: rgb(34, 34, 34);
+            
+          }
+          .txtContent::-webkit-scrollbar-track-piece{
+            background: transparent;
+          }
+          
+        }
         .ChatClass{
             position: relative;
             top: 2px;
@@ -393,15 +366,15 @@ body::-webkit-scrollbar{
             // border: 1px solid #F00;
             justify-content: space-around;
             margin-left: 3px;
-            img{
-  
-  
-            }
         }
     }
+
   }
+
+
   #noinput{
     opacity: 0;
   }
 
 }
+
