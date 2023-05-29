@@ -1,14 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 120vh;
+}
+
+body::-webkit-scrollbar {
+  width: 70px;
+}
+
 #chat_box {
+  display: none;
   margin-left: 20px;
   margin-top: 20px;
-  width: 100px;
+  width: 110px;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   position: absolute;
-  top: 100px;
+  top: 105px;
   left: 300px;
 }
 
@@ -20,6 +36,8 @@
   position: relative;
   /* left: -3px; */
   overflow: hidden;
+  background-color: #EEE;
+  width: 96px;
 }
 
 #chat_box .chat_outline .txt_container .content {
@@ -29,7 +47,6 @@
   word-break: break-all;
   font-size: 11px;
   background-color: #EEE;
-  width: 80%;
   margin-left: 3px;
   padding-bottom: 2px;
   position: relative;
@@ -68,8 +85,8 @@
 
 #chat_box .chat_outline .txt_container::after {
   position: absolute;
-  right: -2px;
-  top: 0;
+  right: -7px;
+  top: 0px;
   content: '';
   display: inline-block;
   width: 10px;
@@ -93,9 +110,10 @@
 }
 
 #chat_box_catmode {
+  display: none;
   margin-left: 20px;
   margin-top: 20px;
-  width: 153px;
+  width: 220px;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -165,7 +183,7 @@
 
 #chat_box_catmode .chat_outline .txt_container::after {
   position: absolute;
-  right: -6px;
+  right: 61px;
   top: 0;
   content: '';
   display: inline-block;
@@ -198,49 +216,11 @@
   height: 400px;
   margin-top: 30px;
   margin-left: 30px;
-  padding-left: 7px;
+  padding-left: 70px;
   border: 1px solid #F00;
 }
 
-.ChatSyscontainer .ChatBoxContainer {
-  margin-top: 100px;
-  border-radius: 7px 7px 0  0;
-  position: absolute;
-  bottom: 50px;
-  width: 410px;
-  height: 100px;
-  background: #0000007b;
-}
-
-.ChatSyscontainer .ChatBoxContainer .outline {
-  border-radius: 1px;
-  height: 4px;
-  background-color: #344146a1;
-}
-
-.ChatSyscontainer .ChatBoxContainer .outline .contentBox .DragIcon #DragIcon {
-  position: absolute;
-  left: 3px;
-  top: 4px;
-}
-
-.ChatSyscontainer .ChatBoxContainer .outline .contentBox .ZoomOutIcon #ZoomOutBtn {
-  position: absolute;
-  right: 3px;
-  top: 4px;
-}
-
-.ChatSyscontainer .ChatBoxContainer .outline .contentBox .UserTxt {
-  opacity: 1;
-  padding-top: 20px;
-  padding-left: 7px;
-  color: #FFF;
-  font-weight: lighter;
-  font-size: 17px;
-  letter-spacing: 0.1px;
-}
-
-.ChatSyscontainer .ChatBarContainer {
+.ChatSyscontainer .ChatContainer {
   position: absolute;
   bottom: 20px;
   -webkit-user-select: none;
@@ -249,11 +229,12 @@
           user-select: none;
   z-index: 3;
   margin-top: 0px;
-  width: 408px;
+  width: calc(var(--chatW) * 1px);
+  min-width: 407px;
   border: 1px solid #000;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline {
+.ChatSyscontainer .ChatContainer .baroutline {
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,13 +246,76 @@
   background: linear-gradient(180deg, #313435 0%, #454748 100%);
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass {
+.ChatSyscontainer .ChatContainer .baroutline .msgContent {
+  position: absolute;
+  width: calc(var(--chatW) * 1px);
+  min-width: 407px;
+  top: calc(var(--chatH) * -20px - 20px);
+  left: -1px;
+  background: #FFF;
+  background: #333333d7;
+  height: calc(var(--chatH) + 20px);
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .dargbar {
+  position: absolute;
+  z-index: 2;
+  height: 20px;
+  width: calc(var(--chatW) * 1px);
+  min-width: 407px;
+  background-color: #222222a9;
+  top: 0;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .dargbar .dragImg {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .dargbar .zoomoutImg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent {
+  margin-top: 20px;
+  padding-left: 3px;
+  font-size: 11px;
+  height: calc( var(--chatH) * 20px);
+  overflow-y: scroll;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  color: #FFF;
+  padding-left: 5px;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent::-webkit-scrollbar {
+  width: 7px;
+  background-color: #797979;
+  background-color: transparent;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent::-webkit-scrollbar-thumb {
+  background-color: #222222;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass {
   position: relative;
   top: 2px;
   margin-left: 3px;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list {
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass .class_ch_list {
   list-style-type: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -284,7 +328,7 @@
   background: #555;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list .item {
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass .class_ch_list .item {
   font-weight: 500;
   margin: 0;
   padding: 0;
@@ -293,23 +337,23 @@
   color: #FFF;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list .item span {
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass .class_ch_list .item span {
   display: inline-block;
   margin-left: 1px;
   color: #ffff22;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list .item:hover {
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass .class_ch_list .item:hover {
   font-weight: bold;
   background: #ffcc00;
   color: #555;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatClass .class_ch_list .item:hover span {
+.ChatSyscontainer .ChatContainer .baroutline .ChatClass .class_ch_list .item:hover span {
   color: #ff2222;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline #userinput {
+.ChatSyscontainer .ChatContainer .baroutline #userinput {
   color: #FFF;
   width: 217px;
   margin-left: 5px;
@@ -324,11 +368,11 @@
   font-size: 10px;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline #userinput:focus {
+.ChatSyscontainer .ChatContainer .baroutline #userinput:focus {
   outline: none;
 }
 
-.ChatSyscontainer .ChatBarContainer .outline .ChatImg {
+.ChatSyscontainer .ChatContainer .baroutline .ChatImg {
   width: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
