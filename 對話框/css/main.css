@@ -34,6 +34,7 @@
 }
 
 #chat_box {
+  display: none;
   width: 110px;
   position: absolute;
   top: 105px;
@@ -104,6 +105,7 @@
 }
 
 #chat_box_catmode {
+  display: none;
   width: 150px;
   position: absolute;
   top: 100px;
@@ -114,7 +116,7 @@
   background-color: #5f96be;
   width: 130px;
   margin-left: 15px;
-  padding: 0px 20px 10px 20px;
+  padding: 3px 20px 10px 20px;
 }
 
 #chat_box_catmode .chat_outline .txt_container .content .idBox {
@@ -253,12 +255,43 @@
   overflow-y: scroll;
 }
 
-.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent span {
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg {
   display: block;
   height: 20px;
   line-height: 20px;
   color: #FFF;
   padding-left: 5px;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c0r {
+  color: #ddb1c2;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c0y {
+  color: #fbff02;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c1 {
+  color: #FFF;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c3 {
+  color: #eb8f05;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c4 {
+  color: #77ffee;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg.c5 {
+  color: #bd8feb;
+}
+
+.ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent .msg .symbol {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  padding: 0px 1.5px;
 }
 
 .ChatSyscontainer .ChatContainer .baroutline .msgContent .txtContent::-webkit-scrollbar {

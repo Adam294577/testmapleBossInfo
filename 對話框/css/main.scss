@@ -25,6 +25,7 @@
 }
 
 #chat_box{
+  display: none;
   width: 110px;
   position: absolute;
   top: 105px;
@@ -98,6 +99,7 @@
 }   
 
 #chat_box_catmode{
+  display: none;
   width: 150px;
   position: absolute;
   top: 100px;
@@ -109,7 +111,7 @@
               background-color: #5f96be;
               width: 130px;
               margin-left: 15px;
-              padding: 0px 20px 10px 20px;
+              padding: 3px 20px 10px 20px;
               .txt{
                   
               }  
@@ -239,13 +241,30 @@
             height: calc( var(--chatH) * 20px );
             // border: 1px solid #F00;
             overflow-y: scroll;
-            span{
+            .msg{
               display: block;
               height: 20px;
               line-height: 20px;
               color: #FFF;
               padding-left: 5px;
+              &.c0r{color: #ddb1c2;}
+              &.c0y{color: #fbff02;}
+              &.c1{color: #FFF;}
+              &.c2{}
+              &.c3{color: #eb8f05;}
+              &.c4{color: #77ffee;}
+              &.c5{color: #bd8feb;}
+
+              .symbol{
+                display: inline-block;
+                position: relative;
+                top: -1px;
+                padding: 0px 1.5px;
+              }
+
+ 
             }
+
           }
           .txtContent::-webkit-scrollbar{
             width: 7px;

@@ -1,14 +1,15 @@
 
 window.onload = () =>{
 
-    const {createApp, ref, reactive } = Vue
+    const {createApp, ref, reactive, computed, watch } = Vue
     const App = {
 
         setup(){
   
 
             const ChatContent = ref("")
-            const game_id = ref("")
+            
+            
             const BtnObj = reactive({
                 normal:[
                     "./img/chat_class_c1.png",
@@ -25,9 +26,33 @@ window.onload = () =>{
                     "./img/chat_class_c5_h.png"
                 ],
             })
-            const inputmsg = ref("")
+            const game_id = ref("測試ID123")
+            const inputmsg = ref("測試內容哈哈哈")
             const chatChannelSrc = ref('./img/chat_class_c1.png')
             const ChannelListisShow = ref(false);
+
+            let nowtime = moment().format("HH:mm"); 
+            const nowTime = ref(nowtime)
+            const timerun = ()=>{
+                nowtime = moment().format("HH:mm"); 
+                nowTime.value = nowtime
+            }
+            setInterval(timerun,1000)
+
+            // c0r:系統頻紅 c0y:系統頻黃 c1:所有頻 c2:隊伍頻  c3:好友頻 c4:公會頻 c5:聯盟頻
+            const msgChannel = ref("c1")
+
+            const msgData = reactive([
+                // {userID: "", class: "c0y", msg: "[歡迎] 歡迎來到新楓之谷！！" , time: "05:27"},
+                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>歡迎<span class="symbol">]</span> 歡迎來到新楓之谷！！` , time: ""},
+                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>系統<span class="symbol">]</span> 新楓之谷 好玩不花錢 ヽ(✿ﾟ▽ﾟ)ノ` , time: ""},
+                // {userID: `${game_id.value} :`, class: "c1", msg: "test123" , time: `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`},
+            ])
+
+
+
+
+            
 
 
             // 滑鼠經過頻道類別 切換hover圖
@@ -60,22 +85,27 @@ window.onload = () =>{
                 let txt = el.currentTarget.innerText
                 if( txt === "對聯盟(/u)"){
                     chatChannelSrc.value = BtnObj.normal[4];
+                    msgChannel.value = "c5"
                     return;
                 }
                 if( txt === "對好友(/f)"){
                     chatChannelSrc.value = BtnObj.normal[2];
+                    msgChannel.value = "c3"
                     return;
                 }
                 if( txt === "對組隊(/p)"){
                     chatChannelSrc.value = BtnObj.normal[1];
+                    msgChannel.value = "c2"
                     return;
                 }
                 if( txt === "對公會(/g)"){
                     chatChannelSrc.value = BtnObj.normal[3];
+                    msgChannel.value = "c4"
                     return;
                 }
                 if( txt === "對所有人(/e)"){
                     chatChannelSrc.value = BtnObj.normal[0];
+                    msgChannel.value = "c1"
                     return;
                 }
                 
@@ -88,27 +118,32 @@ window.onload = () =>{
                 // console.log(str);
                 if (el.keyCode === 13 & str === "/f"){
                     chatChannelSrc.value = BtnObj.normal[2]
+                    msgChannel.value = "c3"
                     el.target.value = ""
                     return;
                 }
 
                 if (el.keyCode === 13 & str === "/p"){
                     chatChannelSrc.value = BtnObj.normal[1]
+                    msgChannel.value = "c2"
                     el.target.value = ""
                     return;
                 }
                 if (el.keyCode === 13 & str === "/g"){
                     chatChannelSrc.value = BtnObj.normal[3]
+                    msgChannel.value = "c4"
                     el.target.value = ""
                     return;
                 }
                 if (el.keyCode === 13 & str === "/u"){
                     chatChannelSrc.value = BtnObj.normal[4]
+                    msgChannel.value = "c5"
                     el.target.value = ""
                     return;
                 }
                 if (el.keyCode === 13 & str === "/e"){
                     chatChannelSrc.value = BtnObj.normal[0]
+                    msgChannel.value = "c1"
                     el.target.value = ""
                     return;
                 }
@@ -122,12 +157,39 @@ window.onload = () =>{
     
                 if (el.keyCode === 13 & str !== ""){
                     inputmsg.value = el.target.value
+                    msgData.push({class: msgChannel.value , msg: inputmsg.value, userID: `${game_id.value} :`, time : `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`} )
                     el.target.value = ""
-                    console.log(el.target.value);
-                    console.log(inputmsg.value);
+
+                    // 因為msgStorage還沒先產出 所以要非同步進行
+                    setTimeout(Msgscrolldown,10)
                     return;
                 }
             }
+            const Msgscrolldown = ()=>{
+                let txtscroll = document.getElementById("txtscroll")
+                txtscroll.scrollTop = txtscroll.scrollHeight
+                console.log(txtscroll.scrollHeight);
+            }
+
+            const msgStorage = computed(()=>{
+                let result = ""
+                const showmsg = msgData.map(item=>{
+                    return {class: item.class , msg: item.msg ,  userID: item.userID, time: item.time , 
+                        render: `${item.time} ${item.userID}  ${item.msg}`
+                    }
+                })
+
+                result = showmsg
+
+                console.log(result);
+
+                return result
+
+               
+            })
+
+
+           
 
             
             const handchatChannel = () =>{
@@ -151,6 +213,7 @@ window.onload = () =>{
                 ClickChangeSrc,
                 inputmsg,
                 txtSummit,
+                msgStorage
               }   
         },
         mounted() {

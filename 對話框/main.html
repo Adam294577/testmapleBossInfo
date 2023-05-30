@@ -63,15 +63,24 @@
         <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱-最多6個字" maxlength="6">
         <!-- <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容"> -->
         <div @click = "clearfn" class="ChatSyscontainer">
-             <div class="ChatContainer" style="--chatH:5; --chatW:410;">
+             <div class="ChatContainer" style="--chatH:7; --chatW:410;">
               <div class="baroutline">
                     <div class="msgContent">
                         <div class="dargbar">
                             <img class="dragImg" src="./img/drag_bar.jpg" alt="bar">
                             <img class="zoomoutImg" src="./img/zoom_out_icon.png" alt="縮小">
                         </div>
-                        <div class="txtContent">
-                            <span>[時間] {{game_id}} : [對話內容]</span>
+                        <div class="txtContent" id="txtscroll">
+                            <!-- <span class="msg c1"><span class="symbol">[</span>時間<span class="symbol">]</span> {{game_id}} : [對話內容]</span>
+                            <span class="msg c0r">[時間] {{game_id}} : [對話內容]</span>
+                            <span class="msg c3">[時間] {{game_id}} : [對話內容]</span>
+                            <span class="msg c4">[時間] {{game_id}} : [對話內容]</span>
+                            <span class="msg c5">[時間] {{game_id}} : [對話內容]</span> -->
+                            <span v-for= "list in msgStorage"
+                            :key= "list.msg"
+                            :class="[ 'msg' , list.class ]"
+                            v-html="list.render"> 
+                        </span>
    
                         </div>
                     </div>
@@ -116,7 +125,8 @@
     </div>
 
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./js/main.js"></script>
 
 
