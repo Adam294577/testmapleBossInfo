@@ -38,32 +38,31 @@
 <body>
     <div id="app">
 
-        <div id="chat_box">
-        <div class="chat_outline">
-            <div class="txt_container">
-                <div class="content">
-                    <span id="game_id">{{game_id}}</span> 
-                    <span class="txt">{{inputmsg}}</span>
+        <div class="chatring" id="chat_box">
+            <div class="chat_outline">
+                <div class="txt_container">
+                    <div class="content">
+                        <span class="idBox" id="game_id">{{game_id}}</span> 
+                        <span class="txt">{{inputmsg}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        <div id="chat_box_catmode">
-        <div class="chat_outline">
-            <div class="txt_container">
-                <div class="content">
-                    <span id="game_id2">{{game_id}}</span> 
-                    <span class="txt">{{inputmsg}}</span>
-                </div>
-            </div>
-        </div>
         </div>
 
-        <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱">
+        <div class="chatring" id="chat_box_catmode">
+            <div class="chat_outline">
+                <div class="txt_container">
+                    <div class="content">
+                        <span class="idBox" id="game_id2">{{game_id}}</span> 
+                        <span class="txt">{{inputmsg}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱-最多6個字" maxlength="6">
         <!-- <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容"> -->
         <div @click = "clearfn" class="ChatSyscontainer">
-
-             
              <div class="ChatContainer" style="--chatH:5; --chatW:410;">
               <div class="baroutline">
                     <div class="msgContent">
@@ -94,7 +93,7 @@
                          <li @click = "ClickChangeSrc" class="item">對所有人<span>(/e)</span></li> 
                       </ul>
                   </div>
-                  <input @keyup= "txtSummit" id="userinput" type="text">
+                  <input @keyup= "txtSummit" id="userinput" type="text" maxlength="20">
                   <div class="ChatImg">
                    <img src="./img/bar_icon_01.png" alt="01" class="Imgitem">
                    <img src="./img/bar_icon_02.png" alt="02" class="Imgitem">
