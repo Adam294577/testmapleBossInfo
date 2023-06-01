@@ -5,11 +5,6 @@ window.onload = () =>{
     const App = {
 
         setup(){
-  
-
-            const ChatContent = ref("")
-            
-            
             const BtnObj = reactive({
                 normal:[
                     "./img/chat_class_c1.png",
@@ -29,7 +24,9 @@ window.onload = () =>{
             const game_id = ref("測試ID123")
             const inputmsg = ref("測試內容哈哈哈")
             const chatChannelSrc = ref('./img/chat_class_c1.png')
+            
             const ChannelListisShow = ref(false);
+            const RingChatbool = ref(false)
 
             let nowtime = moment().format("HH:mm"); 
             const nowTime = ref(nowtime)
@@ -43,18 +40,27 @@ window.onload = () =>{
             const msgChannel = ref("c1")
 
             const msgData = reactive([
-                // {userID: "", class: "c0y", msg: "[歡迎] 歡迎來到新楓之谷！！" , time: "05:27"},
-                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>歡迎<span class="symbol">]</span> 歡迎來到新楓之谷！！` , time: ""},
-                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>系統<span class="symbol">]</span> 新楓之谷 好玩不花錢 ヽ(✿ﾟ▽ﾟ)ノ` , time: ""},
+                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>歡迎<span class="symbol">]</span> 歡迎來到新楓之谷！！` , time: `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`},
+                {userID: "", class: "c0y", msg: `<span class="symbol">[</span>系統<span class="symbol">]</span> 新楓之谷 好玩不花錢 ヽ(✿ﾟ▽ﾟ)ノ` , time: `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`},
                 // {userID: `${game_id.value} :`, class: "c1", msg: "test123" , time: `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`},
             ])
 
 
 
+            const handchatChannel = () =>{
+                ChannelListisShow.value = !ChannelListisShow.value;
+            }
 
+            const clearfn = () =>{
+                ChannelListisShow.value = false;
+            }
+
+            const RingChatshow = (ringbol) =>{
+                if (ringbol) return;
+                RingChatbool.value = true
+                setTimeout(()=>{ RingChatbool.value = false },5000)
+            }
             
-
-
             // 滑鼠經過頻道類別 切換hover圖
             const btnMousein = ( item ) => {
 
@@ -153,11 +159,10 @@ window.onload = () =>{
                     return;
                 }
     
-    
-    
                 if (el.keyCode === 13 & str !== ""){
                     inputmsg.value = el.target.value
                     msgData.push({class: msgChannel.value , msg: inputmsg.value, userID: `${game_id.value} :`, time : `<span class="symbol">[</span>${nowTime.value}<span class="symbol">]</span>`} )
+                    RingChatshow(RingChatbool.value)
                     el.target.value = ""
 
                     // 因為msgStorage還沒先產出 所以要非同步進行
@@ -168,7 +173,6 @@ window.onload = () =>{
             const Msgscrolldown = ()=>{
                 let txtscroll = document.getElementById("txtscroll")
                 txtscroll.scrollTop = txtscroll.scrollHeight
-                console.log(txtscroll.scrollHeight);
             }
 
             const msgStorage = computed(()=>{
@@ -192,17 +196,10 @@ window.onload = () =>{
            
 
             
-            const handchatChannel = () =>{
-                ChannelListisShow.value = !ChannelListisShow.value;
-            }
 
-            const clearfn = () =>{
-                // console.log(5207);
-                ChannelListisShow.value = false;
-            }
             
-            return{ChatContent,
-                 game_id,
+            return{
+                game_id,
                 btnMousein,
                 btnMouseout,
                 BtnObj,
@@ -213,7 +210,8 @@ window.onload = () =>{
                 ClickChangeSrc,
                 inputmsg,
                 txtSummit,
-                msgStorage
+                msgStorage,
+                RingChatbool
               }   
         },
         mounted() {
@@ -231,7 +229,6 @@ window.onload = () =>{
                 }
             },
             userblur(el){
-                // let winKeycode = el.keyCode
                 let val = userinput.value
                 if (el.keyCode === 13 & val === ''){
                     noinput.focus()

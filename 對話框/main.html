@@ -6,54 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 <link rel="stylesheet" href="./css/main.css">
-
-  <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .demo{
-        position: absolute;
-        top: 20px;
-        left: 150px;
-    }
-    .body,html{
-        background-color: #CCC;
-    }
-    .container{
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 1px solid #F00;
-        width: 410px;
-        position: relative;
-        z-index: 1;
-    }
-    .game_screen{
-        width: 410px;
-        border: 1px solid #111;
-        height: 200px;
-    }
-</style>
 </head>
 <body>
     <div id="app">
 
-        <div class="chatring" id="chat_box">
+        <div v-show= "RingChatbool" class="chatring" id="chat_box">
             <div class="chat_outline">
                 <div class="txt_container">
                     <div class="content">
-                        <span class="idBox" id="game_id">{{game_id}}</span> 
+                        <span class="idBox">{{game_id}}</span> 
                         <span class="txt">{{inputmsg}}</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="chatring" id="chat_box_catmode">
+        <div v-show= "RingChatbool" class="chatring" id="chat_box_catmode">
             <div class="chat_outline">
                 <div class="txt_container">
                     <div class="content">
-                        <span class="idBox" id="game_id2">{{game_id}}</span> 
+                        <span class="idBox">{{game_id}}</span> 
                         <span class="txt">{{inputmsg}}</span>
                     </div>
                 </div>
@@ -61,7 +33,6 @@
         </div>
 
         <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱-最多6個字" maxlength="6">
-        <!-- <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容"> -->
         <div @click = "clearfn" class="ChatSyscontainer">
              <div class="ChatContainer" style="--chatH:7; --chatW:410;">
               <div class="baroutline">
@@ -71,11 +42,6 @@
                             <img class="zoomoutImg" src="./img/zoom_out_icon.png" alt="縮小">
                         </div>
                         <div class="txtContent" id="txtscroll">
-                            <!-- <span class="msg c1"><span class="symbol">[</span>時間<span class="symbol">]</span> {{game_id}} : [對話內容]</span>
-                            <span class="msg c0r">[時間] {{game_id}} : [對話內容]</span>
-                            <span class="msg c3">[時間] {{game_id}} : [對話內容]</span>
-                            <span class="msg c4">[時間] {{game_id}} : [對話內容]</span>
-                            <span class="msg c5">[時間] {{game_id}} : [對話內容]</span> -->
                             <span v-for= "list in msgStorage"
                             :key= "list.msg"
                             :class="[ 'msg' , list.class ]"
@@ -84,6 +50,7 @@
    
                         </div>
                     </div>
+                    
                   <div class="ChatClass">
                       <img 
                       @mouseenter = "btnMousein" 
@@ -116,8 +83,6 @@
                   
               </div>
              </div>
-
-       
         <input id="noinput">
         </div>
 
@@ -127,6 +92,7 @@
 
     <script src="./js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="./js/main.js"></script>
 
 
