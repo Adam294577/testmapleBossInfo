@@ -4,21 +4,28 @@
     box-sizing: border-box;
     list-style-type: none;
 }
-main,footer{
+footer{
     display: none;
 }
 
-body{
-    background: #CCC;
+body,html{
+    background: linear-gradient(0deg, #000 0%, #555 50% ,#222 100%);
     position: relative;
+    overflow: hidden;
+    height: 100%;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     
 }
 .menu{
+    // display: none;
     user-select: none;
     #bossMenuBtn{
-        position: absolute;
-        top: 10px;
-        left: 10px;
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        left: 2rem;
         width: 180px;
         height: 70px;
         border-radius: 5px;
@@ -26,9 +33,10 @@ body{
         line-height: 70px;
         font-size: 30px;
         font-weight: bold;
-        display: none;
-        background: #222;
+        // display: none;
+        background: #444;
         color: #FFF;
+        box-shadow: 1px 2px 3px #777;
         transition: 0.5s;
         &.act{
             transition: 0s;
@@ -36,22 +44,31 @@ body{
             // background: #AAA
 
         }
+        &:hover{
+            transition: 0s;
+            border-radius: 5px 5px 0 0;
+            box-shadow: none;
+            background: #000000              
+
+        }
         &:active{
-            // transition: 0s;
-            // border-radius: 5px 5px 0 0;
-            // background: #33aabb              
+            transition: 0s;
+            border-radius: 5px 5px 0 0;
+            background: #000000              
 
         }
     }
 
     .pcNav{
-        display: none;
         position: absolute;
-        top: 0;
+        z-index: 3;
+        top: 3px;
         width: 500px;
+        left: -500px;
         height: 100vh;
         border-radius: 0px 20px 0px 0px;
-        background: #333;
+        background: #333333;
+        transition: 0.3s;
         .bossList{
             color: #FFF;
             .navback{
@@ -179,6 +196,7 @@ body{
                     margin: 3px;
                 }
                 .backbtn,.nextbtn{
+                    cursor: pointer;
                     width: 55px;
                     height: 55px;
                     border: 1px solid #F00;
@@ -208,7 +226,7 @@ body{
         height: 99vh;
         margin-top: 3px;
         margin-left: 7px;
-        // display: none;
+        display: none;
         color: #FFF;
         .searchbar{
             position: absolute;
@@ -292,5 +310,416 @@ body{
 
 }
 
+.sectionTagBox{
+    display: none;
+    user-select: none;
+    position: fixed;
+    z-index: 2;
+    top: 10rem;
+    left: 2rem;
+    width: 13rem;
+    padding: 1rem;
+    font-weight: bold;
+    background: #444;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 5px #777;
+    .taglist{
+        .item{
+            cursor: pointer;
+            font-size: 1.27rem;
+            padding-top: 0.5rem;
+            color: #888;
+            transition: 0.3s;
+            &.act{
+                color: #FFF
+            }
+            &:hover{
+                transition: 0.3s;
+                color: #FFF
+            }
+
+        }
+    }
+}
+.bossContainer{
+    display: none;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    section{
+        padding: 1rem;
+        background-color: #222;
+        box-shadow: 0px 3px 5px #777;
+        border-radius: 1rem;
+        width: 1200px;
+        position: absolute;
+        transform-origin: top;
+        .GradeList{
+            // display: none;
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            z-index: 2;
+            #GradeVal{
+                display: inline-block;
+                width: 10rem;
+                border: 1px solid #FFF;
+                &:after{
+                    display: inline-block;
+                    position: absolute;
+                    right: 10px;
+                    content: url(../img/boss/arrow_white.png);
+                    transform: rotate(90deg);
+                }
+            }
+            li{
+                text-align: center;
+                position: relative;
+                top: -1rem;
+                border: 1px solid #FF0;
+                width: 10rem;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            .misstionTime{
+                display: block;
+            }
+
+        }
+        
+        .title{
+            width: 30%;
+            margin: auto;
+            margin-top: 1rem;
+            padding: 0.7rem;
+            border: 1px solid #F00;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            
+        }
+
+    }
+
+    .bossIntro{
+        // display: none;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-30%) scale(1);
+        
+
+        
+        .content{
+            display: flex;
+            margin-top: 20px;
+            padding-bottom: 3rem;
+            justify-content: center;
+            .bossImg{
+                // text-align-last: left;
+                width: 50%;
+                img{
+                    width: 70%;
+                }
+            }
+            .bosstxt{
+                position: relative;
+                width: 50%;
+                font-weight: bold;
+                // border: 1px solid #F00;
+                border-radius: 1rem;
+                background: #444;
+                // box-shadow: 2px 1px 7px #EEE;
+                .bosstxtList{
+                    width: 95%;
+                    margin: auto;
+                    text-align-last: left;
+                    // display: none;
+                    padding-left: 1rem;
+                    li{
+                        padding-top: 1.5rem;
+                        font-size: 1.4rem;
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bossData{
+        display: none;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%,-15%) scale(0.65) ;  
+        .content{
+            display: flex;
+            justify-content: center;
+            .stagecont{
+                width: 50%;
+                margin-top: 1rem;
+                margin: 2rem 2%;
+                
+                border: 1px solid #FFF;
+                .stagetitle{
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                .stageinfo{
+                    
+                    text-align-last: left;
+                    p{
+                        font-weight: bold;
+                        font-size: 1.27rem;
+                        padding: 0.3rem 1rem;
+                    }
+                }
+            }
+        }
+
+
+    }
+    .damageRef{
+        display: none;
+        transform-origin: top;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-80%) scale(0.65) ;            
+        
+
+        .arcDamageTable,.autDamageTable{
+            margin: 1rem 2rem;
+            .tableTitle{
+                width: 30%;
+                margin: auto;
+                margin-top: 1rem;
+                border: 1px solid #F00;
+                border-radius: 0.4rem;
+                padding: 1rem;
+
+            }
+            .stage{
+                position: relative;
+                top: 0.5rem;
+            }
+
+            ul{
+                // border: 1px solid #FF0;
+                margin: 1rem;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .listTitle{
+                    background: #111;
+                    span{
+
+                    }
+
+                }
+                li{
+                    width: 100px;
+                    // border: 1px solid #F00;
+                    height: 80px;
+                    background: #444;
+                    position: relative;
+                    font-size: 1.2rem;
+                    padding-top: 7px;
+                    margin-top: 7px;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background: #FFFFFF;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                    }
+                    &.none{
+                        span{
+                            opacity: 0;
+                        }
+                    }
+
+
+                    span{
+                        display: block;
+                        width: 100px;
+                        position: absolute;
+                        bottom: 7px;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                    }
+                }
+            }
+        }
+        .arcDamageTable{
+            // display: none;
+            .arcList{
+                .listTitle{
+
+                }
+                .item{
+                    .mark{
+
+                    }
+                }
+            }
+
+        }
+        .autDamageTable{
+            display: none;
+            .autList{
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+        }
+
+
+    }
+    .bossBonus{
+        // display: none;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%,-15%) scale(0.8) ;
+        font-weight: bold;
+        .generalBonus{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background: #333;
+            width: 70%;
+            margin: auto;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 0.5rem;
+            .subtitle{
+                width: 100%;
+                margin-top: 1rem;
+            }
+            .fixedItem,.notfixedItem{
+                border: 1px solid #F00;
+                border-radius: 0.5rem;
+                width: 40%;
+                padding: 0 1.5rem;
+                margin-top: 1.5rem;
+                p{
+                    margin-top: 0.3rem;
+                    font-size: 1.25rem;
+                    img{
+
+                    }
+                    span{
+
+                    }
+                }
+
+                .guildPoint{
+                    span{
+
+                    }
+                }
+                .mileage{
+                    &::before{
+                        content: '';
+                    }
+                }
+                }
+                .money{
+                    display: flex;
+                    flex-wrap: wrap;
+                    border: 1px solid #FF0;
+                    position: relative;
+                    top: 1rem;
+                    &::before{
+                        content: '';
+                    }
+                    span{
+                        display: inline-block;
+                    }
+                    .moneytitle{
+                        width: 100%;
+                        border-bottom: 1px solid #FF0;
+                        background: #000;
+                    }
+
+                    .normalServe,.Reboot{
+                        width: 50%;
+                        background: #333;
+                        
+                     }
+                     .normalServe{
+                        border-right: 1px solid #FF0;
+                    }
+                    .moneyVal{
+                        margin-top: 0.5rem;
+                    }
+
+
+
+                    .money_chinese{
+                        display: block;
+                        width: 100%;
+                    }
+            }
+            .notfixedItem{
+                p{
+                    text-align-last: left;
+                    img{
+
+                    }
+                    span{
+
+                    }
+                }
+
+            }
+
+        }   
+        .majorBonus{
+            display: none;
+            .suuAfterItemBox{
+                .title{
+
+                }
+                .suuAfterList{
+                    .item{
+
+                    }
+                }
+            }
+
+            .majorBox{
+                .title{
+    
+                }
+                .majorList{
+                    li{
+                        img{
+    
+                        }
+                        span{
+                            a{
+                                
+                            }
+                        }
+                    }
+                }
+            }  
+        }  
+       
+
+    }
+    .otherBonusInfo{
+        display: none;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%,-15%) scale(0.65) ;  
+    }
+}
 
 

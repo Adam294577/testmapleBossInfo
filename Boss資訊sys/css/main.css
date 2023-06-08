@@ -6,13 +6,20 @@
   list-style-type: none;
 }
 
-main, footer {
+footer {
   display: none;
 }
 
-body {
-  background: #CCC;
+body, html {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(50%, #555), to(#222));
+  background: linear-gradient(0deg, #000 0%, #555 50%, #222 100%);
   position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none;
 }
 
 .menu {
@@ -23,9 +30,10 @@ body {
 }
 
 .menu #bossMenuBtn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  left: 2rem;
   width: 180px;
   height: 70px;
   border-radius: 5px;
@@ -33,9 +41,10 @@ body {
   line-height: 70px;
   font-size: 30px;
   font-weight: bold;
-  display: none;
-  background: #222;
+  background: #444;
   color: #FFF;
+  -webkit-box-shadow: 1px 2px 3px #777;
+          box-shadow: 1px 2px 3px #777;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -46,14 +55,33 @@ body {
   border-radius: 5px;
 }
 
+.menu #bossMenuBtn:hover {
+  -webkit-transition: 0s;
+  transition: 0s;
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #000000;
+}
+
+.menu #bossMenuBtn:active {
+  -webkit-transition: 0s;
+  transition: 0s;
+  border-radius: 5px 5px 0 0;
+  background: #000000;
+}
+
 .menu .pcNav {
-  display: none;
   position: absolute;
-  top: 0;
+  z-index: 3;
+  top: 3px;
   width: 500px;
+  left: -500px;
   height: 100vh;
   border-radius: 0px 20px 0px 0px;
-  background: #333;
+  background: #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu .pcNav .bossList {
@@ -188,6 +216,7 @@ body {
 }
 
 .menu .pcNav .bossList .pagelist .backbtn, .menu .pcNav .bossList .pagelist .nextbtn {
+  cursor: pointer;
   width: 55px;
   height: 55px;
   border: 1px solid #F00;
@@ -207,6 +236,7 @@ body {
   height: 99vh;
   margin-top: 3px;
   margin-left: 7px;
+  display: none;
   color: #FFF;
 }
 
@@ -289,5 +319,398 @@ body {
 
 .menu .phoneNav .bossinfo .infoitem.err .itemtxt {
   width: 500px;
+}
+
+.sectionTagBox {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: fixed;
+  z-index: 2;
+  top: 10rem;
+  left: 2rem;
+  width: 13rem;
+  padding: 1rem;
+  font-weight: bold;
+  background: #444;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 3px 5px #777;
+          box-shadow: 0px 3px 5px #777;
+}
+
+.sectionTagBox .taglist .item {
+  cursor: pointer;
+  font-size: 1.27rem;
+  padding-top: 0.5rem;
+  color: #888;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sectionTagBox .taglist .item.act {
+  color: #FFF;
+}
+
+.sectionTagBox .taglist .item:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #FFF;
+}
+
+.bossContainer {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+}
+
+.bossContainer section {
+  padding: 1rem;
+  background-color: #222;
+  -webkit-box-shadow: 0px 3px 5px #777;
+          box-shadow: 0px 3px 5px #777;
+  border-radius: 1rem;
+  width: 1200px;
+  position: absolute;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.bossContainer section .GradeList {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  z-index: 2;
+}
+
+.bossContainer section .GradeList #GradeVal {
+  display: inline-block;
+  width: 10rem;
+  border: 1px solid #FFF;
+}
+
+.bossContainer section .GradeList #GradeVal:after {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  content: url(../img/boss/arrow_white.png);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.bossContainer section .GradeList li {
+  text-align: center;
+  position: relative;
+  top: -1rem;
+  border: 1px solid #FF0;
+  width: 10rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.bossContainer section .GradeList .misstionTime {
+  display: block;
+}
+
+.bossContainer section .title {
+  width: 30%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #F00;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.bossContainer .bossIntro {
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%) scale(1);
+          transform: translate(-50%, -30%) scale(1);
+}
+
+.bossContainer .bossIntro .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bossContainer .bossIntro .content .bossImg {
+  width: 50%;
+}
+
+.bossContainer .bossIntro .content .bossImg img {
+  width: 70%;
+}
+
+.bossContainer .bossIntro .content .bosstxt {
+  position: relative;
+  width: 50%;
+  font-weight: bold;
+  border-radius: 1rem;
+  background: #444;
+}
+
+.bossContainer .bossIntro .content .bosstxt .bosstxtList {
+  width: 95%;
+  margin: auto;
+  text-align-last: left;
+  padding-left: 1rem;
+}
+
+.bossContainer .bossIntro .content .bosstxt .bosstxtList li {
+  padding-top: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.bossContainer .bossIntro .content .bosstxt .bosstxtList li span {
+  padding-left: 1rem;
+}
+
+.bossContainer .bossData {
+  display: none;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%) scale(0.65);
+          transform: translate(-50%, -15%) scale(0.65);
+}
+
+.bossContainer .bossData .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bossContainer .bossData .content .stagecont {
+  width: 50%;
+  margin-top: 1rem;
+  margin: 2rem 2%;
+  border: 1px solid #FFF;
+}
+
+.bossContainer .bossData .content .stagecont .stagetitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.bossContainer .bossData .content .stagecont .stageinfo {
+  text-align-last: left;
+}
+
+.bossContainer .bossData .content .stagecont .stageinfo p {
+  font-weight: bold;
+  font-size: 1.27rem;
+  padding: 0.3rem 1rem;
+}
+
+.bossContainer .damageRef {
+  display: none;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%) scale(0.65);
+          transform: translate(-50%, -80%) scale(0.65);
+}
+
+.bossContainer .damageRef .arcDamageTable, .bossContainer .damageRef .autDamageTable {
+  margin: 1rem 2rem;
+}
+
+.bossContainer .damageRef .arcDamageTable .tableTitle, .bossContainer .damageRef .autDamageTable .tableTitle {
+  width: 30%;
+  margin: auto;
+  margin-top: 1rem;
+  border: 1px solid #F00;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.bossContainer .damageRef .arcDamageTable .stage, .bossContainer .damageRef .autDamageTable .stage {
+  position: relative;
+  top: 0.5rem;
+}
+
+.bossContainer .damageRef .arcDamageTable ul, .bossContainer .damageRef .autDamageTable ul {
+  margin: 1rem;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bossContainer .damageRef .arcDamageTable ul .listTitle, .bossContainer .damageRef .autDamageTable ul .listTitle {
+  background: #111;
+}
+
+.bossContainer .damageRef .arcDamageTable ul li, .bossContainer .damageRef .autDamageTable ul li {
+  width: 100px;
+  height: 80px;
+  background: #444;
+  position: relative;
+  font-size: 1.2rem;
+  padding-top: 7px;
+  margin-top: 7px;
+}
+
+.bossContainer .damageRef .arcDamageTable ul li::after, .bossContainer .damageRef .autDamageTable ul li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bossContainer .damageRef .arcDamageTable ul li.none span, .bossContainer .damageRef .autDamageTable ul li.none span {
+  opacity: 0;
+}
+
+.bossContainer .damageRef .arcDamageTable ul li span, .bossContainer .damageRef .autDamageTable ul li span {
+  display: block;
+  width: 100px;
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bossContainer .damageRef .autDamageTable {
+  display: none;
+}
+
+.bossContainer .damageRef .autDamageTable .autList {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.bossContainer .bossBonus {
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%) scale(0.8);
+          transform: translate(-50%, -15%) scale(0.8);
+  font-weight: bold;
+}
+
+.bossContainer .bossBonus .generalBonus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #333;
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.bossContainer .bossBonus .generalBonus .subtitle {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.bossContainer .bossBonus .generalBonus .fixedItem, .bossContainer .bossBonus .generalBonus .notfixedItem {
+  border: 1px solid #F00;
+  border-radius: 0.5rem;
+  width: 40%;
+  padding: 0 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.bossContainer .bossBonus .generalBonus .fixedItem p, .bossContainer .bossBonus .generalBonus .notfixedItem p {
+  margin-top: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.bossContainer .bossBonus .generalBonus .fixedItem .mileage::before, .bossContainer .bossBonus .generalBonus .notfixedItem .mileage::before {
+  content: '';
+}
+
+.bossContainer .bossBonus .generalBonus .money {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #FF0;
+  position: relative;
+  top: 1rem;
+}
+
+.bossContainer .bossBonus .generalBonus .money::before {
+  content: '';
+}
+
+.bossContainer .bossBonus .generalBonus .money span {
+  display: inline-block;
+}
+
+.bossContainer .bossBonus .generalBonus .money .moneytitle {
+  width: 100%;
+  border-bottom: 1px solid #FF0;
+  background: #000;
+}
+
+.bossContainer .bossBonus .generalBonus .money .normalServe, .bossContainer .bossBonus .generalBonus .money .Reboot {
+  width: 50%;
+  background: #333;
+}
+
+.bossContainer .bossBonus .generalBonus .money .normalServe {
+  border-right: 1px solid #FF0;
+}
+
+.bossContainer .bossBonus .generalBonus .money .moneyVal {
+  margin-top: 0.5rem;
+}
+
+.bossContainer .bossBonus .generalBonus .money .money_chinese {
+  display: block;
+  width: 100%;
+}
+
+.bossContainer .bossBonus .generalBonus .notfixedItem p {
+  text-align-last: left;
+}
+
+.bossContainer .bossBonus .majorBonus {
+  display: none;
+}
+
+.bossContainer .otherBonusInfo {
+  display: none;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%) scale(0.65);
+          transform: translate(-50%, -15%) scale(0.65);
 }
 /*# sourceMappingURL=main.css.map */
