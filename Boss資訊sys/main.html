@@ -27,24 +27,35 @@
                             <span class="txt1">名稱</span>
                             <span class="txt2">難易度</span>
                         </div>
+                        
+                        <ul class="pageinfo">
+                            <li class="infoItem">
+                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_使烏.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img class="GradeImg" data-bossname="使烏" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img class="GradeImg" data-bossname="使烏" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_戴米安.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
+                        </ul>
                     </span>
 
 
-                    <ul class="pageinfo" v-html= "NavPagecont">
-                    <!-- <ul class="pageinfo"> -->
-                        <li class="infoItem">
-                            
-                            <span class="bossImg">
-                                    <img class="BossName" src="./img/boss/list_殘暴炎魔.png" alt="殘暴炎魔">
-                            </span>
-    
-                            <span class="bossGrade">
-                                <span @click= "getBossinfoVal" class="GradeItem"><img data-bossname="殘暴炎魔" src="./img/boss/grade_easy.png" alt="easy"></span>
-                                <span @click= "getBossinfoVal" class="GradeItem"><img data-bossname="殘暴炎魔" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                <span @click= "getBossinfoVal" class="GradeItem"><img data-bossname="殘暴炎魔" src="./img/boss/grade_chaos.png" alt="chaos"></span>
-                            </span>
-                        </li>
-                    </ul>
+                    <ul class="pageinfo"></ul>
                     
                     <div class="pagelist">
                         <span @click= "handNavPage" id="backbtn" class="backbtn">上一頁</span>
@@ -119,43 +130,47 @@
 
         <div class="sectionTagBox">
             <ul class="taglist">
-                <li class="item act">BOSS入場規則</li>
-                <li class="item">BOSS資訊</li>
-                <li class="item">BOSS獎勵</li>
-                <li class="item">獎勵資訊說明</li>
+                <li class="tagitem act">BOSS入場規則</li>
+                <li class="tagitem">BOSS資訊</li>
+                <li class="tagitem">BOSS獎勵</li>
+                <li class="tagitem">獎勵資訊說明</li>
             </ul>
         </div>
 
         <main class="bossContainer">
             
                 <section class="bossIntro">
+
                     <ul class="GradeList">
-                        <li id="GradeVal"><img src="./img/boss/grade_hard.png" alt=""></li>
-                        <li><img src="./img/boss/grade_easy.png" alt="簡單"></li>
-                        <li><img src="./img/boss/grade_normal.png" alt="普通"></li>
-                        <li><img src="./img/boss/grade_hard_act.png" alt="困難"></li>
+                        <li @click= "handGradeMenu" id="GradeVal"><img :src="GradeVal.url" :alt="GradeVal.alt"></li>
+
+                        <li 
+                        @click= "handGradeVal" 
+                        v-show= "GradeListbool" 
+                        :data-alt= "list.alt"
+                        v-for="list in showGradeList"
+                        :key= "list.alt"
+                        >
+                        <img :src="list.url" :alt="list.alt">
+                        </li>
                     </ul>
+
                     <h1 class="title">BOSS入場規則</h1>
 
-                    <!-- <div class="content">
+                    <div class="content">
                         <div class="bossImg">
-                            <img src="./img/boss/banner_露希妲.png" alt="">
+                            <img :src="banner" alt="">
                         </div>
                         <div class="bosstxt">
                             <ul class="bosstxtList">
-                                <li class="restrictionLv">最低入場等級:<span id="restrictionLvVal">{{220}}up</span></li>
-                                <li class="restrictionTimes">入場次數:<span id="restrictionTimesVal">{{3次/天}}</span></li>
-                                <li class="restrictionCD">入場等待時間:<span id="restrictionCDVal">{{30}}分鐘/次</span></li>
-                                <li class="restrictionFin">完成次數:<span id="restrictionFinVal">{{全模式每週1次}}</span></li>
-                                <li class="updateTime">重置時間:<span id="updateTimeVal">{{每週四 0:00更新}}</span></li>
-                                <li class="deathTimes">玩家命數:<span id="deathTimesVal">{{10}}</span></li>
-                                <li class="ConsumablesCD">消耗欄冷卻時間:<span id="ConsumablesCDVal">{{10秒}}</span></li>
-                                <li class="frontmisstion">前置任務:</span class="misstionName">{{任務名稱}}</li>
-                                <li class="frontmisstionTime">前置任務時間:<span class="misstionTime">約{{30}}分</span></li>
+                                <li 
+                                v-for="list in bosstxtRender"
+                                :key= "list.key"
+                                >{{list.title}}<span>{{list.msg}}</span></li>
                             </ul>
                         </div>
 
-                    </div> -->
+                    </div>
                 </section>
 
                 <!-- <section class="bossData">
