@@ -36,10 +36,11 @@
                                 </span>
                 
                                 <span class="bossGrade">
-                                    <span class="GradeItem"><img class="GradeImg" data-bossname="使烏" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img class="GradeImg" data-bossname="使烏" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="使烏" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="使烏" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
                             </li>
+
                             <li class="infoItem">
                                 
                                 <span class="bossImg">
@@ -47,8 +48,20 @@
                                 </span>
                 
                                 <span class="bossGrade">
-                                    <span class="GradeItem"><img class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_露希妲.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_easy.png" alt="easy"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
                             </li>
                         </ul>
@@ -89,38 +102,6 @@
                         </span>
                         <span class="itemtxt">守護天使綠水靈</span>
                     </li>
-                    <li class="infoitem">
-                        <span class="imgbox">
-                            <img src="./img/boss/phone_list_守護天使綠水靈.png" alt="">
-                        </span>
-                        <span class="itemtxt">守護天使綠水靈</span>
-                    </li>
-                    <li class="infoitem">
-                        <span class="imgbox">
-                            <img src="./img/boss/phone_list_守護天使綠水靈.png" alt="">
-                        </span>
-                        <span class="itemtxt">守護天使綠水靈</span>
-                    </li>
-                    <li class="infoitem">
-                        <span class="imgbox">
-                            <img src="./img/boss/phone_list_守護天使綠水靈.png" alt="">
-                        </span>
-                        <span class="itemtxt">守護天使綠水靈</span>
-                    </li>
-                    <li class="infoitem">
-                        <span class="imgbox">
-                            <img src="./img/boss/phone_list_守護天使綠水靈.png" alt="">
-                        </span>
-                        <span class="itemtxt">守護天使綠水靈</span>
-                    </li>
-
-
-                    <!-- <li class="infoitem err">
-                        <span class="imgbox">
-                        </span>
-                        <span class="itemtxt">名稱錯誤，找不到相關BOSS資訊 T_T</span>
-                    </li> -->
-    
 
                 </ul>
 
@@ -130,16 +111,19 @@
 
         <div class="sectionTagBox">
             <ul class="taglist">
-                <li class="tagitem act">BOSS入場規則</li>
-                <li class="tagitem">BOSS資訊</li>
-                <li class="tagitem">BOSS獎勵</li>
-                <li class="tagitem">獎勵資訊說明</li>
+                <li 
+                @click= "handsectionTagAct"
+                :class="['tagitem', {act : list.act}]"
+                v-for="list in sectionTagItem"
+                :key= "list.title"
+                >{{list.title}}
+                </li>
             </ul>
         </div>
 
         <main class="bossContainer">
             
-                <section class="bossIntro">
+                <section  v-show="sectioncont[0].open" class="bossIntro">
 
                     <ul class="GradeList">
                         <li @click= "handGradeMenu" id="GradeVal"><img :src="GradeVal.url" :alt="GradeVal.alt"></li>
@@ -173,56 +157,79 @@
                     </div>
                 </section>
 
-                <!-- <section class="bossData">
+                <section v-show="sectioncont[1].open" class="bossData">
                     <ul class="GradeList">
-                        <li id="GradeVal"><img src="./img/boss/grade_hard.png" alt=""></li>
-                        <li><img src="./img/boss/grade_easy.png" alt="簡單"></li>
-                        <li><img src="./img/boss/grade_normal.png" alt="普通"></li>
-                        <li><img src="./img/boss/grade_hard_act.png" alt="困難"></li>
+                        <li @click= "handGradeMenu" id="GradeVal"><img :src="GradeVal.url" :alt="GradeVal.alt"></li>
+                        <li 
+                        @click= "handGradeVal" 
+                        v-show= "GradeListbool" 
+                        :data-alt= "list.alt"
+                        v-for="list in showGradeList"
+                        :key= "list.alt"
+                        >
+                        <img :src="list.url" :alt="list.alt">
+                        </li>
                     </ul>
+
                     <h1 class="title">BOSS資訊</h1>
+                    <!-- 怪物收藏圖 名稱-->
                     <div class="content">
                         <div class="stagecont">
                             <h2 class="stagetitle">一階</h2>
                             <div class="stageinfo">
                                 <p class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></p>
                                 <p class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></p>
-                                <p class="bossHP">血量:<span id="bossHPVal">{{x兆}}</span></p>
-                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{True}}</span></p>
+                                <p class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></p>
+                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></p>
                             </div>
                         </div>
+                        
                         <div class="stagecont">
                             <h2 class="stagetitle">二階</h2>
                             <div class="stageinfo">
                                 <p class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></p>
                                 <p class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></p>
-                                <p class="bossHP">血量:<span id="bossHPVal">{{x兆}}</span></p>
-                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{True}}</span></p>
+                                <p class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></p>
+                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></p>
                             </div>
                         </div>
+
                         <div class="stagecont">
                             <h2 class="stagetitle">三階</h2>
                             <div class="stageinfo">
                                 <p class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></p>
                                 <p class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></p>
-                                <p class="bossHP">血量:<span id="bossHPVal">{{x兆}}</span></p>
-                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{True}}</span></p>
-                                <p class="bossHP">鎖血後恢復血量:<span id="bossHPVal2">{{5985億}}</span><img src="" alt="提示圖"></p>
+                                <p class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></p>
+                                <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></p>
+                                <p class="bossHP">鎖血後恢復血量:<span id="bossHPVal2">{{"5985億"}}</span></p>
                             </div>
                         </div>
                     </div>
                     <h1 class="title">怪物資訊</h1>
+                     <!-- 怪物收藏圖 名稱 -->
                     <div class="content">
-
+                        <div class="mosterinfo">
+                            <p class="bossS1LV">怪物等級:<span id="mosterS1LV">Lv{{230}}</span></p>
+                            <p class="mosterDefense">防禦力:<span id="mosterDefenseVal">{{300}}%</span></p>
+                            <p class="bossHP">血量:<span id="mosterHPVal">{{"x兆"}}</span></p>
+                            <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{false}}</span></p>
+                        </div>       
+                    <!-- 怪物收藏圖 名稱 -->                 
+                        <div class="mosterinfo">
+                            <p class="bossS1LV">怪物等級:<span id="bossS1LV">Lv{{230}}</span></p>
+                            <p class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></p>
+                            <p class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></p>
+                            <p class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{false}}</span></p>
+                        </div>                        
                     </div>
 
 
-                </section> -->
+                </section>
 
-                <!-- <section class="damageRef">
+                <section v-show="sectioncont[2].open" class="damageRef">
                     <div class="content">
                         <div class="arcDamageTable">
-                            <h1 class="tableTitle"><span id="tableTitleVal">{{Arc(祕法符文)}}</span>增幅</h1>
+                            <h1 class="tableTitle"><span id="tableTitleVal">{{"Arc(祕法符文)"}}</span>增幅</h1>
                             <ul class="arcList">
                                 <li class="listTitle">傷害%數<span>角色Arc</span></li>
                                 <li class="item">10%<span>{{0}}</span></li>
@@ -236,8 +243,9 @@
                                 <li class="item">150%<span>{{540}}</span></li>
                             </ul>
                         </div>
+                        
                         <div class="autDamageTable">
-                            <h1 class="tableTitle"><span id="tableTitleVal">{{Aut(真實符文)}}</span>增幅</h1>
+                            <h1 class="tableTitle"><span id="tableTitleVal">{{"Aut(真實符文)"}}</span>增幅</h1>
 
                             <h2 class="stage">一階</h2>
                             <ul class="autList">
@@ -262,6 +270,7 @@
                                 <li class="item none"><span>.</span></li>
                                 <li class="item none"><span>.</span></li>
                             </ul>
+
                             <h2 class="stage">二階</h2>
                             <ul class="autList">
                                 <li class="listTitle">傷害%數<span>角色AUT</span></li>
@@ -291,9 +300,9 @@
                     </div>
 
                     
-                </section> -->
+                </section>
 
-                <!-- <section class="bossBonus">
+                <section v-show="sectioncont[3].open" class="bossBonus">
                     <ul class="GradeList">
                         <li id="GradeVal"><img src="./img/boss/grade_hard.png" alt=""></li>
                         <li><img src="./img/boss/grade_easy.png" alt="簡單"></li>
@@ -309,17 +318,17 @@
                             <p class="mileage">里程數:<span>{{0}}</span></p>
                             <p class="money">
                                 <span class="moneytitle">結晶價格</span>
-                                <span class="normalServe">一般伺服器 <span class="moneyVal">${{0}}</span> <span class="money_chinese">{{萬}}</span>  </span>
-                                <span class="Reboot">Reboot伺服器 <span class="moneyVal">${{0}}</span> <span class="money_chinese">{{萬}}</span></span>
+                                <span class="normalServe">一般伺服器 <span class="moneyVal">${{0}}</span> <span class="money_chinese">{{"萬"}}</span>  </span>
+                                <span class="Reboot">Reboot伺服器 <span class="moneyVal">${{0}}</span> <span class="money_chinese">{{"萬"}}</span></span>
                             </p>
                         </div>
 
                         <div class="notfixedItem">
-                            <p class="dubiouscubeItem"><img src="" alt="方塊">{{可疑方塊:}} {{x}}個</span></p>
-                            <p class="potionItem"><span><img src="" alt="藥水">{{超級藥水:}} {{x}}個</span></p>
-                            <p class="crossicons"><span><img src="" alt="十字">十字硬幣: {{x}}個</span></p>
-                            <p class="fameItem"><img src="" alt="150名譽">名譽[+150]: {{x}}個</p>
-                            <p class="sparkItem"><img src="" alt="輪迴星火">{{XXX}}輪迴星火:1個</p>
+                            <p class="dubiouscubeItem"><img src="" alt="方塊">{{"可疑方塊:"}} {{"x"}}個</span></p>
+                            <p class="potionItem"><span><img src="" alt="藥水">{{"超級藥水:"}} {{"x"}}個</span></p>
+                            <p class="crossicons"><span><img src="" alt="十字">十字硬幣: {{"x"}}個</span></p>
+                            <p class="fameItem"><img src="" alt="150名譽">名譽[+150]: {{"x"}}個</p>
+                            <p class="sparkItem"><img src="" alt="輪迴星火">{{"XXX"}}輪迴星火:1個</p>
                             <p class="prayItem"><img src="" alt="祈禱綠">、<img src="" alt="祈禱紅色"></p>
                         </div>
                     </div>
@@ -368,91 +377,91 @@
                                         <img src="" alt="閃紅">
                                     </div>
                                     <div class="itemtxt">閃紅</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="紅火">
                                     </div>
                                     <div class="itemtxt">紅火</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="紫火">
                                     </div>
                                     <div class="itemtxt">紫火</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="黑火">
                                     </div>
                                     <div class="itemtxt">黑火</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="強力">
                                     </div>
                                     <div class="itemtxt">強力</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="永遠">
                                     </div>
                                     <div class="itemtxt">永遠</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="暗黑">
                                     </div>
                                     <div class="itemtxt">暗黑</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="優質武器">
                                     </div>
                                     <div class="itemtxt">優質武器</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="優質飾品">
                                     </div>
                                     <div class="itemtxt">優質飾品</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="優質寵物">
                                     </div>
                                     <div class="itemtxt">優質寵物</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="飾品">
                                     </div>
                                     <div class="itemtxt">飾品</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="渾沌">
                                     </div>
                                     <div class="itemtxt">渾沌</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                                 <li class="item">
                                     <div class="itemImg">
                                         <img src="" alt="匠人">
                                     </div>
                                     <div class="itemtxt">匠人</div>
-                                    <div class="itemavailable"><img src="#" alt="true"></div>
+                                    <div class="itemavailable"><img src="#" alt="check"></div>
                                 </li>
                             </ul>
                         </div>
@@ -510,9 +519,9 @@
                         </div>
                     </div>
 
-                </section> -->
+                </section>
 
-                <!-- <section class="otherBonusInfo">
+                <section v-show="sectioncont[4].open" class="otherBonusInfo">
                     <ul class="GradeList">
                         <li id="GradeVal"><img src="./img/boss/grade_hard.png" alt=""></li>
                         <li><img src="./img/boss/grade_easy.png" alt="簡單"></li>
@@ -552,10 +561,9 @@
                         </div>
                     </div>
 
-                </section> -->
+                </section>
            
         </main>
-
         <footer>
 
             <div class="player">

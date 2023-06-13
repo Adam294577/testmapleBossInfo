@@ -11,10 +11,8 @@ footer {
 }
 
 body, html {
-  background: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(50%, #555), to(#222));
-  background: linear-gradient(0deg, #000 0%, #555 50%, #222 100%);
+  background: #4F4F4F;
   position: relative;
-  overflow: hidden;
   height: 100%;
 }
 
@@ -152,16 +150,14 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   position: relative;
   display: inline-block;
   width: 150px;
-  margin-left: 7px;
+  margin-left: 0px;
   height: 30px;
   -webkit-transform-origin: left;
           transform-origin: left;
-  margin-right: 50px;
 }
 
 .menu .pcNav .bossList .pageinfo .infoItem .bossImg img {
   width: 100%;
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -169,7 +165,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade {
   position: relative;
-  left: -50px;
+  left: -10px;
   z-index: 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -178,7 +174,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem {
   display: inline-block;
-  margin-left: 27px;
+  margin-left: 20px;
 }
 
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem img {
@@ -365,7 +361,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 
 .bossContainer section {
-  display: none;
   padding: 1rem;
   background-color: #222;
   -webkit-box-shadow: 0px 3px 5px #777;
@@ -484,11 +479,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 
 .bossContainer .bossData {
-  display: none;
   top: 15%;
   left: 50%;
-  -webkit-transform: translate(-50%, -15%) scale(0.65);
-          transform: translate(-50%, -15%) scale(0.65);
+  -webkit-transform: translate(-50%, -15%) scale(0.8);
+          transform: translate(-50%, -15%) scale(0.8);
 }
 
 .bossContainer .bossData .content {
@@ -523,14 +517,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 
 .bossContainer .damageRef {
-  display: none;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
-  -webkit-transform: translate(-50%, -80%) scale(0.65);
-          transform: translate(-50%, -80%) scale(0.65);
+  -webkit-transform: translate(-50%, 0%) scale(0.65);
+          transform: translate(-50%, 0%) scale(0.65);
 }
 
 .bossContainer .damageRef .arcDamageTable, .bossContainer .damageRef .autDamageTable {
@@ -574,7 +564,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   height: 80px;
   background: #444;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   padding-top: 7px;
   margin-top: 7px;
 }
@@ -604,10 +594,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-.bossContainer .damageRef .autDamageTable {
-  display: none;
 }
 
 .bossContainer .damageRef .autDamageTable .autList {
@@ -716,7 +702,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 
 .bossContainer .otherBonusInfo {
-  display: none;
   top: 15%;
   left: 50%;
   -webkit-transform: translate(-50%, -15%) scale(0.65);

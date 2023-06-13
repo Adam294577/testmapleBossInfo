@@ -9,9 +9,10 @@ footer{
 }
 
 body,html{
-    background: linear-gradient(0deg, #000 0%, #555 50% ,#222 100%);
+    // background: linear-gradient(0deg, #000 0%, #555 50% ,#222 100%);
+    background: #4F4F4F;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
     &::-webkit-scrollbar{
         display: none;
@@ -136,16 +137,16 @@ body,html{
                         display: inline-block;
                         // width: 135px;
                         width: 150px;
-                        margin-left: 7px;
+                        margin-left: 0px;
                         height: 30px;
                         transform-origin: left;
                         // transform: scale(1.2);
-                        margin-right: 50px;
+                        // margin-right: 50px;
                         // border: 1px solid #FFF;
                         
                         img{
                             width: 100%;
-                            display: inline-block;
+                            // display: inline-block;
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -155,13 +156,12 @@ body,html{
                     .bossGrade{
                         // display: flex;
                         position: relative;
-                        left: -50px;
+                        left: -10px;
                         z-index: 2;
                         align-items: center;
-                        // border: 1px solid #FFF;
                         .GradeItem{
                             display: inline-block;
-                            margin-left: 27px;
+                            margin-left: 20px;
                             img{
                                 border-radius: 10px;
                             }
@@ -348,7 +348,7 @@ body,html{
     text-align: center;
     color: #FFF;
     section{
-        display: none;
+        // display: none;
         padding: 1rem;
         background-color: #222;
         box-shadow: 0px 3px 5px #777;
@@ -456,10 +456,10 @@ body,html{
         }
     }
     .bossData{
-        display: none;
+        // display: block;
         top: 15%;
         left: 50%;
-        transform: translate(-50%,-15%) scale(0.65) ;  
+        transform: translate(-50%,-15%) scale(0.8) ;  
         .content{
             display: flex;
             justify-content: center;
@@ -488,12 +488,10 @@ body,html{
 
     }
     .damageRef{
-        display: none;
-        transform-origin: top;
-        position: absolute;
-        top: 80%;
+        // display: none;
+        top: 70%;
         left: 50%;
-        transform: translate(-50%,-80%) scale(0.65) ;            
+        transform: translate(-50%,0%) scale(0.65) ;            
         
 
         .arcDamageTable,.autDamageTable{
@@ -524,7 +522,7 @@ body,html{
                     span{
 
                     }
-
+                    
                 }
                 li{
                     width: 100px;
@@ -532,7 +530,7 @@ body,html{
                     height: 80px;
                     background: #444;
                     position: relative;
-                    font-size: 1.2rem;
+                    font-size: 1.35rem;
                     padding-top: 7px;
                     margin-top: 7px;
 
@@ -582,7 +580,6 @@ body,html{
 
         }
         .autDamageTable{
-            display: none;
             .autList{
                 flex-wrap: wrap;
                 justify-content: start;
@@ -725,7 +722,7 @@ body,html{
 
     }
     .otherBonusInfo{
-        display: none;
+        // display: none;
         top: 15%;
         left: 50%;
         transform: translate(-50%,-15%) scale(0.65) ;  
