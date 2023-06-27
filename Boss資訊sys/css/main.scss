@@ -42,10 +42,6 @@
         transform: translate(-50%,-50%) rotate(-45deg);
     }    
 }
-.poin{
-    position: absolute;
-    right: 35%;
-}
 
 
 footer{
@@ -448,7 +444,6 @@ body,html{
     }
 
     .bossIntro{
-        transform: scale(0.8);
         .content{
             display: flex;
             margin-top: 20px;
@@ -488,8 +483,6 @@ body,html{
         }
     }
     .bossData{
-        transform: scale(0.8);
-       
         .content{
             display: flex;
             justify-content: center;
@@ -674,11 +667,6 @@ body,html{
     
     .bossBonus{
         font-weight: bold;
-        transform: scale(0.8);
-
-
-        
-       
         .generalBonus,.majorBonus{
             background: #333;
             width: 80%;
@@ -696,7 +684,6 @@ body,html{
                 .fixedItem,.notfixedItem{
                     // border: 1px solid #F00;
                     // background: #CCC;
-                    display: none;
                     border-radius: 0.5rem;
                     width: 45%;
                     margin-top: 1rem;
@@ -786,6 +773,9 @@ body,html{
                     }
     
                 }
+                &.close{
+                    display: none;
+                }
             }
 
 
@@ -798,6 +788,9 @@ body,html{
                 
             }
             .suuAfterItemBox{
+                &.close{
+                    display: none;
+                }
                 .suuAfterList{
                     // border: 1px solid #FFF;
                     border: 1px solid #F00;
@@ -836,6 +829,9 @@ body,html{
             }
 
             .majorBox{
+                &.close{
+                    display: none;
+                }
                 .majorList{
                     
                     li{

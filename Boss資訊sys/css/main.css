@@ -6,11 +6,6 @@
   text-decoration: none;
 }
 
-.poin {
-  position: absolute;
-  right: 35%;
-}
-
 footer {
   display: none;
 }
@@ -355,9 +350,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border-radius: 0.4rem;
   padding: 1rem;
 }
-.bossContainer .bossIntro {
-  transform: scale(0.8);
-}
 .bossContainer .bossIntro .content {
   display: flex;
   margin-top: 20px;
@@ -391,9 +383,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 .bossContainer .bossIntro .content .bosstxt .bosstxtList li span {
   padding-left: 1rem;
-}
-.bossContainer .bossData {
-  transform: scale(0.8);
 }
 .bossContainer .bossData .content {
   display: flex;
@@ -536,7 +525,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 .bossContainer .bossBonus {
   font-weight: bold;
-  transform: scale(0.8);
 }
 .bossContainer .bossBonus .generalBonus, .bossContainer .bossBonus .majorBonus {
   background: #333;
@@ -561,7 +549,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   justify-content: space-around;
 }
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem {
-  display: none;
   border-radius: 0.5rem;
   width: 45%;
   margin-top: 1rem;
@@ -643,6 +630,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   position: relative;
   left: 3px;
 }
+.bossContainer .bossBonus .generalBonus .generalcontaner.close, .bossContainer .bossBonus .majorBonus .generalcontaner.close {
+  display: none;
+}
 .bossContainer .bossBonus .majorBonus {
   margin-top: 2rem;
 }
@@ -655,6 +645,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border-bottom: 1px solid #FFF;
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.bossContainer .bossBonus .majorBonus .suuAfterItemBox.close {
+  display: none;
 }
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList {
   border: 1px solid #F00;
@@ -683,6 +676,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemtxt {
   font-size: 18px;
   margin: 0.5rem 0;
+}
+.bossContainer .bossBonus .majorBonus .majorBox.close {
+  display: none;
 }
 .bossContainer .bossBonus .majorBonus .majorBox .majorList li {
   display: flex;
