@@ -84,17 +84,20 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 418300,"Rbvalue": 2091500 },
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 418300 },
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 2091500 },
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1501700 ,"Rbvalue": 7508500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1501700},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7508500},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 20},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 8819007 ,"Rbvalue": 44095035}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 20},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 8819007},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 44095035}
                     
                     
 
@@ -297,17 +300,20 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 612900,"Rbvalue": 3064500 },
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 612900 },
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 3064500 },
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 844700 ,"Rbvalue": 4223500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 844700},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 4223500},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1419500 ,"Rbvalue": 7097500}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1419500},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 7097500}
                     
                     
 
@@ -454,13 +460,15 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 463500 ,"Rbvalue": 2317500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 463500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2317500},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 5},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 6677700 ,"Rbvalue": 33388500}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 5},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 6677700},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 33388500}
                     
                     
 
@@ -607,13 +615,15 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 667400 ,"Rbvalue": 3337000},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 667400},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 3337000},
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1460300 ,"Rbvalue": 7301500}
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1460300},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7301500}
                     
                     
 
@@ -762,13 +772,15 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 5},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 5307400 ,"Rbvalue": 26537000},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 5},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 5307400},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 26537000},
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 5},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8709400 ,"Rbvalue": 43547000}
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 5},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8709400},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 43547000}
 
                 ],
                 "notfixedItem":[
@@ -885,13 +897,15 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 375500 ,"Rbvalue": 1877500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 375500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1877500},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1543700 ,"Rbvalue": 7718500}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1543700},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 7718500}
 
                 ],
                 "notfixedItem":[
@@ -1009,9 +1023,10 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 724200 ,"Rbvalue": 3621000}
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 724200},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 3621000}
 
                 ],
                 "notfixedItem":[
@@ -1129,17 +1144,20 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 115800,"Rbvalue": 115800},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 115800},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 115800},
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 354800,"Rbvalue": 1774000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 354800},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1774000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7059750, "Rbvalue": 35298750}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7059750},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 35298750}
                     
                     
 
@@ -1313,17 +1331,20 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 511000,"Rbvalue": 2555000},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 511000},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 2555000},
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 586600,"Rbvalue": 2933000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 586600},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2933000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 783300, "Rbvalue": 3916500}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 783300},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 3916500}
                     
                     
 
@@ -1472,13 +1493,15 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 813700,"Rbvalue": 4068500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 813700},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 4068500},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 5},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7630700, "Rbvalue": 38153500}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 5},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7630700},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38153500}
                     
                     
 
@@ -1604,13 +1627,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800,"Rbvalue": 2804000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7313306, "Rbvalue": 36566530}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7313306},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 36566530}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1730,13 +1755,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800,"Rbvalue": 2804000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7693781, "Rbvalue": 38468905}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7693781},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38468905}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1857,13 +1884,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800,"Rbvalue": 2804000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7682035, "Rbvalue": 38410175}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7682035},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38410175}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1981,13 +2010,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800,"Rbvalue": 2804000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 20},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 9070003, "Rbvalue": 45350015}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 20},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 9070003},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 45350015}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -2105,13 +2136,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 28843452,"Rbvalue": 144217260},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 28843452},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 144217260},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 80612548, "Rbvalue": 403062740}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 80612548},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 403062740}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
@@ -2269,13 +2302,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 27207040,"Rbvalue": 136035200},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 27207040},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 136035200},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 87503781, "Rbvalue": 437518905}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 87503781},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 437518905}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
@@ -2465,17 +2500,20 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 48799200,"Rbvalue": 243996000},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 48799200},
+                    { "idx": 3, "key": "easyRB結晶價格", "Grade":"easy", "title": "RB結晶價格:" , "value": 243996000},
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 58457600,"Rbvalue": 292288000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 58457600 },
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 292288000},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 97438242, "Rbvalue": 487191210}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 97438242},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 487191210}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "easy可疑附加方塊", "Grade":"easy","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
@@ -2674,17 +2712,20 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 52139000,"Rbvalue": 260695000},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 52139000},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 260695000},
 
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 67421000,"Rbvalue": 337106000},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 67421000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 337106000},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 109805699, "Rbvalue": 549028495}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 109805699},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 549028495}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "easy可疑附加方塊", "Grade":"easy","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 4},
@@ -2853,13 +2894,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 39114492,"Rbvalue": 195572460},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 39114492},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 195572460},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120450252, "Rbvalue": 602251260}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120450252},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 602251260}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
@@ -3015,13 +3058,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 72293700,"Rbvalue": 361468500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 72293700},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 361468500},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 116977942, "Rbvalue": 584889710}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 116977942},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 584889710}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 6},
@@ -3185,13 +3230,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 77908300,"Rbvalue": 389541500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 77908300},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 389541500},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120151104, "Rbvalue": 600755520}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120151104},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 600755520}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 6},
@@ -3358,13 +3405,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 60},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 118489900,"Rbvalue": 592449500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 60},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 118489900},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 592449500},
                     
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 138191654, "Rbvalue": 690958270}
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 138191654},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 690958270}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 9},
@@ -3531,13 +3580,15 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 30},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 990841916,"Rbvalue": 4954209580},
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 30},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 990841916},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 4954209580},
                     
-                    { "idx": 1, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 30},
-                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 3000000000, "Rbvalue": 15000000000}
+                    { "idx": 0, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 30},
+                    { "idx": 2, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 3000000000, "Rbvalue": 15000000000},
+                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 15000000000, "Rbvalue": 15000000000}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 30},
@@ -3746,17 +3797,20 @@
             "bossBonus":{
                 "show" : false,
                 "fixedItem":[
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 145101237,"Rbvalue": 725506185},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 145101237},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 725506185},
 
-                    { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 262989400,"Rbvalue": 1314947000},
+                    { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 262989400},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1314947000},
                     
-                    { "idx": 1, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": "未知"},
-                    { "idx": 2, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 700000000, "Rbvalue": 3500000000}
+                    { "idx": 0, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": "未知"},
+                    { "idx": 1, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 700000000},
+                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 3500000000}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 10},
@@ -3971,9 +4025,10 @@
                 "show" : false,
                 "fixedItem":[
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 300000000, "Rbvalue": 1500000000}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 300000000},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 1500000000}
                 ],
                 "notfixedItem":[
 
@@ -4114,17 +4169,20 @@
                 "show" : false,
                 "fixedItem":[
 
-                    { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 396500,"Rbvalue": 1982500},
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 396500},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 1982500},
                     
-                    { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
-                    { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1543700,"Rbvalue": 7718500},
+                    { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
+                    { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1543700},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7718500},
                     
-                    { "idx": 1, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 30},
-                    { "idx": 2, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 20088150, "Rbvalue": 100440750}
+                    { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 30},
+                    { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
+                    { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 20088150},
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 100440750}
                     
                     
 
@@ -4227,7 +4285,12 @@
             },
             "bossBonus":{
                 "show" : false,
-                "fixedItem":[],
+                "fixedItem":[
+                    { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
+                    { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
+                    { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 0},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 0}
+                ],
 
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -4318,7 +4381,8 @@
 
                     { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 10},
                     { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8953200 ,"Rbvalue": 44766000}
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8953200},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 44766000}
                     
 
                 ],
