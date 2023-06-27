@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
 }
@@ -23,7 +22,6 @@ body, html {
   position: relative;
   min-height: 100vh;
 }
-
 body::-webkit-scrollbar, html::-webkit-scrollbar {
   display: none;
 }
@@ -31,10 +29,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .menu {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
-
 .menu #bossMenuBtn {
   position: fixed;
   z-index: 2;
@@ -49,34 +45,24 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   font-weight: bold;
   background: #444;
   color: #FFF;
-  -webkit-box-shadow: 1px 2px 3px #777;
-          box-shadow: 1px 2px 3px #777;
-  -webkit-transition: 0.5s;
+  box-shadow: 1px 2px 3px #777;
   transition: 0.5s;
 }
-
 .menu #bossMenuBtn.act {
-  -webkit-transition: 0s;
   transition: 0s;
   border-radius: 5px;
 }
-
 .menu #bossMenuBtn:hover {
-  -webkit-transition: 0s;
   transition: 0s;
   border-radius: 5px 5px 0 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   background: #000000;
 }
-
 .menu #bossMenuBtn:active {
-  -webkit-transition: 0s;
   transition: 0s;
   border-radius: 5px 5px 0 0;
   background: #000000;
 }
-
 .menu .pcNav {
   position: fixed;
   z-index: 3;
@@ -86,14 +72,11 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   height: 100vh;
   border-radius: 0px 20px 0px 0px;
   background: #333333;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .menu .pcNav .bossList {
   color: #FFF;
 }
-
 .menu .pcNav .bossList .navback {
   cursor: pointer;
   position: absolute;
@@ -102,25 +85,20 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   width: 30px;
   height: 30px;
 }
-
 .menu .pcNav .bossList .navback .bar {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   display: inline-block;
   width: 27px;
   height: 7px;
   background: #FFFFFF;
   border-radius: 10px;
 }
-
 .menu .pcNav .bossList .navback .bar2 {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .menu .pcNav .bossList .title {
   display: inline-block;
   position: absolute;
@@ -130,107 +108,81 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   height: 70px;
   width: 90%;
 }
-
 .menu .pcNav .bossList .title .navtitle span {
   font-size: 27px;
   font-weight: bold;
   display: inline-block;
 }
-
 .menu .pcNav .bossList .title .navtitle .txt1 {
   padding-top: 15px;
   padding-left: 35px;
 }
-
 .menu .pcNav .bossList .title .navtitle .txt2 {
   padding-left: 177px;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem {
   margin-top: 12px;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem:nth-child(1) {
   margin-top: 80px;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossImg {
   position: relative;
   display: inline-block;
   width: 150px;
   margin-left: 0px;
   height: 30px;
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossImg img {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade {
   position: relative;
   left: -10px;
   z-index: 2;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem {
   display: inline-block;
   margin-left: 20px;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem img {
   border-radius: 10px;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem img:hover {
-  -webkit-box-shadow: 0 0 7px #ffffff;
-          box-shadow: 0 0 7px #ffffff;
+  box-shadow: 0 0 7px #ffffff;
 }
-
 .menu .pcNav .bossList .pageinfo .infoItem .bossGrade .GradeItem:nth-child(1) {
   margin-left: 15px;
 }
-
 .menu .pcNav .bossList .pagelist {
   position: absolute;
   bottom: 30px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translateX(-50%);
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 95%;
   border: 1px solid #F0F;
 }
-
 .menu .pcNav .bossList .pagelist span {
   display: inline-block;
   margin: 3px;
 }
-
 .menu .pcNav .bossList .pagelist .backbtn, .menu .pcNav .bossList .pagelist .nextbtn {
   cursor: pointer;
   width: 55px;
   height: 55px;
   border: 1px solid #F00;
 }
-
 .menu .pcNav .bossList .pagelist .pagecontent {
   position: relative;
   top: 10px;
 }
-
 .menu .phoneNav {
   position: absolute;
   top: 0;
@@ -243,18 +195,15 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   display: none;
   color: #FFF;
 }
-
 .menu .phoneNav .searchbar {
   position: absolute;
   top: 10px;
   left: 20px;
 }
-
 .menu .phoneNav .searchbar input {
   padding: 10px 20px;
   width: 300px;
 }
-
 .menu .phoneNav .navback {
   position: absolute;
   right: 8px;
@@ -262,34 +211,25 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   width: 30px;
   height: 30px;
 }
-
 .menu .phoneNav .navback .bar {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   display: inline-block;
   width: 27px;
   height: 7px;
   background: #FFFFFF;
   border-radius: 10px;
 }
-
 .menu .phoneNav .navback .bar2 {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .menu .phoneNav .bossinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 100px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .menu .phoneNav .bossinfo .infoitem, .menu .phoneNav .bossinfo .infoitem.err {
   position: relative;
   width: 30%;
@@ -297,7 +237,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   margin-top: 50px;
   margin-left: 2.5%;
 }
-
 .menu .phoneNav .bossinfo .infoitem .imgbox, .menu .phoneNav .bossinfo .infoitem.err .imgbox {
   position: absolute;
   top: 0;
@@ -308,7 +247,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border: 1px solid #EEE;
   overflow: hidden;
 }
-
 .menu .phoneNav .bossinfo .infoitem span, .menu .phoneNav .bossinfo .infoitem.err span {
   width: 100%;
   position: absolute;
@@ -317,10 +255,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   font-size: 10px;
   top: 100%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .menu .phoneNav .bossinfo .infoitem.err .itemtxt {
   width: 500px;
 }
@@ -328,7 +264,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .sectionTagBox {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   position: fixed;
   z-index: 2;
@@ -339,25 +274,19 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   font-weight: bold;
   background: #444;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 3px 5px #777;
-          box-shadow: 0px 3px 5px #777;
+  box-shadow: 0px 3px 5px #777;
 }
-
 .sectionTagBox .taglist .tagitem {
   cursor: pointer;
   font-size: 1.27rem;
   padding-top: 0.5rem;
   color: #888;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .sectionTagBox .taglist .tagitem.act {
   color: #FFF;
 }
-
 .sectionTagBox .taglist .tagitem:hover {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #FFF;
 }
@@ -369,21 +298,17 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   margin: 0 auto;
   margin-bottom: 200px;
 }
-
 .bossContainer section {
   padding: 1rem;
   background-color: #222;
-  -webkit-box-shadow: 0px 3px 20px #777;
-          box-shadow: 0px 3px 20px #777;
+  box-shadow: 0px 3px 20px #777;
   border-radius: 1rem;
   width: 1200px;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   margin: 0 auto;
   position: relative;
   top: 100px;
 }
-
 .bossContainer section .GradeList {
   position: absolute;
   top: 3rem;
@@ -391,26 +316,21 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   z-index: 2;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
 }
-
 .bossContainer section .GradeList #GradeVal {
   display: inline-block;
   width: 10rem;
   border: 1px solid #FFF;
   background: linear-gradient(120deg, #6d6d6d 0%, #2f2f2f 25%);
 }
-
 .bossContainer section .GradeList #GradeVal:after {
   display: inline-block;
   position: absolute;
   right: 10px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .bossContainer section .GradeList li {
   text-align: center;
   position: relative;
@@ -420,15 +340,12 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   font-weight: bold;
   font-size: 2rem;
 }
-
 .bossContainer section .GradeList li img {
   display: inline-block;
 }
-
 .bossContainer section .GradeList .misstionTime {
   display: block;
 }
-
 .bossContainer section .title {
   width: 30%;
   margin: auto;
@@ -438,31 +355,21 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border-radius: 0.4rem;
   padding: 1rem;
 }
-
 .bossContainer .bossIntro {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
-
 .bossContainer .bossIntro .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
   padding-bottom: 3rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .bossContainer .bossIntro .content .bossImg {
   width: 50%;
 }
-
 .bossContainer .bossIntro .content .bossImg img {
   width: 70%;
 }
-
 .bossContainer .bossIntro .content .bosstxt {
   position: relative;
   width: 50%;
@@ -471,37 +378,27 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: #444;
   padding-bottom: 2rem;
 }
-
 .bossContainer .bossIntro .content .bosstxt .bosstxtList {
   width: 95%;
   margin: auto;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
   padding-left: 1rem;
 }
-
 .bossContainer .bossIntro .content .bosstxt .bosstxtList li {
   padding-top: 1.5rem;
   font-size: 1.4rem;
 }
-
 .bossContainer .bossIntro .content .bosstxt .bosstxtList li span {
   padding-left: 1rem;
 }
-
 .bossContainer .bossData {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
-
 .bossContainer .bossData .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .bossContainer .bossData .content .stagecont {
   width: 50%;
   margin-top: 1rem;
@@ -513,89 +410,68 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border: 1px solid #DDD;
   border-radius: 7px;
 }
-
 .bossContainer .bossData .content .stagecont .stagetitle {
   text-align: center;
   margin-bottom: 1rem;
 }
-
 .bossContainer .bossData .content .stagecont .stageinfo {
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
-
 .bossContainer .bossData .content .stagecont .stageinfo li {
   font-weight: bold;
   font-size: 1.27rem;
   padding: 1rem 1rem 0rem;
 }
-
 .bossContainer .bossData .content .stagecont .stageinfo li span {
   position: relative;
   left: 7px;
 }
-
 .bossContainer .bossData .content .stagecont .stageinfo img {
   position: relative;
   top: 5px;
   left: 5px;
 }
-
 .bossContainer .bossData .moscontent .mosTitle {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .bossContainer .bossData .moscontent .mosTitle li {
   width: 30%;
 }
-
 .bossContainer .bossData .moscontent .mosTitle li span {
   font-size: 24px;
   font-weight: bold;
 }
-
 .bossContainer .bossData .moscontent .mosterinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 1.5rem;
   border: 1px solid #FFF;
   background: linear-gradient(135deg, #6d6d6d 0%, #2f2f2f 15%);
   padding: 0.5rem 0;
 }
-
 .bossContainer .bossData .moscontent .mosterinfo li {
   display: inline-block;
   width: 30%;
 }
-
 .bossContainer .bossData .moscontent .mosterinfo li img {
   position: relative;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
 }
-
 .bossContainer .bossData .moscontent .mosterinfo li span {
   display: block;
   font-size: 19px;
   font-weight: bold;
   margin-top: 3px;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable, .bossContainer .bossData .damageRef .autDamageTable {
   margin: 1rem 2rem;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable .tableTitle, .bossContainer .bossData .damageRef .autDamageTable .tableTitle {
   width: 30%;
   margin: auto;
@@ -604,31 +480,21 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border-radius: 0.4rem;
   padding: 1rem;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable .stage, .bossContainer .bossData .damageRef .autDamageTable .stage {
   position: relative;
   top: 0.5rem;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul, .bossContainer .bossData .damageRef .autDamageTable ul {
   margin: 1rem;
   padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul .listTitle, .bossContainer .bossData .damageRef .autDamageTable ul .listTitle {
   background: #111;
   font-weight: bold;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul li, .bossContainer .bossData .damageRef .autDamageTable ul li {
   width: 100px;
   height: 80px;
@@ -639,9 +505,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   margin-top: 7px;
   font-weight: bold;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul li::after, .bossContainer .bossData .damageRef .autDamageTable ul li::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -649,42 +514,30 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul li.none span, .bossContainer .bossData .damageRef .autDamageTable ul li.none span {
   opacity: 0;
 }
-
 .bossContainer .bossData .damageRef .arcDamageTable ul li span, .bossContainer .bossData .damageRef .autDamageTable ul li span {
   display: block;
   width: 100px;
   position: absolute;
   bottom: 7px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .bossContainer .bossData .damageRef .autDamageTable {
   display: none;
 }
-
 .bossContainer .bossData .damageRef .autDamageTable .autList {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  flex-wrap: wrap;
+  justify-content: start;
 }
-
 .bossContainer .bossBonus {
   font-weight: bold;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
-
 .bossContainer .bossBonus .generalBonus, .bossContainer .bossBonus .majorBonus {
   background: #333;
   width: 80%;
@@ -693,7 +546,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
-
 .bossContainer .bossBonus .generalBonus .subtitle, .bossContainer .bossBonus .majorBonus .subtitle {
   position: relative;
   cursor: pointer;
@@ -704,15 +556,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner, .bossContainer .bossBonus .majorBonus .generalcontaner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem {
   display: none;
   border-radius: 0.5rem;
@@ -720,25 +567,18 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   margin-top: 1rem;
   padding: 0.5rem 0 1rem;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem p, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem p, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem p, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem p {
   margin-top: 0.3rem;
   font-size: 1.25rem;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem .pointItem, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem .pointItem, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem .pointItem, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem .pointItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0.5rem 0;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem .pointItem .guildPoint, .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem .pointItem .mileage, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem .pointItem .guildPoint, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem .pointItem .mileage, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem .pointItem .guildPoint, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem .pointItem .mileage, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem .pointItem .guildPoint, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem .pointItem .mileage {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 45%;
   height: 60px;
@@ -751,23 +591,18 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   padding-left: 15px;
   font-size: 23px;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem .pointItem .guildPoint span, .bossContainer .bossBonus .generalBonus .generalcontaner .fixedItem .pointItem .mileage span, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem .pointItem .guildPoint span, .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem .pointItem .mileage span, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem .pointItem .guildPoint span, .bossContainer .bossBonus .majorBonus .generalcontaner .fixedItem .pointItem .mileage span, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem .pointItem .guildPoint span, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem .pointItem .mileage span {
   position: absolute;
   right: 16px;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneytitle, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneytitle {
   margin-top: 1rem;
   width: 100%;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneytitle img, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneytitle img {
   width: 100%;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .normalServe, .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .Reboot, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .normalServe, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .Reboot {
   border: 1px solid #FFF;
   width: 80%;
@@ -776,51 +611,41 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: linear-gradient(135deg, #6d6d6d 0%, #2f2f2f 40%);
   padding: 0.7rem 0;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .normalServe .serveTxt, .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .Reboot .serveTxt, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .normalServe .serveTxt, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .Reboot .serveTxt {
   font-size: 23px;
   padding-bottom: 0.7rem;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .normalServe span, .bossContainer .bossBonus .generalBonus .generalcontaner .moneyItem .moneyVal .Reboot span, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .normalServe span, .bossContainer .bossBonus .majorBonus .generalcontaner .moneyItem .moneyVal .Reboot span {
   font-size: 21px;
   display: block;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem {
   text-align: left;
   padding-left: 2rem;
   padding-top: 1.5rem;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem li, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem li {
   padding-bottom: 1.5rem;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem li img, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem li img {
   width: 45px;
   height: 45px;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   position: relative;
   top: 10px;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem li span, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem li span {
   padding-left: 1rem;
   font-size: 22px;
 }
-
 .bossContainer .bossBonus .generalBonus .generalcontaner .notfixedItem li .countTxt, .bossContainer .bossBonus .majorBonus .generalcontaner .notfixedItem li .countTxt {
   padding-left: 0;
   position: relative;
   left: 3px;
 }
-
 .bossContainer .bossBonus .majorBonus {
   margin-top: 2rem;
 }
-
 .bossContainer .bossBonus .majorBonus .subtitle {
   position: relative;
   cursor: pointer;
@@ -831,96 +656,70 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList {
   border: 1px solid #F00;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
   margin-top: 2rem;
   width: 90%;
 }
-
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item {
   width: 16%;
   text-align: center;
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
-
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemImg {
   margin: auto;
   width: 45px;
   height: 45px;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemImg img {
   width: 100%;
 }
-
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemtxt {
   font-size: 18px;
   margin: 0.5rem 0;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   height: 70px;
   border-bottom: none;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList li span {
   width: 40%;
   font-size: 18px;
   font-weight: bold;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList li span:nth-child(1) {
   width: 20%;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList li span:nth-child(2) {
   width: 20%;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listTitle {
   background: #444;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listTitle span {
   font-weight: bold;
   font-size: 20px;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem {
   padding: 2rem 0;
   border-bottom: 1px solid #CCC;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem span {
   position: relative;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem span .dash {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   display: block;
   width: 23px;
   height: 5px;
@@ -929,33 +728,26 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   position: relative;
   top: -3px;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem span a {
   display: block;
   color: #FFF;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem .infoIcon {
   margin: auto;
   display: block;
   width: 30px;
   cursor: pointer;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem .itemIcon {
   width: 45px;
   height: 45px;
 }
-
 .bossContainer .bossBonus .majorBonus .majorBox .majorList .listItem:last-child {
   border-bottom: none;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox {
   position: relative;
-  display: block;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .dark {
   background-color: #000;
   position: fixed;
@@ -966,7 +758,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   left: 0;
   opacity: 0.7;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content {
   border: 1px solid #F00;
   position: fixed;
@@ -976,7 +767,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   height: 100vh;
   z-index: 1000;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content .BonusBoxCross {
   cursor: pointer;
   position: absolute;
@@ -985,38 +775,27 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   width: 30px;
   height: 30px;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content .BonusBoxCross .bar {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   display: inline-block;
   width: 27px;
   height: 7px;
   background: #FFFFFF;
   border-radius: 10px;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content .BonusBoxCross .bar2 {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content .setImg {
   position: fixed;
   z-index: 100;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
-.bossContainer .otherBonusInfo .BonusInfoContainer .BonusBox .content .careerList {
-  display: none;
-}
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList {
   width: 80%;
   margin: auto;
@@ -1024,7 +803,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
-
+.bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .NobonusDataTxt {
+  font-weight: bold;
+  font-size: 30px;
+}
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .subtitle {
   margin-top: 2rem;
   position: relative;
@@ -1036,36 +818,28 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content {
   background: #333;
   position: relative;
 }
-
+.bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content.close {
+  display: none;
+}
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content p .furniture {
   margin-top: 1rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinHowChange > span:nth-child(1), .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinWhereChange > span:nth-child(1), .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinChangeNPC > span:nth-child(1) {
   position: absolute;
   font-size: 20px;
   font-weight: bold;
   left: 1rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinHowChange {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinHowChange .icon {
   margin: 1rem;
   width: 45px;
@@ -1073,56 +847,38 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   border-radius: 5px;
   overflow: hidden;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinHowChange .plus, .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinHowChange .equal {
   margin-left: 10px;
   font-weight: bold;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinWhereChange {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinWhereChange span {
   margin-right: 1rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinWhereChange .orTxt {
   font-size: 30px;
   font-weight: bold;
   margin: 1rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinChangeNPC {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .coinChangeNPC img {
   width: 120px;
   height: 120px;
   border-radius: 5px;
   overflow: hidden;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setLink {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   font-size: 22px;
@@ -1135,68 +891,49 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   height: 60px;
   line-height: 60px;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setLink .lookIcon {
   position: absolute;
   left: 1rem;
-  -webkit-transform: scale(0.6) rotate(-3deg);
-          transform: scale(0.6) rotate(-3deg);
+  transform: scale(0.6) rotate(-3deg);
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setLink span {
   position: absolute;
   top: 0;
   left: 60%;
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
+  transform: translateX(-60%);
   display: inline-block;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   height: 70px;
   border-bottom: none;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList li span {
   display: inline-block;
   width: 25%;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItemTitle {
   background: #444;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItemTitle span {
   font-size: 20px;
   font-weight: bold;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItem {
   padding: 2rem 0;
   border-bottom: 1px solid #CCC;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItem img {
   width: 45px;
   height: 45px;
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItem .lookIcon {
   cursor: pointer;
-  -webkit-transform: scale(0.6) rotate(-3deg);
-          transform: scale(0.6) rotate(-3deg);
+  transform: scale(0.6) rotate(-3deg);
 }
-
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content .setList .setItem a {
   color: #FFF;
   text-decoration: underline;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

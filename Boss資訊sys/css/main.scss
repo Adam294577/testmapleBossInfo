@@ -910,7 +910,7 @@ body,html{
 
             .BonusBox{
                 position: relative;
-                display: block;
+                
 
                 .dark{
                     background-color: #000;
@@ -951,7 +951,6 @@ body,html{
                         transform: translate(-50% , -50%);
                     }
                     .careerList{
-                        display: none;
                     }
                 }
             }
@@ -962,6 +961,10 @@ body,html{
                 padding-bottom: 0.5rem;
                 border-radius: 0.5rem;      
                 .BonusInfoItem{
+                    .NobonusDataTxt{
+                        font-weight: bold;
+                        font-size: 30px;
+                    }
                     .subtitle{
                         margin-top: 2rem;
                         @include BonusSubtitleType()
@@ -969,6 +972,10 @@ body,html{
                     .content{
                         background: #333;
                         position: relative;
+
+                        &.close{
+                            display: none;
+                        }
                         p{
                             // 家具
                             .furniture{
@@ -1038,6 +1045,7 @@ body,html{
 
                         // set
                         .setLink{
+                            cursor: pointer;
                             position: relative;
                             display: inline-block;
                             font-size: 22px;
@@ -1099,6 +1107,7 @@ body,html{
                         }                        
 
                     }
+
                 }
 
 

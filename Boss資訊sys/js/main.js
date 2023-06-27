@@ -1,4 +1,4 @@
-const {createApp, ref, reactive, computed, watch, onMounted } = Vue
+const {createApp, ref, reactive, computed, watch, onMounted, onUpdated } = Vue
 
 const App = {
     setup(){
@@ -286,6 +286,7 @@ const App = {
         const handGradeVal = (el) =>{
             GradeSelected.value = el.currentTarget.dataset.alt;
             GradeListbool.value = false;
+           
             // emit
         }
 
@@ -340,6 +341,7 @@ const App = {
 
         
         watch(BossNameSelected, (bossCh)=>{
+            console.log(bossCh);
             banner.value = BossInfo.data[bossCh].banner
             GradeList.value = BossInfo.data[bossCh].GradeList
             bosstxtData.value = BossInfo.data[bossCh].bossIntro.bosstxt
@@ -355,9 +357,9 @@ const App = {
         ])
         const sectioncont = reactive([
             {  idx:0, section: "bossIntro", open: false},
-            {  idx:1, section: "bossData", open: true},
-            {  idx:2, section: "damageRef", open: true},
-            {  idx:3, section: "bossBonus", open: false},
+            {  idx:1, section: "bossData", open: false},
+            {  idx:2, section: "damageRef", open: false},
+            {  idx:3, section: "bossBonus", open: tr},
             {  idx:4, section: "otherBonusInfo", open: false}
         ])
 
@@ -411,15 +413,185 @@ const App = {
             
         }
 
+        // BonusBox
+
+        const BonusBoxContData = reactive([
+            { href:"露希妲硬幣商店" , setImgbool: true , careerList: false , url: "./img/store/露希妲硬幣商店.png"},
+            { href:"威爾硬幣商店" , setImgbool: true , careerList: false , url: "./img/store/威爾硬幣商店.png"}
+        ])
+
+
+        const BonusBoxCont = ref("");        
+        const BonusBoxBool = ref(false);
+        const handBonusBox = (el)=> {
+            BonusBoxBool.value = !BonusBoxBool.value
+            if(BonusBoxBool.value){
+                
+                console.log(el.currentTarget.dataset.href);
+                BonusBoxCont.value = el.currentTarget.dataset.href
+            }
+        }
+        const BonusBoxContRender = computed(()=>{
+            const Render  = BonusBoxContData.filter(item=>{
+                return item.href === BonusBoxCont.value;
+            })
+            return Render
+        })
+
+        // furniture
+        const furnitureData = reactive([
+            {bossName: "露希妲", Grade: "hard", title: "露希妲家具展示" , url: "./img/item/露希妲床鋪實體.png"},
+            {bossName: "威爾", Grade: "hard", title: "威爾家具展示" , url: "./img/item/威爾的蜘蛛網狀吊椅實體.png"},
+        ])
+
+        const furnitureRender = computed(()=>{
+            const NameFilter = furnitureData.filter(item=>{
+                return item.bossName === BossNameSelected.value
+            })
+            const GradeFilter = NameFilter.filter(item=>{
+                return item.Grade === GradeSelected.value
+            })
+            return GradeFilter
+
+        })
+        // store
+        const storeData = reactive([
+            {title: "露希妲硬幣商店" , bossName: "露希妲", Grade: ["hard","normal"],
+            HowChangeRender:`
+            <span>兌換方式: </span>
+            <img class="icon" src="./img/store/LCD硬幣01.png" alt="BOSS水滴"> 
+            <span>X9</span>
+            <span class="plus">+</span> 
+            <img class="icon" src="./img/store/LCD硬幣02.png" alt="怪物水滴"> 
+            <span>X1</span>
+            <span class="equal">=</span>
+            <img class="icon" src="./img/store/LCD硬幣03.png" alt="商店硬幣">
+            `,
+            WhereChangeRender:`
+            <span>兌換位置:</span>
+            <img src="./img/store/NPC01.png" alt="村莊小地圖">
+            <span class="orTxt">or</span>
+            <img src="./img/store/NPC02.png" alt="村莊小地圖">
+            `,
+            NpcRender:`
+            <span>尋找:</span>
+            <img class="npc" src="./img/store/神秘硬幣NPC.png" alt="NPC圖">
+            `},
+        ])
+        const CoinstoreRender = computed(()=>{
+            const NameFilter = storeData.filter(item=>{
+                return item.bossName === BossNameSelected.value
+            })
+            const GradeFilter = NameFilter.filter(item=>{
+                return item.Grade.indexOf(GradeSelected.value) !==  -1;
+            })
+            return GradeFilter           
+        })
+        // MapleSetData
+        const MapleSetData = reactive([
+            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "hard"},
+        ])
+
+        const MapleSetBool = reactive([
+            {idx:0 , key : "黎明套組" ,show: false},
+            {idx:1 , key : "漆黑套組" ,show: false},
+            {idx:2 , key : "神秘套組" ,show: false}
+        ])
+
+
+        const NobonusDataTxt = ref(false)
+        const handNobonusDataTxt = ()=>{
+            let count = 0
+            MapleSetBool.forEach(item=>{
+                if(item.show === true){
+                    count++;
+                }
+                if(count === 0){
+                    NobonusDataTxt.value = true
+                }else{
+                    NobonusDataTxt.value = false
+                }   
+            })
+        }
+        
+        const MapleSetShow = computed(()=>{
+            
+            const bossFilt = MapleSetData.filter(item=>{
+                return item.bossname === BossNameSelected.value;
+            })
+            const GradeFilt = bossFilt.filter(item=>{
+                return item.Grade === GradeSelected.value;
+            })
+            const result = GradeFilt.map(item=>{
+                return item.key
+            })
+            const Render = GradeFilt.map(item=>{
+                return item.key
+            })
+
+            MapleSetBool.forEach(item => {
+              if(result.indexOf(item.key) !== -1 ){
+                item.show = true
+              }else{
+                item.show = false
+              }
+            });
+
+            handNobonusDataTxt()
+            return Render
+        })
+
+        // BonusInfoItem Bar toggle
+        const BonusContent = reactive([
+            {idx:0 , key:"家具",  act: true},
+            {idx:1 , key:"商店",  act: true},
+            {idx:2 , key:"神秘套組",  act: true},
+            {idx:3 , key:"黎明套組",  act: true},
+            {idx:4 , key:"漆黑套組",  act: true},
+        ])
+
+        const handBonusContent = (el) =>{
+            BonusContent.forEach(item=>{
+                if(el.currentTarget.dataset.bonusinfo === item.key){
+                    if(item.act){
+                        item.act = false
+                        return
+                    }
+                  item.act = true
+                }
+
+            })
+        }
+        
+
+
+
+
+
+
+
+
         onMounted(() => {
-          axios.get("./api/mapleBossInfo.json")
+            const getmapleBossInfoApi = () =>{
+                return axios.get("./api/mapleBossInfo.json")
+            }
+
+
+            
+          axios.all([getmapleBossInfoApi()])
           .then((res)=>{
-            BossInfo.data = res.data[0].data
+            BossInfo.data = res[0].data[0].data
         })
           .catch((err)=>{
             console.error("API沒接到");
         })
         })
+
 
 
 
@@ -448,7 +620,26 @@ const App = {
             // sectionTag
             sectioncont,
             sectionTagItem,
-            handsectionTagAct
+            handsectionTagAct,
+
+            // BonusBox
+            BonusBoxBool,
+            handBonusBox,
+            BonusBoxContRender,
+
+            // furniture
+            furnitureRender,
+            // store
+            CoinstoreRender,
+            // set
+            MapleSetBool,
+            MapleSetShow,
+            NobonusDataTxt,
+            // content toggle
+            BonusContent,
+            handBonusContent
+            
+
         }
 
 
