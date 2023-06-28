@@ -64,6 +64,18 @@
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
                             </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_威爾.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_easy.png" alt="easy"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
                         </ul>
                     </span>
 
@@ -109,7 +121,7 @@
 
         </div>
 
-        <div class="sectionTagBox">
+        <div class="sectionTagBox"  :data-sectionchange="sectionchange">
             <ul class="taglist">
                 <li 
                 @click= "handsectionTagAct"
@@ -347,14 +359,18 @@
                     <h1 class="title">BOSS獎勵</h1>
                     
                     <div class="generalBonus">
-                        <h2 class="subtitle">基本獎勵</h2>
-                        <div class="generalcontaner">
+                        <h2 
+                        data-barkey="基本獎勵"
+                        @click= "handsubtitleBar" 
+                        class="subtitle">
+                        基本獎勵</h2>
+                        <div :class="['generalcontaner', {close: subtitleBar[5].act}]">
 
                             <div class="fixedItem">
 
                                 <div class="pointItem">
-                                    <p class="mileage">里程點數:<span>{{5}}</span></p>
-                                    <p class="guildPoint">頭目點數:<span id="guildPointVal">{{60}}</span></p>
+                                    <p class="mileage">里程點數:<span>{{FixedItemShow[0].value}}</span></p>
+                                    <p class="guildPoint">頭目點數:<span id="guildPointVal">{{FixedItemShow[1].value}}</span></p>
                                 </div>
 
                                 <div class="moneyItem">
@@ -364,32 +380,47 @@
                                     <div class="moneyVal">
                                         <p class="normalServe">
                                             <span class="serveTxt">一般服</span>
-                                            <span>{{"97,438,242"}}</span>
-                                             <span class="money_chinese">({{"9743萬8242"}})</span>  
+                                            <!-- <span>{{"97,438,242"}}</span> -->
+                                            <span>{{FixedItemShow[2].value}}</span>
+                                             <span class="money_chinese">({{FixedItemShow[2].chvalue}})</span>  
                                             </p>
                                         <p class="Reboot">
                                             <span class="serveTxt">Reboot</span>
-                                            <span>{{"487,191,210"}}</span> 
-                                            <span class="money_chinese">({{"4億8719萬1210"}})</span>
+                                            <!-- <span>{{"487,191,210"}}</span>  -->
+                                            <span>{{FixedItemShow[3].value}}</span> 
+                                            <span class="money_chinese">({{FixedItemShow[3].chvalue}})</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
     
                             <div class="notfixedItem">
-                                <li><img src="./img/item/超級藥水.png" alt="藥水"><span>{{"超級藥水:"}} {{"50"}}<span class="countTxt">個</span></li>
+                                <li
+                                v-for="list in notFixedItemShow"
+                                :key="list.url"
+                                ><img :src="list.url" :alt="list.title"><span>{{list.title}} {{list.value}}<span class="countTxt">個</span></li>
+                                <!-- <li><img src="./img/item/超級藥水.png" alt="藥水"><span>{{"超級藥水:"}} {{"50"}}<span class="countTxt">個</span></li>
                                 <li><img src="./img/item/可疑的附加方塊.png" alt="方塊"><span>{{"可疑附加方塊:"}} {{"9"}}<span class="countTxt">個</span></li>
                                 <li><img src="./img/item/十字硬幣.png" alt="十字"><span>{{"十字硬幣:"}} {{"26"}}<span class="countTxt">個</span></li>
-                                <li><img src="./img/item/150星火.png" alt="輪迴星火"><span>{{"150輪迴星火:"}}1<span class="countTxt">個</span></li>
-                                <li><img src="./img/item/名譽.png" alt="150名譽"><span>{{"名譽[+150]:"}} {{"0"}}<span class="countTxt">個</span></li>
-                                <!-- <p class="prayItem"><img src="" alt="祈禱綠">、<img src="" alt="祈禱紅色"></p> -->
+                                <li><img src="./img/item/150星火.png" alt="輪迴星火"><span>{{"150"}}輪迴星火:1<span class="countTxt">個</span></li>
+                                <li><img src="./img/item/名譽.png" alt="150名譽"><span>{{"名譽[+150]:"}} {{"0"}}<span class="countTxt">個</span></li> -->
                             </div>
+                            
                         </div>
 
                     </div>
-                    <div class="majorBonus">
-                        <h2 class="subtitle">重要戰利品</h2>
-                        <div class="majorBox">
+                    <!-- <div class="majorBonus"> -->
+                    <div 
+                    class="majorBonus"
+                    v-show="!majorListnoData"
+                    >
+                        <h2 
+                        data-barkey="重要戰利品"
+                        @click= "handsubtitleBar" 
+                        class="subtitle">
+                        重要戰利品</h2>
+                        <div 
+                        :class="['majorBox',{close: subtitleBar[6].act}]">
                             <ul class="majorList">
                                 <li class="listTitle">
                                    <span>圖示</span> 
@@ -397,7 +428,25 @@
                                    <span>道具名稱</span> 
                                    <span>詳細資訊</span> 
                                 </li>
-                                <li class="listItem">
+
+                                <li class="listItem" 
+                                v-for="list in majorListShow"
+                                :key="list.title"
+                                >
+                                <span ><img class="itemIcon" :src="list.url" :alt="list.title"></span> 
+                                <span>{{list.class}}</span> 
+                                <span>{{list.title}}</span> 
+                                <span>
+                                    <a 
+                                    v-show=" list.hrefTxt !== 'noBonusInfo' " 
+                                    :data-href="list.hrefTxt" 
+                                    @click.prevent= "handToOtherBonusInfo" >
+                                    <img class="infoIcon" src="./img/infoIcon.png" :alt="list.hrefTxt">{{list.hrefTxt}}</a>
+
+                                    <span v-show="list.hrefTxt === 'noBonusInfo' " class="dash"></span>
+                                </span> 
+                             </li>
+                                <!-- <li class="listItem" data-majorListShow="majorListShow"> 
                                    <span ><img class="itemIcon" src="./img/item/蝴蝶翅膀水滴石.png" alt="蝴蝶翅膀水滴石"></span> 
                                    <span>硬幣</span> 
                                    <span>蝴蝶翅膀水滴石</span> 
@@ -440,7 +489,7 @@
                                    <span>家具</span> 
                                    <span>露希妲床鋪</span> 
                                    <span><a href="露希妲家具展示"><img class="infoIcon" src="./img/infoIcon.png" alt="">家具展示</a></span> 
-                                </li>
+                                </li> -->
                  
 
                             </ul>
@@ -448,8 +497,13 @@
                     </div>
                     
                     <div class="majorBonus">
-                        <h2 class="subtitle">基本戰利品 <img class="poin" src="./img/pointer.png" alt=""></h2>
-                        <div class="suuAfterItemBox">
+                        <h2 
+                        data-barkey="基本戰利品"
+                        @click= "handsubtitleBar" 
+                        class="subtitle">
+                        基本戰利品</h2>
+                        <div 
+                        :class="['suuAfterItemBox',{close: subtitleBar[7].act}]">
                             <ul class="suuAfterList">
                                 <li class="item">
                                     <div class="itemImg">
@@ -605,17 +659,22 @@
                     <h1 class="title">獎勵補充資訊</h1>
                     <div class="BonusInfoContainer">
 
-                        <div  class="BonusBox" data-set="xx系列總覽">
+                        <div v-show="BonusBoxBool"  class="BonusBox" data-set="xx系列總覽">
                             <div class="dark"></div>
                             <div class="content">
-                                <span @click="" class="BonusBoxCross">
+                                <span @click.prevent= "handBonusBox" class="BonusBoxCross">
                                     <span class="bar"></span>
                                     <span class="bar bar2"></span>
                                 </span>                            
-                                <!-- set、商店圖片 -->
-                                <img v-if="" class="setImg" src="./img/store/露希妲硬幣商店.png" alt="set名稱或xx系列總覽.png">
+                                <img  v-for="data in BonusBoxContRender" 
+                                v-show="data.setImgbool" 
+                                class="setImg" 
+                                :src="data.url" 
+                                :alt="data.href">
                                 <!-- 武器系列 -->
-                                <ul v-if="" class="careerList">
+                                <ul v-for="data in BonusBoxContRender" 
+                                 v-show="data.careerList" 
+                                 class="careerList">
                                     <li class="item">
                                         <img src="" alt="劍士">
                                         <span>名稱</span>
@@ -640,20 +699,67 @@
                             </div>
                         </div>
 
-                        <ul class="BonusInfoList">
-                            <li class="BonusInfoItem">
+                        <ul class="BonusInfoList" :data-setTitle="MapleSetShow">
+                            
+                            
+
+                            <!-- <li class="BonusInfoItem" id="furniture"  v-for="result in furnitureRender">
                                 <h2 class="subtitle">露希妲家具展示</h2>
-                                <div class="content">
+                                <div class="content" data-title="露希妲家具展示">
                                     <p>
-                                       <img class="furniture" src="./img/item/露希妲床鋪實體.png" alt="">
+                                       <img class="furniture" src="./img/item/威爾的蜘蛛網狀吊椅實體.png" alt="">
+                                    </p>
+                                </div>
+                            </li> -->
+                            <li class="BonusInfoItem" v-show="NobonusDataTxt">
+                                <span class="NobonusDataTxt">無任何資料</span>
+                            </li>
+                            
+                            <li class="BonusInfoItem" id="furniture"  
+                            v-for="result in furnitureRender"
+                            :key="result.bossname"
+                            >
+
+                                <h2 
+                                class="subtitle"
+                                data-barkey="家具展示" 
+                                @click= "handsubtitleBar"
+                                >{{result.title}}</h2>
+                                <div 
+                                :class="['content' , {close: subtitleBar[0].act} ]" 
+                                :data-title="result.title">
+                                    <p>
+                                       <img class="furniture" :src="result.url" :alt="result.bossName">
                                     </p>
                                 </div>
                             </li>
 
-                            <li class="BonusInfoItem">
+                            <li class="BonusInfoItem" 
+                            v-for="result in CoinstoreRender"
+                            >
+                                <h2 class="subtitle"
+                                data-barkey="硬幣商店" 
+                                @click= "handsubtitleBar"
+
+                                >{{result.title}}</h2>
+                                <div 
+                                :class="['content' , {close: subtitleBar[1].act} ]" 
+                                :data-title="result.title">
+                                    <p class="coinHowChange" v-html="result.HowChangeRender">
+                                    </p>
+                                    <p class="coinWhereChange" v-html="result.WhereChangeRender">
+                                    </p>
+                                    <p class="coinChangeNPC" v-html="result.NpcRender">
+                                    </p>
+                                    <a @click.prevent= "handBonusBox" class="setLink" :data-href="result.title" :href="result.title">
+                                        <img class="lookIcon" src="./img/look_w.png" alt="放大鏡">
+                                        <span>商店總覽</span>
+                                    </a>   
+                                </div>
+                            </li>
+                            <!-- <li class="BonusInfoItem" >
                                 <h2 class="subtitle">露希妲硬幣商店</h2>
-                                <div class="content">
-                                    <!-- vhtml -->
+                                <div class="content" data-title="露希妲硬幣商店">
                                     <p class="coinHowChange">
                                         <span>兌換方式: </span>
                                         <img class="icon" src="./img/store/LCD硬幣01.png" alt="BOSS水滴"> 
@@ -674,18 +780,21 @@
                                         <span>尋找:</span>
                                         <img class="npc" src="./img/store/神秘硬幣NPC.png" alt="NPC圖">
                                     </p>
-                                    <p>
-                                        <a class="setLink" href="硬幣資訊總覽">
+                                        <a @click.prevent= "handBonusBox" class="setLink" data-href="露希妲硬幣商店" href="露希妲硬幣商店">
                                             <img class="lookIcon" src="./img/look_w.png" alt="放大鏡">
                                             <span>商店總覽</span>
                                         </a>
-                                    </p>
                                 </div>
-                            </li>
+                            </li> -->
 
-                            <li class="BonusInfoItem">
-                                <h2 class="subtitle">神秘套組</h2>
-                                <div class="content">
+                            <li class="BonusInfoItem" v-show="MapleSetBool[2].show">
+                                <h2 class="subtitle"
+                                data-barkey="神秘套組" 
+                                @click= "handsubtitleBar"
+                                >神秘套組</h2>
+                                <div 
+                                :class="['content' , {close: subtitleBar[2].act} ]" 
+                                >
                                     <ul class="setList">
                                         <li class="setItemTitle">
                                             <span>圖示</span>
@@ -698,7 +807,7 @@
                                                 <img src="./img/item/神秘系列武器.png" alt="">
                                             </span>
                                             <span>武器</span>
-                                            <span><a href="武器總覽" target="_blank">神秘武器總覽</a></span>
+                                            <span><a href="武器總覽" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
 
                                         <li class="setItem">
@@ -706,28 +815,28 @@
                                                 <img src="./img/item/神秘系列鞋子.png" alt="">
                                             </span>
                                             <span>鞋子</span>
-                                            <span><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></span>
+                                            <span><a href="神秘系列鞋子" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
                                         <li class="setItem">
                                             <span>
                                                 <img src="./img/item/神秘系列帽.png" alt="">
                                             </span>
                                             <span>帽子</span>
-                                            <span><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></span>
+                                            <span><a href="神秘系列帽" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
                                         <li class="setItem">
                                             <span>
                                                 <img src="./img/item/神秘系列手套.png" alt="">
                                             </span>
                                             <span>手套</span>
-                                            <span><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></span>
+                                            <span><a href="神秘系列手套" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
                                         <li class="setItem">
                                             <span>
                                                 <img src="./img/item/神秘系列披風.png" alt="">
                                             </span>
                                             <span>披風</span>
-                                            <span><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></span>
+                                            <span><a href="神秘系列披風" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
                                         <li class="setItem">
                                             <span>
@@ -750,10 +859,14 @@
                                     </a>                                    
                                 </div>
                             </li>
-
-                            <li class="BonusInfoItem">
-                                <h2 class="subtitle">黎明套組</h2>
-                                <div class="content">
+                            <li class="BonusInfoItem" v-show="MapleSetBool[0].show">
+                                <h2 class="subtitle"
+                                data-barkey="黎明套組" 
+                                @click= "handsubtitleBar"
+                                >黎明套組</h2>
+                                <div 
+                                :class="['content' , {close: subtitleBar[3].act} ]" 
+                                >
                                     <ul class="setList">
                                         <li class="setItemTitle">
                                             <span>圖示</span>
@@ -802,14 +915,20 @@
                                     </a>
                                 </div>
                             </li>
-
-                            <li class="BonusInfoItem">
-                                <h2 class="subtitle">漆黑套組</h2>
-                                <div class="content">
+                            <li class="BonusInfoItem" v-show="MapleSetBool[1].show">
+                                
+                                <h2 
+                                data-barkey="漆黑套組" 
+                                @click= "handsubtitleBar"
+                                class="subtitle"
+                                >漆黑套組</h2>
+                                <div 
+                                :class="['content' , {close: subtitleBar[4].act} ]" 
+                                >
                                     <ul class="setList">
                                         <li class="setItemTitle">
                                             <span>圖示</span>
-                                            <span>分類</span>
+                                            <span>部位</span>
                                             <span>道具名稱</span>
                                             <span>裝備資訊</span>
                                         </li>
@@ -820,7 +939,7 @@
                                             </span>
                                             <span>心臟</span>
                                             <span>黑心</span>
-                                            <span><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></span>
+                                            <span><a href="黑心Info" target="_blank"><img class="lookIcon" src="./img/look_w.png" alt="放大鏡"></a></span>
                                         </li>
                                         <li class="setItem">
                                             <span>

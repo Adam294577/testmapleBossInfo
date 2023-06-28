@@ -2,6 +2,13 @@ const {createApp, ref, reactive, computed, watch, onMounted, onUpdated } = Vue
 
 const App = {
     setup(){
+                // 父層data
+                const GradeSelected = ref("hard")
+                const BossNameSelected = ref("露希妲")
+                const sectionSelected = ref("BOSS獎勵")
+
+                // icon統一路徑
+                const ItemURL = ref("./img/item/")
 
 
 // API
@@ -114,17 +121,21 @@ const App = {
                     "bossBonus":{
                         "show" : false,
                         "fixedItem":[
-                            { "idx": 1, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
-                            { "idx": 2, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
-                            { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 48799200,"Rbvalue": 243996000},
+                            { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
+                            { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
+                            { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 48799200},
+                            { "idx": 3, "key": "easyRB結晶價格", "Grade":"easy", "title": "RB結晶價格:" , "value": 243996000},
         
-                            { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
-                            { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
-                            { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 58457600,"Rbvalue": 292288000},
+                            { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
+                            { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
+                            { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 58457600 },
+                            { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 292288000},
                             
-                            { "idx": 1, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
-                            { "idx": 2, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
-                            { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 97438242, "Rbvalue": 487191210}
+                            { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
+                            { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
+                            { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 97438242},
+                            // { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 487191210}
+                            { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 5207}
                         ],
                         "notfixedItem":[
                             {"idx": 1, "key": "easy可疑附加方塊", "Grade":"easy","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
@@ -234,14 +245,70 @@ const App = {
         });
         watch(BossInfo, api=>{
             console.log("串API後的資料:",api.data);
+            banner.value = BossInfo.data[BossNameSelected.value].banner
+            GradeList.value = BossInfo.data[BossNameSelected.value].GradeList
+            bosstxtData.value = BossInfo.data[BossNameSelected.value].bossIntro.bosstxt
+            generalBonusFixeddata.value = BossInfo.data[BossNameSelected.value].bossBonus.fixedItem
+            generalBonusnotFixeddata.value = BossInfo.data[BossNameSelected.value].bossBonus.notfixedItem
+            majorListData.value = BossInfo.data[BossNameSelected.value].bossBonus.majorList
+
         })
 
-       
+
+        watch(BossNameSelected, (bossCh)=>{
+            console.log(bossCh);
+            banner.value = BossInfo.data[bossCh].banner
+            GradeList.value = BossInfo.data[bossCh].GradeList
+            bosstxtData.value = BossInfo.data[bossCh].bossIntro.bosstxt
+            generalBonusFixeddata.value = BossInfo.data[bossCh].bossBonus.fixedItem
+            generalBonusnotFixeddata.value = BossInfo.data[bossCh].bossBonus.notfixedItem
+            majorListData.value = BossInfo.data[bossCh].bossBonus.majorList
+            
+        })
 
 
 
-        
-        
+// numDisplaychange
+        const numPrice = (num) => {
+            const n = num + "";
+            const numArr = n.split("").reverse();
+            const overArr = [];
+            let i = 0;
+            numArr.forEach((item) => {
+              i++;
+              if (i > 3) {
+                i = 1;
+                overArr.push(",");
+              }
+              overArr.push(item);
+            });
+            overArr.reverse();
+            return overArr.join("");
+          };
+
+        const numPriceChinese = (num)=>{
+            const n = num + "";
+            const length = n.length
+            const numArr = n.split("").reverse();
+            const overArr = [];
+            let i = 0;
+            numArr.forEach((item) => {
+              if (i === 4 & length >= 5) {
+                overArr.push("萬");
+              }
+              if(i === 8 & length >= 9){
+                overArr.push("億");
+              }
+              if(i === 12 & length >= 13){
+                overArr.push("兆");
+              }
+              overArr.push(item);
+              i++;
+            });
+            overArr.reverse();
+            return overArr.join("");
+        }        
+
 
         //  NavFn
         const NavBool = ref(false);
@@ -267,14 +334,8 @@ const App = {
 
         }
 
-        // GradeCh
 
-        // 父層data
-        const GradeSelected = ref("hard")
-        const BossNameSelected = ref("露希妲")
-        const sectionSelected = ref("")
-
-        // getAPI
+        // GradeList
         const GradeList = ref(BossInfo.data[BossNameSelected.value].GradeList)
 
 
@@ -286,8 +347,6 @@ const App = {
         const handGradeVal = (el) =>{
             GradeSelected.value = el.currentTarget.dataset.alt;
             GradeListbool.value = false;
-           
-            // emit
         }
 
         const GradeVal = computed(()=>{
@@ -315,8 +374,6 @@ const App = {
 
 
         // render bossIntro content
-
-        // getAPI
         const banner = ref(BossInfo.data[BossNameSelected.value].banner)
 
         const bosstxtData = ref(BossInfo.data[BossNameSelected.value].bossIntro.bosstxt)
@@ -340,17 +397,11 @@ const App = {
 
 
         
-        watch(BossNameSelected, (bossCh)=>{
-            console.log(bossCh);
-            banner.value = BossInfo.data[bossCh].banner
-            GradeList.value = BossInfo.data[bossCh].GradeList
-            bosstxtData.value = BossInfo.data[bossCh].bossIntro.bosstxt
-        })
 
 
         // sectionTag
         const sectionTagItem = reactive([
-            {act: true , title: "BOSS入場規則"},
+            {act: false , title: "BOSS入場規則"},
             {act: false , title: "BOSS資訊"},
             {act: false , title: "BOSS獎勵"},
             {act: false , title: "獎勵資訊說明"},
@@ -359,59 +410,61 @@ const App = {
             {  idx:0, section: "bossIntro", open: false},
             {  idx:1, section: "bossData", open: false},
             {  idx:2, section: "damageRef", open: false},
-            {  idx:3, section: "bossBonus", open: tr},
+            {  idx:3, section: "bossBonus", open: false},
             {  idx:4, section: "otherBonusInfo", open: false}
         ])
-
         const handsectionTagAct = (el) =>{
-            // console.log(el.target.innerText);
+            
+            let result = ""
 
+             // 處理 sectionTagBox變化
+            if (el === undefined){
+                result = sectionSelected.value
+            }else{
+                result = el.target.innerText
+                sectionSelected.value = el.target.innerText;
+            }
 
-            // 處理 sectionTagBox變化
             sectionTagItem.map(item=>{
-                if(el.target.innerText === item.title){
+                if(result === item.title){
                     return item.act = true
                 }
                 return item.act = false
             })
             
-             // 處理 section Render變化
+            //  處理 section Render變化
             sectioncont.map(item=>{
                 return item.open = false;
             })
-            console.log(sectioncont);
-
            
-           
-            if(el.target.innerText === "BOSS入場規則"){
+            if(result === "BOSS入場規則"){
                 sectioncont[0].open = true;
-                 console.log(sectioncont);
-
                 return;
             }
-            if(el.target.innerText === "BOSS資訊"){
+            if(result === "BOSS資訊"){
                 sectioncont[1].open = true;
                 sectioncont[2].open = true;
-                 console.log(sectioncont);
-
                 return;
             }
-            if(el.target.innerText === "BOSS獎勵"){
+            if(result === "BOSS獎勵"){
                 sectioncont[3].open = true;
-                 console.log(sectioncont);
-
                 return;
             }
-            if(el.target.innerText === "獎勵資訊說明"){
+            if(result === "獎勵資訊說明"){
                 sectioncont[4].open = true;
-                 console.log(sectioncont);
-
                 return;
             }
 
             
             
         }
+
+        const sectionchange = computed(()=>{
+            sectionTagItem.forEach(item=>{
+                item.act = item.title === sectionSelected.value ? true : false
+            })
+            handsectionTagAct()
+        })
 
         // BonusBox
 
@@ -487,38 +540,51 @@ const App = {
             })
             return GradeFilter           
         })
+        
         // MapleSetData
-        const MapleSetData = reactive([
-            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "normal"},
-            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "hard"},
-        ])
-
         const MapleSetBool = reactive([
             {idx:0 , key : "黎明套組" ,show: false},
             {idx:1 , key : "漆黑套組" ,show: false},
             {idx:2 , key : "神秘套組" ,show: false}
         ])
+        const MapleSetData = reactive([
+            { idx:0 , key : "黎明套組" , bossname: "守護者天使綠水靈" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "守護者天使綠水靈" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossname: "頓凱爾" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "頓凱爾" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "extreme"},
+            { idx:0 , key : "黎明套組" , bossname: "真希拉" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "真希拉" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossname: "戴斯克" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "戴斯克" , Grade : "chaos"},
+            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossname: "威爾" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossname: "威爾" , Grade : "hard"},
 
+            { idx:1 , key : "漆黑套組" , bossname: "受選的賽蓮" , Grade : "extreme"},
+            { idx:1 , key : "漆黑套組" , bossname: "受選的賽蓮" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "黑魔法師" , Grade : "extreme"},
+            { idx:1 , key : "漆黑套組" , bossname: "黑魔法師" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "真希拉" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "頓凱爾" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "戴斯克" , Grade : "chaos"},
+            { idx:1 , key : "漆黑套組" , bossname: "威爾" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "戴米安" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossname: "使烏" , Grade : "hard"},
 
-        const NobonusDataTxt = ref(false)
-        const handNobonusDataTxt = ()=>{
-            let count = 0
-            MapleSetBool.forEach(item=>{
-                if(item.show === true){
-                    count++;
-                }
-                if(count === 0){
-                    NobonusDataTxt.value = true
-                }else{
-                    NobonusDataTxt.value = false
-                }   
-            })
-        }
-        
+            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "真希拉" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossname: "真希拉" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "頓凱爾" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossname: "戴斯克" , Grade : "chaos"},
+        ])
         const MapleSetShow = computed(()=>{
             
             const bossFilt = MapleSetData.filter(item=>{
@@ -527,15 +593,12 @@ const App = {
             const GradeFilt = bossFilt.filter(item=>{
                 return item.Grade === GradeSelected.value;
             })
-            const result = GradeFilt.map(item=>{
-                return item.key
-            })
             const Render = GradeFilt.map(item=>{
                 return item.key
             })
 
             MapleSetBool.forEach(item => {
-              if(result.indexOf(item.key) !== -1 ){
+              if(Render.indexOf(item.key) !== -1 ){
                 item.show = true
               }else{
                 item.show = false
@@ -546,18 +609,33 @@ const App = {
             return Render
         })
 
-        // BonusInfoItem Bar toggle
-        const BonusContent = reactive([
-            {idx:0 , key:"家具",  act: true},
-            {idx:1 , key:"商店",  act: true},
-            {idx:2 , key:"神秘套組",  act: true},
-            {idx:3 , key:"黎明套組",  act: true},
-            {idx:4 , key:"漆黑套組",  act: true},
+        const NobonusDataTxt = ref(false)
+        const handNobonusDataTxt = ()=>{
+            let count = 0
+            MapleSetBool.forEach(item=>{
+                if(item.show === true){
+                    count++;
+                }
+
+                NobonusDataTxt.value = count === 0 ? true : false
+            })
+        }        
+
+        // content Bar toggle
+        const subtitleBar = reactive([
+            {idx:0 , key:"家具展示",  act: true , where: "獎勵資訊說明"},
+            {idx:1 , key:"硬幣商店",  act: true , where: "獎勵資訊說明"},
+            {idx:2 , key:"神秘套組",  act: true , where: "獎勵資訊說明"},
+            {idx:3 , key:"黎明套組",  act: true , where: "獎勵資訊說明"},
+            {idx:4 , key:"漆黑套組",  act: true , where: "獎勵資訊說明"},
+            {idx:5 , key:"基本獎勵",  act: true , where: "Boss獎勵"},
+            {idx:6 , key:"重要戰利品",  act: false , where: "Boss獎勵" },
+            {idx:7 , key:"基本戰利品",  act: true , where: "Boss獎勵" },
         ])
 
-        const handBonusContent = (el) =>{
-            BonusContent.forEach(item=>{
-                if(el.currentTarget.dataset.bonusinfo === item.key){
+        const handsubtitleBar = (el) =>{
+            subtitleBar.forEach(item=>{
+                if(el.currentTarget.dataset.barkey === item.key){
                     if(item.act){
                         item.act = false
                         return
@@ -567,7 +645,108 @@ const App = {
 
             })
         }
+
+
+        // generalBonus 基本獎勵數據變化
+        const generalBonusFixeddata = ref(BossInfo.data[BossNameSelected.value].bossBonus.fixedItem)
+        const generalBonusnotFixeddata = ref(BossInfo.data[BossNameSelected.value].bossBonus.notfixedItem)
         
+
+
+        const FixedItemShow = computed(()=>{
+            const gradefilt = generalBonusFixeddata.value.filter(item=>{
+                return item.Grade === GradeSelected.value
+            })
+
+            const Render = gradefilt.map(item=>{
+                return {title : item.title , value : numPrice(item.value) , chvalue: numPriceChinese(item.value) }
+            })
+            return Render
+        })
+
+        const notFixedItemShow = computed(()=>{
+            const gradefilt = generalBonusnotFixeddata.value.filter(item=>{
+                return item.Grade === GradeSelected.value
+            })
+            const hidezeroVal = gradefilt.filter(item=>{
+                return item.value !== 0
+            })
+            const Render = hidezeroVal.map(item=>{
+                return {url : `${ItemURL.value}${item.url}` , title : item.title ,  value : item.value}
+            })
+            return Render     
+        })
+
+        // majorList - 重要戰利品數據變化
+        const majorListData = ref(BossInfo.data[BossNameSelected.value].bossBonus.majorList)
+
+        
+        const majorListnoData = ref(false)
+        const majorListShow = computed(()=>{
+            const GradeFilt = majorListData.value.filter(item=>{
+                return item.Grade === GradeSelected.value;
+            })
+            const Render = GradeFilt.map(el=>{
+                return {title : el.item,
+                        class: el.class,
+                        url: `${ItemURL.value}${el.item}.png`,
+                        BonusInfoHref: el.toBonusInfohref,
+                        hrefTxt: majorListHerfTxt(el),
+
+
+                    }
+            })
+            if(Render.length === 0){
+                majorListnoData.value = true;
+            }else{
+                majorListnoData.value = false;
+            }
+            return Render
+        })
+        const majorListHerfTxt = (el)=>{
+            let txt = ""
+
+            if(el.toBonusInfohref === `${BossNameSelected.value}硬幣商店`){
+                txt = "硬幣商店"
+            }
+            if(el.toBonusInfohref === "黎明套組"){
+                txt = "黎明套組"
+            }
+            if(el.toBonusInfohref === "漆黑套組"){
+                txt = "漆黑套組"
+            }
+            if(el.toBonusInfohref === "神秘套組" | el.toBonusInfohref === "神秘系列武器"){
+                txt = "神秘套組"
+            }
+            if(el.toBonusInfohref === `${BossNameSelected.value}家具展示`){
+                txt = "家具展示"
+            }
+
+            if(el.toBonusInfohref === undefined | txt === ""){
+                txt = "noBonusInfo"
+            }
+            return txt
+        }
+        const handToOtherBonusInfo = (el) =>{
+            let href = ""
+            // console.log(el.currentTarget.dataset.href);
+            href = el.currentTarget.dataset.href
+            subtitleBar.forEach(item=>{
+                if(item.where === "獎勵資訊說明"){
+                    item.act = true
+                }
+
+                if(item.key === href){
+                    item.act = false
+                }
+            })
+            sectionSelected.value = "獎勵資訊說明"
+            handsectionTagAct()
+
+        }
+        
+
+
 
 
 
@@ -621,23 +800,37 @@ const App = {
             sectioncont,
             sectionTagItem,
             handsectionTagAct,
+            sectionchange,
 
             // BonusBox
             BonusBoxBool,
             handBonusBox,
             BonusBoxContRender,
 
-            // furniture
+
+            // BonusItem
+            NobonusDataTxt,
+                // furniture
             furnitureRender,
-            // store
+                // store
             CoinstoreRender,
-            // set
+                // set
             MapleSetBool,
             MapleSetShow,
-            NobonusDataTxt,
+
+            
             // content toggle
-            BonusContent,
-            handBonusContent
+            subtitleBar,
+            handsubtitleBar,
+
+            // generalBonus 基本獎勵數據變化
+            FixedItemShow,
+            notFixedItemShow,
+
+            // majorList 重要戰利品變化
+            majorListnoData,
+            majorListShow,
+            handToOtherBonusInfo
             
 
         }
@@ -648,10 +841,11 @@ const App = {
     }
 
 
-    
+   
 }
+createApp(App).mount("#app") 
 
-createApp(App).mount("#app")     
+
 
 
 
