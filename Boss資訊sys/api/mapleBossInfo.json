@@ -303,17 +303,17 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 612900 },
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 3064500 },
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 3064500 },
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 844700},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 4223500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 4223500},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1419500},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 7097500}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 7097500}
                     
                     
 
@@ -323,19 +323,19 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 20},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 7},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 3},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 5},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 10},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 4},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"120輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"120輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
                     
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 7},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 12},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 5},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "輪迴星火:" , "value": 130}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -618,12 +618,12 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 667400},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 3337000},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 3337000},
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1460300},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7301500}
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 7301500}
                     
                     
 
@@ -633,13 +633,13 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 20},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 8},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 3},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"120輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"120輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
                     
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 7},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 12},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 5},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"130輪迴星火.png" , "title": "輪迴星火:" , "value": 130}
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -775,12 +775,12 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 5},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 5307400},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 26537000},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 26537000},
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 5},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8709400},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 43547000}
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 43547000}
 
                 ],
                 "notfixedItem":[
@@ -788,13 +788,13 @@
                     {"idx": 2, "key": "easy超級藥水", "Grade":"easy","url":"超級藥水.png" , "title": "超級藥水:" , "value": 25},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 24},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 11},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"140輪迴星火.png" , "title": "輪迴星火:" , "value": 140},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"140輪迴星火.png" , "title": "140輪迴星火:" , "value": 1},
                      
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 11},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 35},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 13},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"140輪迴星火.png" , "title": "輪迴星火:" , "value": 140}
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"140輪迴星火.png" , "title": "140輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -900,12 +900,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 375500},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1877500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 1877500},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1543700},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 7718500}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 7718500}
 
                 ],
                 "notfixedItem":[
@@ -913,13 +913,13 @@
                     {"idx": 2, "key": "normal特殊藥水", "Grade":"normal","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 10},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 0},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 1},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
                     
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 10},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 0},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 5},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "輪迴星火:" , "value": 130}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1026,7 +1026,7 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 724200},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 3621000}
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 3621000}
 
                 ],
                 "notfixedItem":[
@@ -1034,7 +1034,7 @@
                     {"idx": 2, "key": "normal特殊藥水", "Grade":"normal","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 25},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 8},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 4},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110}
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1}
 
                 ],
                 "suuAfterItemBox":{
@@ -1147,17 +1147,17 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 115800},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 115800},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 115800},
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 354800},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1774000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 1774000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7059750},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 35298750}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 35298750}
                     
                     
 
@@ -1167,19 +1167,19 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 5},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 0},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 1},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
                     {"idx": 2, "key": "normal特殊藥水", "Grade":"normal","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 10},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 1},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 12},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 35},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 14},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1334,17 +1334,17 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 511000},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 2555000},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 2555000},
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 586600},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2933000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 2933000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 783300},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 3916500}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 3916500}
                     
                     
 
@@ -1354,19 +1354,19 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 10},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 2},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 2},
                     {"idx": 2, "key": "normal特殊藥水", "Grade":"normal","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 15},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 7},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 3},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 2},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 5},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 10},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 4},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"120輪迴星火.png" , "title": "輪迴星火:" , "value": 120}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"120輪迴星火.png" , "title": "120輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1496,12 +1496,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 813700},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 4068500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 4068500},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 5},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7630700},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38153500}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 38153500}
                     
                     
 
@@ -1511,13 +1511,13 @@
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 5},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 10},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 4},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"120輪迴星火.png" , "title": "輪迴星火:" , "value": 120},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"120輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 30},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 24},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 12},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "輪迴星火:" , "value": 130}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1630,12 +1630,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 2804000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7313306},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 36566530}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 36566530}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1643,13 +1643,13 @@
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 2},
                     {"idx": 5, "key": "normal名譽", "Grade":"normal","url":"小名譽.png" , "title": "名譽(10):" , "value": 1},
-                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 13},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 35},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 15},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1758,12 +1758,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 2804000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7693781},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38468905}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 38468905}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1771,13 +1771,13 @@
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 2},
                     {"idx": 5, "key": "normal名譽", "Grade":"normal","url":"小名譽.png" , "title": "名譽(10):" , "value": 1},
-                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 13},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 35},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 15},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -1887,12 +1887,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 2804000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 10},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 7682035},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 38410175}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 38410175}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -1900,13 +1900,13 @@
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 2},
                     {"idx": 5, "key": "normal名譽", "Grade":"normal","url":"小名譽.png" , "title": "名譽(10):" , "value": 1},
-                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 13},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 35},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 15},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -2013,12 +2013,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 560800},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 2804000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 2804000},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 20},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 9070003},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 45350015}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 45350015}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
@@ -2026,13 +2026,13 @@
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 2},
                     {"idx": 5, "key": "normal名譽", "Grade":"normal","url":"小名譽.png" , "title": "名譽(10):" , "value": 1},
-                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 15},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 15},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -2139,23 +2139,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 28843452},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 144217260},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 144217260},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 80612548},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 403062740}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 403062740}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 7},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -2305,23 +2305,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 27207040},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 136035200},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 136035200},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 87503781},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 437518905}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 437518905}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 8},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -2503,33 +2503,33 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 30},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 48799200},
-                    { "idx": 3, "key": "easyRB結晶價格", "Grade":"easy", "title": "RB結晶價格:" , "value": 243996000},
+                    { "idx": 3, "key": "easyRB結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 243996000},
 
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 58457600 },
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 292288000},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 292288000},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 97438242},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 487191210}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 487191210}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "easy可疑附加方塊", "Grade":"easy","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
                     {"idx": 2, "key": "easy超級藥水", "Grade":"easy","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "easy輪迴星火", "Grade":"easy","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "easy輪迴星火", "Grade":"easy","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 4},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 9},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -2725,23 +2725,23 @@
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 60},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 109805699},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 549028495}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 549028495}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "easy可疑附加方塊", "Grade":"easy","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 4},
                     {"idx": 2, "key": "easy超級藥水", "Grade":"easy","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "easy輪迴星火", "Grade":"easy","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "easy輪迴星火", "Grade":"easy","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 5},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 9},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -2897,23 +2897,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 30},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 39114492},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 195572460},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 195572460},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120450252},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 602251260}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 602251260}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 9},
                     {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -3061,23 +3061,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 72293700},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 361468500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 361468500},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 116977942},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 584889710}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 584889710}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 6},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 10},
                     {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -3233,23 +3233,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 40},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 77908300},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 389541500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 389541500},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 120151104},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 600755520}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 600755520}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 6},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 10},
                     {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -3408,23 +3408,23 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 60},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 118489900},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 592449500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 592449500},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 138191654},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 690958270}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 690958270}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 9},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 10},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -3583,23 +3583,23 @@
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 30},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 990841916},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 4954209580},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 4954209580},
                     
                     { "idx": 0, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 30},
                     { "idx": 2, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 3000000000, "Rbvalue": 15000000000},
-                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 15000000000, "Rbvalue": 15000000000}
+                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "Rb結晶價格:" , "value": 15000000000, "Rbvalue": 15000000000}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 30},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
                     {"idx": 2, "key": "extreme超級藥水", "Grade":"extreme","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "extreme十字硬幣", "Grade":"extreme","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -3800,33 +3800,33 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 145101237},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 725506185},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 725506185},
 
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 262989400},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 1314947000},
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 1314947000},
                     
                     { "idx": 0, "key": "extreme頭目點數", "Grade":"extreme", "title": "頭目點數:" , "value": "未知"},
                     { "idx": 1, "key": "extreme里程數", "Grade":"extreme", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 700000000},
-                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "結晶價格:" , "value": 3500000000}
+                    { "idx": 3, "key": "extreme結晶價格", "Grade":"extreme", "title": "Rb結晶價格:" , "value": 3500000000}
                 ],
                 "notfixedItem":[
                     {"idx": 1, "key": "normal可疑附加方塊", "Grade":"normal","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 10},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑附加方塊", "Grade":"hard","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": 11},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150},
+                    {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
                     {"idx": 2, "key": "extreme超級藥水", "Grade":"extreme","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "extreme十字硬幣", "Grade":"extreme","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -4028,7 +4028,7 @@
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 70},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 300000000},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 1500000000}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 1500000000}
                 ],
                 "notfixedItem":[
 
@@ -4036,7 +4036,7 @@
                     {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
                     {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
-                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : true,
@@ -4172,17 +4172,17 @@
                     { "idx": 0, "key": "easy頭目點數", "Grade":"easy", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "easy里程數", "Grade":"easy", "title": "里程數:" , "value": 0},
                     { "idx": 2, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 396500},
-                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "結晶價格:" , "value": 1982500},
+                    { "idx": 3, "key": "easy結晶價格", "Grade":"easy", "title": "Rb結晶價格:" , "value": 1982500},
                     
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1543700},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7718500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 7718500},
                     
                     { "idx": 0, "key": "chaos頭目點數", "Grade":"chaos", "title": "頭目點數:" , "value": 30},
                     { "idx": 1, "key": "chaos里程數", "Grade":"chaos", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 20088150},
-                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "結晶價格:" , "value": 100440750}
+                    { "idx": 3, "key": "chaos結晶價格", "Grade":"chaos", "title": "Rb結晶價格:" , "value": 100440750}
                     
                     
 
@@ -4192,19 +4192,19 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 10},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 1},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 10},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 12},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 5},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 2},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 18},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
@@ -4382,7 +4382,7 @@
                     { "idx": 1, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 10},
                     { "idx": 2, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 5},
                     { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 8953200},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 44766000}
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 44766000}
                     
 
                 ],
@@ -4391,8 +4391,8 @@
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 0},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 11},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"140輪迴星火.png" , "title": "輪迴星火:" , "value": 140},
-                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"140輪迴星火.png" , "title": "140輪迴星火:" , "value": 1},
+                    {"idx": 6, "key": "normal輪迴星火", "Grade":"normal","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                     
                 ],
                 "suuAfterItemBox":{
