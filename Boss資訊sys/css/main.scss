@@ -9,12 +9,34 @@
 @mixin BonusSubtitleType{
     position: relative;
     cursor: pointer;
+    user-select: none;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     font-size: 33px;
     border-bottom: 1px solid #FFF;
     background: #444;
     border-radius: 0.5rem 0.5rem 0 0;
+    
+
+    &::after{
+        transition: 0.2s;
+        content: url(../img/arrow_white2.png);
+        position: absolute;
+        top: 50%;
+        right: 310px;
+        transform: translateY(-40%) rotateX(180deg) ;
+    }
+    &.arrowReverse{
+        transition: 0.2s;
+        &::after{
+            content: url(../img/arrow_white2.png);
+            position: absolute;
+            top: 50%;
+            right: 310px;
+            transform: translateY(-60%) rotateX(0deg);       
+             
+        }
+    }   
 }
 
 @mixin BonuslistStyle{
@@ -676,6 +698,7 @@ body,html{
             border-radius: 0.5rem;
             .subtitle{
                 @include BonusSubtitleType()
+                
             }
             .generalcontaner{
                 display: flex;
@@ -792,8 +815,6 @@ body,html{
                     display: none;
                 }
                 .suuAfterList{
-                    // border: 1px solid #FFF;
-                    border: 1px solid #F00;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -803,10 +824,15 @@ body,html{
                     
                     .item{
                         width: 16%;
-                        // border: 1px solid #F00;
+                        // background: #5b5b5b;
                         text-align: center;
                         padding: 0.5rem;
                         margin-top: 0.5rem;
+                        background: url(../img/ItemBox.jpg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: 50% 3px;
+                        // border: 1px solid #F00;
                         
                         .itemImg{
                             margin: auto;
@@ -818,11 +844,17 @@ body,html{
                             }
                         }
                         .itemtxt{
-                            font-size: 18px;
+                            font-size: 14px;
                             margin: 0.5rem 0;
+                            // background: linear-gradient(90deg, transparent 10%, #000 50% , transparent 90%);
+                            .frameval{
+                                font-size: 13px;
+                            }
                         }
                         .itemavailable{
-
+                            img{
+                                transform: scale(0.75);
+                            }
                         }
                     }
                 }

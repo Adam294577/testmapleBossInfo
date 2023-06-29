@@ -76,6 +76,19 @@
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
                             </li>
+                            
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_梅格耐斯.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_easy.png" alt="easy"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
                         </ul>
                     </span>
 
@@ -362,15 +375,15 @@
                         <h2 
                         data-barkey="基本獎勵"
                         @click= "handsubtitleBar" 
-                        class="subtitle">
+                        :class="['subtitle', {'arrowReverse': !subtitleBar[5].act}]">
                         基本獎勵</h2>
                         <div :class="['generalcontaner', {close: subtitleBar[5].act}]">
 
                             <div class="fixedItem">
 
                                 <div class="pointItem">
-                                    <p class="mileage">里程點數:<span>{{FixedItemShow[0].value}}</span></p>
-                                    <p class="guildPoint">頭目點數:<span id="guildPointVal">{{FixedItemShow[1].value}}</span></p>
+                                    <p class="mileage">里程點數:<span>{{FixedItemShow[1].value}}</span></p>
+                                    <p class="guildPoint">頭目點數:<span id="guildPointVal">{{FixedItemShow[0].value}}</span></p>
                                 </div>
 
                                 <div class="moneyItem">
@@ -417,7 +430,7 @@
                         <h2 
                         data-barkey="重要戰利品"
                         @click= "handsubtitleBar" 
-                        class="subtitle">
+                        :class="['subtitle', {'arrowReverse': !subtitleBar[6].act}]">
                         重要戰利品</h2>
                         <div 
                         :class="['majorBox',{close: subtitleBar[6].act}]">
@@ -496,16 +509,31 @@
                         </div>
                     </div>
                     
-                    <div class="majorBonus">
+                    <div class="majorBonus" 
+                    :data-test="generalListShow"
+                    v-show="generalListShow !== 'noItemRender'"
+                    >
                         <h2 
                         data-barkey="基本戰利品"
                         @click= "handsubtitleBar" 
-                        class="subtitle">
-                        基本戰利品</h2>
+                        :class="['subtitle', {'arrowReverse': !subtitleBar[7].act}]">
+                        基本戰利品
+                        </h2>
                         <div 
                         :class="['suuAfterItemBox',{close: subtitleBar[7].act}]">
                             <ul class="suuAfterList">
-                                <li class="item">
+                                <li class="item" 
+                                v-for="list in generalListShow"
+                                :key="list.key"
+                                >
+                                    <div class="itemImg">
+                                        <img :src="list.url" :alt="list.key">
+                                    </div>
+                                    <div class="itemtxt">{{list.key}}</div>
+                                    <div class="itemavailable"><img :src="list.drop" alt=""></div>
+                                </li>
+            
+                                <!-- <li class="item">
                                     <div class="itemImg">
                                         <img src="./img/item/太初.png" alt="太初">
                                     </div>
@@ -516,7 +544,7 @@
                                     <div class="itemImg">
                                         <img src="./img/item/名譽.png" alt="名譽">
                                     </div>
-                                    <div class="itemtxt">名譽[+5000]</div>
+                                    <div class="itemtxt">名譽<span class="frameval">(5000)</span></div>
                                     <div class="itemavailable"><img src="./img/check.png" alt="check"></div>
                                 </li>
                                 <li class="item">
@@ -630,7 +658,7 @@
                                     </div>
                                     <div class="itemtxt">匠人</div>
                                     <div class="itemavailable"><img src="./img/check.png" alt="check"></div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -721,7 +749,7 @@
                             >
 
                                 <h2 
-                                class="subtitle"
+                                :class="['subtitle', {'arrowReverse': !subtitleBar[0].act}]"
                                 data-barkey="家具展示" 
                                 @click= "handsubtitleBar"
                                 >{{result.title}}</h2>
@@ -737,7 +765,8 @@
                             <li class="BonusInfoItem" 
                             v-for="result in CoinstoreRender"
                             >
-                                <h2 class="subtitle"
+                                <h2 
+                                :class="['subtitle', {'arrowReverse': !subtitleBar[1].act}]"
                                 data-barkey="硬幣商店" 
                                 @click= "handsubtitleBar"
 
@@ -788,7 +817,8 @@
                             </li> -->
 
                             <li class="BonusInfoItem" v-show="MapleSetBool[2].show">
-                                <h2 class="subtitle"
+                                <h2 
+                                :class="['subtitle', {'arrowReverse': !subtitleBar[2].act}]"
                                 data-barkey="神秘套組" 
                                 @click= "handsubtitleBar"
                                 >神秘套組</h2>
@@ -860,7 +890,8 @@
                                 </div>
                             </li>
                             <li class="BonusInfoItem" v-show="MapleSetBool[0].show">
-                                <h2 class="subtitle"
+                                <h2 
+                                :class="['subtitle', {'arrowReverse': !subtitleBar[3].act}]"
                                 data-barkey="黎明套組" 
                                 @click= "handsubtitleBar"
                                 >黎明套組</h2>
@@ -920,7 +951,7 @@
                                 <h2 
                                 data-barkey="漆黑套組" 
                                 @click= "handsubtitleBar"
-                                class="subtitle"
+                                :class="['subtitle', {'arrowReverse': !subtitleBar[4].act}]"
                                 >漆黑套組</h2>
                                 <div 
                                 :class="['content' , {close: subtitleBar[4].act} ]" 

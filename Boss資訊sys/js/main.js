@@ -5,7 +5,7 @@ const App = {
                 // 父層data
                 const GradeSelected = ref("hard")
                 const BossNameSelected = ref("露希妲")
-                const sectionSelected = ref("BOSS獎勵")
+                const sectionSelected = ref("BOSS資訊")
 
                 // icon統一路徑
                 const ItemURL = ref("./img/item/")
@@ -251,6 +251,7 @@ const App = {
             generalBonusFixeddata.value = BossInfo.data[BossNameSelected.value].bossBonus.fixedItem
             generalBonusnotFixeddata.value = BossInfo.data[BossNameSelected.value].bossBonus.notfixedItem
             majorListData.value = BossInfo.data[BossNameSelected.value].bossBonus.majorList
+            generalListData.value = BossInfo.data[BossNameSelected.value].bossBonus.suuAfterItemBox
 
         })
 
@@ -263,6 +264,7 @@ const App = {
             generalBonusFixeddata.value = BossInfo.data[bossCh].bossBonus.fixedItem
             generalBonusnotFixeddata.value = BossInfo.data[bossCh].bossBonus.notfixedItem
             majorListData.value = BossInfo.data[bossCh].bossBonus.majorList
+            generalListData.value = BossInfo.data[bossCh].bossBonus.suuAfterItemBox
             
         })
 
@@ -282,6 +284,11 @@ const App = {
         }
 
         const FilterGradeFn = (Data , Grade) =>{
+            // console.log("傳入的資料:", Data);
+            if(Data.length === 0){
+                return;
+
+            }
 
             if(typeof(Data[0].Grade) === "string"){
                 let result = Data.filter(item=>{
@@ -296,7 +303,7 @@ const App = {
                 })
                 return result
             }
-            console.error("Grade篩選值有誤");
+            
 
         }
 
@@ -565,7 +572,6 @@ const App = {
             //     return item.bossName === BossNameSelected.value
             // })
             const NameFilter = FilterBossNameFn(storeData, BossNameSelected.value)
-            console.log(NameFilter);
             // const GradeFilter = NameFilter.filter(item=>{
             //     return item.Grade.indexOf(GradeSelected.value) !==  -1;
             // })
@@ -616,12 +622,14 @@ const App = {
             { idx:2 , key : "神秘套組" , bossName: "真希拉" , Grade : "hard"},
             { idx:2 , key : "神秘套組" , bossName: "頓凱爾" , Grade : "hard"},
             { idx:2 , key : "神秘套組" , bossName: "戴斯克" , Grade : "chaos"},
+
+            { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "hard"},
         ])
         const MapleSetShow = computed(()=>{
             
             const bossFilt = FilterBossNameFn( MapleSetData, BossNameSelected.value)
             const GradeFilt = FilterGradeFn(bossFilt,  GradeSelected.value)
-            
             const result = GradeFilt.map(item=>{
                 return item.key
             })
@@ -657,9 +665,9 @@ const App = {
             {idx:2 , key:"神秘套組",  act: true , where: "獎勵資訊說明"},
             {idx:3 , key:"黎明套組",  act: true , where: "獎勵資訊說明"},
             {idx:4 , key:"漆黑套組",  act: true , where: "獎勵資訊說明"},
-            {idx:5 , key:"基本獎勵",  act: true , where: "Boss獎勵"},
+            {idx:5 , key:"基本獎勵",  act: false , where: "Boss獎勵"},
             {idx:6 , key:"重要戰利品",  act: false , where: "Boss獎勵" },
-            {idx:7 , key:"基本戰利品",  act: true , where: "Boss獎勵" },
+            {idx:7 , key:"基本戰利品",  act: false , where: "Boss獎勵" },
         ])
 
         const handsubtitleBar = (el) =>{
@@ -765,6 +773,34 @@ const App = {
             handsectionTagAct()
 
         }
+        // 基本戰利品 資料變化  suuAfterItemBox
+        const generalListData = ref(BossInfo.data[BossNameSelected.value].bossBonus.suuAfterItemBox)
+        // console.log(generalListData);
+        // console.log(generalListData.value.BossLv);
+        // console.log(generalListData.value.list);
+
+        const generalListShow = computed(()=>{
+            if(generalListData.value.BossLv){
+
+                const dropImgFn = (bool)=>{
+                    let nodropImg = "./img/cross.png"
+                    let dropImg = "./img/check.png"
+                    let result = ''
+                    return result = bool ? dropImg : nodropImg
+                }
+                const Filt = FilterGradeFn(generalListData.value.list, GradeSelected.value)
+                const Render = Filt.map(el=>{
+                    return {url: `${ItemURL.value}${el.url}` , key: el.item ,drop: dropImgFn(el.drop)}
+                })
+                return Render
+    
+            }
+
+            if(!generalListData.value.BossLv){
+                return 'noItemRender'
+            }
+        })
+        
         
         onMounted(() => {
             const getmapleBossInfoApi = () =>{
@@ -838,7 +874,10 @@ const App = {
             // majorList 重要戰利品變化
             majorListnoData,
             majorListShow,
-            handToOtherBonusInfo
+            handToOtherBonusInfo,
+
+            // generalList 基本戰利品變化
+            generalListShow
             
 
         }

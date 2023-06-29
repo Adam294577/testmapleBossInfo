@@ -537,12 +537,33 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .bossContainer .bossBonus .generalBonus .subtitle, .bossContainer .bossBonus .majorBonus .subtitle {
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: 33px;
   border-bottom: 1px solid #FFF;
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.bossContainer .bossBonus .generalBonus .subtitle::after, .bossContainer .bossBonus .majorBonus .subtitle::after {
+  transition: 0.2s;
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-40%) rotateX(180deg);
+}
+.bossContainer .bossBonus .generalBonus .subtitle.arrowReverse, .bossContainer .bossBonus .majorBonus .subtitle.arrowReverse {
+  transition: 0.2s;
+}
+.bossContainer .bossBonus .generalBonus .subtitle.arrowReverse::after, .bossContainer .bossBonus .majorBonus .subtitle.arrowReverse::after {
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-60%) rotateX(0deg);
 }
 .bossContainer .bossBonus .generalBonus .generalcontaner, .bossContainer .bossBonus .majorBonus .generalcontaner {
   display: flex;
@@ -639,6 +660,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .bossContainer .bossBonus .majorBonus .subtitle {
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: 33px;
@@ -646,11 +670,28 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+.bossContainer .bossBonus .majorBonus .subtitle::after {
+  transition: 0.2s;
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-40%) rotateX(180deg);
+}
+.bossContainer .bossBonus .majorBonus .subtitle.arrowReverse {
+  transition: 0.2s;
+}
+.bossContainer .bossBonus .majorBonus .subtitle.arrowReverse::after {
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-60%) rotateX(0deg);
+}
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox.close {
   display: none;
 }
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList {
-  border: 1px solid #F00;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -663,6 +704,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   text-align: center;
   padding: 0.5rem;
   margin-top: 0.5rem;
+  background: url(../img/ItemBox.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 3px;
 }
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemImg {
   margin: auto;
@@ -674,8 +719,14 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   width: 100%;
 }
 .bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemtxt {
-  font-size: 18px;
+  font-size: 14px;
   margin: 0.5rem 0;
+}
+.bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemtxt .frameval {
+  font-size: 13px;
+}
+.bossContainer .bossBonus .majorBonus .suuAfterItemBox .suuAfterList .item .itemavailable img {
+  transform: scale(0.75);
 }
 .bossContainer .bossBonus .majorBonus .majorBox.close {
   display: none;
@@ -807,12 +858,33 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   margin-top: 2rem;
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: 33px;
   border-bottom: 1px solid #FFF;
   background: #444;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .subtitle::after {
+  transition: 0.2s;
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-40%) rotateX(180deg);
+}
+.bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .subtitle.arrowReverse {
+  transition: 0.2s;
+}
+.bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .subtitle.arrowReverse::after {
+  content: url(../img/arrow_white2.png);
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  transform: translateY(-60%) rotateX(0deg);
 }
 .bossContainer .otherBonusInfo .BonusInfoContainer .BonusInfoList .BonusInfoItem .content {
   background: #333;
