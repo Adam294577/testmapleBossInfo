@@ -266,6 +266,40 @@ const App = {
             
         })
 
+// 統合 Filter Data 的 Method
+        const FilterBossNameFn = (Data ,  BossName) => {
+           
+            if (typeof(Data[0].bossName) === "string"){
+
+                let result = Data.filter(item=>{
+                    return item.bossName === BossName
+                })
+                return result
+            }
+            console.error("BossName篩選值有誤");
+
+
+        }
+
+        const FilterGradeFn = (Data , Grade) =>{
+
+            if(typeof(Data[0].Grade) === "string"){
+                let result = Data.filter(item=>{
+                    return item.Grade === Grade
+                })
+                return result
+            }
+
+            if(typeof(Data[0].Grade) === "object"){
+                let result = Data.filter(item=>{
+                    return item.Grade.indexOf(Grade) !==  -1;
+                })
+                return result
+            }
+            console.error("Grade篩選值有誤");
+
+        }
+
 
 
 // numDisplaychange
@@ -379,10 +413,8 @@ const App = {
         const bosstxtData = ref(BossInfo.data[BossNameSelected.value].bossIntro.bosstxt)
 
         const bosstxtRender = computed(()=>{
-            const filterGrade = bosstxtData.value.filter(item=>{
-                return item.Grade === GradeSelected.value
-            })
-            return filterGrade
+            const result = FilterGradeFn(bosstxtData.value, GradeSelected.value)
+            return result
         })
 
 
@@ -491,6 +523,8 @@ const App = {
             return Render
         })
 
+
+
         // furniture
         const furnitureData = reactive([
             {bossName: "露希妲", Grade: "hard", title: "露希妲家具展示" , url: "./img/item/露希妲床鋪實體.png"},
@@ -498,14 +532,9 @@ const App = {
         ])
 
         const furnitureRender = computed(()=>{
-            const NameFilter = furnitureData.filter(item=>{
-                return item.bossName === BossNameSelected.value
-            })
-            const GradeFilter = NameFilter.filter(item=>{
-                return item.Grade === GradeSelected.value
-            })
-            return GradeFilter
-
+            const filterboss =  FilterBossNameFn(furnitureData , BossNameSelected.value)
+            const result = FilterGradeFn(filterboss, GradeSelected.value)            
+            return result
         })
         // store
         const storeData = reactive([
@@ -532,13 +561,16 @@ const App = {
             `},
         ])
         const CoinstoreRender = computed(()=>{
-            const NameFilter = storeData.filter(item=>{
-                return item.bossName === BossNameSelected.value
-            })
-            const GradeFilter = NameFilter.filter(item=>{
-                return item.Grade.indexOf(GradeSelected.value) !==  -1;
-            })
-            return GradeFilter           
+            // const NameFilter = storeData.filter(item=>{
+            //     return item.bossName === BossNameSelected.value
+            // })
+            const NameFilter = FilterBossNameFn(storeData, BossNameSelected.value)
+            console.log(NameFilter);
+            // const GradeFilter = NameFilter.filter(item=>{
+            //     return item.Grade.indexOf(GradeSelected.value) !==  -1;
+            // })
+            const result = FilterGradeFn(NameFilter, GradeSelected.value)
+            return result           
         })
         
         // MapleSetData
@@ -548,57 +580,54 @@ const App = {
             {idx:2 , key : "神秘套組" ,show: false}
         ])
         const MapleSetData = reactive([
-            { idx:0 , key : "黎明套組" , bossname: "守護者天使綠水靈" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "守護者天使綠水靈" , Grade : "hard"},
-            { idx:0 , key : "黎明套組" , bossname: "頓凱爾" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "頓凱爾" , Grade : "hard"},
-            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "hard"},
-            { idx:0 , key : "黎明套組" , bossname: "受選的賽蓮" , Grade : "extreme"},
-            { idx:0 , key : "黎明套組" , bossname: "真希拉" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "真希拉" , Grade : "hard"},
-            { idx:0 , key : "黎明套組" , bossname: "戴斯克" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "戴斯克" , Grade : "chaos"},
-            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:0 , key : "黎明套組" , bossname: "威爾" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossname: "威爾" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "守護者天使綠水靈" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "守護者天使綠水靈" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "頓凱爾" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "頓凱爾" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "受選的賽蓮" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "受選的賽蓮" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "受選的賽蓮" , Grade : "extreme"},
+            { idx:0 , key : "黎明套組" , bossName: "真希拉" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "真希拉" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "戴斯克" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "戴斯克" , Grade : "chaos"},
+            { idx:0 , key : "黎明套組" , bossName: "露希妲" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "露希妲" , Grade : "hard"},
+            { idx:0 , key : "黎明套組" , bossName: "威爾" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "威爾" , Grade : "hard"},
 
-            { idx:1 , key : "漆黑套組" , bossname: "受選的賽蓮" , Grade : "extreme"},
-            { idx:1 , key : "漆黑套組" , bossname: "受選的賽蓮" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "黑魔法師" , Grade : "extreme"},
-            { idx:1 , key : "漆黑套組" , bossname: "黑魔法師" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "真希拉" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "頓凱爾" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "戴斯克" , Grade : "chaos"},
-            { idx:1 , key : "漆黑套組" , bossname: "威爾" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "戴米安" , Grade : "hard"},
-            { idx:1 , key : "漆黑套組" , bossname: "使烏" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "受選的賽蓮" , Grade : "extreme"},
+            { idx:1 , key : "漆黑套組" , bossName: "受選的賽蓮" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "黑魔法師" , Grade : "extreme"},
+            { idx:1 , key : "漆黑套組" , bossName: "黑魔法師" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "真希拉" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "頓凱爾" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "戴斯克" , Grade : "chaos"},
+            { idx:1 , key : "漆黑套組" , bossName: "威爾" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "露希妲" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "戴米安" , Grade : "hard"},
+            { idx:1 , key : "漆黑套組" , bossName: "使烏" , Grade : "hard"},
 
-            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "normal"},
-            { idx:2 , key : "神秘套組" , bossname: "露希妲" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "normal"},
-            { idx:2 , key : "神秘套組" , bossname: "威爾" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "真希拉" , Grade : "normal"},
-            { idx:2 , key : "神秘套組" , bossname: "真希拉" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "頓凱爾" , Grade : "hard"},
-            { idx:2 , key : "神秘套組" , bossname: "戴斯克" , Grade : "chaos"},
+            { idx:2 , key : "神秘套組" , bossName: "露希妲" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossName: "露希妲" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossName: "威爾" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossName: "威爾" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossName: "真希拉" , Grade : "normal"},
+            { idx:2 , key : "神秘套組" , bossName: "真希拉" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossName: "頓凱爾" , Grade : "hard"},
+            { idx:2 , key : "神秘套組" , bossName: "戴斯克" , Grade : "chaos"},
         ])
         const MapleSetShow = computed(()=>{
             
-            const bossFilt = MapleSetData.filter(item=>{
-                return item.bossname === BossNameSelected.value;
-            })
-            const GradeFilt = bossFilt.filter(item=>{
-                return item.Grade === GradeSelected.value;
-            })
-            const Render = GradeFilt.map(item=>{
+            const bossFilt = FilterBossNameFn( MapleSetData, BossNameSelected.value)
+            const GradeFilt = FilterGradeFn(bossFilt,  GradeSelected.value)
+            
+            const result = GradeFilt.map(item=>{
                 return item.key
             })
 
             MapleSetBool.forEach(item => {
-              if(Render.indexOf(item.key) !== -1 ){
+              if(result.indexOf(item.key) !== -1 ){
                 item.show = true
               }else{
                 item.show = false
@@ -606,7 +635,7 @@ const App = {
             });
 
             handNobonusDataTxt()
-            return Render
+            return result
         })
 
         const NobonusDataTxt = ref(false)
@@ -654,21 +683,17 @@ const App = {
 
 
         const FixedItemShow = computed(()=>{
-            const gradefilt = generalBonusFixeddata.value.filter(item=>{
-                return item.Grade === GradeSelected.value
-            })
+            const filt = FilterGradeFn(generalBonusFixeddata.value, GradeSelected.value)
 
-            const Render = gradefilt.map(item=>{
+            const Render = filt.map(item=>{
                 return {title : item.title , value : numPrice(item.value) , chvalue: numPriceChinese(item.value) }
             })
             return Render
         })
 
         const notFixedItemShow = computed(()=>{
-            const gradefilt = generalBonusnotFixeddata.value.filter(item=>{
-                return item.Grade === GradeSelected.value
-            })
-            const hidezeroVal = gradefilt.filter(item=>{
+            const filt = FilterGradeFn(generalBonusnotFixeddata.value, GradeSelected.value)
+            const hidezeroVal = filt.filter(item=>{
                 return item.value !== 0
             })
             const Render = hidezeroVal.map(item=>{
@@ -683,17 +708,13 @@ const App = {
         
         const majorListnoData = ref(false)
         const majorListShow = computed(()=>{
-            const GradeFilt = majorListData.value.filter(item=>{
-                return item.Grade === GradeSelected.value;
-            })
-            const Render = GradeFilt.map(el=>{
+            const filt = FilterGradeFn(majorListData.value, GradeSelected.value)
+            const Render = filt.map(el=>{
                 return {title : el.item,
                         class: el.class,
                         url: `${ItemURL.value}${el.item}.png`,
                         BonusInfoHref: el.toBonusInfohref,
                         hrefTxt: majorListHerfTxt(el),
-
-
                     }
             })
             if(Render.length === 0){
@@ -745,16 +766,6 @@ const App = {
 
         }
         
-
-
-
-
-
-
-
-
-
-
         onMounted(() => {
             const getmapleBossInfoApi = () =>{
                 return axios.get("./api/mapleBossInfo.json")
@@ -770,9 +781,6 @@ const App = {
             console.error("API沒接到");
         })
         })
-
-
-
 
 
         return{
