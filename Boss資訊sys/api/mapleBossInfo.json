@@ -92,12 +92,12 @@
                     { "idx": 0, "key": "normal頭目點數", "Grade":"normal", "title": "頭目點數:" , "value": 0},
                     { "idx": 1, "key": "normal里程數", "Grade":"normal", "title": "里程數:" , "value": 1},
                     { "idx": 2, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 1501700},
-                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "結晶價格:" , "value": 7508500},
+                    { "idx": 3, "key": "normal結晶價格", "Grade":"normal", "title": "Rb結晶價格:" , "value": 7508500},
                     
                     { "idx": 0, "key": "hard頭目點數", "Grade":"hard", "title": "頭目點數:" , "value": 20},
                     { "idx": 1, "key": "hard里程數", "Grade":"hard", "title": "里程數:" , "value": 5},
                     { "idx": 2, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 8819007},
-                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "結晶價格:" , "value": 44095035}
+                    { "idx": 3, "key": "hard結晶價格", "Grade":"hard", "title": "Rb結晶價格:" , "value": 44095035}
                     
                     
 
@@ -107,42 +107,23 @@
                     {"idx": 2, "key": "easy特殊藥水", "Grade":"easy","url":"特殊藥水.png" , "title": "特殊藥水:" , "value": 10},
                     {"idx": 3, "key": "easy十字硬幣", "Grade":"easy","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 6},
                     {"idx": 4, "key": "easy名譽", "Grade":"easy","url":"名譽.png" , "title": "名譽(150):" , "value": 1},
-                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "easy輪迴星火", "Grade":"easy","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
 
                     {"idx": 1, "key": "normal可疑方塊", "Grade":"normal","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 3},
                     {"idx": 2, "key": "normal超級藥水", "Grade":"normal","url":"超級藥水.png" , "title": "超級藥水:" , "value": 10},
                     {"idx": 3, "key": "normal十字硬幣", "Grade":"normal","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 12},
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 5},
-                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "輪迴星火:" , "value": 110},
+                    {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"110輪迴星火.png" , "title": "110輪迴星火:" , "value": 1},
                     
                     {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 14},
                     {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 40},
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 16},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "輪迴星火:" , "value": 150}
+                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
-                    "list":[
-                        { "idx":1 , "key": "easy太初", "Grade":"easy" , "item": "太初" , "url": "太初.png", "infoUrl":"太初_info.png","drop": false},
-                        { "idx":2 , "key": "easy名譽(5000)", "Grade":"easy" , "item": "名譽(5000)" , "url": "名譽.png", "infoUrl":"名譽_info.png","drop": false},
-                        { "idx":3 , "key": "easy小經驗", "Grade":"easy" , "item": "小經驗" , "url": "小經驗.png", "infoUrl":"小經驗_info.png","drop": false},
-                        { "idx":4 , "key": "easy追加經驗", "Grade":"easy" , "item": "追加經驗" , "url": "追加經驗.png","infoUrl":"追加經驗.png", "drop": false},
-                        { "idx":5 , "key": "easy閃藍", "Grade":"easy" , "item": "閃藍" , "url": "閃藍.png","infoUrl":"閃藍.png", "drop": false},
-                        { "idx":6 , "key": "easy閃紅", "Grade":"easy" , "item": "閃紅" , "url": "閃紅.png","infoUrl":"閃紅.png", "drop": false},
-                        { "idx":7 , "key": "easy紅火", "Grade":"easy" , "item": "紅火" , "url": "紅火.png","infoUrl":"紅火.png", "drop": false},
-                        { "idx":8 , "key": "easy紫火", "Grade":"easy" , "item": "紫火" , "url": "紫火.png","infoUrl":"紫火.png", "drop": false},
-                        { "idx":9 , "key": "easy黑火", "Grade":"easy" , "item": "黑火" , "url": "黑火.png","infoUrl":"黑火.png", "drop": false},
-                        { "idx":10 , "key": "easy強力", "Grade":"easy" , "item": "強力" , "url": "強力.png","infoUrl":"強力.png", "drop": false},
-                        { "idx":11 , "key": "easy永遠", "Grade":"easy" , "item": "永遠" , "url": "永遠.png","infoUrl":"永遠.png", "drop": false},
-                        { "idx":12 , "key": "easy暗黑", "Grade":"easy" , "item": "暗黑" , "url": "暗黑.png","infoUrl":"暗黑.png", "drop": false},
-                        { "idx":13 , "key": "easy優質武器", "Grade":"easy" , "item": "優質武器" , "url": "優質武器.png","infoUrl":"優質武器.png", "drop": false},
-                        { "idx":14 , "key": "easy優質飾品", "Grade":"easy" , "item": "優質飾品" , "url": "優質飾品.png","infoUrl":"優質飾品.png", "drop": false},
-                        { "idx":15 , "key": "easy優質寵物", "Grade":"easy" , "item": "優質寵物" , "url": "優質寵物.png","infoUrl":"優質寵物.png", "drop": false},
-                        { "idx":16 , "key": "easy飾品", "Grade":"easy" , "item": "飾品" , "url": "飾品.png","infoUrl":"飾品.png", "drop": false},
-                        { "idx":17 , "key": "easy混沌", "Grade":"easy" , "item": "混沌" , "url": "混沌.png","infoUrl":"混沌.png", "drop": false},
-                        { "idx":18 , "key": "easy匠人", "Grade":"easy" , "item": "匠人" , "url": "匠人.png","infoUrl":"匠人.png", "drop": false}
-                    ]
+                    "list":[]
                     
                 },
                 "majorList":[
@@ -923,26 +904,7 @@
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,
-                    "list":[
-                        { "idx":1 , "key": "easy太初", "Grade":"easy" , "item": "太初" , "url": "太初.png", "infoUrl":"太初_info.png","drop": false},
-                        { "idx":2 , "key": "easy名譽(5000)", "Grade":"easy" , "item": "名譽(5000)" , "url": "名譽.png", "infoUrl":"名譽_info.png","drop": false},
-                        { "idx":3 , "key": "easy小經驗", "Grade":"easy" , "item": "小經驗" , "url": "小經驗.png", "infoUrl":"小經驗_info.png","drop": false},
-                        { "idx":4 , "key": "easy追加經驗", "Grade":"easy" , "item": "追加經驗" , "url": "追加經驗.png","infoUrl":"追加經驗.png", "drop": false},
-                        { "idx":5 , "key": "easy閃藍", "Grade":"easy" , "item": "閃藍" , "url": "閃藍.png","infoUrl":"閃藍.png", "drop": false},
-                        { "idx":6 , "key": "easy閃紅", "Grade":"easy" , "item": "閃紅" , "url": "閃紅.png","infoUrl":"閃紅.png", "drop": false},
-                        { "idx":7 , "key": "easy紅火", "Grade":"easy" , "item": "紅火" , "url": "紅火.png","infoUrl":"紅火.png", "drop": false},
-                        { "idx":8 , "key": "easy紫火", "Grade":"easy" , "item": "紫火" , "url": "紫火.png","infoUrl":"紫火.png", "drop": false},
-                        { "idx":9 , "key": "easy黑火", "Grade":"easy" , "item": "黑火" , "url": "黑火.png","infoUrl":"黑火.png", "drop": false},
-                        { "idx":10 , "key": "easy強力", "Grade":"easy" , "item": "強力" , "url": "強力.png","infoUrl":"強力.png", "drop": false},
-                        { "idx":11 , "key": "easy永遠", "Grade":"easy" , "item": "永遠" , "url": "永遠.png","infoUrl":"永遠.png", "drop": false},
-                        { "idx":12 , "key": "easy暗黑", "Grade":"easy" , "item": "暗黑" , "url": "暗黑.png","infoUrl":"暗黑.png", "drop": false},
-                        { "idx":13 , "key": "easy優質武器", "Grade":"easy" , "item": "優質武器" , "url": "優質武器.png","infoUrl":"優質武器.png", "drop": false},
-                        { "idx":14 , "key": "easy優質飾品", "Grade":"easy" , "item": "優質飾品" , "url": "優質飾品.png","infoUrl":"優質飾品.png", "drop": false},
-                        { "idx":15 , "key": "easy優質寵物", "Grade":"easy" , "item": "優質寵物" , "url": "優質寵物.png","infoUrl":"優質寵物.png", "drop": false},
-                        { "idx":16 , "key": "easy飾品", "Grade":"easy" , "item": "飾品" , "url": "飾品.png","infoUrl":"飾品.png", "drop": false},
-                        { "idx":17 , "key": "easy混沌", "Grade":"easy" , "item": "混沌" , "url": "混沌.png","infoUrl":"混沌.png", "drop": false},
-                        { "idx":18 , "key": "easy匠人", "Grade":"easy" , "item": "匠人" , "url": "匠人.png","infoUrl":"匠人.png", "drop": false}
-                    ]
+                    "list":[]
                     
                 },
                 "majorList":[
