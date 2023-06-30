@@ -105,7 +105,7 @@ const App = {
                     "damageRef":{
                         "show" : false,
                         "region": "arc",
-                        "arcList":[
+                        "List":[
                             {"damage": "10%" , "need": 0},
                             {"damage": "30%" , "need": 40},
                             {"damage": "60%" , "need": 110},
@@ -252,6 +252,8 @@ const App = {
             generalBonusnotFixeddata.value = BossInfo.data[BossNameSelected.value].bossBonus.notfixedItem
             majorListData.value = BossInfo.data[BossNameSelected.value].bossBonus.majorList
             generalListData.value = BossInfo.data[BossNameSelected.value].bossBonus.suuAfterItemBox
+            damageRefTable.value = BossInfo.data[BossNameSelected.value].damageRef.region
+            damageRefVal.value = BossInfo.data[BossNameSelected.value].damageRef.List
 
         })
 
@@ -265,6 +267,9 @@ const App = {
             generalBonusnotFixeddata.value = BossInfo.data[bossCh].bossBonus.notfixedItem
             majorListData.value = BossInfo.data[bossCh].bossBonus.majorList
             generalListData.value = BossInfo.data[bossCh].bossBonus.suuAfterItemBox
+            damageRefTable.value = BossInfo.data[bossCh].damageRef.region
+            damageRefVal.value = BossInfo.data[bossCh].damageRef.List
+           
             
         })
 
@@ -625,6 +630,8 @@ const App = {
 
             { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "normal"},
             { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "hard"},
+
+            { idx:4 , key : "永恆套組" , bossName: "監視者卡洛斯" , Grade : "chaos"},
         ])
         const MapleSetShow = computed(()=>{
             
@@ -800,7 +807,84 @@ const App = {
                 return 'noItemRender'
             }
         })
+
+        // 顯示 AUT 、 ARC 增傷表
+        const damageRefTable = ref(BossInfo.data[BossNameSelected.value].damageRef.region)
+        const damageRefVal = ref(BossInfo.data[BossNameSelected.value].damageRef.List)
+        const region = ref('none')
         
+
+        const damageRefArcShow = computed(()=>{
+            let TxtModify = ''
+            let can = true
+            let result = [{
+                region: region.value
+            }]
+            if(damageRefTable.value !== 'arc'){
+                console.log(damageRefTable.value);
+                result[0].region = 'none'
+            }
+            if(damageRefTable.value === "arc"){
+                region.value = "arc" ;
+                result = damageRefVal.value.map(item=>{
+                    TxtModify = ''
+                    can = true
+                    if(item.damage === "150%" & item.need <= 1320){
+                        TxtModify = "以上"
+                    }
+
+                    // 針對黑魔法師增傷 遊戲中無法超過的arc值作標示
+                    if(item.need > 1500){
+                        can = false
+                    }
+
+                    return {region: region.value ,damage : item.damage, val : `${item.need}${TxtModify}` , cangetVal: can}
+                })
+            }
+            
+            
+            
+            console.log("arc",result);
+            return result
+
+           
+        })
+        const damageRefAutShow = computed(()=>{
+            let TxtModify = ''
+
+            // 目前Render aut資料必要的長度
+            let autlength = 32
+
+            let result = []
+            if(damageRefTable.value !== 'aut'){
+                console.log(damageRefTable.value);
+                for (let i = 0; i < autlength; i++) {
+                    result.push({region:"none" , val : 0})
+                }
+            }
+
+            if(damageRefTable.value === "aut"){
+                region.value = "aut" ;
+                result = damageRefVal.value.map(item=>{
+                    TxtModify = ''
+                    if(item.damage === "5%"){
+                        TxtModify = "以下"
+                    }
+                    if(item.damage === "125%"){
+                        TxtModify = "以上"
+                    }
+
+                    return {stage: item.stage , region: region.value ,damage : item.damage, val : `${item.need}${TxtModify}` }
+                })
+            }
+            
+            
+            
+            console.log("aut",result);
+            return result
+
+           
+        })
         
         onMounted(() => {
             const getmapleBossInfoApi = () =>{
@@ -877,7 +961,11 @@ const App = {
             handToOtherBonusInfo,
 
             // generalList 基本戰利品變化
-            generalListShow
+            generalListShow,
+
+            // 顯示 AUT 、 ARC 增傷表
+            damageRefArcShow,
+            damageRefAutShow
             
 
         }

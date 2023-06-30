@@ -2446,7 +2446,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 40},
                     {"damage": "60%" , "need": 110},
@@ -2658,7 +2658,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 80},
                     {"damage": "60%" , "need": 230},
@@ -3005,7 +3005,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 75},
                     {"damage": "60%" , "need": 220},
@@ -3177,7 +3177,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 85},
                     {"damage": "60%" , "need": 255},
@@ -3352,7 +3352,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 90},
                     {"damage": "60%" , "need": 270},
@@ -3527,7 +3527,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "arc",
-                "arcList":[
+                "List":[
                     {"damage": "10%" , "need": 0},
                     {"damage": "30%" , "need": 135},
                     {"damage": "60%" , "need": 400},
@@ -3558,7 +3558,7 @@
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
-                    {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
+                    {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "?"},
                     {"idx": 2, "key": "extreme超級藥水", "Grade":"extreme","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "extreme十字硬幣", "Grade":"extreme","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
@@ -3720,7 +3720,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "aut",
-                "autList":[
+                "List":[
                     {"stage":"一階", "damage": "5%" , "need": 50},
                     {"stage":"一階", "damage": "10%" , "need": 60},
                     {"stage":"一階", "damage": "20%" , "need": 70},
@@ -3785,7 +3785,7 @@
                     {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "hard輪迴星火", "Grade":"hard","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1},
 
-                    {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
+                    {"idx": 1, "key": "extreme可疑附加方塊", "Grade":"extreme","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "?"},
                     {"idx": 2, "key": "extreme超級藥水", "Grade":"extreme","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "extreme十字硬幣", "Grade":"extreme","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "extreme輪迴星火", "Grade":"extreme","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}
@@ -3947,7 +3947,7 @@
             "damageRef":{
                 "show" : false,
                 "region": "aut",
-                "autList":[
+                "List":[
                     {"stage":"一階", "damage": "5%" , "need": 150},
                     {"stage":"一階", "damage": "10%" , "need": 160},
                     {"stage":"一階", "damage": "20%" , "need": 170},
@@ -3995,7 +3995,7 @@
                 "notfixedItem":[
 
 
-                    {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "未知"},
+                    {"idx": 1, "key": "chaos可疑附加方塊", "Grade":"chaos","url":"可疑附加方塊.png" , "title": "可疑附加方塊:" , "value": "?"},
                     {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 50},
                     {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 26},
                     {"idx": 4, "key": "chaos輪迴星火", "Grade":"chaos","url":"150輪迴星火.png" , "title": "150輪迴星火:" , "value": 1}

@@ -89,6 +89,39 @@
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
                             </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_受選的賽蓮.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_extreme.png" alt="extreme"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_黑魔法師.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="黑魔法師" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="黑魔法師" src="./img/boss/grade_extreme.png" alt="extreme"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_監視者卡洛斯.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="監視者卡洛斯" src="./img/boss/grade_chaos.png" alt="chaos"></span>
+                                </span>
+                            </li>
                         </ul>
                     </span>
 
@@ -277,13 +310,20 @@
                         </div>       
                     </div>
 
-                    <div v-show="sectioncont[2].open" class="damageRef">
-                        <div class="content">
+                    <div v-show="sectioncont[2].open" class="damageRef" :data-test="damageRefArcShow.region">
+                        <div class="content"
+                        v-show=" damageRefArcShow[0].region === 'arc' "
+                        >
+                        <!-- <div class="content"> -->
                             <div class="arcDamageTable">
                                 <h1 class="tableTitle"><span id="tableTitleVal">{{"祕法符文增幅"}}</span></h1>
                                 <ul class="arcList">
                                     <li class="listTitle">傷害%數<span>角色Arc</span></li>
-                                    <li class="item">10%<span>{{0}}</span></li>
+                                    <li class="item"
+                                    v-for="list in damageRefArcShow"
+                                    :key="list.val"
+                                    >{{list.damage}}<span :class="{mark: !list.cangetVal}">{{list.val}}</span></li>
+                                    <!-- <li class="item">10%<span>{{0}}</span></li>
                                     <li class="item">30%<span>{{40}}</span></li>
                                     <li class="item">60%<span>{{110}}</span></li>
                                     <li class="item">70%<span>{{180}}</span></li>
@@ -291,63 +331,66 @@
                                     <li class="item">100%<span>{{360}}</span></li>
                                     <li class="item">110%<span>{{400}}</span></li>
                                     <li class="item">130%<span>{{470}}</span></li>
-                                    <li class="item">150%<span>{{"540up"}}</span></li>
+                                    <li class="item">150%<span>{{"540up"}}</span></li> -->
                                 </ul>
                             </div>
-                            
+                        </div>
+                        <div class="content"  :data-test="damageRefAutShow"
+                        v-show=" damageRefAutShow[0].region === 'aut' ">
                             <div class="autDamageTable">
                                 <h1 class="tableTitle"><span id="tableTitleVal">{{"Aut(真實符文)"}}</span>增幅</h1>
     
-                                <h2 class="stage">一階</h2>
-                                <ul class="autList">
+                                <!-- <h2 class="stage">一階</h2> -->
+                                <!-- <ul class="autList"> -->
+                                <h2 class="stage" v-show="damageRefAutShow[0].stage === '一階' ">一階</h2>
+                                <ul class="autList" v-show="damageRefAutShow[0].stage === '一階' ">
                                     <li class="listTitle">傷害%數<span>角色AUT</span></li>
-                                    <li class="item">5%<span>{{0}}以下</span></li>
-                                    <li class="item">10%<span>{{40}}</span></li>
-                                    <li class="item">20%<span>{{110}}</span></li>
-                                    <li class="item">30%<span>{{180}}</span></li>
-                                    <li class="item">40%<span>{{255}}</span></li>
-                                    <li class="item">50%<span>{{360}}</span></li>
-                                    <li class="item">60%<span>{{400}}</span></li>
-                                    <li class="item">70%<span>{{470}}</span></li>
-                                    <li class="item">80%<span>{{540}}</span></li>
+                                    <li class="item">5%<span>{{ damageRefAutShow[0].val}}</span></li>
+                                    <li class="item">10%<span>{{damageRefAutShow[1].val}}</span></li>
+                                    <li class="item">20%<span>{{damageRefAutShow[2].val}}</span></li>
+                                    <li class="item">30%<span>{{damageRefAutShow[3].val}}</span></li>
+                                    <li class="item">40%<span>{{damageRefAutShow[4].val}}</span></li>
+                                    <li class="item">50%<span>{{damageRefAutShow[5].val}}</span></li>
+                                    <li class="item">60%<span>{{damageRefAutShow[6].val}}</span></li>
+                                    <li class="item">70%<span>{{damageRefAutShow[7].val}}</span></li>
+                                    <li class="item">80%<span>{{damageRefAutShow[8].val}}</span></li>
                                     <li class="listTitle">傷害%數<span>角色AUT</span></li>
-                                    <li class="item">90%<span>{{540}}</span></li>
-                                    <li class="item">100%<span>{{540}}</span></li>
-                                    <li class="item">105%<span>{{540}}</span></li>
-                                    <li class="item">110%<span>{{540}}</span></li>
-                                    <li class="item">115%<span>{{540}}</span></li>
-                                    <li class="item">120%<span>{{540}}</span></li>
-                                    <li class="item">125%<span>{{540}}以上</span></li>
+                                    <li class="item">90%<span>{{ damageRefAutShow[9].val}}</span></li>
+                                    <li class="item">100%<span>{{damageRefAutShow[10].val}}</span></li>
+                                    <li class="item">105%<span>{{damageRefAutShow[11].val}}</span></li>
+                                    <li class="item">110%<span>{{damageRefAutShow[12].val}}</span></li>
+                                    <li class="item">115%<span>{{damageRefAutShow[13].val}}</span></li>
+                                    <li class="item">120%<span>{{damageRefAutShow[14].val}}</span></li>
+                                    <li class="item">125%<span>{{damageRefAutShow[15].val}}</span></li>
                                     <li class="item none"><span>.</span></li>
                                     <li class="item none"><span>.</span></li>
                                 </ul>
     
-                                <h2 class="stage">二階</h2>
-                                <ul class="autList">
+                                <h2 class="stage" v-show="damageRefAutShow[16].stage === '二階' ">二階</h2>
+                                <ul class="autList" v-show="damageRefAutShow[16].stage === '二階' " >
                                     <li class="listTitle">傷害%數<span>角色AUT</span></li>
-                                    <li class="item">5%<span>{{0}}以下</span></li>
-                                    <li class="item">10%<span>{{40}}</span></li>
-                                    <li class="item">20%<span>{{110}}</span></li>
-                                    <li class="item">30%<span>{{180}}</span></li>
-                                    <li class="item">40%<span>{{255}}</span></li>
-                                    <li class="item">50%<span>{{360}}</span></li>
-                                    <li class="item">60%<span>{{400}}</span></li>
-                                    <li class="item">70%<span>{{470}}</span></li>
-                                    <li class="item">80%<span>{{540}}</span></li>
+                                    <li class="item">5%<span>{{ damageRefAutShow[16].val}}</span></li>
+                                    <li class="item">10%<span>{{damageRefAutShow[17].val}}</span></li>
+                                    <li class="item">20%<span>{{damageRefAutShow[18].val}}</span></li>
+                                    <li class="item">30%<span>{{damageRefAutShow[19].val}}</span></li>
+                                    <li class="item">40%<span>{{damageRefAutShow[20].val}}</span></li>
+                                    <li class="item">50%<span>{{damageRefAutShow[21].val}}</span></li>
+                                    <li class="item">60%<span>{{damageRefAutShow[22].val}}</span></li>
+                                    <li class="item">70%<span>{{damageRefAutShow[23].val}}</span></li>
+                                    <li class="item">80%<span>{{damageRefAutShow[24].val}}</span></li>
                                     <li class="listTitle">傷害%數<span>角色AUT</span></li>
-                                    <li class="item">90%<span>{{540}}</span></li>
-                                    <li class="item">100%<span>{{540}}</span></li>
-                                    <li class="item">105%<span>{{540}}</span></li>
-                                    <li class="item">110%<span>{{540}}</span></li>
-                                    <li class="item">115%<span>{{540}}</span></li>
-                                    <li class="item">120%<span>{{540}}</span></li>
-                                    <li class="item">125%<span>{{540}}以上</span></li>
+                                    <li class="item">90%<span>{{ damageRefAutShow[25].val}}</span></li>
+                                    <li class="item">100%<span>{{damageRefAutShow[26].val}}</span></li>
+                                    <li class="item">105%<span>{{damageRefAutShow[27].val}}</span></li>
+                                    <li class="item">110%<span>{{damageRefAutShow[28].val}}</span></li>
+                                    <li class="item">115%<span>{{damageRefAutShow[29].val}}</span></li>
+                                    <li class="item">120%<span>{{damageRefAutShow[30].val}}</span></li>
+                                    <li class="item">125%<span>{{damageRefAutShow[31].val}}</span></li>
                                     <li class="item none"><span>.</span></li>
                                     <li class="item none"><span>.</span></li>
     
                                 </ul>
                             </div>
-    
                         </div>
     
                         

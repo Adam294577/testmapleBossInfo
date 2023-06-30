@@ -6,6 +6,7 @@
     text-decoration: none;
     
 }
+$markTxt : rgb(255, 60, 0);
 @mixin BonusSubtitleType{
     position: relative;
     cursor: pointer;
@@ -656,6 +657,9 @@ body,html{
                             bottom: 7px;
                             left: 50%;
                             transform: translateX(-50%);
+                            &.mark{
+                                color: $markTxt
+                            }
     
                         }
                     }
@@ -676,7 +680,7 @@ body,html{
     
             }
             .autDamageTable{
-                display: none;
+                // display: none;
                 .autList{
                     flex-wrap: wrap;
                     justify-content: start;

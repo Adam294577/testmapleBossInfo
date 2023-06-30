@@ -516,8 +516,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   left: 50%;
   transform: translateX(-50%);
 }
-.bossContainer .bossData .damageRef .autDamageTable {
-  display: none;
+.bossContainer .bossData .damageRef .arcDamageTable ul li span.mark, .bossContainer .bossData .damageRef .autDamageTable ul li span.mark {
+  color: rgb(255, 60, 0);
 }
 .bossContainer .bossData .damageRef .autDamageTable .autList {
   flex-wrap: wrap;
