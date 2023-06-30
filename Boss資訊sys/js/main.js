@@ -687,6 +687,9 @@ const App = {
             { idx:3 , key : "首領Boss套組" , bossName: "皮卡啾" , Grade : "chaos"},
 
             { idx:4 , key : "永恆套組" , bossName: "監視者卡洛斯" , Grade : "chaos"},
+
+            { idx:5 , key : "女皇套組" , bossName: "西格諾斯" , Grade : "easy"},
+            { idx:5 , key : "女皇套組" , bossName: "西格諾斯" , Grade : "normal"},
         ])
         const MapleSetShow = computed(()=>{
             
@@ -952,22 +955,30 @@ const App = {
                     return result =  txt
                 }
             }
-            const Filt = FilterGradeFn(mosData.value.info, GradeSelected.value)
-            console.log(Filt);
-            const Render = Filt.map(item=>{
-                return {url: `${mosURL.value}${item.name}.png`, 
-                        alt: item.name, 
-                        mosLv: item.LV,
-                        mosHp: numPriceChinese(item.HP),
-                        mosDefense: item.Defense, 
-                        attributeHalf: checkImgFn(item.attributeHalf),
-                        HalfTxt: HalftxtFn(item.Halftxt)
 
+            if(mosNoData.value){
+                const Filt = FilterGradeFn(mosData.value.info, GradeSelected.value)
+                console.log(Filt);
+                const Render = Filt.map(item=>{
+                    return {url: `${mosURL.value}${item.name}.png`, 
+                            alt: item.name, 
+                            mosLv: item.LV,
+                            mosHp: numPriceChinese(item.HP),
+                            mosDefense: item.Defense, 
+                            attributeHalf: checkImgFn(item.attributeHalf),
+                            HalfTxt: HalftxtFn(item.Halftxt)
+    
+                }
+                })
+                console.log(Render);
+                return Render
+
+            }else{
+                const Render = []
+                console.log(Render);
+                return Render
             }
-            })
-            console.log(Render);
 
-            return Render
         })
         
         onMounted(() => {
