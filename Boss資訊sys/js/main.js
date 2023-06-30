@@ -9,9 +9,18 @@ const App = {
 
                 // icon統一路徑
                 const ItemURL = ref("./img/item/")
+                const mosURL = ref("./img/mos/")
+
+                const isload = ref(false)
 
 
 // API
+        const handLoadbool = ()=>{
+            setTimeout(()=>{
+                isload.value = true
+            },100)
+        }
+
         const BossInfo = reactive({
             "data" : {
                 "露希妲" :{
@@ -245,6 +254,7 @@ const App = {
         });
         watch(BossInfo, api=>{
             console.log("串API後的資料:",api.data);
+            
             banner.value = BossInfo.data[BossNameSelected.value].banner
             GradeList.value = BossInfo.data[BossNameSelected.value].GradeList
             bosstxtData.value = BossInfo.data[BossNameSelected.value].bossIntro.bosstxt
@@ -254,6 +264,7 @@ const App = {
             generalListData.value = BossInfo.data[BossNameSelected.value].bossBonus.suuAfterItemBox
             damageRefTable.value = BossInfo.data[BossNameSelected.value].damageRef.region
             damageRefVal.value = BossInfo.data[BossNameSelected.value].damageRef.List
+
 
         })
 
@@ -896,6 +907,7 @@ const App = {
           axios.all([getmapleBossInfoApi()])
           .then((res)=>{
             BossInfo.data = res[0].data[0].data
+            handLoadbool()
         })
           .catch((err)=>{
             console.error("API沒接到");
@@ -904,6 +916,8 @@ const App = {
 
 
         return{
+            // API串接資料後 才顯示畫面
+            isload,
             // NavOpen
             NavWidth,
             handNavBool,

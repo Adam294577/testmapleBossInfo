@@ -179,7 +179,12 @@
             </ul>
         </div>
 
-        <main class="bossContainer">
+        <div class="loading" v-show=" !isload">
+            <h1>Loading</h1>
+        </div>
+
+        <!-- <main class="bossContainer"  v-show=" isload"> -->
+        <main :class="['bossContainer', {'load' : !isload}]">
             
                 <section  v-show="sectioncont[0].open" class="bossIntro">
 
