@@ -264,6 +264,7 @@ const App = {
             generalListData.value = BossInfo.data[BossNameSelected.value].bossBonus.suuAfterItemBox
             damageRefTable.value = BossInfo.data[BossNameSelected.value].damageRef.region
             damageRefVal.value = BossInfo.data[BossNameSelected.value].damageRef.List
+            mosData.value = BossInfo.data[BossNameSelected.value].bossData.mosInfo
 
 
         })
@@ -280,6 +281,7 @@ const App = {
             generalListData.value = BossInfo.data[bossCh].bossBonus.suuAfterItemBox
             damageRefTable.value = BossInfo.data[bossCh].damageRef.region
             damageRefVal.value = BossInfo.data[bossCh].damageRef.List
+            mosData.value = BossInfo.data[bossCh].bossData.mosInfo
            
             
         })
@@ -343,28 +345,68 @@ const App = {
             return overArr.join("");
           };
 
-        const numPriceChinese = (num)=>{
+          const numPriceChinese = (num)=>{
             const n = num + "";
             const length = n.length
             const numArr = n.split("").reverse();
-            const overArr = [];
+
+            //  t4 c3 t3 c2 t2 c1 t1 -> xxxx 兆 xxxx 億 xxxx 萬 xxxx
+            let Render = [];
+            let t1 = []
+            let t2 = []
+            let t3 = []
+            let t4 = []
+
+            let c1 = []
+            let c2 = []
+            let c3 = []
+            if(length >= 5){
+                c1.push("萬")
+            }
+            if(length >= 9){
+                c2.push("億")
+            }
+            if(length >= 13){
+                c3.push("兆")
+            }
             let i = 0;
             numArr.forEach((item) => {
-              if (i === 4 & length >= 5) {
-                overArr.push("萬");
-              }
-              if(i === 8 & length >= 9){
-                overArr.push("億");
-              }
-              if(i === 12 & length >= 13){
-                overArr.push("兆");
-              }
-              overArr.push(item);
-              i++;
+                i++;
+                if(i >= 1 &  i <= 4){
+                    t1.push(item)
+                }
+                if(i >= 5 &  i <= 8){
+                    t2.push(item)
+                }
+                if(i >= 9 &  i <= 12){
+                    t3.push(item)
+                }
+                if(i >= 13 &  i <= 16){
+                    t4.push(item)
+                }
             });
-            overArr.reverse();
-            return overArr.join("");
-        }        
+            if( t1.join("") === "0000" & length >= 5 ){
+                t1 = []
+            }
+            if(t2.join("") === "0000" & length >= 9){
+                t2 = []
+            }
+            if(t3.join("") === "0000" & length >= 13){
+                t3 = []
+            }
+            Render= [...t1 , ...c1 , ...t2 , ...c2 , ...t3 , ...c3 , ...t4]
+            Render.reverse()
+            Render = Render.join("").replace("億萬","億").replace("兆億","兆")
+            return Render
+        }  
+        
+        
+        const checkImgFn = (bool)=>{
+            let FalseImg = "./img/cross.png"
+            let TrueImg = "./img/check.png"
+            let result = ''
+            return result = bool ? TrueImg : FalseImg
+        }
 
 
         //  NavFn
@@ -641,6 +683,8 @@ const App = {
 
             { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "normal"},
             { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "hard"},
+            { idx:3 , key : "首領Boss套組" , bossName: "皮卡啾" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "皮卡啾" , Grade : "chaos"},
 
             { idx:4 , key : "永恆套組" , bossName: "監視者卡洛斯" , Grade : "chaos"},
         ])
@@ -800,15 +844,10 @@ const App = {
         const generalListShow = computed(()=>{
             if(generalListData.value.BossLv){
 
-                const dropImgFn = (bool)=>{
-                    let nodropImg = "./img/cross.png"
-                    let dropImg = "./img/check.png"
-                    let result = ''
-                    return result = bool ? dropImg : nodropImg
-                }
+
                 const Filt = FilterGradeFn(generalListData.value.list, GradeSelected.value)
                 const Render = Filt.map(el=>{
-                    return {url: `${ItemURL.value}${el.url}` , key: el.item ,drop: dropImgFn(el.drop)}
+                    return {url: `${ItemURL.value}${el.url}` , key: el.item ,drop: checkImgFn(el.drop)}
                 })
                 return Render
     
@@ -832,7 +871,6 @@ const App = {
                 region: region.value
             }]
             if(damageRefTable.value !== 'arc'){
-                console.log(damageRefTable.value);
                 result[0].region = 'none'
             }
             if(damageRefTable.value === "arc"){
@@ -855,7 +893,7 @@ const App = {
             
             
             
-            console.log("arc",result);
+            // console.log("arc",result);
             return result
 
            
@@ -868,7 +906,6 @@ const App = {
 
             let result = []
             if(damageRefTable.value !== 'aut'){
-                console.log(damageRefTable.value);
                 for (let i = 0; i < autlength; i++) {
                     result.push({region:"none" , val : 0})
                 }
@@ -891,10 +928,46 @@ const App = {
             
             
             
-            console.log("aut",result);
+            // console.log("aut",result);
             return result
 
            
+        })
+
+        // mos資料顯示
+        const mosData = ref(BossInfo.data[BossNameSelected.value].bossData.mosInfo)
+        const mosNoData = ref(false)
+        
+        console.log(mosData.value);
+        const mosDataShow = computed(()=>{
+            mosNoData.value = mosData.value.has ? true : false
+
+            const HalftxtFn = (txt) =>{
+                let result = ''
+                if( txt === '' | txt === undefined){
+                    return result
+                }
+                if(txt !== ''){
+                    console.log(txt);
+                    return result =  txt
+                }
+            }
+            const Filt = FilterGradeFn(mosData.value.info, GradeSelected.value)
+            console.log(Filt);
+            const Render = Filt.map(item=>{
+                return {url: `${mosURL.value}${item.name}.png`, 
+                        alt: item.name, 
+                        mosLv: item.LV,
+                        mosHp: numPriceChinese(item.HP),
+                        mosDefense: item.Defense, 
+                        attributeHalf: checkImgFn(item.attributeHalf),
+                        HalfTxt: HalftxtFn(item.Halftxt)
+
+            }
+            })
+            console.log(Render);
+
+            return Render
         })
         
         onMounted(() => {
@@ -979,7 +1052,11 @@ const App = {
 
             // 顯示 AUT 、 ARC 增傷表
             damageRefArcShow,
-            damageRefAutShow
+            damageRefAutShow,
+
+            // 怪物資訊 Render
+            mosDataShow,
+            mosNoData,
             
 
         }

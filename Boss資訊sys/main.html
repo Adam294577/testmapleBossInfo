@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
-
+        <div class="loading" v-show=" !isload">
+            <h1>Loading</h1>
+        </div>
         
         <div class="menu">
             <span @click="handNavBool" id="bossMenuBtn" class="btntxt act">Boss</span>
@@ -87,6 +89,17 @@
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_easy.png" alt="easy"></span>
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_normal.png" alt="normal"></span>
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_hard.png" alt="hard"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
+                                        <img src="./img/boss/list_皮卡啾.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="皮卡啾" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="皮卡啾" src="./img/boss/grade_chaos.png" alt="chaos"></span>
                                 </span>
                             </li>
                             <li class="infoItem">
@@ -179,9 +192,7 @@
             </ul>
         </div>
 
-        <div class="loading" v-show=" !isload">
-            <h1>Loading</h1>
-        </div>
+
 
         <!-- <main class="bossContainer"  v-show=" isload"> -->
         <main :class="['bossContainer', {'load' : !isload}]">
@@ -270,8 +281,10 @@
                         </div>
                         
                     </div>
-                    <h1 class="title">怪物資訊</h1>
-                    <div class="moscontent">
+                    <h1 class="title" 
+                    v-show="mosNoData"
+                    :data-test="mosDataShow">怪物資訊</h1>
+                    <div class="moscontent" v-show="mosNoData">
                         <div class="mosTitle">
                             <li><span>怪物名稱</span></li>
                             <li><span>怪物等級</span></li>
@@ -279,7 +292,24 @@
                             <li><span>血量</span></li>
                             <li><span>屬性減半</span></li>
                         </div>
-                        <div class="mosterinfo">
+                        <div 
+                        class="mosterinfo"
+                        v-for="list in mosDataShow"
+                        :key="list.alt"
+                        >
+                            <li>
+                                <img :src="list.url" :alt="list.alt">
+                                <span>{{list.alt}}</span>
+                            </li>
+                            <li><span>LV.{{list.mosLv}}</span></li>
+                            <li><span>{{list.mosDefense}}</span></li>
+                            <li><span>{{list.mosHp}}</span></li>
+                            <li>
+                                <span><img :src="list.attributeHalf" alt="有無"></span>
+                                <span>{{list.HalfTxt}}</span>
+                            </li>
+                        </div> 
+                        <!-- <div class="mosterinfo">
                             <li>
                                 <img src="./img/mos/惡夢石巨人.png" alt="">
                                 <span>{{"惡夢石巨人(一階)"}}</span>
@@ -312,7 +342,7 @@
                                 <span>{{"補充訊息"}}</span>
 
                             </li>
-                        </div>       
+                        </div>        -->
                     </div>
 
                     <div v-show="sectioncont[2].open" class="damageRef" :data-test="damageRefArcShow.region">

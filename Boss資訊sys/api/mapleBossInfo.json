@@ -1475,11 +1475,11 @@
                     {"idx": 4, "key": "normal名譽", "Grade":"normal","url":"名譽.png" , "title": "名譽(150):" , "value": 4},
                     {"idx": 5, "key": "normal輪迴星火", "Grade":"normal","url":"120輪迴星火.png" , "title": "120輪迴星火:" , "value": 1},
 
-                    {"idx": 1, "key": "hard可疑方塊", "Grade":"hard","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
-                    {"idx": 2, "key": "hard超級藥水", "Grade":"hard","url":"超級藥水.png" , "title": "超級藥水:" , "value": 30},
-                    {"idx": 3, "key": "hard十字硬幣", "Grade":"hard","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 24},
-                    {"idx": 4, "key": "hard名譽", "Grade":"hard","url":"名譽.png" , "title": "名譽(150):" , "value": 12},
-                    {"idx": 5, "key": "hard輪迴星火", "Grade":"hard","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
+                    {"idx": 1, "key": "chaos可疑方塊", "Grade":"chaos","url":"可疑方塊.png" , "title": "可疑方塊:" , "value": 1},
+                    {"idx": 2, "key": "chaos超級藥水", "Grade":"chaos","url":"超級藥水.png" , "title": "超級藥水:" , "value": 30},
+                    {"idx": 3, "key": "chaos十字硬幣", "Grade":"chaos","url":"十字硬幣.png" , "title": "十字硬幣:" , "value": 24},
+                    {"idx": 4, "key": "chaos名譽", "Grade":"chaos","url":"名譽.png" , "title": "名譽(150):" , "value": 12},
+                    {"idx": 5, "key": "chaos輪迴星火", "Grade":"chaos","url":"130輪迴星火.png" , "title": "130輪迴星火:" , "value": 1}
                 ],
                 "suuAfterItemBox":{
                     "BossLv" : false,

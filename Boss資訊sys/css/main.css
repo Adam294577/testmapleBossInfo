@@ -462,7 +462,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 .bossContainer .bossData .moscontent .mosterinfo li {
   display: inline-block;
-  width: 30%;
+  width: 20%;
 }
 .bossContainer .bossData .moscontent .mosterinfo li img {
   position: relative;
