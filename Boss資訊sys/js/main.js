@@ -252,8 +252,14 @@ const App = {
                 }, 
             }
         });
+
+        const BossGradeData = reactive({data:{}})
+        console.log(BossGradeData.data);
+        watch(BossGradeData,ApiData=>{
+        console.log(ApiData);  
+        })
         watch(BossInfo, api=>{
-            console.log("串API後的資料:",api.data);
+            // console.log("串API後的資料:",api.data);
             
             banner.value = BossInfo.data[BossNameSelected.value].banner
             GradeList.value = BossInfo.data[BossNameSelected.value].GradeList
@@ -265,6 +271,7 @@ const App = {
             damageRefTable.value = BossInfo.data[BossNameSelected.value].damageRef.region
             damageRefVal.value = BossInfo.data[BossNameSelected.value].damageRef.List
             mosData.value = BossInfo.data[BossNameSelected.value].bossData.mosInfo
+            bossAbout.value = BossInfo.data[BossNameSelected.value].bossData.stagecont
 
 
         })
@@ -282,6 +289,7 @@ const App = {
             damageRefTable.value = BossInfo.data[bossCh].damageRef.region
             damageRefVal.value = BossInfo.data[bossCh].damageRef.List
             mosData.value = BossInfo.data[bossCh].bossData.mosInfo
+            bossAbout.value = BossInfo.data[bossCh].bossData.stagecont
            
             
         })
@@ -941,7 +949,7 @@ const App = {
         const mosData = ref(BossInfo.data[BossNameSelected.value].bossData.mosInfo)
         const mosNoData = ref(false)
         
-        console.log(mosData.value);
+        // console.log(mosData.value);
         const mosDataShow = computed(()=>{
             mosNoData.value = mosData.value.has ? true : false
 
@@ -958,7 +966,7 @@ const App = {
 
             if(mosNoData.value){
                 const Filt = FilterGradeFn(mosData.value.info, GradeSelected.value)
-                console.log(Filt);
+                // console.log(Filt);
                 const Render = Filt.map(item=>{
                     return {url: `${mosURL.value}${item.name}.png`, 
                             alt: item.name, 
@@ -967,30 +975,69 @@ const App = {
                             mosDefense: item.Defense, 
                             attributeHalf: checkImgFn(item.attributeHalf),
                             HalfTxt: HalftxtFn(item.Halftxt)
-    
                 }
                 })
-                console.log(Render);
+                // console.log(Render);
                 return Render
 
             }else{
                 const Render = []
-                console.log(Render);
+                // console.log(Render);
                 return Render
             }
 
         })
+         // Boss資訊Render
+        const bossAbout = ref(BossInfo.data[BossNameSelected.value].bossData.stagecont)
+        // console.log(bossAbout.value);
+
+        const bossAboutShow = computed(()=>{
+            const Filt = FilterGradeFn(bossAbout.value, GradeSelected.value)
+
+
+            const Render = Filt.map(item=>{
+                let HPTxt=''
+                
+                if(item.recoverInfoTitle === undefined){
+                    item.recoverInfoTitle = "none"
+                }
+                if(BossNameSelected.value === "威爾" & item.stagetitle === "一階"){
+                    HPTxt = "(兩區總血量)";
+                }
+                if(BossNameSelected.value === "黑魔法師"  & item.stagetitle === "一階" ){
+                    HPTxt = "(黑白騎士-血量共用)";
+                    
+                }
+                return {
+                    stageTitle : item.stagetitle,
+                    LV : item.LV,
+                    Defense : item.Defense,
+                    HP : numPriceChinese(item.HP),
+                    HPTxt: HPTxt,
+                    attributeHalf: checkImgFn(item.attributeHalf),
+                    recoverInfoTitle: item.recoverInfoTitle,
+                    recoverHp : item.hpRecoverCh
+                }
+            })
+            // console.log(Render);
+            return Render
+        })
+        
+
         
         onMounted(() => {
-            const getmapleBossInfoApi = () =>{
-                return axios.get("./api/mapleBossInfo.json")
-            }
-
-
-            
-          axios.all([getmapleBossInfoApi()])
+        const getmapleBossInfoApi = () =>{
+            return axios.get("./api/mapleBossInfo.json")
+        }
+        const getmapleBossGradeApi = () =>{
+            return axios.get("./api/bossGrade.json")
+        }
+        axios.all([getmapleBossInfoApi(),getmapleBossGradeApi()])
           .then((res)=>{
             BossInfo.data = res[0].data[0].data
+            BossGradeData.data = res[1].data[0].data
+            
+
             handLoadbool()
         })
           .catch((err)=>{
@@ -1068,6 +1115,8 @@ const App = {
             // 怪物資訊 Render
             mosDataShow,
             mosNoData,
+            // Boss資訊Render
+            bossAboutShow,
             
 
         }

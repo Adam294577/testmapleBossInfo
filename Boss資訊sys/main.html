@@ -94,6 +94,17 @@
                             <li class="infoItem">
                                 
                                 <span class="bossImg">
+                                        <img src="./img/boss/list_西格諾斯.png" alt="">
+                                </span>
+                
+                                <span class="bossGrade">
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="西格諾斯" src="./img/boss/grade_easy.png" alt="easy"></span>
+                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="西格諾斯" src="./img/boss/grade_normal.png" alt="normal"></span>
+                                </span>
+                            </li>
+                            <li class="infoItem">
+                                
+                                <span class="bossImg">
                                         <img src="./img/boss/list_皮卡啾.png" alt="">
                                 </span>
                 
@@ -246,39 +257,42 @@
                     </ul>
 
                     <h1 class="title">BOSS資訊</h1>
-                    <div class="content">
-                        <div class="stagecont">
-                            <h2 class="stagetitle">一階
-                                <!-- <img src="" alt="BOSS小icon"> -->
-                            </h2>
+                    <div class="content" 
+                    :data-test="bossAboutShow"
+                    v-for="list in bossAboutShow"
+                    :key="list.stageTitle"
+                    >
+                        <div class="stagecont" v-show="list.stageTitle !== 'none' " >
+                            <h2>{{list.stageTitle}}</h2>
                             <div class="stageinfo">
-                                <li class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></li>
-                                <li class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></li>
-                                <li class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></li>
-                                <li class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></li>
+                                <li class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{list.LV}}</span></li>
+                                <li class="bossHP">血量:<span id="bossHPVal">{{list.HP}}<span>{{list.HPTxt}}</span> </span></li>
+                                <li class="bossDefense">防禦力:<span id="bossDefenseVal">{{list.Defense}}</span></li>
+                                <li class="attributeHalf">屬性減半:<span id="attributeHalfVal"><img :src="list.attributeHalf" alt=""></span></li>
+                                <li class="other" v-show="list.recoverInfoTitle !== 'none'">{{list.recoverInfoTitle}}:<span id="attributeHalfVal">{{list.recoverHp}}</span></li>
                             </div>
                         </div>
-                        <div class="stagecont">
-                            <h2 class="stagetitle">二階</h2>
+                        <!-- <div class="stagecont" v-show="bossAboutShow[0].stageTitle !== 'none' " >
+                            <h2 class="stagetitle" >一階</h2>
                             <div class="stageinfo">
                                 <li class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></li>
-                                <li class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></li>
+                                <li class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}{{"黑白騎士-血量共用、威爾-兩區總血量"}}</span></li>
                                 <li class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></li>
-                                <li class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></li>
-                            </div>
-                        </div>
-
-                        <div class="stagecont">
-                            <h2 class="stagetitle">三階</h2>
-                            <div class="stageinfo">
-                                <li class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></li>
-                                <li class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></li>
-                                <li class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></li>
-                                <!-- <li class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></li> -->
                                 <li class="attributeHalf">屬性減半:<span id="attributeHalfVal"><img src="./img/check.png" alt="">{{"補充訊息"}}</span></li>
-                                <!-- <li class="attributeHalf">{{"護盾、回復血量"}}<span id="attributeHalfVal">{{"hp"}}</span></li> -->
+                                <li class="other">{{"黑魔法師護盾、綠水回復血量、露希妲三階回血"}}<span id="attributeHalfVal">{{"txt"}}</span></li>
                             </div>
-                        </div>
+                        </div> -->
+                        <!-- <div class="stagecont" v-show="bossAboutShow[1].stageTitle === '二階' " >
+                            <h2 class="stagetitle" >二階</h2>
+                            <div class="stageinfo">
+                                <li class="bossS1LV">BOSS等級:<span id="bossS1LV">Lv{{230}}</span></li>
+                                <li class="bossHP">血量:<span id="bossHPVal">{{"x兆"}}</span></li>
+                                <li class="bossDefense">防禦力:<span id="bossDefenseVal">{{300}}%</span></li>
+                                <li class="attributeHalf">屬性減半:<span id="attributeHalfVal">{{true}}</span></li>
+                            </div>
+                        </div> -->
+
+
                         
                     </div>
                     <h1 class="title" 

@@ -2422,7 +2422,7 @@
                     {"key":"normal二階", "Grade": "normal", "stagetitle" : "二階" , "LV" : 230 , "Defense" : "300%", "HP": 12000000000000,"HPCh":"12兆","attributeHalf": true},
                     {"key":"hard一階", "Grade": "hard", "stagetitle" : "一階" , "LV" : 230 , "Defense" : "300%", "HP": 50800000000000,"HPCh":"50.8兆","attributeHalf": true},
                     {"key":"hard二階", "Grade": "hard", "stagetitle" : "二階" , "LV" : 230 , "Defense" : "300%", "HP": 54000000000000,"HPCh":"54兆","attributeHalf": true},
-                    {"key":"hard三階", "Grade": "hard", "stagetitle" : "三階" , "LV" : 230 , "Defense" : "300%", "HP": 11970000000000,"HPCh":"11兆9700億","attributeHalf": true ,"hpRecoverCh":"5985億"}
+                    {"key":"hard三階", "Grade": "hard", "stagetitle" : "三階" , "LV" : 230 , "Defense" : "300%", "HP": 11970000000000,"HPCh":"11兆9700億","attributeHalf": true ,"hpRecoverCh":"5985億", "recoverInfoTitle": "鎖血後恢復血量"}
                 ],
                 "mosInfo": {
                     "has": true,
@@ -2836,8 +2836,8 @@
             "bossData":{
                 "show" : false,
                 "stagecont":[
-                    {"key":"normal", "Grade": "normal", "stagetitle" : "" , "LV" : 220 , "Defense" : "300%", "HP": 5000000000000,"HPCh":"5兆","attributeHalf": true ,"hpRecoverCh":"500億"},
-                    {"key":"chaos", "Grade": "chaos", "stagetitle" : "" , "LV" : 220 , "Defense" : "300%", "HP": 115500000000000,"HPCh":"115.5兆","attributeHalf": true,"hpRecoverCh":"1.155兆"}
+                    {"key":"normal", "Grade": "normal", "stagetitle" : "" , "LV" : 220 , "Defense" : "300%", "HP": 5000000000000,"HPCh":"5兆","attributeHalf": true ,"hpRecoverCh":"500億", "recoverInfoTitle": "每分鐘恢復血量"},
+                    {"key":"chaos", "Grade": "chaos", "stagetitle" : "" , "LV" : 220 , "Defense" : "300%", "HP": 115500000000000,"HPCh":"115.5兆","attributeHalf": true,"hpRecoverCh":"1.155兆", "recoverInfoTitle": "每分鐘恢復血量"}
                 ],
                 "mosInfo": {
                     "has": true,
@@ -3508,15 +3508,15 @@
             "bossData":{
                 "show" : false,
                 "stagecont":[
-                    {"key":"hard一階", "Grade": "hard", "stagetitle" : "一階" , "LV" : 265 , "Defense" : "300%", "HP": 63000000000000,"HPCh":"63兆(血量共用)","attributeHalf": true, "hpRecoverCh":"7500億"},
-                    {"key":"hard二階", "Grade": "hard", "stagetitle" : "二階" , "LV" : 275 , "Defense" : "300%", "HP": 115500000000000,"HPCh":"115.5兆","attributeHalf": true, "hpRecoverCh":"2.2兆"},
-                    {"key":"hard三階", "Grade": "hard", "stagetitle" : "三階" , "LV" : 275 , "Defense" : "300%", "HP": 157500000000000,"HPCh":"157.5兆","attributeHalf": true, "hpRecoverCh":"3.5兆"},
-                    {"key":"hard四階", "Grade": "hard", "stagetitle" : "四階" , "LV" : 265 , "Defense" : "300%", "HP": 140000000000000,"HPCh":"140兆","attributeHalf": true, "hpRecoverCh":"3兆"},
+                    {"key":"hard一階", "Grade": "hard", "stagetitle" : "一階" , "LV" : 265 , "Defense" : "300%", "HP": 63000000000000,"HPCh":"63兆(血量共用)","attributeHalf": true, "hpRecoverCh":"7500億", "recoverInfoTitle": "護盾血量"},
+                    {"key":"hard二階", "Grade": "hard", "stagetitle" : "二階" , "LV" : 275 , "Defense" : "300%", "HP": 115500000000000,"HPCh":"115.5兆","attributeHalf": true, "hpRecoverCh":"2.2兆", "recoverInfoTitle": "護盾血量"},
+                    {"key":"hard三階", "Grade": "hard", "stagetitle" : "三階" , "LV" : 275 , "Defense" : "300%", "HP": 157500000000000,"HPCh":"157.5兆","attributeHalf": true, "hpRecoverCh":"3.5兆", "recoverInfoTitle": "護盾血量"},
+                    {"key":"hard四階", "Grade": "hard", "stagetitle" : "四階" , "LV" : 265 , "Defense" : "300%", "HP": 140000000000000,"HPCh":"140兆","attributeHalf": true, "hpRecoverCh":"3兆", "recoverInfoTitle": "護盾血量"},
 
-                    {"key":"extreme一階", "Grade": "extreme", "stagetitle" : "一階" , "LV" : 275 , "Defense" : "300%", "HP": 1260000000000000,"HPCh":"1260兆(血量共用)","attributeHalf": true, "hpRecoverCh":"未知"},
-                    {"key":"extreme二階", "Grade": "extreme", "stagetitle" : "二階" , "LV" : 280 , "Defense" : "300%", "HP": 1470000000000000,"HPCh":"1470兆(推估)","attributeHalf": true, "hpRecoverCh":"未知"},
-                    {"key":"extreme三階", "Grade": "extreme", "stagetitle" : "三階" , "LV" : 280 , "Defense" : "300%", "HP": 1575000000000000,"HPCh":"1575兆(推估)","attributeHalf": true, "hpRecoverCh":"未知"},
-                    {"key":"extreme四階", "Grade": "extreme", "stagetitle" : "四階" , "LV" : 280 , "Defense" : "300%", "HP": 1680000000000000,"HPCh":"1680兆(推估)","attributeHalf": true, "hpRecoverCh":"未知"}
+                    {"key":"extreme一階", "Grade": "extreme", "stagetitle" : "一階" , "LV" : 275 , "Defense" : "300%", "HP": 1260000000000000,"HPCh":"1260兆(血量共用)","attributeHalf": true, "hpRecoverCh":"未知","recoverInfoTitle": "護盾血量"},
+                    {"key":"extreme二階", "Grade": "extreme", "stagetitle" : "二階" , "LV" : 280 , "Defense" : "300%", "HP": 1470000000000000,"HPCh":"1470兆(推估)","attributeHalf": true, "hpRecoverCh":"未知","recoverInfoTitle": "護盾血量"},
+                    {"key":"extreme三階", "Grade": "extreme", "stagetitle" : "三階" , "LV" : 280 , "Defense" : "300%", "HP": 1575000000000000,"HPCh":"1575兆(推估)","attributeHalf": true, "hpRecoverCh":"未知","recoverInfoTitle": "護盾血量"},
+                    {"key":"extreme四階", "Grade": "extreme", "stagetitle" : "四階" , "LV" : 280 , "Defense" : "300%", "HP": 1680000000000000,"HPCh":"1680兆(推估)","attributeHalf": true, "hpRecoverCh":"未知","recoverInfoTitle": "護盾血量"}
                 ],
                 "mosInfo": {
                     "has": false,
@@ -3908,15 +3908,15 @@
                     { "idx": 8, "key":"nromal前置任務", "Grade": "nromal", "title": "前置任務:" , "msg": "卡羅泰"},
                     { "idx": 9, "key":"nromal前置任務時間", "Grade": "nromal", "title": "前置任務時間:" , "msg": "約20分"},      
 
-                    { "idx": 1, "key":"hard最低入場等級", "Grade": "hard", "title": "最低入場等級:" , "msg": "270up"},
-                    { "idx": 2, "key":"hard入場次數", "Grade": "hard", "title": "入場次數:" , "msg": "3次/天"},
-                    { "idx": 3, "key":"hard入場等待時間", "Grade": "hard", "title": "入場等待時間:" , "msg": "30分鐘/次"},
-                    { "idx": 4, "key":"hard完成次數", "Grade": "hard", "title": "完成次數:" , "msg": "全模式每週1次"},
-                    { "idx": 5, "key":"hard重置時間", "Grade": "hard", "title": "重置時間:" , "msg": "每週四 0:00更新"},
-                    { "idx": 6, "key":"hard玩家命數", "Grade": "hard", "title": "玩家命數:" , "msg": "5"},
-                    { "idx": 7, "key":"hard消耗欄冷卻時間", "Grade": "hard", "title": "消耗欄冷卻時間:" , "msg": "10秒"},
-                    { "idx": 8, "key":"hard前置任務", "Grade": "hard", "title": "前置任務:" , "msg": "卡羅泰"},
-                    { "idx": 9, "key":"hard前置任務時間", "Grade": "hard", "title": "前置任務時間:" , "msg": "約20分"},                            
+                    { "idx": 1, "key":"chaos最低入場等級", "Grade": "chaos", "title": "最低入場等級:" , "msg": "270up"},
+                    { "idx": 2, "key":"chaos入場次數", "Grade": "chaos", "title": "入場次數:" , "msg": "3次/天"},
+                    { "idx": 3, "key":"chaos入場等待時間", "Grade": "chaos", "title": "入場等待時間:" , "msg": "30分鐘/次"},
+                    { "idx": 4, "key":"chaos完成次數", "Grade": "chaos", "title": "完成次數:" , "msg": "每週1次"},
+                    { "idx": 5, "key":"chaos重置時間", "Grade": "chaos", "title": "重置時間:" , "msg": "每週四 0:00更新"},
+                    { "idx": 6, "key":"chaos玩家命數", "Grade": "chaos", "title": "玩家命數:" , "msg": "5"},
+                    { "idx": 7, "key":"chaos消耗欄冷卻時間", "Grade": "chaos", "title": "消耗欄冷卻時間:" , "msg": "10秒"},
+                    { "idx": 8, "key":"chaos前置任務", "Grade": "chaos", "title": "前置任務:" , "msg": "卡羅泰"},
+                    { "idx": 9, "key":"chaos前置任務時間", "Grade": "chaos", "title": "前置任務時間:" , "msg": "約20分"},                            
 
                     { "idx": 1, "key":"extreme最低入場等級", "Grade": "extreme" , "title": "最低入場等級:" , "msg": "270up"},
                     { "idx": 2, "key":"extreme入場次數", "Grade": "extreme" , "title": "入場次數:" , "msg": "3次/天"},
