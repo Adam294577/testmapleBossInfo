@@ -10,8 +10,22 @@ const App = {
                 // icon統一路徑
                 const ItemURL = ref("./img/item/")
                 const mosURL = ref("./img/mos/")
+                const bossListURL = ref("./img/boss/list_")
+                const GradeListURL = ref("./img/boss/grade_")
 
                 const isload = ref(false)
+
+
+
+              
+
+
+               
+
+                
+        
+
+                
 
 
 // API
@@ -253,11 +267,17 @@ const App = {
             }
         });
 
-        const BossGradeData = reactive({data:{}})
-        console.log(BossGradeData.data);
+        const BossGradeData = reactive({data:[{key:""}]})
         watch(BossGradeData,ApiData=>{
-        console.log(ApiData);  
+           
+            ApiData.data.forEach(item=>{
+                let a = item.Grade.map(i=>{
+                   return  {bossname: item.key ,key: i, url : `${GradeListURL.value}${i}.png`}
+                })
+                GradeurlArr.data.push(a)
+            })        
         })
+        
         watch(BossInfo, api=>{
             // console.log("串API後的資料:",api.data);
             
@@ -296,6 +316,10 @@ const App = {
 
 // 統合 Filter Data 的 Method
         const FilterBossNameFn = (Data ,  BossName) => {
+            if(typeof(Data[0].bossName) === undefined){
+                console.error("BossName篩選值有誤");
+                return;
+            }
            
             if (typeof(Data[0].bossName) === "string"){
 
@@ -304,13 +328,17 @@ const App = {
                 })
                 return result
             }
-            console.error("BossName篩選值有誤");
+           
 
 
         }
 
         const FilterGradeFn = (Data , Grade) =>{
             // console.log("傳入的資料:", Data);
+            if(Data === undefined) {
+                console.error("資料有誤");
+                return
+            }
             if(Data.length === 0){
                 return;
 
@@ -418,6 +446,22 @@ const App = {
 
 
         //  NavFn
+        const GradeurlArr = reactive({data:[]})
+        NavListRender = computed(()=>{
+            let i = -1
+            const Render = BossGradeData.data.map(item=>{
+                i++;
+                return {
+                    page: item.page, 
+                    name: item.key,
+                    url: `${bossListURL.value}${item.key}.png`,
+                    Grade: GradeurlArr.data[i]
+                }
+                
+            })
+            console.log(Render);
+            return Render
+        })
         const NavBool = ref(false);
 
         const handNavBool = () =>{
@@ -602,6 +646,7 @@ const App = {
         const furnitureData = reactive([
             {bossName: "露希妲", Grade: "hard", title: "露希妲家具展示" , url: "./img/item/露希妲床鋪實體.png"},
             {bossName: "威爾", Grade: "hard", title: "威爾家具展示" , url: "./img/item/威爾的蜘蛛網狀吊椅實體.png"},
+            {bossName: "巴洛古", Grade: "easy", title: "威爾家具展示" , url: "./img/item/威爾的蜘蛛網狀吊椅實體.png"},
         ])
 
         const furnitureRender = computed(()=>{
@@ -649,11 +694,15 @@ const App = {
         const MapleSetBool = reactive([
             {idx:0 , key : "黎明套組" ,show: false},
             {idx:1 , key : "漆黑套組" ,show: false},
-            {idx:2 , key : "神秘套組" ,show: false}
+            {idx:2 , key : "神秘套組" ,show: false},
         ])
         const MapleSetData = reactive([
-            { idx:0 , key : "黎明套組" , bossName: "守護者天使綠水靈" , Grade : "normal"},
-            { idx:0 , key : "黎明套組" , bossName: "守護者天使綠水靈" , Grade : "hard"},
+            { idx:-1 , key : "無套組" , bossName: "卡翁" , Grade : "normal"},
+            { idx:-1 , key : "無套組" , bossName: "拉圖斯" , Grade : "easy"},
+            { idx:-1 , key : "無套組" , bossName: "拉圖斯" , Grade : "normal"},
+            { idx:-1 , key : "無套組" , bossName: "巴洛古" , Grade : "easy"},
+            { idx:0 , key : "黎明套組" , bossName: "守護天使綠水靈" , Grade : "normal"},
+            { idx:0 , key : "黎明套組" , bossName: "守護天使綠水靈" , Grade : "chaos"},
             { idx:0 , key : "黎明套組" , bossName: "頓凱爾" , Grade : "normal"},
             { idx:0 , key : "黎明套組" , bossName: "頓凱爾" , Grade : "hard"},
             { idx:0 , key : "黎明套組" , bossName: "受選的賽蓮" , Grade : "normal"},
@@ -693,11 +742,40 @@ const App = {
             { idx:3 , key : "首領Boss套組" , bossName: "梅格耐斯" , Grade : "hard"},
             { idx:3 , key : "首領Boss套組" , bossName: "皮卡啾" , Grade : "normal"},
             { idx:3 , key : "首領Boss套組" , bossName: "皮卡啾" , Grade : "chaos"},
+            { idx:3 , key : "首領Boss套組" , bossName: "希拉" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "希拉" , Grade : "hard"},
+            { idx:3 , key : "首領Boss套組" , bossName: "阿卡伊農" , Grade : "easy"},
+            { idx:3 , key : "首領Boss套組" , bossName: "阿卡伊農" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "森蘭丸" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "殘暴炎魔" , Grade : "easy"},
+            { idx:3 , key : "首領Boss套組" , bossName: "殘暴炎魔" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "殘暴炎魔" , Grade : "chaos"},
+            { idx:3 , key : "首領Boss套組" , bossName: "闇黑龍王" , Grade : "easy"},
+            { idx:3 , key : "首領Boss套組" , bossName: "闇黑龍王" , Grade : "normal"},
+            { idx:3 , key : "首領Boss套組" , bossName: "闇黑龍王" , Grade : "chaos"},
+            { idx:3 , key : "首領Boss套組" , bossName: "拉圖斯" , Grade : "hard"},
 
             { idx:4 , key : "永恆套組" , bossName: "監視者卡洛斯" , Grade : "chaos"},
 
             { idx:5 , key : "女皇套組" , bossName: "西格諾斯" , Grade : "easy"},
             { idx:5 , key : "女皇套組" , bossName: "西格諾斯" , Grade : "normal"},
+
+            { idx:6 , key : "凡雷恩套組" , bossName: "凡雷恩" , Grade : "easy"},
+            { idx:6 , key : "凡雷恩套組" , bossName: "凡雷恩" , Grade : "normal"},
+            { idx:6 , key : "凡雷恩套組" , bossName: "凡雷恩" , Grade : "hard"},
+
+            { idx:7 , key : "戰國套組" , bossName: "森藍丸" , Grade : "hard"},
+
+            { idx:8 , key : "深淵套組" , bossName: "比艾樂" , Grade : "normal"},
+            { idx:8 , key : "深淵套組" , bossName: "比艾樂" , Grade : "chaos"},
+            { idx:8 , key : "深淵套組" , bossName: "斑斑" , Grade : "normal"},
+            { idx:8 , key : "深淵套組" , bossName: "斑斑" , Grade : "chaos"},
+            { idx:8 , key : "深淵套組" , bossName: "血腥皇后" , Grade : "normal"},
+            { idx:8 , key : "深淵套組" , bossName: "血腥皇后" , Grade : "chaos"},
+            { idx:8 , key : "深淵套組" , bossName: "貝倫" , Grade : "normal"},
+            { idx:8 , key : "深淵套組" , bossName: "貝倫" , Grade : "chaos"},
+
+            { idx:9 , key : "妖蝶姬系列" , bossName: "濃姬" , Grade : "normal"},
         ])
         const MapleSetShow = computed(()=>{
             
@@ -952,6 +1030,9 @@ const App = {
         // console.log(mosData.value);
         const mosDataShow = computed(()=>{
             mosNoData.value = mosData.value.has ? true : false
+            if(BossNameSelected.value === "斑斑" & GradeSelected.value === "normal"){
+                mosNoData.value = false
+            }
 
             const HalftxtFn = (txt) =>{
                 let result = ''
@@ -959,7 +1040,6 @@ const App = {
                     return result
                 }
                 if(txt !== ''){
-                    console.log(txt);
                     return result =  txt
                 }
             }
@@ -1055,6 +1135,7 @@ const App = {
             // NavPage
             handNavPage,
             NavPageidx,
+            NavListRender,
             // GradeCh
             showGradeList,
             GradeVal,

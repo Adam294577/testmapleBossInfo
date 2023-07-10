@@ -10,6 +10,8 @@ body, html {
   background: url("../img/testBG.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   position: relative;
   min-height: 100vh;
 }
@@ -401,14 +403,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 .bossContainer .bossIntro .content .bosstxt .bosstxtList li span {
   padding-left: 1rem;
 }
-.bossContainer .bossData .content {
-  display: flex;
-  justify-content: center;
-}
 .bossContainer .bossData .content .stagecont {
-  width: 50%;
-  margin-top: 1rem;
-  margin: 2rem 1%;
+  width: 70%;
+  margin: 0.8rem auto;
   padding: 1rem 0 1.5rem;
   background: #6d6d6d;
   background: #2f2f2f;
@@ -426,7 +423,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 }
 .bossContainer .bossData .content .stagecont .stageinfo li {
   font-weight: bold;
-  font-size: 1.27rem;
+  font-size: 1.5rem;
   padding: 1rem 1rem 0rem;
 }
 .bossContainer .bossData .content .stagecont .stageinfo li span {

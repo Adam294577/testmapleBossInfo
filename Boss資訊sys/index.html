@@ -31,7 +31,7 @@
                         </div>
                         
                         <ul class="pageinfo">
-                            <li class="infoItem">
+                            <!-- <li class="infoItem">
                 
                                 <span class="bossImg">
                                         <img src="./img/boss/list_使烏.png" alt="">
@@ -41,109 +41,21 @@
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="使烏" src="./img/boss/grade_normal.png" alt="normal"></span>
                                     <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="使烏" src="./img/boss/grade_hard.png" alt="hard"></span>
                                 </span>
-                            </li>
-
-                            <li class="infoItem">
-                                
+                            </li> -->
+                            <li class="infoItem" 
+                            v-for="list in NavListRender"
+                            :key="list.key"
+                            v-show="list.page === NavPageidx"
+                            >
+                
                                 <span class="bossImg">
-                                        <img src="./img/boss/list_戴米安.png" alt="">
+                                        <img :src="list.url" :alt="list.key">
                                 </span>
                 
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="戴米安" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_露希妲.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_easy.png" alt="easy"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="露希妲" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_威爾.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_easy.png" alt="easy"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="威爾" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                </span>
-                            </li>
-                            
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_梅格耐斯.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_easy.png" alt="easy"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="梅格耐斯" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_西格諾斯.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="西格諾斯" src="./img/boss/grade_easy.png" alt="easy"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="西格諾斯" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_皮卡啾.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="皮卡啾" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="皮卡啾" src="./img/boss/grade_chaos.png" alt="chaos"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_受選的賽蓮.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_normal.png" alt="normal"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="受選的賽蓮" src="./img/boss/grade_extreme.png" alt="extreme"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_黑魔法師.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="黑魔法師" src="./img/boss/grade_hard.png" alt="hard"></span>
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="黑魔法師" src="./img/boss/grade_extreme.png" alt="extreme"></span>
-                                </span>
-                            </li>
-                            <li class="infoItem">
-                                
-                                <span class="bossImg">
-                                        <img src="./img/boss/list_監視者卡洛斯.png" alt="">
-                                </span>
-                
-                                <span class="bossGrade">
-                                    <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" data-bossname="監視者卡洛斯" src="./img/boss/grade_chaos.png" alt="chaos"></span>
+                                <span class="bossGrade"
+                                v-for="Grade in list.Grade"
+                                >
+                                <span class="GradeItem"><img @click= "chbossNameTest" class="GradeImg" :data-bossname="Grade.bossname" :src="Grade.url" :alt="Grade.key"></span>
                                 </span>
                             </li>
                         </ul>
@@ -359,7 +271,7 @@
                         </div>        -->
                     </div>
 
-                    <div v-show="sectioncont[2].open" class="damageRef" :data-test="damageRefArcShow.region">
+                    <div v-show="sectioncont[2].open" class="damageRef">
                         <div class="content"
                         v-show=" damageRefArcShow[0].region === 'arc' "
                         >
@@ -1159,3 +1071,4 @@
     <script src="./js/main.js"></script>
 </body>
 </html>
+
