@@ -223,9 +223,9 @@
                         v-for="list in mosDataShow"
                         :key="list.alt"
                         >
-                            <li>
-                                <img :src="list.url" :alt="list.alt">
-                                <span>{{list.alt}}</span>
+                            <li class="mosFrame">
+                                <img class="Frameimg"  :src="list.url" :alt="list.alt">
+                                <span class="Frametxt">{{list.alt}}</span>
                             </li>
                             <li><span>LV.{{list.mosLv}}</span></li>
                             <li><span>{{list.mosDefense}}</span></li>

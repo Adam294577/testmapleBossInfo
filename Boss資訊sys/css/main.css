@@ -457,6 +457,28 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   background: linear-gradient(135deg, #6d6d6d 0%, #2f2f2f 15%);
   padding: 0.5rem 0;
 }
+.bossContainer .bossData .moscontent .mosterinfo .mosFrame {
+  height: 140px;
+  background-image: url(../img/mos/frame.png);
+  background-size: 120px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transform: scale(1.3);
+  position: relative;
+}
+.bossContainer .bossData .moscontent .mosterinfo .mosFrame .Frametxt {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  transform: scale(1) translate(-50%, -82%);
+  font-size: 9px;
+}
+.bossContainer .bossData .moscontent .mosterinfo .mosFrame .Frameimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.3);
+}
 .bossContainer .bossData .moscontent .mosterinfo li {
   display: inline-block;
   width: 20%;
