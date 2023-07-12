@@ -252,17 +252,17 @@
                 "mosInfo": {
                     "has": true,
                     "info": [
-                        {"key":"easy教官鮑爾", "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "20%", "HP": 1500000,"HPCh":"150萬","attributeHalf": false},
-                        {"key":"easy教官萊諾", "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "20%", "HP": 1500000,"HPCh":"150萬","attributeHalf": false},
-                        {"key":"easy迷你要塞", "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "30%", "HP": 5000000,"HPCh":"500萬","attributeHalf": false},
+                        {"key":"easy教官鮑爾","name":"教官鮑爾" , "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "20%", "HP": 1500000,"HPCh":"150萬","attributeHalf": false},
+                        {"key":"easy教官萊諾","name":"教官萊諾" , "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "20%", "HP": 1500000,"HPCh":"150萬","attributeHalf": false},
+                        {"key":"easy迷你要塞","name":"迷你要塞" , "Grade": "easy", "stagetitle" : "" , "LV" : 120 , "Defense" : "30%", "HP": 5000000,"HPCh":"500萬","attributeHalf": false},
 
-                        {"key":"normal教官鮑爾", "Grade": "normal", "stagetitle" : "" , "LV" : 127 , "Defense" : "20%", "HP": 30000000,"HPCh":"3000萬","attributeHalf": false},
-                        {"key":"normal教官萊諾", "Grade": "normal", "stagetitle" : "" , "LV" : 127 , "Defense" : "20%", "HP": 30000000,"HPCh":"3000萬","attributeHalf": false},
-                        {"key":"normal迷你要塞", "Grade": "normal", "stagetitle" : "" , "LV" : 123 , "Defense" : "50%", "HP": 50000000,"HPCh":"5000萬","attributeHalf": false},
+                        {"key":"normal教官鮑爾", "name":"教官鮑爾","Grade": "normal", "stagetitle" : "" , "LV" : 127 , "Defense" : "20%", "HP": 30000000,"HPCh":"3000萬","attributeHalf": false},
+                        {"key":"normal教官萊諾", "name":"教官萊諾","Grade": "normal", "stagetitle" : "" , "LV" : 127 , "Defense" : "20%", "HP": 30000000,"HPCh":"3000萬","attributeHalf": false},
+                        {"key":"normal迷你要塞", "name":"迷你要塞","Grade": "normal", "stagetitle" : "" , "LV" : 123 , "Defense" : "50%", "HP": 50000000,"HPCh":"5000萬","attributeHalf": false},
 
-                        {"key":"hard教官鮑爾", "Grade": "hard", "stagetitle" : "" , "LV" : 140 , "Defense" : "50%", "HP": 60000000,"HPCh":"6000萬","attributeHalf": false},
-                        {"key":"hard教官萊諾", "Grade": "hard", "stagetitle" : "" , "LV" : 140 , "Defense" : "50%", "HP": 60000000,"HPCh":"6000萬","attributeHalf": false},
-                        {"key":"hard迷你要塞", "Grade": "hard", "stagetitle" : "" , "LV" : 135 , "Defense" : "70%", "HP": 125000000,"HPCh":"1.25億","attributeHalf": false}
+                        {"key":"hard教官鮑爾","name":"教官鮑爾", "Grade": "hard", "stagetitle" : "" , "LV" : 140 , "Defense" : "50%", "HP": 60000000,"HPCh":"6000萬","attributeHalf": false},
+                        {"key":"hard教官萊諾","name":"教官萊諾", "Grade": "hard", "stagetitle" : "" , "LV" : 140 , "Defense" : "50%", "HP": 60000000,"HPCh":"6000萬","attributeHalf": false},
+                        {"key":"hard迷你要塞","name":"迷你要塞", "Grade": "hard", "stagetitle" : "" , "LV" : 135 , "Defense" : "70%", "HP": 125000000,"HPCh":"1.25億","attributeHalf": false}
                         ]
 
                 }
@@ -4228,7 +4228,7 @@
                 "mosInfo": {
                     "has": true,
                     "info": [
-                        {"key":"easy地域巴洛古", "name":"地域巴洛古", "Grade": "easy", "stagetitle" : "" , "LV" : 44 , "Defense" : "25%", "HP": 50000,"HPCh":"5萬","attributeHalf": false},
+                        {"key":"easy地獄巴洛古", "name":"地獄巴洛古", "Grade": "easy", "stagetitle" : "" , "LV" : 44 , "Defense" : "25%", "HP": 50000,"HPCh":"5萬","attributeHalf": false},
                         {"key":"easy小巴洛古", "name":"小巴洛古", "Grade": "easy", "stagetitle" : "" , "LV" : 44 , "Defense" : "25%", "HP": 50000,"HPCh":"5萬","attributeHalf": false},
                         {"key":"easy迷你巴洛古", "name":"迷你巴洛古", "Grade": "easy", "stagetitle" : "" , "LV" : 48 , "Defense" : "25%", "HP": 2000,"HPCh":"","attributeHalf": false}
                     ]
