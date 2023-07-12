@@ -1,7 +1,7 @@
 
 window.onload = () =>{
 
-    const {createApp, ref, reactive, computed, watch } = Vue
+    const {createApp, ref, reactive, computed, watch, onMounted , onUpdated} = Vue
     const App = {
 
         setup(){
@@ -63,8 +63,6 @@ window.onload = () =>{
             
             // 滑鼠經過頻道類別 切換hover圖
             const btnMousein = ( item ) => {
-
-            
                 let txt_src = item.target.src.slice(-6,-4);
                 let idx = txt_src.slice(1) -1; 
                 if (txt_src === "c" + (idx + 1) ){
@@ -191,7 +189,41 @@ window.onload = () =>{
 
                
             })
+            
+            const gameIDcount = ref(0)
+            const gameIDAlert = ref(false)
+              function checkInput(el) {
+                
+                let punctuationCount = countMatches(el.target.value, /[\p{P}\u2000-\u206F\u2E00-\u2E7F\u3000-\u303F]/gu);
+                let symbolCount = countMatches(el.target.value, /[\p{S}\u2070-\u209F\u20A0-\u20CF\u2100-\u214F]/gu);
+                let whitespaceCount = countMatches(el.target.value, /[\p{Z}\u0009-\u000D\u0020]/gu);
+                let chinesesymbolCount = (el.target.value.match(/[\u3105-\u3129\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9]/g
+                ) || []).length; 
 
+                if(chinesesymbolCount !== 0 || whitespaceCount !== 0 || symbolCount !== 0 || punctuationCount !== 0 ){
+                    // console.log('標點符號',punctuationCount);
+                    // console.log('特殊符號',symbolCount);
+                    // console.log('空白符號',whitespaceCount);
+                    // console.log('ㄅㄆㄇ符號',chinesesymbolCount);
+                    gameIDAlert.value = true
+                }else{
+                    gameIDAlert.value = false
+                }
+                let chineseCount = (el.target.value.match(/[\u4e00-\u9fa5]/g) || []).length;
+                let englishCount = (el.target.value.match(/[a-zA-Z]/g) || []).length; 
+                let numberCount = countMatches(el.target.value, /[\p{N}]/gu);
+            
+                gameIDcount.value =  numberCount + chineseCount * 2 + englishCount;
+                console.log(gameIDcount.value);
+                IDTxt = el.target.value
+            
+              }
+            
+              function countMatches(value, regex) {
+                let matches = value.match(regex);
+                return matches ? matches.length : 0;
+              }              
+                
 
            
 
@@ -211,7 +243,9 @@ window.onload = () =>{
                 inputmsg,
                 txtSummit,
                 msgStorage,
-                RingChatbool
+                RingChatbool,
+                checkInput,
+                gameIDAlert
               }   
         },
         mounted() {

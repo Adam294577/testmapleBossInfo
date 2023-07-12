@@ -10,30 +10,28 @@
 <body>
     <div id="app">
 
-        <div v-show= "RingChatbool" class="chatring" id="chat_box">
-            <div class="chat_outline">
-                <div class="txt_container">
-                    <div class="content">
-                        <span class="idBox">{{game_id}}</span> 
-                        <span class="txt">{{inputmsg}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div v-show= "RingChatbool" class="chatring" id="chat_box_catmode">
-            <div class="chat_outline">
-                <div class="txt_container">
-                    <div class="content">
-                        <span class="idBox">{{game_id}}</span> 
-                        <span class="txt">{{inputmsg}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱-最多6個字" maxlength="6">
         <div @click = "clearfn" class="ChatSyscontainer">
+            <div v-show= "RingChatbool" class="chatring" id="chat_box">
+                <div class="chat_outline">
+                    <div class="txt_container">
+                        <div class="content">
+                            <span class="idBox">{{game_id}}</span> 
+                            <span class="txt">{{inputmsg}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div v-show= "RingChatbool" class="chatring" id="chat_box_catmode">
+                <div class="chat_outline">
+                    <div class="txt_container">
+                        <div class="content">
+                            <span class="idBox">{{game_id}}</span> 
+                            <span class="txt">{{inputmsg}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
              <div class="ChatContainer" style="--chatH:7; --chatW:410;">
               <div class="baroutline">
                     <div class="msgContent">
@@ -79,21 +77,46 @@
                    <img src="./img/bar_icon_06.png" alt="畫面外顯示聊天室窗" class="Imgitem">
           
                   </div>
-
-                  
               </div>
              </div>
         <input id="noinput">
         </div>
 
-
+        <div class="CustomContainer">
+            <div class="q1">
+                <h1>1.選擇聊天戒指</h1>                
+                <input type="radio" id="yes" value="Yes" v-model="isLearningVue">
+                <label for="yes">無</label>
+                <input type="radio" id="no" value="No" v-model="isLearningVue">
+                <label for="no">貓咪戒指</label>
+            </div>
+            <div class="q2">
+                <h1>2.輸入ID</h1>
+                <input @keyup="checkInput"
+                 v-model = "game_id" 
+                 id="game_id_input" 
+                 type="text" placeholder="輸入角色名稱">
+    
+                 <p v-show="gameIDAlert" class="IDalert">目前輸入ID不符合遊戲規則!</p>
+            </div>
+        </div>
+        <div class="mapSlectcontainer">
+            <!-- test swiper input small map -->
+        </div>
     </div>
+    
+
+
 
 
     <script src="./js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        // test.addEventListener("input",checkInput())
+
+    </script>
 
 
 
