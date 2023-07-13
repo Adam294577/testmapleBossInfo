@@ -6,33 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 <link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/ring.css">
+
 </head>
 <body>
     <div id="app">
-
+        
+        
+        
+        
         <div @click = "clearfn" class="ChatSyscontainer">
-            <div v-show= "RingChatbool" class="chatring" id="chat_box">
-                <div class="chat_outline">
-                    <div class="txt_container">
-                        <div class="content">
-                            <span class="idBox">{{game_id}}</span> 
-                            <span class="txt">{{inputmsg}}</span>
+            <div class="ringContainer person">
+                <!-- <div v-show= "RingChatbool" class="chatring mode01" style="">  -->
+                    <!-- ringSelectedShow -->
+                    <!-- :style="[{transform: calChatHeight}]" -->
+                <div 
+                v-show="RingChatbool" 
+                :class="['chatring',ringSelectedShow[0].mode]" 
+                :style="[{transform: ChatTxtHeight}]"
+                
+                > 
+                    <div class="chat_outline">
+                        <div class="txt_container">
+                            <div class="Txtcontent">
+                                <span class="idBox">{{game_id}}</span> 
+                                <span ref="msgRef" class="txt">{{inputmsg}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <div v-show= "RingChatbool" class="chatring" id="chat_box_catmode">
-                <div class="chat_outline">
-                    <div class="txt_container">
-                        <div class="content">
-                            <span class="idBox">{{game_id}}</span> 
-                            <span class="txt">{{inputmsg}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <div class="ChatContainer" style="--chatH:7; --chatW:410;">
+
+             <div class="ChatContainer" style="--chatH:4; --chatW:410;">
               <div class="baroutline">
                     <div class="msgContent">
                         <div class="dargbar">
@@ -83,27 +88,47 @@
         </div>
 
         <div class="CustomContainer">
-            <div class="q1">
+            <div class="question q1">
                 <h1>1.選擇聊天戒指</h1>                
-                <input type="radio" id="yes" value="Yes" v-model="isLearningVue">
-                <label for="yes">無</label>
-                <input type="radio" id="no" value="No" v-model="isLearningVue">
-                <label for="no">貓咪戒指</label>
+                <li 
+                @click="handRingList"
+                class="itemSelected" 
+                data-ring="selected"
+                >
+                    <img :src="ringSelectedShow[0].url" :alt="ringSelectedShow[0].key" >
+                    {{ringSelectedShow[0].key}}
+                </li>
+                <ul class="ringList" v-show="ringListbool">
+                <!-- <ul class="ringList" v-show="true"> -->
+                    <li 
+                    @click="handRingList"
+                    v-for="list in ringListshow"
+                    :key="list.key"
+                    :class="['item',{'act':list.act} ]" 
+                    :data-ring="list.key">
+                        <img :src="list.url" :alt="list.key">
+                        <span>{{list.key}}</span>
+                    </li>
+                </ul>
             </div>
-            <div class="q2">
+            <div class="question q2">
                 <h1>2.輸入ID</h1>
                 <input @keyup="checkInput"
                  v-model = "game_id" 
                  id="game_id_input" 
                  type="text" placeholder="輸入角色名稱">
-    
-                 <p v-show="gameIDAlert" class="IDalert">目前輸入ID不符合遊戲規則!</p>
+                <div class="alertbox">
+                    <p v-show="gameIDAlert" class="IDalert">ID不符合遊戲規則!</p>
+                </div>
             </div>
         </div>
         <div class="mapSlectcontainer">
             <!-- test swiper input small map -->
         </div>
     </div>
+
+
+
     
 
 

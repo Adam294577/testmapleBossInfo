@@ -1,0 +1,167 @@
+.chatring {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.chatring .chat_outline {
+  position: relative;
+}
+.chatring .chat_outline .txt_container {
+  position: relative;
+  overflow: hidden;
+}
+.chatring .chat_outline .txt_container .Txtcontent {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  word-break: break-all;
+  font-size: 11px;
+}
+.chatring .chat_outline .txt_container .Txtcontent .txt {
+  display: inline-block;
+  line-height: 15px;
+  text-align: center;
+}
+
+.person {
+  position: fixed;
+  right: 50%;
+  top: 200px;
+  width: 70px;
+  height: 90px;
+  border: 1px solid #F00;
+}
+
+.mode00 {
+  position: absolute;
+  top: -65px;
+  left: -10px;
+  width: 110px;
+}
+.mode00 .chat_outline::before {
+  content: "";
+  display: block;
+  height: 6px;
+  background: url(../img/chat_borer/up.png) no-repeat;
+}
+.mode00 .chat_outline::after {
+  content: "";
+  display: block;
+  height: 14px;
+  background: url(../img/chat_borer/down.png) no-repeat;
+}
+.mode00 .chat_outline .txt_container::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  display: inline-block;
+  width: 10px;
+  height: 300px;
+  background: url(../img/chat_borer/left.png) repeat-y;
+  background-position: 0 0;
+}
+.mode00 .chat_outline .txt_container::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  display: inline-block;
+  width: 10px;
+  height: 300px;
+  background: url(../img/chat_borer/right.png) repeat-y;
+  background-position: -2px 0;
+}
+.mode00 .chat_outline .txt_container .Txtcontent {
+  background-color: #EEE;
+  width: 94px;
+  margin-left: 1px;
+  padding: 0 3px 2px 3px;
+  border: 1px solid #FF0;
+}
+.mode00 .chat_outline .txt_container .Txtcontent .txt {
+  font-size: 11px;
+  width: 80px;
+}
+.mode00 .chat_outline .txt_container .Txtcontent .idBox {
+  position: relative;
+  width: 80px;
+  display: block;
+  text-align: center;
+}
+.mode00 .chat_outline .txt_container .Txtcontent .idBox::after {
+  content: ":";
+  position: absolute;
+  right: 0px;
+}
+
+.mode01 {
+  position: absolute;
+  top: -100px;
+  left: -40px;
+  width: 150px;
+}
+.mode01 .chat_outline .txt_container .Txtcontent {
+  background-color: #5f96be;
+  margin-left: 15px;
+  padding: 3px 20px 10px 20px;
+  width: 130px;
+}
+.mode01 .chat_outline .txt_container .Txtcontent .txt {
+  position: relative;
+  left: -7px;
+  width: 100px;
+}
+.mode01 .chat_outline .txt_container .Txtcontent .idBox {
+  position: relative;
+  margin-right: 15px;
+}
+.mode01 .chat_outline .txt_container .Txtcontent .idBox::after {
+  content: ":";
+  position: absolute;
+  right: -8px;
+  top: -1px;
+}
+.mode01 .chat_outline .txt_container .Txtcontent .txt, .mode01 .chat_outline .txt_container .Txtcontent .idBox, .mode01 .chat_outline .txt_container .Txtcontent .idBox::after {
+  color: #884400;
+  font-weight: 500;
+  text-shadow: 0 0 0 #884400, 0 0 0 #884400, 0 0 0 #884400;
+}
+.mode01 .chat_outline .txt_container::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  display: inline-block;
+  width: 14px;
+  height: 300px;
+  background: url(../img/catmode/left_border.png) repeat-y;
+  background-position: 0 0;
+}
+.mode01 .chat_outline .txt_container::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: 0;
+  display: inline-block;
+  width: 14px;
+  height: 300px;
+  background: url(../img/catmode/right_border.png) repeat-y;
+  background-position: -2px 0;
+}
+.mode01 .chat_outline::before {
+  content: "";
+  display: block;
+  height: 31px;
+  background: url(../img/catmode/up.png) no-repeat;
+}
+.mode01 .chat_outline::after {
+  content: "";
+  display: block;
+  height: 22px;
+  position: relative;
+  left: 6px;
+  top: -7px;
+  background: url(../img/catmode/down.png) no-repeat;
+}/*# sourceMappingURL=ring.css.map */

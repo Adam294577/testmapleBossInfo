@@ -21,8 +21,8 @@ window.onload = () =>{
                     "./img/chat_class_c5_h.png"
                 ],
             })
-            const game_id = ref("測試ID123")
-            const inputmsg = ref("測試內容哈哈哈")
+            const game_id = ref("我推的ID")
+            const inputmsg = ref("測試內容哈")
             const chatChannelSrc = ref('./img/chat_class_c1.png')
             
             const ChannelListisShow = ref(false);
@@ -183,13 +183,14 @@ window.onload = () =>{
 
                 result = showmsg
 
-                console.log(result);
+                // console.log(result);
 
                 return result
 
                
             })
             
+            // ID字數限制
             const gameIDcount = ref(0)
             const gameIDAlert = ref(false)
               function checkInput(el) {
@@ -214,17 +215,109 @@ window.onload = () =>{
                 let numberCount = countMatches(el.target.value, /[\p{N}]/gu);
             
                 gameIDcount.value =  numberCount + chineseCount * 2 + englishCount;
-                console.log(gameIDcount.value);
-                IDTxt = el.target.value
+                // 字符數4~12才正常
+                if(gameIDcount.value <= 3 || gameIDcount.value >= 13){
+                    gameIDAlert.value = true
+                }
+                game_id.value = el.target.value
+                // console.log(gameIDcount.value);
             
               }
             
               function countMatches(value, regex) {
                 let matches = value.match(regex);
                 return matches ? matches.length : 0;
-              }              
-                
+              }  
+              
+            // 戒指List
+            const ringListbool = ref(false)
+            const ringSelected = reactive([{idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"}])
+            
+            const ringList = reactive({data:[
+                {idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"},
+                {idx:1 , key:"貓咪線球", url:"none" , act: false ,mode:"mode01"},
+                {idx:2 , key:"蝴蝶夢", url:"none" , act: false ,mode:""},
+            ]})
 
+
+            const handRingList = (el)=>{
+                let target = ""
+                    target = el.currentTarget.dataset.ring
+                if(target === "selected"){
+                    ringListbool.value = !ringListbool.value
+                }else{
+                    // 
+                    const actAllfalse = ringList.data.map(item=>{
+                        return {
+                            idx:item.idx, 
+                            key:item.key, 
+                            url:item.url, 
+                            act: false,
+                            mode:item.mode, 
+                            posTop:item.posTop, 
+                            posLeft:item.posLeft, 
+                        }
+                    })
+                    const filt = actAllfalse.filter(item=>{
+                        return item.key === target
+                    })
+                    
+                    ringSelected[0].key = filt[0].key
+                    ringSelected[0].url = filt[0].url
+                    ringSelected[0].mode = filt[0].mode
+                    ringSelected[0].posTop = filt[0].posTop
+                    ringListbool.value = false
+                }
+
+          
+                return target
+            }
+
+
+            const ringSelectedShow = computed(()=>{
+                const a = ringSelected.map(item=>{
+                    return {
+                        key: item.key,
+                        url: item.url,
+                        mode:item.mode, 
+                        posTop:item.posTop, 
+                    }
+                })
+                console.log(a);
+                return a
+            })
+
+            const ringListshow = computed(()=>{
+                const a = ringList.data.map(item=>{
+                    if(item.key === ringSelected[0].key){
+                        return  {idx:item.idx , key:item.key, url:item.url , act: true }
+                    }
+                    return  {idx:item.idx , key:item.key, url:item.url , act: false }
+                })
+                return a
+            })
+
+
+            // txt換行計算
+            const msgRef = ref(null)
+            const ChatTxtHeight = ref(0)
+
+            const CalTxtHeight = () =>{
+                // 固定行高15px
+                console.log(msgRef.value);
+                const textHeight = msgRef.value.offsetHeight;
+                ChatTxtHeight.value = `translateY(-${textHeight-15}px)`
+            }
+
+            onMounted(()=>{
+                CalTxtHeight()
+
+            })
+            onUpdated(()=>{
+                CalTxtHeight()
+            })
+ 
+ 
            
 
             
@@ -244,8 +337,18 @@ window.onload = () =>{
                 txtSummit,
                 msgStorage,
                 RingChatbool,
+                // ID字數限制
                 checkInput,
-                gameIDAlert
+                gameIDAlert,
+                // 戒指List
+                ringListbool,
+                ringSelectedShow,
+                ringListshow,
+                handRingList,
+
+                // txt換行計算
+                msgRef,
+                ChatTxtHeight,
               }   
         },
         mounted() {
