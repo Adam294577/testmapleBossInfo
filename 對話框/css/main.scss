@@ -15,14 +15,13 @@ body{
   position: relative;
   width: 800px;
   height: 600px;
-  margin-top: 30px;
   margin: auto;
   border: 1px solid #F00;
 
   
   .ChatContainer{
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     user-select: none;
     z-index: 3;
     margin-top: 0px;
@@ -102,15 +101,6 @@ body{
             background-color: #797979;
             background-color: transparent;
           }
-          .txtContent::-webkit-scrollbar-button{
-            // display: none;
-          }
-          .txtContent::-webkit-scrollbar-button:start:decrement{
-
-          }
-          .txtContent::-webkit-scrollbar-button:end:increment{
-
-          }
           .txtContent::-webkit-scrollbar-thumb{
             background-color: rgb(34, 34, 34);
             
@@ -154,7 +144,6 @@ body{
                         color: #ff2222;
                     }
                 }
-                
             }
   
         }
@@ -263,5 +252,48 @@ body{
    }
   }
   
+}
+
+swiper-container {
+  position: relative;
+  top: 100px;
+  margin: auto;
+  /* width: 800px; */
+  max-width: 400px;
+  width: 90%;
+  height: 100px;
+  swiper-slide {
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+    &.swiper-slide-thumb-active{
+      opacity: 1;
+    }
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  
+    }
+
+}
+.mySwiper2 swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}    
+}
+#nodis{
+  // display: none; 
 }
 

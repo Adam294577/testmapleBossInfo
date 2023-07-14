@@ -22,7 +22,7 @@ window.onload = () =>{
                 ],
             })
             const game_id = ref("我推的ID")
-            const inputmsg = ref("測試內容哈")
+            const inputmsg = ref("5207")
             const chatChannelSrc = ref('./img/chat_class_c1.png')
             
             const ChannelListisShow = ref(false);
@@ -193,50 +193,49 @@ window.onload = () =>{
             // ID字數限制
             const gameIDcount = ref(0)
             const gameIDAlert = ref(false)
-              function checkInput(el) {
-                
-                let punctuationCount = countMatches(el.target.value, /[\p{P}\u2000-\u206F\u2E00-\u2E7F\u3000-\u303F]/gu);
-                let symbolCount = countMatches(el.target.value, /[\p{S}\u2070-\u209F\u20A0-\u20CF\u2100-\u214F]/gu);
-                let whitespaceCount = countMatches(el.target.value, /[\p{Z}\u0009-\u000D\u0020]/gu);
-                let chinesesymbolCount = (el.target.value.match(/[\u3105-\u3129\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9]/g
-                ) || []).length; 
-
-                if(chinesesymbolCount !== 0 || whitespaceCount !== 0 || symbolCount !== 0 || punctuationCount !== 0 ){
-                    // console.log('標點符號',punctuationCount);
-                    // console.log('特殊符號',symbolCount);
-                    // console.log('空白符號',whitespaceCount);
-                    // console.log('ㄅㄆㄇ符號',chinesesymbolCount);
-                    gameIDAlert.value = true
-                }else{
-                    gameIDAlert.value = false
-                }
-                let chineseCount = (el.target.value.match(/[\u4e00-\u9fa5]/g) || []).length;
-                let englishCount = (el.target.value.match(/[a-zA-Z]/g) || []).length; 
-                let numberCount = countMatches(el.target.value, /[\p{N}]/gu);
-            
-                gameIDcount.value =  numberCount + chineseCount * 2 + englishCount;
-                // 字符數4~12才正常
-                if(gameIDcount.value <= 3 || gameIDcount.value >= 13){
-                    gameIDAlert.value = true
-                }
-                game_id.value = el.target.value
-                // console.log(gameIDcount.value);
-            
-              }
-            
-              function countMatches(value, regex) {
-                let matches = value.match(regex);
-                return matches ? matches.length : 0;
-              }  
+            function checkInput(el) {
               
+              let punctuationCount = countMatches(el.target.value, /[\p{P}\u2000-\u206F\u2E00-\u2E7F\u3000-\u303F]/gu);
+              let symbolCount = countMatches(el.target.value, /[\p{S}\u2070-\u209F\u20A0-\u20CF\u2100-\u214F]/gu);
+              let whitespaceCount = countMatches(el.target.value, /[\p{Z}\u0009-\u000D\u0020]/gu);
+              let chinesesymbolCount = (el.target.value.match(/[\u3105-\u3129\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9\u02c7\u02cb\u02ca\u02d9\u02da\u02dc\u02c9]/g
+              ) || []).length; 
+              if(chinesesymbolCount !== 0 || whitespaceCount !== 0 || symbolCount !== 0 || punctuationCount !== 0 ){
+                  gameIDAlert.value = true
+              }else{
+                  gameIDAlert.value = false
+              }
+              let chineseCount = (el.target.value.match(/[\u4e00-\u9fa5]/g) || []).length;
+              let englishCount = (el.target.value.match(/[a-zA-Z]/g) || []).length; 
+              let numberCount = countMatches(el.target.value, /[\p{N}]/gu);
+        
+              gameIDcount.value =  numberCount + chineseCount * 2 + englishCount;
+              // 字符數4~12才正常
+              if(gameIDcount.value <= 3 || gameIDcount.value >= 13){
+                  gameIDAlert.value = true
+              }
+              game_id.value = el.target.value
+              // console.log(gameIDcount.value);
+        
+            }
+        
+            function countMatches(value, regex) {
+              let matches = value.match(regex);
+              return matches ? matches.length : 0;
+            }  
+            
             // 戒指List
             const ringListbool = ref(false)
-            const ringSelected = reactive([{idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"}])
+            const ringSelected = reactive([
+                {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
+            ])
             
             const ringList = reactive({data:[
                 {idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"},
                 {idx:1 , key:"貓咪線球", url:"none" , act: false ,mode:"mode01"},
-                {idx:2 , key:"蝴蝶夢", url:"none" , act: false ,mode:""},
+                {idx:2 , key:"蝴蝶夢", url:"none" , act: true ,mode:"mode02"},
+                {idx:3 , key:"粉貓貓", url:"none" , act: true ,mode:"mode03"},
+                {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
             ]})
 
 
@@ -254,8 +253,6 @@ window.onload = () =>{
                             url:item.url, 
                             act: false,
                             mode:item.mode, 
-                            posTop:item.posTop, 
-                            posLeft:item.posLeft, 
                         }
                     })
                     const filt = actAllfalse.filter(item=>{
@@ -265,7 +262,6 @@ window.onload = () =>{
                     ringSelected[0].key = filt[0].key
                     ringSelected[0].url = filt[0].url
                     ringSelected[0].mode = filt[0].mode
-                    ringSelected[0].posTop = filt[0].posTop
                     ringListbool.value = false
                 }
 
@@ -307,10 +303,50 @@ window.onload = () =>{
                 console.log(msgRef.value);
                 const textHeight = msgRef.value.offsetHeight;
                 ChatTxtHeight.value = `translateY(-${textHeight-15}px)`
+                console.log(ChatTxtHeight.value);
             }
 
             onMounted(()=>{
                 CalTxtHeight()
+
+                // 可拖拉chatsys
+                let ChatContainer = document.getElementById('ChatContainer')
+
+                function dragMoveListener (event) {
+                    let target = event.target
+                    let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+                    let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+                    target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+                    target.setAttribute('data-x', x)
+                    target.setAttribute('data-y', y)
+                    }
+                    window.dragMoveListener = dragMoveListener
+                interact(ChatContainer)
+                    .draggable({
+                      inertia: false,
+                      autoScroll: true,
+                      modifiers: [
+                        interact.modifiers.snap({
+                          targets: [
+                            interact.snappers.grid({ x: 15, y: 15 })
+                          ],
+                          range: Infinity,
+                          relativePoints: [ { x: 0, y: 0 } ]
+                        }),
+                    
+                        interact.modifiers.restrict({
+                          // restriction: element.parentNode,
+                          restriction: 'parent',
+                          elementRect: { top: -3, left: 0, bottom: 1, right: 1 },
+                          endOnly: false
+                        })
+                      ],
+                      listeners: {
+                          move: dragMoveListener,
+                        }
+                    })    
+                                    
+                  
 
             })
             onUpdated(()=>{
