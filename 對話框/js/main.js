@@ -300,11 +300,40 @@ window.onload = () =>{
 
             const CalTxtHeight = () =>{
                 // 固定行高15px
-                console.log(msgRef.value);
+                // console.log(msgRef.value);
                 const textHeight = msgRef.value.offsetHeight;
                 ChatTxtHeight.value = `translateY(-${textHeight-15}px)`
-                console.log(ChatTxtHeight.value);
+                // console.log(ChatTxtHeight.value);
             }
+
+            // MapSwiper
+            const MapData = reactive([
+                {idx:1 , url: "https://swiperjs.com/demos/images/nature-1.jpg"},
+                {idx:2 , url: "https://swiperjs.com/demos/images/nature-2.jpg"},
+                {idx:3 , url: "https://swiperjs.com/demos/images/nature-3.jpg"},
+                {idx:4 , url: "https://swiperjs.com/demos/images/nature-4.jpg"},
+                {idx:5 , url: "https://swiperjs.com/demos/images/nature-5.jpg"},
+                {idx:6 , url: "https://swiperjs.com/demos/images/nature-6.jpg"},
+                {idx:7 , url: "https://swiperjs.com/demos/images/nature-7.jpg"},
+                {idx:8 , url: "https://swiperjs.com/demos/images/nature-8.jpg"},
+                {idx:9 , url: "https://swiperjs.com/demos/images/nature-9.jpg"},
+                {idx:10 , url: "https://swiperjs.com/demos/images/nature-10.jpg"},
+            ])
+            const MapSelected = ref(1)
+            const HandImgDataMap = (el)=>{
+                console.log(el.currentTarget.dataset.map);
+                MapSelected.value = Number(el.currentTarget.dataset.map)
+            }
+            const MapRender = computed(()=>{
+                const a = MapData.filter(item=>{
+                    return item.idx === MapSelected.value
+                })
+                const render = a.map(item=>{
+                    return `url(${item.url})`
+                })
+                console.log(render);
+                return render
+            })
 
             onMounted(()=>{
                 CalTxtHeight()
@@ -345,7 +374,26 @@ window.onload = () =>{
                           move: dragMoveListener,
                         }
                     })    
+
+
                                     
+                // swiperNav 
+                const Getslide = document.getElementsByClassName('Getslide')
+                const swiperRoot = document.getElementById("mapNavigation").shadowRoot
+                const buttonPrev = swiperRoot.querySelector('[part="button-prev"]')
+                const buttonNext = swiperRoot.querySelector('[part="button-next"]')
+
+                const handNavDataMap = ()=>{
+                    for (let i = 0; i < Getslide.length; i++) {
+                        if(Getslide[i].classList.contains('swiper-slide-active')){
+                            MapSelected.value = Number(Getslide[i].dataset.map)
+                            console.log(Getslide[i].dataset.map);
+                            console.log(MapSelected.value);
+                        }
+                    }
+                }
+                buttonPrev.addEventListener("click",handNavDataMap)
+                buttonNext.addEventListener("click",handNavDataMap)
                   
 
             })
@@ -385,6 +433,9 @@ window.onload = () =>{
                 // txt換行計算
                 msgRef,
                 ChatTxtHeight,
+                // MapSwiper
+                MapRender,
+                HandImgDataMap,
               }   
         },
         mounted() {
