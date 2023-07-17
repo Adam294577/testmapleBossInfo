@@ -404,7 +404,6 @@ window.onload = () =>{
                 const render = a.map(item=>{
                     return `url(${item.url})`
                 })
-                // console.alert("暫時不出現地圖背景");
                 console.warn("暫時不出現地圖背景");
                 // return render
                 return 0

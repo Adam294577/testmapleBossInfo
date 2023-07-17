@@ -10,6 +10,10 @@ body, html {
   height: 100%;
 }
 
+#app {
+  height: 100%;
+}
+
 .navContainer {
   position: absolute;
   z-index: 100;
@@ -276,12 +280,18 @@ body, html {
   display: flex;
   justify-content: space-around;
 }
+.CustomContainer .question {
+  position: relative;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
 .CustomContainer .question h1 {
   font-size: 20px;
   margin-top: 3px;
+  margin-bottom: 10px;
 }
 .CustomContainer .q1 .itemSelected {
-  border: 1px solid;
   cursor: pointer;
   width: 200px;
   line-height: 45px;
@@ -291,6 +301,7 @@ body, html {
   position: relative;
 }
 .CustomContainer .q1 .itemSelected:after {
+  display: none;
   content: url(../img/symbal/arrow.png);
   position: absolute;
   right: 20px;
@@ -310,32 +321,6 @@ body, html {
   height: 100%;
   display: block;
 }
-.CustomContainer .q2 .personBox {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  background-color: #999;
-  border-radius: 0 0 10px 10px;
-}
-.CustomContainer .q2 .personBox ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-.CustomContainer .q2 .personBox ul li {
-  border: 1px solid #F00;
-  width: 70px;
-  height: 90px;
-  margin: 10px 20px;
-}
-.CustomContainer .q2 .personBox ul li:nth-child(7n+1) {
-  margin-left: 40px;
-}
-.CustomContainer .q2 .personBox ul li img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 .CustomContainer .q3 input {
   padding: 7px;
 }
@@ -345,6 +330,34 @@ body, html {
 .CustomContainer .q3 .alertbox .IDalert {
   color: #F00;
   font-size: 14px;
+}
+
+.personBox {
+  position: fixed;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  width: 800px;
+  background-color: #999;
+  border-radius: 0 0 10px 10px;
+}
+.personBox ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.personBox ul li {
+  border: 1px solid #F00;
+  width: 70px;
+  height: 90px;
+  margin: 10px 20px;
+}
+.personBox ul li:nth-child(7n+1) {
+  margin-left: 40px;
+}
+.personBox ul li img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 swiper-container {
@@ -375,8 +388,13 @@ swiper-container swiper-slide img {
 }
 
 .mapSwiper {
+  position: fixed;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   max-width: 600px;
   height: 120px;
+  z-index: 1;
 }
 .mapSwiper swiper-slide {
   opacity: 0.4;
@@ -397,8 +415,4 @@ swiper-container swiper-slide img {
 #mapNavigation swiper-slide {
   opacity: 0;
   position: relative;
-}
-
-#mapNavigation, #mapSwiper, swiper-container {
-  display: none;
 }/*# sourceMappingURL=main.css.map */

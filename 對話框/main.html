@@ -139,20 +139,6 @@
                 :src="personSelected[0].url" 
                 :alt="personSelected[0].idx">
               </div>
-              <div class="personBox" v-show="personBoxBool">
-                <ul class="personList">
-                  <li 
-                  v-for="list in personBoxRender"
-                  :key="list.url"
-                  @click="handpersonData"  
-                  :data-alt="list.idx"
-                  :class="{act: list.act}">
-                  <img :data-alt="list.idx"  :src="list.url" :alt="list.idx">
-                </li>
-                </ul>
-              </div>
-
-
             </div>
             <div class="question q3">
                 <h1>3.輸入ID</h1>
@@ -164,43 +150,56 @@
                     <p v-show="gameIDAlert" class="IDalert">ID不符合遊戲規則!</p>
                 </div>
             </div>
+            <div class="personBox" v-show="personBoxBool">
+              <ul class="personList">
+                <li 
+                v-for="list in personBoxRender"
+                :key="list.url"
+                @click="handpersonData"  
+                :data-alt="list.idx"
+                :class="{act: list.act}">
+                <img :data-alt="list.idx"  :src="list.url" :alt="list.idx">
+              </li>
+              </ul>
+            </div>
+            <swiper-container 
+            class="mapSwiper" space-between="10" slides-per-view="3" 
+              watch-slides-progress="true"  >
+              <swiper-slide data-map="1" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="2" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="3" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="4" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="5" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="6" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="7" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="8" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="9" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+              </swiper-slide>
+              <swiper-slide data-map="10" @click="HandImgDataMap">
+                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+              </swiper-slide>
+            </swiper-container> 
         </div>
 
 
-        <swiper-container 
-        class="mapSwiper" space-between="10" slides-per-view="3" 
-          watch-slides-progress="true"  >
-          <swiper-slide data-map="1" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="2" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="3" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="4" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="5" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="6" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="7" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="8" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="9" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </swiper-slide>
-          <swiper-slide data-map="10" @click="HandImgDataMap">
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-          </swiper-slide>
-        </swiper-container> 
+   
         <swiper-container
         style="--swiper-navigation-color: #FFF; --swiper-navigation-size: 27px"
         id="mapNavigation"
