@@ -16,7 +16,12 @@
       <!-- <aside class="navContainer open"> -->
       <aside :class="['navContainer', {'open': ringListbool}]">
         
-        <input id="navSearch" type="text" placeholder="收尋要找的聊天戒指">
+        <input 
+        @keyup="ringsearchFn"
+        id="navSearch" 
+        type="text" 
+        placeholder="收尋要找的聊天戒指"
+        >
         <div 
         class="navCross" 
         data-ring="cancel"

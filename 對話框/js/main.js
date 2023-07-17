@@ -226,6 +226,7 @@ window.onload = () =>{
             
             // 戒指List
             const ringListbool = ref(false)
+            const ringsearch = ref("")
             const ringSelected = reactive([
                 {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
             ])
@@ -263,10 +264,18 @@ window.onload = () =>{
                     ringSelected[0].url = filt[0].url
                     ringSelected[0].mode = filt[0].mode
                     ringListbool.value = false
+
+                    ringsearch.value = ""
+                    navSearch.value = ""
                 }
 
           
                 return target
+            }
+           
+            const ringsearchFn = (el)=>{
+                console.log(el.target.value);
+                ringsearch.value =  el.target.value
             }
 
 
@@ -276,10 +285,8 @@ window.onload = () =>{
                         key: item.key,
                         url: item.url,
                         mode:item.mode, 
-                        posTop:item.posTop, 
                     }
                 })
-                console.log(a);
                 return a
             })
 
@@ -290,8 +297,16 @@ window.onload = () =>{
                     }
                     return  {idx:item.idx , key:item.key, url:item.url , act: false }
                 })
-                return a
+                const search = a.filter(item=>{
+                    if(item.key.indexOf(ringsearch.value) !== -1){
+                        return  {idx:item.idx , key:item.key, url:item.url , act: item.act }
+                    }
+                })
+                console.log(search);
+                return search
             })
+
+
 
 
             // txt換行計算
@@ -331,12 +346,18 @@ window.onload = () =>{
                 const render = a.map(item=>{
                     return `url(${item.url})`
                 })
-                console.log(render);
+                // console.alert("暫時不出現地圖背景");
+                console.warn("暫時不出現地圖背景");
                 // return render
                 return 0
             })
 
             onMounted(()=>{
+                // 宣告 清除navSearch的值
+                const navSearch = document.getElementById("navSearch").value
+                
+
+                // 計算聊天室的高度
                 CalTxtHeight()
 
                 // 可拖拉chatsys
@@ -430,6 +451,7 @@ window.onload = () =>{
                 ringSelectedShow,
                 ringListshow,
                 handRingList,
+                ringsearchFn,
 
                 // txt換行計算
                 msgRef,
@@ -437,6 +459,7 @@ window.onload = () =>{
                 // MapSwiper
                 MapRender,
                 HandImgDataMap,
+                
               }   
         },
         mounted() {
