@@ -305,6 +305,64 @@ window.onload = () =>{
                 console.log(search);
                 return search
             })
+            // 角色圖資料操作
+            const personBoxBool = ref(false)
+            const personSelected = ref([{idx:7, url : ""}])
+            const personBoxData = ref([
+                {idx:1, act: false, url:""},
+                {idx:2, act: false, url:""},
+                {idx:3, act: false, url:""},
+                {idx:4, act: false, url:""},
+                {idx:5, act: false, url:""},
+                {idx:6, act: false, url:""},
+                {idx:7, act: false, url:""},
+                {idx:8, act: false, url:""},
+                {idx:9, act: false, url:""},
+                {idx:10,act: false,  url:""}
+            ])
+            const handpersonData = (el) =>{
+                let idx = 0
+                let url = ""
+                if(el === null){
+                    idx = personSelected.value[0].idx
+                    url = personSelected.value[0].url
+                    personBoxData.value = personBoxData.value.map(item=>{
+                        if(item.idx === idx){
+                            return {idx:item.idx, act: true, url:item.url}
+                        }else{
+                            return {idx:item.idx, act: false, url:item.url}
+                        }
+                    })                    
+                    return
+                }
+
+                console.log(el.target.dataset.alt);
+                idx = Number(el.target.dataset.alt)
+                
+                
+                if(idx === personSelected.value[0].idx){
+                    console.log(personBoxBool.value);
+                    personBoxBool.value = !personBoxBool.value
+                }else{
+                    personSelected.value[0].idx = idx
+                    personSelected.value[0].url = url
+
+                    personBoxData.value = personBoxData.value.map(item=>{
+                        if(item.idx === idx){
+                            return {idx:item.idx, act: true, url:item.url}
+                        }else{
+                            return {idx:item.idx, act: false, url:item.url}
+                        }
+                    })
+                    personBoxBool.value = false
+                }
+            }
+            const personBoxRender = computed(()=>{
+                const a = personBoxData.value.map(item=>{
+                    return {idx:item.idx, act: item.act, url:item.url}
+                })
+                return a
+            })
 
 
 
@@ -355,7 +413,8 @@ window.onload = () =>{
             onMounted(()=>{
                 // 宣告 清除navSearch的值
                 const navSearch = document.getElementById("navSearch").value
-                
+
+                handpersonData(null)                
 
                 // 計算聊天室的高度
                 CalTxtHeight()
@@ -452,6 +511,12 @@ window.onload = () =>{
                 ringListshow,
                 handRingList,
                 ringsearchFn,
+                // personData
+                personBoxBool,
+                handpersonData,
+                personBoxRender,
+                personSelected,
+
 
                 // txt換行計算
                 msgRef,

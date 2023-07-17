@@ -54,7 +54,6 @@
                 v-show="RingChatbool" 
                 :class="['chatring',ringSelectedShow[0].mode]" 
                 :style="[{transform: ChatTxtHeight}]"
-                
                 > 
                     <div class="chat_outline">
                         <div class="txt_container">
@@ -80,8 +79,7 @@
                             :class="[ 'msg' , list.class ]"
                             v-html="list.render"> 
                         </span>
-   
-                        </div>
+                      </div>
                     </div>
                     
                   <div class="ChatClass">
@@ -131,7 +129,33 @@
 
             </div>
             <div class="question q2">
-                <h1>2.輸入ID</h1>
+              <h1>2.選擇喜歡的角色圖</h1>
+              <div 
+              @click="handpersonData" 
+              :data-alt="personSelected[0].idx"
+              class="personSelected">
+                <img 
+                :data-alt="personSelected[0].idx"
+                :src="personSelected[0].url" 
+                :alt="personSelected[0].idx">
+              </div>
+              <div class="personBox" v-show="personBoxBool">
+                <ul class="personList">
+                  <li 
+                  v-for="list in personBoxRender"
+                  :key="list.url"
+                  @click="handpersonData"  
+                  :data-alt="list.idx"
+                  :class="{act: list.act}">
+                  <img :data-alt="list.idx"  :src="list.url" :alt="list.idx">
+                </li>
+                </ul>
+              </div>
+
+
+            </div>
+            <div class="question q3">
+                <h1>3.輸入ID</h1>
                 <input @keyup="checkInput"
                  v-model = "game_id" 
                  id="game_id_input" 
