@@ -317,6 +317,49 @@ body,html{
 
   }
   .q2{
+    .personSelected{
+      width: 70px;
+      height: 90px;
+      border: 1px solid #F00;
+      position: relative;
+      left: 50px;
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .personBox{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background-color: #999;
+      border-radius:  0 0 10px 10px;
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          border: 1px solid #F00;
+          width: 70px;
+          height: 90px;
+          margin: 10px 20px;
+          &:nth-child(7n+1){
+            margin-left: 40px;
+          }
+
+          img{
+
+            width: 100%;
+            height: 100%;
+            display: block;            
+          }
+        }
+      }
+    }
+  }
+  .q3{
     input{
       padding: 7px;
     }

@@ -297,13 +297,52 @@ body, html {
   top: 50%;
   transform: translateY(-55%) rotate(90deg) scale(0.8);
 }
-.CustomContainer .q2 input {
+.CustomContainer .q2 .personSelected {
+  width: 70px;
+  height: 90px;
+  border: 1px solid #F00;
+  position: relative;
+  left: 50px;
+  margin-bottom: 10px;
+}
+.CustomContainer .q2 .personSelected img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.CustomContainer .q2 .personBox {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: #999;
+  border-radius: 0 0 10px 10px;
+}
+.CustomContainer .q2 .personBox ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.CustomContainer .q2 .personBox ul li {
+  border: 1px solid #F00;
+  width: 70px;
+  height: 90px;
+  margin: 10px 20px;
+}
+.CustomContainer .q2 .personBox ul li:nth-child(7n+1) {
+  margin-left: 40px;
+}
+.CustomContainer .q2 .personBox ul li img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.CustomContainer .q3 input {
   padding: 7px;
 }
-.CustomContainer .q2 .alertbox {
+.CustomContainer .q3 .alertbox {
   height: 20px;
 }
-.CustomContainer .q2 .alertbox .IDalert {
+.CustomContainer .q3 .alertbox .IDalert {
   color: #F00;
   font-size: 14px;
 }
