@@ -242,7 +242,7 @@ window.onload = () =>{
             const handRingList = (el)=>{
                 let target = ""
                     target = el.currentTarget.dataset.ring
-                if(target === "selected"){
+                if(target === "selected" || target === "cancel"){
                     ringListbool.value = !ringListbool.value
                 }else{
                     // 
@@ -332,7 +332,8 @@ window.onload = () =>{
                     return `url(${item.url})`
                 })
                 console.log(render);
-                return render
+                // return render
+                return 0
             })
 
             onMounted(()=>{

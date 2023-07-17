@@ -5,10 +5,91 @@
   list-style-type: none;
 }
 
-body {
+body, html {
   background-color: #555;
+  height: 100%;
 }
 
+.navContainer {
+  position: absolute;
+  z-index: 100;
+  width: 270px;
+  height: 100vh;
+  left: -300px;
+  background-color: #444;
+  box-shadow: 0 0 20px #555;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+.navContainer::-webkit-scrollbar {
+  width: 10px;
+}
+.navContainer::-webkit-scrollbar-thumb {
+  width: 3px;
+  border-radius: 5px;
+  background-color: #777;
+}
+.navContainer.open {
+  position: absolute;
+  left: 0px;
+}
+.navContainer .navCross {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+.navContainer .navCross .bar {
+  position: absolute;
+  background-color: #fff;
+  width: 26px;
+  height: 4px;
+  border-radius: 3px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+.navContainer .navCross .bar2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.navContainer input {
+  padding: 3px;
+  padding-left: 10px;
+  border-radius: 3px;
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  height: 30px;
+  width: 200px;
+}
+.navContainer input:focus {
+  outline: none;
+}
+.navContainer .ringList {
+  position: absolute;
+  top: 60px;
+  width: 270px;
+}
+.navContainer .ringList li {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #FFF;
+}
+.navContainer .ringList li.act {
+  background-image: url(../img/symbal/check.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 90% 40%;
+}
 .ChatSyscontainer {
   background-size: cover;
   position: relative;
@@ -215,26 +296,6 @@ body {
   top: 50%;
   transform: translateY(-55%) rotate(90deg) scale(0.8);
 }
-.CustomContainer .q1 .ringList {
-  position: absolute;
-  top: 100%;
-}
-.CustomContainer .q1 .ringList li {
-  cursor: pointer;
-  width: 200px;
-  height: 45px;
-  line-height: 45px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  background-color: #ABABAB;
-}
-.CustomContainer .q1 .ringList li.act {
-  background-image: url(../img/symbal/check.png);
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-position: 95% 40%;
-}
 .CustomContainer .q2 input {
   padding: 7px;
 }
@@ -296,4 +357,8 @@ swiper-container swiper-slide img {
 #mapNavigation swiper-slide {
   opacity: 0;
   position: relative;
+}
+
+#mapNavigation, #mapSwiper, swiper-container {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

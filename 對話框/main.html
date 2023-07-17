@@ -11,12 +11,39 @@
 </head>
 <body>
     <div id="app">
+
+
+      <!-- <aside class="navContainer open"> -->
+      <aside :class="['navContainer', {'open': ringListbool}]">
         
+        <input id="navSearch" type="text" placeholder="收尋要找的聊天戒指">
+        <div 
+        class="navCross" 
+        data-ring="cancel"
+        @click="handRingList"
+        >
+          <div class="bar"></div>
+          <div class="bar bar2"></div>
+        </div>
+
+        <nav class="ringList" v-show="ringListbool">
+          <li 
+          @click="handRingList"
+          v-for="list in ringListshow"
+          :key="list.key"
+          :class="['item',{'act':list.act} ]" 
+          :data-ring="list.key">
+              <img :src="list.url" :alt="list.key">
+              <span>{{list.key}}</span>
+          </li>
+        </nav>
+      </aside>
         
-        
-        <div @click = "clearfn" 
+        <div 
+        class="ChatSyscontainer"
+        @click = "clearfn" 
         :style="[{'background-image': MapRender}]"
-        class="ChatSyscontainer">
+        >
             <div class="ringContainer person">
                 <div 
                 v-show="RingChatbool" 
@@ -96,17 +123,7 @@
                     <img :src="ringSelectedShow[0].url" :alt="ringSelectedShow[0].key" >
                     {{ringSelectedShow[0].key}}
                 </li>
-                <ul class="ringList" v-show="ringListbool">
-                    <li 
-                    @click="handRingList"
-                    v-for="list in ringListshow"
-                    :key="list.key"
-                    :class="['item',{'act':list.act} ]" 
-                    :data-ring="list.key">
-                        <img :src="list.url" :alt="list.key">
-                        <span>{{list.key}}</span>
-                    </li>
-                </ul>
+
             </div>
             <div class="question q2">
                 <h1>2.輸入ID</h1>
@@ -119,6 +136,8 @@
                 </div>
             </div>
         </div>
+
+
         <swiper-container 
         class="mapSwiper" space-between="10" slides-per-view="3" 
           watch-slides-progress="true"  >

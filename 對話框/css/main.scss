@@ -4,11 +4,99 @@
   box-sizing: border-box;
   list-style-type: none;
 }
-body{
+body,html{
   background-color: #555;
+  height: 100%;
+  // overflow: hidden;
 }
 
+.navContainer{
+  position: absolute;
+  z-index: 100;
+  width: 270px;
+  // height: 200px;
+  height: 100vh;
+  left: -300px;
+  background-color: #444;
+  box-shadow: 0 0 20px #555;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.3s;
+  &::-webkit-scrollbar{
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb{
+    width: 3px;
+    border-radius: 5px;
+    background-color: #777;
+  }
+  &.open{
+    position: absolute;
+    left: 0px;
+  }
+  .navCross{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    // border: 1px solid #F00;
+    .bar{
+      position: absolute;
+      background-color: #fff;
+      width: 26px;
+      height: 4px;
+      border-radius: 3px;
+      transform: translate(-50%,-50%) rotate(45deg);
+      top: 50%;
+      left: 50%;
 
+    }
+    .bar2{
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+  input{
+    padding: 3px;
+    padding-left: 10px;
+    border-radius: 3px;
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    height: 30px;
+    width: 200px;
+    &:focus{
+      outline: none;
+    }
+  }
+  .ringList{
+    position: absolute;
+    top: 60px;
+    width: 270px;
+    li{
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      height: 50px;
+      line-height: 50px;
+      user-select: none;
+      color: #FFF;
+      &.act{
+        background-image: url(../img/symbal/check.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 90% 40%;
+      }
+      img{
+
+      }
+      span{
+
+      }
+    }
+  }
+}
 
 
 .ChatSyscontainer{
@@ -224,30 +312,7 @@ body{
         transform: translateY(-55%) rotate(90deg) scale(0.8);
       }
   }
-    .ringList{
-      position: absolute;
-      top: 100%;
-      li{
-        cursor: pointer;
-        width: 200px;
-        height: 45px;
-        line-height: 45px;
-        user-select: none;
-        background-color: #ABABAB;
-        &.act{
-          background-image: url(../img/symbal/check.png);
-          background-repeat: no-repeat;
-          background-size: 20px;
-          background-position: 95% 40%;
-        }
-        img{
-  
-        }
-        span{
-  
-        }
-      }
-    }
+
 
   }
   .q2{
@@ -309,6 +374,7 @@ swiper-container {
 }
 
 #mapNavigation{
+  
   position: relative;
   z-index: -1;
   top: 100px;
@@ -319,4 +385,7 @@ swiper-container {
     opacity: 0;
     position: relative;
   }
+}
+#mapNavigation,#mapSwiper,swiper-container{
+  display: none;
 }
