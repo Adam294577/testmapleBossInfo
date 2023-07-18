@@ -14,7 +14,7 @@ body,html{
 }
 
 .navContainer{
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 270px;
   // height: 200px;
@@ -34,7 +34,6 @@ body,html{
     background-color: #777;
   }
   &.open{
-    position: absolute;
     left: 0px;
   }
   .navCross{
@@ -106,15 +105,16 @@ body,html{
   background-size: cover;
   // background-attachment: fixed;
   position: relative;
+  top: 30px;
   width: 800px;
   height: 600px;
-  margin: auto;
-  border: 1px solid #F00;
+  margin: 0 auto;
+  // border: 1px solid #F00;
 
   
   .ChatContainer{
     position: absolute;
-    bottom: 0px;
+    top: 100px;
     user-select: none;
     z-index: 3;
     margin-top: 0px;
@@ -328,17 +328,24 @@ body,html{
   }
   .q2{
     .personSelected{
-      width: 70px;
+      background-color: #EEE;
+      border-radius: 4px;
+      box-shadow: 0 0 7px #888;
+      width: 90px;
       height: 90px;
-      border: 1px solid #F00;
       position: relative;
       left: 50px;
       margin-bottom: 10px;
       
       img{
-        width: 100%;
-        height: 100%;
+        width: 70px;
+        height: 90px;
         display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -2px;
+
       }
     }
   }
@@ -371,19 +378,27 @@ body,html{
     display: flex;
     flex-wrap: wrap;
     li{
-      border: 1px solid #F00;
-      width: 70px;
+      position: relative;
+      border-radius: 4px;
+      background-color: #EEE;
+      width: 90px;
       height: 90px;
-      margin: 10px 20px;
+      margin: 10px 10px;
+      box-shadow: 0 0 7px #888;
+      &.act{
+        box-shadow: 0 0 7px #fff455 ;
+      }
       &:nth-child(7n+1){
         margin-left: 40px;
       }
 
       img{
-
-        width: 100%;
-        height: 100%;
-        display: block;            
+        width: 70px;
+        height: 90px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-5%);
       }
     }
   }
@@ -437,8 +452,8 @@ swiper-container {
 
 #mapNavigation{
   position: relative;
-  z-index: -1;
-  top: 100px;
+  // z-index: -1;
+  top: 300px;
   // border: 1px solid;
   height: 100px;
   width: 200px;

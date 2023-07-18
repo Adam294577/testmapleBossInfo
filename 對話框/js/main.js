@@ -302,23 +302,23 @@ window.onload = () =>{
                         return  {idx:item.idx , key:item.key, url:item.url , act: item.act }
                     }
                 })
-                console.log(search);
+                // console.log(search);
                 return search
             })
             // 角色圖資料操作
             const personBoxBool = ref(false)
-            const personSelected = ref([{idx:7, url : ""}])
+            const personSelected = ref([{idx:7, url : "./img/role/cos7.png", toMap: "url(./img/role/cos7.png)"}])
             const personBoxData = ref([
-                {idx:1, act: false, url:""},
-                {idx:2, act: false, url:""},
-                {idx:3, act: false, url:""},
-                {idx:4, act: false, url:""},
-                {idx:5, act: false, url:""},
-                {idx:6, act: false, url:""},
-                {idx:7, act: false, url:""},
-                {idx:8, act: false, url:""},
-                {idx:9, act: false, url:""},
-                {idx:10,act: false,  url:""}
+                {idx:1, act: false, url:"./img/role/cos1.png"},
+                {idx:2, act: false, url:"./img/role/cos2.png"},
+                {idx:3, act: false, url:"./img/role/cos3.png"},
+                {idx:4, act: false, url:"./img/role/cos4.png"},
+                {idx:5, act: false, url:"./img/role/cos5.png"},
+                {idx:6, act: false, url:"./img/role/cos6.png"},
+                {idx:7, act: false, url:"./img/role/cos7.png"},
+                {idx:8, act: false, url:"./img/role/cos8.png"},
+                {idx:9, act: false, url:"./img/role/cos9.png"},
+                {idx:10,act: false,  url:"./img/role/cos10.png"}
             ])
             const handpersonData = (el) =>{
                 let idx = 0
@@ -341,11 +341,13 @@ window.onload = () =>{
                 
                 
                 if(idx === personSelected.value[0].idx){
-                    console.log(personBoxBool.value);
+                    // console.log(personBoxBool.value);
                     personBoxBool.value = !personBoxBool.value
                 }else{
+                    url = `./img/role/cos${idx}.png`
                     personSelected.value[0].idx = idx
                     personSelected.value[0].url = url
+                    personSelected.value[0].toMap = `url(${url})`
 
                     personBoxData.value = personBoxData.value.map(item=>{
                         if(item.idx === idx){
@@ -356,6 +358,7 @@ window.onload = () =>{
                     })
                     personBoxBool.value = false
                 }
+                console.log(personBoxData.value);
             }
             const personBoxRender = computed(()=>{
                 const a = personBoxData.value.map(item=>{
@@ -381,16 +384,17 @@ window.onload = () =>{
 
             // MapSwiper
             const MapData = reactive([
-                {idx:1 , url: "https://swiperjs.com/demos/images/nature-1.jpg"},
-                {idx:2 , url: "https://swiperjs.com/demos/images/nature-2.jpg"},
-                {idx:3 , url: "https://swiperjs.com/demos/images/nature-3.jpg"},
-                {idx:4 , url: "https://swiperjs.com/demos/images/nature-4.jpg"},
-                {idx:5 , url: "https://swiperjs.com/demos/images/nature-5.jpg"},
-                {idx:6 , url: "https://swiperjs.com/demos/images/nature-6.jpg"},
-                {idx:7 , url: "https://swiperjs.com/demos/images/nature-7.jpg"},
-                {idx:8 , url: "https://swiperjs.com/demos/images/nature-8.jpg"},
-                {idx:9 , url: "https://swiperjs.com/demos/images/nature-9.jpg"},
-                {idx:10 , url: "https://swiperjs.com/demos/images/nature-10.jpg"},
+                {idx:1 , url: "./img/map/map01.png"},
+                {idx:2 , url: "./img/map/map02.png"},
+                {idx:3 , url: "./img/map/map03.png"},
+                {idx:4 , url: "./img/map/map04.png"},
+                {idx:5 , url: "./img/map/map05.png"},
+                {idx:6 , url: "./img/map/map06.png"},
+                {idx:7 , url: "./img/map/map07.png"},
+                {idx:8 , url: "./img/map/map08.png"},
+                {idx:9 , url: "./img/map/map09.png"},
+                {idx:10 , url:"./img/map/map10.png"},
+                {idx:11 , url:"./img/map/map11.png"},
             ])
             const MapSelected = ref(1)
             const HandImgDataMap = (el)=>{
@@ -404,9 +408,9 @@ window.onload = () =>{
                 const render = a.map(item=>{
                     return `url(${item.url})`
                 })
-                console.warn("暫時不出現地圖背景");
-                // return render
-                return 0
+                // console.warn("暫時不出現地圖背景");
+                return render
+                // return 0
             })
 
             onMounted(()=>{
