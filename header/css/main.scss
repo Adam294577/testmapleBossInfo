@@ -6,6 +6,7 @@
   }
   body{
     background-color: #222;
+    height: 100%;
   }
   header{
     display: flex;
@@ -18,9 +19,13 @@
     background-color: #000;
     height: 40px;
     li{
-      width: 100px;
+      width: 120px;
       // border: 1px solid #F00;
+      font-weight: bold;
       height: 100%;
+      text-align: center;
+      padding-top: 7px;
+      
       &:last-child{
         margin-right: 20px;
       }
@@ -30,12 +35,17 @@
         left: 0px;
       }
       a{
+        // border: 1px solid #F00;
+        font-size: 18px;
         text-align: center;
-        display: inline-block;
         width: 100%;
         margin-top: 10px;
         color:#FFF;
         text-decoration: none;
+        position: relative;
+        &:hover{
+          color: rgb(255, 25, 133);
+        }
       }
-    }
   }
+}

@@ -7,6 +7,7 @@
 
 body {
   background-color: #222;
+  height: 100%;
 }
 
 header {
@@ -21,8 +22,11 @@ header {
   height: 40px;
 }
 header li {
-  width: 100px;
+  width: 120px;
+  font-weight: bold;
   height: 100%;
+  text-align: center;
+  padding-top: 7px;
 }
 header li:last-child {
   margin-right: 20px;
@@ -33,10 +37,14 @@ header li.home {
   left: 0px;
 }
 header li a {
+  font-size: 18px;
   text-align: center;
-  display: inline-block;
   width: 100%;
   margin-top: 10px;
   color: #FFF;
   text-decoration: none;
+  position: relative;
+}
+header li a:hover {
+  color: rgb(255, 25, 133);
 }/*# sourceMappingURL=main.css.map */

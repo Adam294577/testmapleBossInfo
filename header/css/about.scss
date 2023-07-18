@@ -1,0 +1,48 @@
+.aboutContainer{
+    width: 90vw;
+    position: absolute;
+    margin: 70px;
+    .aboutImg{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        .aboutCard{
+            width: 300px;
+            margin-left: 30px;
+            border: 1px solid #FF0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                text-align: center;
+                border: 1px solid #F00;
+                width: 200px;
+                color: #FFF;
+            }
+            img{
+
+            }
+        }
+    }
+    .content{
+        background-color: #000;
+        box-shadow: 0 0 7px #777;
+        border-radius: 3px;
+        margin: 0 auto;
+        width: 700px;
+        p{
+            font-weight: bold;
+            color: #FFF;
+            line-height: 20px;
+            padding: 18px;
+            a{
+                color: #FFF;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(255, 25, 133);
+                }
+            }
+        }
+        
+    }
+}
