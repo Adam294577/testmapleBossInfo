@@ -433,3 +433,79 @@
         }     
     }
   }     
+  // 夢幻兔
+  .mode05{
+    position: absolute;
+    top: -53px;
+    left: -25px;
+    width: 121px;
+    .chat_outline{
+        &::before{
+            content: '';
+            display: block;
+            height: 21px;
+            background: url(../img/mode/05/b_up.png) no-repeat;
+        }
+        &::after{
+            content: '';
+            display: block;
+            height: 11px;
+            background: url(../img/mode/05/b_down.png) no-repeat;
+        }
+        .txt_container{
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0;
+                display: inline-block;
+                width: 16px;
+                height: 300px;
+                background: url(../img/mode/05/b_left.png) repeat-y;
+                background-position: 0 0;
+            }
+              &::after{
+                content: '';
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                display: inline-block;
+                width: 15px;
+                height: 300px;
+                background: url(../img/mode/05/b_right.png) repeat-y;
+                background-position: 0px 0;
+            }            
+          .Txtcontent{
+            background-color: #e6bce6;
+            color: #fffbff;
+            position: relative;
+            // 依據左的圖邊設定margin-left
+            margin-left: 16px;
+            // 依據第一行何時換行設定寬 (mode最長寬 - 左右圖的寬)
+            width: 90px;
+            // 依據沒填滿的空間 設定padding
+            padding-top: 3px; 
+            padding-bottom: 3px;
+            // border: 1px solid;
+
+            .txt{
+              // opacity: 0;
+              display: inline-block;
+              font-size: 11px;
+            }
+            .idBox{
+              position: relative;
+              margin-right: 15px;
+                }
+            .idBox::after{
+                content: ":";
+                position: absolute;
+                right: -8px;
+                top: -1px;
+                
+            }                     
+          }
+
+        }     
+    }
+  }     

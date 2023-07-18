@@ -228,7 +228,7 @@ window.onload = () =>{
             const ringListbool = ref(false)
             const ringsearch = ref("")
             const ringSelected = reactive([
-                {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
+                {idx:5 , key:"夢幻兔子", url:"none" , act: true ,mode:"mode05"},
             ])
             
             const ringList = reactive({data:[
@@ -237,6 +237,7 @@ window.onload = () =>{
                 {idx:2 , key:"蝴蝶夢", url:"none" , act: true ,mode:"mode02"},
                 {idx:3 , key:"粉貓貓", url:"none" , act: true ,mode:"mode03"},
                 {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
+                {idx:5 , key:"夢幻兔子", url:"none" , act: true ,mode:"mode05"},
             ]})
 
 
@@ -450,7 +451,7 @@ window.onload = () =>{
                         interact.modifiers.restrict({
                           // restriction: element.parentNode,
                           restriction: 'parent',
-                          elementRect: { top: -3, left: 0, bottom: 1, right: 1 },
+                          elementRect: { top: -3, left: 0, bottom: 1.9, right: 1 },
                           endOnly: false
                         })
                       ],

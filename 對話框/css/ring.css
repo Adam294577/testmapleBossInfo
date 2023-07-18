@@ -371,4 +371,68 @@
   position: absolute;
   right: -8px;
   top: -1px;
+}
+
+.mode05 {
+  position: absolute;
+  top: -53px;
+  left: -25px;
+  width: 121px;
+}
+.mode05 .chat_outline::before {
+  content: "";
+  display: block;
+  height: 21px;
+  background: url(../img/mode/05/b_up.png) no-repeat;
+}
+.mode05 .chat_outline::after {
+  content: "";
+  display: block;
+  height: 11px;
+  background: url(../img/mode/05/b_down.png) no-repeat;
+}
+.mode05 .chat_outline .txt_container::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  display: inline-block;
+  width: 16px;
+  height: 300px;
+  background: url(../img/mode/05/b_left.png) repeat-y;
+  background-position: 0 0;
+}
+.mode05 .chat_outline .txt_container::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  width: 15px;
+  height: 300px;
+  background: url(../img/mode/05/b_right.png) repeat-y;
+  background-position: 0px 0;
+}
+.mode05 .chat_outline .txt_container .Txtcontent {
+  background-color: #e6bce6;
+  color: #fffbff;
+  position: relative;
+  margin-left: 16px;
+  width: 90px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.mode05 .chat_outline .txt_container .Txtcontent .txt {
+  display: inline-block;
+  font-size: 11px;
+}
+.mode05 .chat_outline .txt_container .Txtcontent .idBox {
+  position: relative;
+  margin-right: 15px;
+}
+.mode05 .chat_outline .txt_container .Txtcontent .idBox::after {
+  content: ":";
+  position: absolute;
+  right: -8px;
+  top: -1px;
 }/*# sourceMappingURL=ring.css.map */
