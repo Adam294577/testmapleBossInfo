@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: #222;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: end;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 40px;
+}
+header li {
+  width: 100px;
+  height: 100%;
+}
+header li:last-child {
+  margin-right: 20px;
+}
+header li.home {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+header li a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  color: #FFF;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

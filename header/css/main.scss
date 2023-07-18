@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+  }
+  body{
+    background-color: #222;
+  }
+  header{
+    display: flex;
+    position: fixed;
+    justify-content: end;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    height: 40px;
+    li{
+      width: 100px;
+      // border: 1px solid #F00;
+      height: 100%;
+      &:last-child{
+        margin-right: 20px;
+      }
+      &.home{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      a{
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        color:#FFF;
+        text-decoration: none;
+      }
+    }
+  }
