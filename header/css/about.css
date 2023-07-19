@@ -1,4 +1,5 @@
 .aboutContainer {
+  display: none;
   width: 90vw;
   position: absolute;
   margin: 70px;
@@ -11,16 +12,13 @@
 .aboutContainer .aboutImg .aboutCard {
   width: 300px;
   margin-left: 30px;
-  border: 1px solid #FF0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.aboutContainer .aboutImg .aboutCard h1 {
-  text-align: center;
-  border: 1px solid #F00;
-  width: 200px;
-  color: #FFF;
+.aboutContainer .aboutImg .aboutCard img {
+  width: 271px;
+  height: 226px;
 }
 .aboutContainer .content {
   background-color: #000;
@@ -41,4 +39,56 @@
 }
 .aboutContainer .content p a:hover {
   color: rgb(255, 25, 133);
+}
+
+/* desktops */
+/* tablets */
+/* phones */
+@media (max-width: 576px) {
+  .aboutContainer {
+    width: 100%;
+    position: absolute;
+    left: -15%;
+  }
+  .aboutContainer .aboutImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .aboutContainer .aboutImg .aboutCard {
+    width: 300px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutContainer .aboutImg .aboutCard img {
+    width: 271px;
+    height: 226px;
+    margin-bottom: 30px;
+  }
+  .aboutContainer .content {
+    background-color: #000;
+    box-shadow: 0 0 7px #777;
+    border-radius: 3px;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 9px;
+  }
+  .aboutContainer .content p {
+    font-weight: bold;
+    color: #FFF;
+    line-height: 20px;
+    padding: 18px;
+  }
+  .aboutContainer .content p a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .aboutContainer .content p a:hover {
+    color: rgb(255, 25, 133);
+  }
 }/*# sourceMappingURL=about.css.map */
