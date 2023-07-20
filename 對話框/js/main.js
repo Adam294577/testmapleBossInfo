@@ -228,16 +228,16 @@ window.onload = () =>{
             const ringListbool = ref(false)
             const ringsearch = ref("")
             const ringSelected = reactive([
-                {idx:5 , key:"夢幻兔子", url:"none" , act: true ,mode:"mode05"},
+                {idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"}
             ])
             
             const ringList = reactive({data:[
                 {idx:0 , key:"無", url:"none" , act: true ,mode:"mode00"},
-                {idx:1 , key:"貓咪線球", url:"none" , act: false ,mode:"mode01"},
-                {idx:2 , key:"蝴蝶夢", url:"none" , act: true ,mode:"mode02"},
-                {idx:3 , key:"粉貓貓", url:"none" , act: true ,mode:"mode03"},
-                {idx:4 , key:"黑貓貓", url:"none" , act: true ,mode:"mode04"},
-                {idx:5 , key:"夢幻兔子", url:"none" , act: true ,mode:"mode05"},
+                {idx:1 , key:"貓咪線球", url:"./img/ring/貓咪線球.png" , act: false ,mode:"mode01"},
+                {idx:2 , key:"蝴蝶夢", url:"./img/ring/蝴蝶夢.png" , act: true ,mode:"mode02"},
+                {idx:3 , key:"粉貓貓", url:"./img/ring/粉貓貓.png" , act: true ,mode:"mode03"},
+                {idx:4 , key:"黑貓貓", url:"./img/ring/黑貓貓.png" , act: true ,mode:"mode04"},
+                {idx:5 , key:"夢幻兔子", url:"./img/ring/夢幻兔子.png" , act: true ,mode:"mode05"},
             ]})
 
 

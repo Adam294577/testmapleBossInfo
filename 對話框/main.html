@@ -32,7 +32,7 @@
           :key="list.key"
           :class="['item',{'act':list.act} ]" 
           :data-ring="list.key">
-              <img :src="list.url" :alt="list.key">
+              <img :src="list.url" :alt="">
               <span>{{list.key}}</span>
           </li>
         </nav>
@@ -119,8 +119,10 @@
                 class="itemSelected" 
                 data-ring="selected"
                 >
-                    <img :src="ringSelectedShow[0].url" :alt="ringSelectedShow[0].key" >
-                    {{ringSelectedShow[0].key}}
+                    <img 
+                    :src="ringSelectedShow[0].url" 
+                    :alt="" >
+                    <span :class="{'noneImg' : ringSelectedShow[0].key === '無'}">{{ringSelectedShow[0].key}}</span>
                 </li>
 
             </div>

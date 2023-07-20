@@ -93,6 +93,14 @@ body, html {
   background-size: 20px;
   background-position: 90% 40%;
 }
+.navContainer .ringList li img {
+  padding-left: 10px;
+}
+.navContainer .ringList li span {
+  position: absolute;
+  left: 55px;
+}
+
 .ChatSyscontainer {
   background-size: cover;
   position: relative;
@@ -291,6 +299,8 @@ body, html {
   margin-bottom: 10px;
 }
 .CustomContainer .q1 .itemSelected {
+  background-color: #EEE;
+  border-radius: 3px;
   cursor: pointer;
   width: 200px;
   line-height: 45px;
@@ -306,6 +316,18 @@ body, html {
   right: 20px;
   top: 50%;
   transform: translateY(-55%) rotate(90deg) scale(0.8);
+}
+.CustomContainer .q1 .itemSelected img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.CustomContainer .q1 .itemSelected span {
+  position: relative;
+  top: -5px;
+  padding-left: 20px;
+}
+.CustomContainer .q1 .itemSelected span.noneImg {
+  top: 0;
 }
 .CustomContainer .q2 .personSelected {
   background-color: #EEE;
