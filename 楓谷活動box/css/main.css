@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -7,4 +8,255 @@
 
 body {
   background-color: #222;
+  position: relative;
+}
+
+.Activitycrossbox {
+  cursor: pointer;
+  position: fixed;
+  right: 11vw;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  z-index: 1000;
+}
+.Activitycrossbox .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #FFF;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.Activitycrossbox .bar.bar2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mapleActivity {
+  position: fixed;
+  z-index: 999;
+  width: 80vw;
+  height: 90vh;
+  left: 50%;
+  top: 3%;
+  transform: translateX(-50%);
+  overflow-y: scroll;
+  background-color: #e2ccb5;
+  border-radius: 10px;
+  padding-bottom: 50px;
+}
+.mapleActivity::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.mapleActivity::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 10px;
+}
+.mapleActivity::-webkit-scrollbar-button {
+  display: none;
+}
+.mapleActivity::-webkit-scrollbar-track-piece {
+  display: none;
+}
+.mapleActivity .modeTag {
+  position: absolute;
+  width: 130px;
+  height: 70px;
+  left: -131px;
+  top: 7px;
+  background-color: #00568f;
+}
+.mapleActivity .modeTag .modeTxt {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  line-height: 70px;
+  color: #FFF;
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Activitydate {
+  width: 80vw;
+  height: 3vh;
+  position: fixed;
+  bottom: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e2ccb5;
+  z-index: 1111;
+  padding-left: 20px;
+  border-radius: 0 0 10px 10px;
+}
+.Activitydate .txt {
+  padding-left: 10px;
+}
+
+.latestContainer .title {
+  padding-top: 1rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.latestContainer .contentTag {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.latestContainer .contentTag li {
+  cursor: pointer;
+  width: 80px;
+  height: 50px;
+  margin: 7px;
+  position: relative;
+}
+.latestContainer .contentTag li.act::after {
+  content: "";
+  color: #000;
+  text-shadow: 0 0 3px #FFF;
+}
+.latestContainer .contentTag li.act img {
+  opacity: 1;
+}
+.latestContainer .contentTag li img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+}
+.latestContainer .contentTag li::after {
+  content: "";
+  font-weight: bold;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  color: #777;
+}
+.latestContainer .contentTag li.goldAppleTag::after {
+  content: "黃金蘋果";
+}
+.latestContainer .contentTag li.cuteMosTag::after {
+  content: "萌獸卡牌包";
+}
+.latestContainer .contentTag li.fashionTag::after {
+  content: "時尚隨機箱";
+}
+.latestContainer .contentTag li.dressingTag::after {
+  content: "皇家美容院";
+}
+.latestContainer .contentTag li.petTag::after {
+  content: "寵物隨機箱";
+}
+.latestContainer .contentTag li.cubeTag::after {
+  content: "XX方塊";
+}
+.latestContainer .contentTag li.crystalTag::after {
+  content: "月光水晶";
+}
+.latestContainer .contentTag li.frameTag::after {
+  content: "魔法畫框";
+}
+.latestContainer .contentTag li.cartTag::after {
+  content: "";
+}
+.latestContainer .content .banner {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+.latestContainer .content .ProbabilityBox .title {
+  position: relative;
+}
+.latestContainer .content .ProbabilityBox .refHref {
+  width: 100%;
+  font-size: 16px;
+}
+.latestContainer .content .ProbabilityBox .refHref span {
+  display: block;
+  text-align: center;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable {
+  display: flex;
+  justify-content: center;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul {
+  width: 48%;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 500px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul li {
+  border: 1px solid #000;
+  display: flex;
+  padding: 5px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul li span {
+  text-align: center;
+  width: 50%;
+  font-weight: bold;
+}
+.latestContainer .content .ProbabilityBox.goldApple ul li span {
+  width: 33%;
+}
+.latestContainer .content .ProbabilityBox.fashion .fashionTitle {
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid;
+}
+.latestContainer .content .ProbabilityBox.fashion ul li span {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .latestContainer .contentTag li {
+    width: 23%;
+    margin-top: 20px;
+  }
+  .latestContainer .content .ProbabilityBox .ProbabilityTable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .latestContainer .content .ProbabilityBox .ProbabilityTable ul {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .latestContainer .content .ProbabilityBox .ProbabilityTable ul {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 500px;
+  }
+  .latestContainer .content .ProbabilityBox .ProbabilityTable ul li {
+    border: 1px solid #000;
+    display: flex;
+    padding: 3px;
+  }
+  .latestContainer .content .ProbabilityBox .ProbabilityTable ul li span {
+    text-align: center;
+    width: 33%;
+  }
+  .latestContainer .content .ProbabilityBox.fashion .fashionTitle {
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid;
+  }
+  .latestContainer .content .ProbabilityBox.fashion ul li span {
+    width: 50%;
+  }
 }/*# sourceMappingURL=main.css.map */
