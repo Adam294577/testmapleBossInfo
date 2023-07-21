@@ -289,6 +289,38 @@ footer{
     }
   }
 }  
+.ActivityscrollTop{
+  cursor: pointer;
+  position: fixed;
+  right: 12vw;
+  top: 91vh;
+  width: 40px;
+  height: 40px;
+  z-index: 1200;
+  background-color: #FFF;
+  border-radius: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  &.show{
+    transition: 0.2s;
+    opacity: 1;
+  }
+  span{
+    font-weight: bold;
+    font-size: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &:hover,.act{
+    background-color: #000;
+    span{
+      color: #FFF;
+    }
+  }
+}
+
 .mapleActivity{
   position: fixed;
   z-index: 999;
@@ -456,7 +488,7 @@ footer{
       // border: 1px solid #F00;
       width: 100%;
       max-width: 600px;
-      max-height: 600px;
+      // max-height: 600px;
       margin: auto;
       margin-top: 20px;
       // opacity: 0;
@@ -468,24 +500,59 @@ footer{
       .refHref{
         width: 100%;
         font-size: 16px;
+        .author{
+          display: inline;
+          font-size: 18px;
+          font-weight: bold;
+        }
         span{
           display: block;
           text-align: center;
 
         }
         a{
-          
+          display: inline-block;
+          padding:  0 10px;
         }
       }         
       .ProbabilityTable{
         display: flex;
         justify-content: center;
-
         ul{
           width: 48%;
           margin: auto;
           margin-top: 10px;
           max-width: 500px;
+          .remindTxt{
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 7px;
+            .mark{
+              display: inline-block;
+              padding: 0px 5px;
+            }
+            .framesort{
+              background-color: #ffffffb2;
+              border-radius: 5px;
+              padding: 0 20px;
+              width: 130%;
+              position: relative;
+              left: -15%;
+              margin: 5px;
+              span{
+                // border: 1px solid #F00;
+                display: block;
+                // text-align: center;
+                position: relative;
+                left: -13%;
+                width: 126%;
+                padding: 1%;
+              }
+            }
+          }
+          .itemTitle{
+            background-color: #f1bf8a;
+          }
           li{
             border: 1px solid #000;
             display: flex;
@@ -514,6 +581,7 @@ footer{
       }
       &.fashion{
         .fashionTitle{
+          background-color: #f1bf8a;
           font-size: 22px;
           text-align: center;
           border: 1px solid;
@@ -527,6 +595,19 @@ footer{
         }
       }
       &.dressing{
+        .dressingTitle{
+          background-color: #f1bf8a;
+          font-size: 22px;
+          text-align: center;
+          border: 1px solid;          
+        }
+        ul{
+          li{
+            span{
+              width: 50%;
+            }
+          }
+        }        
 
       }
       &.pet{
@@ -615,7 +696,22 @@ footer{
               }
             }
           }
-        }                 
+        }
+        &.dressing{
+          .dressingTitle{
+            font-size: 22px;
+            text-align: center;
+            border: 1px solid;          
+          }
+          ul{
+            li{
+              span{
+                width: 50%;
+              }
+            }
+          }          
+  
+        }                
       }
 
     }
@@ -658,10 +754,15 @@ footer{
           line-height: 20px;
           padding: 18px;
           a{
+              display: inline-block;
               color: #FFF;
               text-decoration: none;
+              border-bottom: 1px solid #FFF;
+              
+
               &:hover{
                   color: rgb(255, 25, 133);
+                  border-bottom: 1px solid rgb(255, 25, 133);
               }
           }
       }

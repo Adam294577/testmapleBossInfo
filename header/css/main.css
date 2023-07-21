@@ -261,6 +261,38 @@ footer #copyright {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.ActivityscrollTop {
+  cursor: pointer;
+  position: fixed;
+  right: 12vw;
+  top: 91vh;
+  width: 40px;
+  height: 40px;
+  z-index: 1200;
+  background-color: #FFF;
+  border-radius: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.ActivityscrollTop.show {
+  transition: 0.2s;
+  opacity: 1;
+}
+.ActivityscrollTop span {
+  font-weight: bold;
+  font-size: 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ActivityscrollTop:hover, .ActivityscrollTop .act {
+  background-color: #000;
+}
+.ActivityscrollTop:hover span, .ActivityscrollTop .act span {
+  color: #FFF;
+}
+
 .mapleActivity {
   position: fixed;
   z-index: 999;
@@ -400,7 +432,6 @@ footer #copyright {
   display: block;
   width: 100%;
   max-width: 600px;
-  max-height: 600px;
   margin: auto;
   margin-top: 20px;
 }
@@ -411,9 +442,18 @@ footer #copyright {
   width: 100%;
   font-size: 16px;
 }
+.latestContainer .content .ProbabilityBox .refHref .author {
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+}
 .latestContainer .content .ProbabilityBox .refHref span {
   display: block;
   text-align: center;
+}
+.latestContainer .content .ProbabilityBox .refHref a {
+  display: inline-block;
+  padding: 0 10px;
 }
 .latestContainer .content .ProbabilityBox .ProbabilityTable {
   display: flex;
@@ -424,6 +464,34 @@ footer #copyright {
   margin: auto;
   margin-top: 10px;
   max-width: 500px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul .remindTxt {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul .remindTxt .mark {
+  display: inline-block;
+  padding: 0px 5px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul .remindTxt .framesort {
+  background-color: rgba(255, 255, 255, 0.6980392157);
+  border-radius: 5px;
+  padding: 0 20px;
+  width: 130%;
+  position: relative;
+  left: -15%;
+  margin: 5px;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul .remindTxt .framesort span {
+  display: block;
+  position: relative;
+  left: -13%;
+  width: 126%;
+  padding: 1%;
+}
+.latestContainer .content .ProbabilityBox .ProbabilityTable ul .itemTitle {
+  background-color: #f1bf8a;
 }
 .latestContainer .content .ProbabilityBox .ProbabilityTable ul li {
   border: 1px solid #000;
@@ -439,11 +507,21 @@ footer #copyright {
   width: 33%;
 }
 .latestContainer .content .ProbabilityBox.fashion .fashionTitle {
+  background-color: #f1bf8a;
   font-size: 22px;
   text-align: center;
   border: 1px solid;
 }
 .latestContainer .content .ProbabilityBox.fashion ul li span {
+  width: 50%;
+}
+.latestContainer .content .ProbabilityBox.dressing .dressingTitle {
+  background-color: #f1bf8a;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid;
+}
+.latestContainer .content .ProbabilityBox.dressing ul li span {
   width: 50%;
 }
 @media (max-width: 768px) {
@@ -487,6 +565,14 @@ footer #copyright {
   .latestContainer .content .ProbabilityBox.fashion ul li span {
     width: 50%;
   }
+  .latestContainer .content .ProbabilityBox.dressing .dressingTitle {
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid;
+  }
+  .latestContainer .content .ProbabilityBox.dressing ul li span {
+    width: 50%;
+  }
 }
 .aboutContainer {
   width: 90vw;
@@ -523,11 +609,14 @@ footer #copyright {
   padding: 18px;
 }
 .aboutContainer .content p a {
+  display: inline-block;
   color: #FFF;
   text-decoration: none;
+  border-bottom: 1px solid #FFF;
 }
 .aboutContainer .content p a:hover {
   color: rgb(255, 25, 133);
+  border-bottom: 1px solid rgb(255, 25, 133);
 }
 
 @media (max-width: 576px) {
