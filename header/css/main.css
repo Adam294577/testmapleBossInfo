@@ -10,25 +10,18 @@ body {
   background-color: #222;
   height: 100%;
 }
+body ::-webkit-scrollbar {
+  width: 0;
+}
 
 .introBg img {
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translateX(-55%);
-  max-height: 30vh;
+  transform: translateX(-45%);
+  max-height: 20vh;
 }
 
-@media (max-width: 768px) {
-  .introBg {
-    transform: translateX(-50%);
-  }
-}
-@media (max-width: 576px) {
-  .introBg {
-    display: none;
-  }
-}
 header {
   position: fixed;
   top: 0;
@@ -46,6 +39,9 @@ header .headerList {
   display: flex;
   justify-content: end;
   align-items: center;
+}
+header .headerList p {
+  color: #FFF;
 }
 header .headerList li {
   width: 120px;
@@ -665,5 +661,214 @@ footer #copyright {
   }
   .aboutContainer .content p a:hover {
     color: rgb(255, 25, 133);
+  }
+}
+.homeContainer {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.homeContainer .topicTag {
+  display: none;
+}
+.homeContainer .topicList .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.homeContainer .topicList .row .cloudItem {
+  width: 418px;
+  height: 318px;
+  position: relative;
+}
+.homeContainer .topicList .row .cloudItem::before {
+  content: url(../img/cloudBg_L.png);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.homeContainer .topicList .row .cloudItem:nth-child(odd) {
+  position: relative;
+  left: -25px;
+}
+.homeContainer .topicList .row .cloudItem:nth-child(even) {
+  position: relative;
+  left: 25px;
+}
+.homeContainer .topicList .row .cloudItem:nth-child(even)::before {
+  content: url(../img/cloudBg_R.png);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.homeContainer .topicList .row .cloudItem h1 {
+  position: relative;
+  top: 80px;
+  z-index: 2;
+  max-width: 200px;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #ffade4;
+  color: #000;
+  padding: 0.3rem;
+  margin: 10px auto 0;
+}
+.homeContainer .topicList .row .cloudItem img {
+  margin-top: 85px;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #F00;
+}
+.homeContainer .topicList .row .cloudItem .link {
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+.homeContainer .topicList .row .cloudItem .link span {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #333;
+  display: inline-block;
+  max-width: 120px;
+  width: 90px;
+  margin-left: 10px;
+  padding: 3px 0;
+}
+.homeContainer .topicList .row .cloudItem .link span:hover {
+  background-color: #000;
+  color: #FFF;
+}
+.homeContainer .topicList .row .cloudItem .noData {
+  width: 100%;
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+}
+.homeContainer .workIntroBox {
+  position: fixed;
+  z-index: 10;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 70vh;
+  background-color: #DDD;
+}
+.homeContainer .workIntroBox .IntroBoxLink {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.homeContainer .workIntroBox .IntroBoxLink a {
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  padding: 7px 0;
+  border-radius: 3px;
+  margin-left: 10px;
+  background-color: #FFF;
+}
+.homeContainer .workIntroBox .IntroBoxLink a:hover {
+  background-color: #000;
+  color: #FFF;
+}
+.homeContainer .workIntroBox h1 {
+  margin-top: 5px;
+  text-align: center;
+}
+.homeContainer .workIntroBox p {
+  margin: 20px 10px;
+  font-weight: bold;
+}
+.homeContainer .workIntroBox p span {
+  display: block;
+  margin-top: 10px;
+}
+.homeContainer .workIntroBox .addTxt {
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  .homeContainer .topicList .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .homeContainer .topicList .row .cloudItem {
+    margin-left: 0px;
+    margin-top: 10px;
+    position: relative;
+  }
+  .homeContainer .topicList .row .cloudItem::before {
+    content: url(../img/cloudBg_L.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .homeContainer .topicList .row .cloudItem img {
+    margin-top: 85px;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #F00;
+  }
+}
+@media (max-width: 576px) {
+  .homeContainer .topicList .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .homeContainer .topicList .row .cloudItem {
+    margin-left: 0;
+    transform: scale(0.8);
+    position: absolute;
+    left: 0;
+  }
+  .homeContainer .topicList .row .cloudItem::before {
+    display: inline-block;
+    content: url(../img/cloudBg_L.png);
+  }
+  .homeContainer .topicList .row .cloudItem img {
+    margin-top: 85px;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #F00;
+  }
+  .homeContainer .topicList .row .cloudItem .link span {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #333;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 0;
+  }
+  .homeContainer .topicList .row .cloudItem .link span:hover {
+    background-color: #000;
+    color: #FFF;
+  }
+  .homeContainer .topicList .row .cloudItem .noData {
+    transform: translateX(-3%);
   }
 }/*# sourceMappingURL=main.css.map */
