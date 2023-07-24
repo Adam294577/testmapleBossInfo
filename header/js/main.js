@@ -74,9 +74,10 @@ window.onload = () =>{
                         `4.面對各種聊天戒指的樣式，在css切圖上也花了不少時間去了解T_T`,
                         ],
                     addTxt: `若聊天模擬器上沒有的，歡迎加入<a href="#">Discord</a>分享自己常用戒指有空之餘會再更新上去`,
+                    refHref:``,
                     },
                     {
-                    key: "test" , 
+                    key: "demo" , 
                     aim :"5207", 
                     learn:[
                         `1.777`,
@@ -84,6 +85,10 @@ window.onload = () =>{
                         `3.94207`,
                         ],
                     addTxt: "",
+                    refHref:[
+                        `1.chat GPT:<a href="https://chat.openai.com/">https://chat.openai.com/</a><span>(感謝<a href="#">A作者</a>分享)</span>`,
+                        `2.chat GPT2:<a href="https://chat.openai.com/">https://chat.openai.com/</a><span>(感謝<a href="#">B作者</a>分享)</span>`,
+                    ]
                     },
 
                 ]})
@@ -102,6 +107,7 @@ window.onload = () =>{
                         workIntroBoxCont.value['aim'] = item.aim
                         workIntroBoxCont.value['learn'] = item.learn
                         workIntroBoxCont.value['addTxt'] = item.addTxt
+                        workIntroBoxCont.value['refHref'] = item.refHref
                     }
                 })
                 console.log(workIntroBoxCont.value);

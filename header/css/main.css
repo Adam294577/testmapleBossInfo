@@ -801,8 +801,11 @@ footer #copyright {
   display: block;
   margin-top: 10px;
 }
-.homeContainer .workIntroBox .addTxt {
+.homeContainer .workIntroBox .addTxt, .homeContainer .workIntroBox .refHref {
   margin-top: 30px;
+}
+.homeContainer .workIntroBox .refHref a {
+  padding: 0 2px;
 }
 
 @media (max-width: 992px) {

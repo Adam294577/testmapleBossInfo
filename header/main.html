@@ -340,10 +340,10 @@
                     </li>
                     <li class="cloudItem">
                         <!-- <span class="noData">Coming Soon</span> -->
-                        <h1>test</h1>
+                        <h1>demo</h1>
                         <img src="" alt="">
                         <div class="link">
-                            <span data-introTxt="test" @click="handworkIntroBox">Intro</span>
+                            <span data-introTxt="demo" @click="handworkIntroBox">Intro</span>
                             <span>See</span>
                         </div>                        
                     </li>
@@ -369,6 +369,10 @@
                     <p class="addTxt" v-if="workIntroBoxCont.addTxt !== ''">
                         備註: 
                         <span v-html="workIntroBoxCont.addTxt"></span>
+                    </p>
+                    <p class="refHref" v-if="workIntroBoxCont.refHref !== ''">
+                        其他製作參考連結: 
+                        <span v-for="list in workIntroBoxCont.refHref" :key="list" v-html="list"></span>
                     </p>
                     <div class="IntroBoxLink">
                         <a @click="handworkIntroBox">Close</a>
@@ -401,7 +405,7 @@
         <footer v-show="!Activitybool">
             <span id="updatetime">
                 <h1>本頁更新日期:</h1>
-                <span>2023.07.21</span>
+                <span>2023.07.24</span>
             </span>
             <span id="copyright">© 2023  池雲寅 - 轉載文章時請附上作者(池雲寅)及原文連結(Url)。</span>
         </footer>
