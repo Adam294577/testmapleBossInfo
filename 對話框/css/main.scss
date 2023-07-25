@@ -1,0 +1,349 @@
+
+#chat_box{
+  // display: none;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100px;
+  position: relative;
+  user-select: none;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+
+
+
+  .chat_outline{
+      // display: none;
+      position: relative;
+      .txt_container{
+          position: relative;
+          /* left: -3px; */
+          overflow: hidden;
+          .content{
+              text-align: center;
+              display: inline-block;
+              word-wrap: break-word;
+              word-break: break-all;
+              font-size: 11px;
+              background-color: #EEE;
+              width: 80%;
+              margin-left: 3px;
+              padding-bottom: 2px;
+              position: relative;
+              padding-left: 3px;
+              padding-right: 7px;
+              .txt{
+                  display: inline-block;
+                  text-align: center;
+              }  
+              #game_id{
+                /* border: 1px solid #000; */
+                display: block;
+                position: relative;
+              }
+              #game_id::after{
+                  content: ":";
+                  position: absolute;
+                  right: 5px;
+              }                     
+          }
+      }  
+      .txt_container::before{
+          position: absolute;
+          left: 0px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 300px;
+          background: url(../img/chat_borer/left.png) repeat-y;
+          background-position: 0 0;
+
+      }      
+      .txt_container::after{
+          position: absolute;
+          right: -2px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 300px;
+          background: url(../img/chat_borer/right.png) repeat-y;
+          background-position: -2px 0;
+
+      }    
+      }
+  .chat_outline::before{
+      content: '';
+      display: block;
+      height: 6px;
+      background: url(../img/chat_borer/up.png) no-repeat;
+  }    
+  .chat_outline::after{
+      content: '';
+      display: block;
+      height: 14px;
+      background: url(../img/chat_borer/down.png) no-repeat;
+      
+  }   
+
+
+      
+
+}   
+
+#chat_box_catmode{
+  // display: none;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 153px;
+  position: relative;
+  user-select: none;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+
+
+
+  .chat_outline{
+      // display: none;
+      position: relative;
+      .txt_container{
+          position: relative;
+          /* left: -3px; */
+          overflow: hidden;
+          // background-color: #5f96be;
+          .content{
+              
+              text-align: center;
+              display: inline-block;
+              // word-wrap: break-word;
+              word-break: break-all;
+              font-size: 11px;
+              background-color: #5f96be;
+              // background-color: #FFF;
+              width: 60%;
+              min-height: 30px;
+              margin-left: 15px;
+              position: relative;
+              padding: 4px 20px 10px 20px;
+              .txt{
+                  text-align: center;
+              }  
+              #game_id2{
+                position: relative;
+                margin-right: 15px;
+              }
+              #game_id2::after{
+                  content: ":";
+                  position: absolute;
+                  right: -8px;
+                  top: -1px;
+                  
+              }    
+              .txt,#game_id2,#game_id2::after{
+                color: #884400;
+                font-weight: 500;
+                text-shadow: 0 0 0 #884400,0 0 0 #884400,0 0 0 #884400;
+                
+              }              
+          }
+      }  
+      .txt_container::before{
+          position: absolute;
+          left: 7px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 300px;
+          background: url(../img/catmode/left_border.png) repeat-y;
+          background-position: 0 0;
+
+      }      
+      .txt_container::after{
+          position: absolute;
+          right: -6px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 300px;
+          background: url(../img/catmode/right_border.png) repeat-y;
+          background-position: -2px 0;
+
+      }    
+      }
+  .chat_outline::before{
+      content: '';
+      display: block;
+      height: 31px;
+      background: url(../img/catmode/up.png) no-repeat;
+  }    
+  .chat_outline::after{
+      content: '';
+      display: block;
+      height: 22px;
+      position: relative;
+      left: 6px;
+      top: -7px;
+      background: url(../img/catmode/down.png) no-repeat;
+      
+  }   
+
+
+      
+
+}  
+
+
+
+.ChatSyscontainer{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-left: 7px;
+  border: 1px solid #F00;
+  .ChatBoxContainer{
+    // display: none;
+    // border: 1px solid #000;
+    margin-top: 100px;
+    // margin-left: 30px;
+    border-radius: 7px 7px 0  0 ;
+    position: absolute;
+    bottom: 50px;
+    // left: 10px;
+    width: 410px;
+    height: 100px;
+    // padding-top: 200px;
+    background: #0000007b;
+    // opacity: 0.5;
+    // top: -145px;
+    .outline{
+      
+      border-radius: 1px;
+      
+      height: 4px;
+      background-color: #344146a1;
+      .contentBox{
+        .DragIcon{
+          #DragIcon{
+            // display: none;
+            position: absolute;
+            left: 3px;
+            top: 4px;
+          }
+        }
+        .ZoomOutIcon{
+          #ZoomOutBtn{
+            position: absolute;
+            right: 3px;
+            top: 4px;
+          }
+        }
+        .UserTxt{
+          opacity: 1;
+          padding-top: 20px;
+          padding-left: 7px;
+          color: #FFF;
+          font-weight: lighter;
+          font-size: 17px;
+          letter-spacing: 0.1px;
+  
+        }
+  
+      }
+    }
+  }
+  
+  
+  .ChatBarContainer{
+    position: absolute;
+    bottom: 20px;
+    user-select: none;
+    z-index: 3;
+    margin-top: 0px;
+    // margin-left: 7px;
+    width: 408px;
+    // height: 70px;
+    border: 1px solid #000;
+    .outline{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(49,52,53,1) 0%, rgba(69,71,72,1) 100%);
+        .ChatClass{
+            position: relative;
+            top: 2px;
+            margin-left: 3px;
+            .class_ch_list{
+                // display: none;
+                list-style-type: none;
+                user-select: none;
+                position: absolute;
+                top: -83px;
+                width: 75px;
+                height: 83px;
+                background: #555;
+                .item{
+                    font-weight: 500;
+                    margin: 0;
+                    padding: 0;
+                    padding-left: 3px;
+                    font-size: 10px;
+                    color: #FFF;
+                    span{
+                        display: inline-block;
+                        margin-left: 1px;
+                        color: #ffff22;
+                    }
+                }
+                .item:hover{
+                    font-weight: bold;
+                    background: #ffcc00;
+                    color: #555;
+                    span{
+                        color: #ff2222;
+                    }
+                }
+                
+            }
+  
+        }
+        #userinput{
+            color: #FFF;
+            width: 217px;
+            margin-left: 5px;
+            padding: 1px;
+            padding-left: 5px;
+            border-radius: 3px;
+            background: #2e2f32;
+            border: none;
+            border-bottom: 1px solid #222;
+            box-shadow: 0px 2px 2px #4a4b50,inset 1px -1px 7px #1e1e20,3px 1px 3px #363638 ;
+            font-size: 10px;
+            
+        }
+        #userinput:focus{
+            outline: none;
+        }
+        .ChatImg{
+            width: 125px;
+            display: flex;
+            // border: 1px solid #F00;
+            justify-content: space-around;
+            margin-left: 3px;
+            img{
+  
+  
+            }
+        }
+    }
+  }
+  #noinput{
+    opacity: 0;
+  }
+
+}
