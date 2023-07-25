@@ -7,6 +7,213 @@
 body{
     background-color: #222;
 }
-h1{
-    color: #FFF;
+
+
+// starContainer
+.starContainer{
+    width: 1200px;
+    // height: 300px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    h1{
+        color: #FFF;
+    }    
+    label{
+        display: block;
+        margin: 1rem 0;
+        position: relative;
+        span{
+            color: #FFF;   
+            padding: 3px 7px;         
+        }
+        .equipSelected,.strategySelected{
+            cursor: pointer;
+            display: inline-block;
+            color: #FF0;
+            border: 1px solid #CCC;
+            width: 150px;
+            padding: 7px;
+            padding-left: 20px;
+            border-radius: 3px;
+        }
+        .strategySelected{
+            width: 300px;
+        }
+        .equipList,.strategyList{
+            // border: 1px solid #F00;
+            position: absolute;
+            top: 75%;
+            left: 125px;
+            width: 300px;
+            background-color: #999;
+            margin-top: 10px;
+            z-index: 2;
+            li{
+                margin-left: 15px;
+                padding: 15px 0;
+                cursor: pointer;
+                &.act{
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                
+            }
+        }
+        .strategyList{
+            position: absolute;
+            top: 27%;
+            left: 60px;
+        }
+        .hint{
+            color:  #FF0;
+            &.equipcostHint{
+                // display: block;
+            }
+        }
+        .equipcostCh{
+            display: inline-block;
+            padding: 0 7px;
+        }
+        .pointORcoinTable{
+            width: 220px;
+            padding: 10px;
+            position: absolute;
+            top: -180px;
+            left: 450px;
+            z-index: 2;
+            background-color: #888;
+            h1{
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+            ul{
+                position: relative;
+                li{
+                    width: 100%;
+                    position: relative;
+                    left: -10px;
+                    color: #FFF;
+                    // border: 1px solid #F00;
+                    padding-top: 10px;
+                    span{
+                        position: relative;
+                        left: 40px;
+                        // text-align: center;
+                    }
+                    &.title{
+                        left: -18px;
+                        span{
+                            left: 20px;
+                            // text-align: center;
+                        }                        
+                    }
+
+                }
+
+            }
+        }
+        .pointORcoinHref{
+            color: #FF0;
+        }
+        .startStar{
+            position: relative;
+        }
+
+
+    }
+    .aimBox{
+        // border: 1px solid;
+        span{
+            display: inline-block;
+        }
+        .option{
+            display: inline;
+        }
+    }
+    .star20Box,.star22Box{
+        input{
+            padding: 5px;
+            width: 50px;
+            margin-left: 5px;
+            &:focus{
+                outline: none;
+            }
+            &.equipcost,&.starcost{
+                width: 150px;
+            }
+        }        
+
+
+    }
+    .commputeBtn{
+        cursor: pointer;
+        color: #FFF;
+        width: 100px;
+        padding: 4px;
+        text-align: center;
+        // border: 1px solid;
+        border-radius: 5px;
+        background-color: #222;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .resultBox{
+        margin-top: 100px;
+        // border: 1px solid #F00;
+        h1{
+            margin: 10px 0;
+        }
+        .and{
+            padding: 0 7px;
+        }
+        p{
+            color: #FFF;
+        }
+        .totalcost{
+            padding-left: 20px;
+        }
+        .ans{
+            color: #FF0;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+    }
+
+}
+@media (max-width: 992px) { 
+.starContainer{
+    width: 98%;
+    h1{
+        text-align: center;
+    }    
+    label{
+        .hint{
+            display: block;
+            margin-top: 5px;
+        }
+
+    }
+}    
+}
+
+
+// none
+@media (max-width: 992px) { 
+
+}
+@media (max-width: 768px) { 
+
+}
+@media (max-width: 576px) { 
+  .starContainer{
+    .aimBox{
+        .option{
+            display: block;
+        }
+    }
+  }
 }

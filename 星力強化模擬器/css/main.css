@@ -9,6 +9,172 @@ body {
   background-color: #222;
 }
 
-h1 {
+.starContainer {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #444;
+  border-radius: 10px;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+.starContainer h1 {
   color: #FFF;
+}
+.starContainer label {
+  display: block;
+  margin: 1rem 0;
+  position: relative;
+}
+.starContainer label span {
+  color: #FFF;
+  padding: 3px 7px;
+}
+.starContainer label .equipSelected, .starContainer label .strategySelected {
+  cursor: pointer;
+  display: inline-block;
+  color: #FF0;
+  border: 1px solid #CCC;
+  width: 150px;
+  padding: 7px;
+  padding-left: 20px;
+  border-radius: 3px;
+}
+.starContainer label .strategySelected {
+  width: 300px;
+}
+.starContainer label .equipList, .starContainer label .strategyList {
+  position: absolute;
+  top: 75%;
+  left: 125px;
+  width: 300px;
+  background-color: #999;
+  margin-top: 10px;
+  z-index: 2;
+}
+.starContainer label .equipList li, .starContainer label .strategyList li {
+  margin-left: 15px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.starContainer label .equipList li.act, .starContainer label .strategyList li.act {
+  font-weight: bold;
+  font-size: 17px;
+}
+.starContainer label .strategyList {
+  position: absolute;
+  top: 27%;
+  left: 60px;
+}
+.starContainer label .hint {
+  color: #FF0;
+}
+.starContainer label .equipcostCh {
+  display: inline-block;
+  padding: 0 7px;
+}
+.starContainer label .pointORcoinTable {
+  width: 220px;
+  padding: 10px;
+  position: absolute;
+  top: -180px;
+  left: 450px;
+  z-index: 2;
+  background-color: #888;
+}
+.starContainer label .pointORcoinTable h1 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.starContainer label .pointORcoinTable ul {
+  position: relative;
+}
+.starContainer label .pointORcoinTable ul li {
+  width: 100%;
+  position: relative;
+  left: -10px;
+  color: #FFF;
+  padding-top: 10px;
+}
+.starContainer label .pointORcoinTable ul li span {
+  position: relative;
+  left: 40px;
+}
+.starContainer label .pointORcoinTable ul li.title {
+  left: -18px;
+}
+.starContainer label .pointORcoinTable ul li.title span {
+  left: 20px;
+}
+.starContainer label .pointORcoinHref {
+  color: #FF0;
+}
+.starContainer label .startStar {
+  position: relative;
+}
+.starContainer .aimBox span {
+  display: inline-block;
+}
+.starContainer .aimBox .option {
+  display: inline;
+}
+.starContainer .star20Box input, .starContainer .star22Box input {
+  padding: 5px;
+  width: 50px;
+  margin-left: 5px;
+}
+.starContainer .star20Box input:focus, .starContainer .star22Box input:focus {
+  outline: none;
+}
+.starContainer .star20Box input.equipcost, .starContainer .star20Box input.starcost, .starContainer .star22Box input.equipcost, .starContainer .star22Box input.starcost {
+  width: 150px;
+}
+.starContainer .commputeBtn {
+  cursor: pointer;
+  color: #FFF;
+  width: 100px;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #222;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.starContainer .resultBox {
+  margin-top: 100px;
+}
+.starContainer .resultBox h1 {
+  margin: 10px 0;
+}
+.starContainer .resultBox .and {
+  padding: 0 7px;
+}
+.starContainer .resultBox p {
+  color: #FFF;
+}
+.starContainer .resultBox .totalcost {
+  padding-left: 20px;
+}
+.starContainer .resultBox .ans {
+  color: #FF0;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+@media (max-width: 992px) {
+  .starContainer {
+    width: 98%;
+  }
+  .starContainer h1 {
+    text-align: center;
+  }
+  .starContainer label .hint {
+    display: block;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .starContainer .aimBox .option {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
