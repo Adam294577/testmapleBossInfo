@@ -6,83 +6,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 <link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/ring.css">
 
-  <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .demo{
-        position: absolute;
-        top: 20px;
-        left: 150px;
-    }
-    .body,html{
-        background-color: #CCC;
-    }
-    .container{
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 1px solid #F00;
-        width: 410px;
-        position: relative;
-        z-index: 1;
-    }
-    .game_screen{
-        width: 410px;
-        border: 1px solid #111;
-        height: 200px;
-    }
-</style>
 </head>
 <body>
     <div id="app">
-
-        <div id="chat_box">
-        <div class="chat_outline">
-            <div class="txt_container">
-                <div class="content">
-                    <span id="game_id">{{game_id}}</span> 
-                    <span class="txt">{{inputmsg}}</span>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div id="chat_box_catmode">
-        <div class="chat_outline">
-            <div class="txt_container">
-                <div class="content">
-                    <span id="game_id2">{{game_id}}</span> 
-                    <span class="txt">{{inputmsg}}</span>
-                </div>
-            </div>
-        </div>
+      <aside :class="['navContainer', {'open': ringListbool}]">
+        <input 
+        @keyup="ringsearchFn"
+        id="navSearch" 
+        type="text" 
+        placeholder="收尋要找的聊天戒指">
+        <div 
+        class="navCross" 
+        data-ring="cancel"
+        @click="handRingList">
+          <div class="bar"></div>
+          <div class="bar bar2"></div>
         </div>
 
-        <input v-model = "game_id" id="game_id_input" type="text" placeholder="角色名稱">
-        <input v-model = "ChatContent" id="ChatContent" type="text" placeholder="對話框內容">
-        <div @click = "clearfn" class="ChatSyscontainer">
-            <div class="ChatBoxContainer">
-              <div class="outline">
-                  <div class="contentBox">
-                      <div class="DragIcon">
-                          <img id="DragIcon" src="./img/drag_bar.jpg" alt="darg">
+        <nav class="ringList" v-show="ringListbool">
+          <li 
+          @click="handRingList"
+          v-for="list in ringListshow"
+          :key="list.key"
+          :class="['item',{'act':list.act} ]" 
+          :data-ring="list.key">
+              <img :src="list.url" :alt="">
+              <span>{{list.key}}</span>
+          </li>
+        </nav>
+      </aside>
+        
+        <div 
+        class="ChatSyscontainer"
+        @click = "clearfn" 
+        :style="[{'background-image': MapRender}]"
+        >
+            <div class="ringContainer person"
+            :style="{'background-image': personSelected[0].toMap}"
+            >
+                <div 
+                v-show="RingChatbool" 
+                :class="['chatring',ringSelectedShow[0].mode]" 
+                :style="[{transform: ChatTxtHeight}]"
+                > 
+                    <div class="chat_outline">
+                        <div class="txt_container">
+                            <div class="Txtcontent">
+                                <span class="idBox">{{game_id}}</span> 
+                                <span ref="msgRef" class="txt">{{inputmsg}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ChatContainer" class="ChatContainer" style="--chatH:4;">
+              <div class="baroutline">
+                    <div class="msgContent">
+                        <div class="dargbar">
+                            <img class="dragImg" src="./img/drag_bar.jpg" alt="bar">
+                            <img class="zoomoutImg" src="./img/zoom_out_icon.png" alt="縮小">
+                        </div>
+                        <div class="txtContent" id="txtscroll">
+                            <span v-for= "list in msgStorage"
+                            :key= "list.msg"
+                            :class="[ 'msg' , list.class ]"
+                            v-html="list.render"> 
+                        </span>
                       </div>
-                      <div class="ZoomOutIcon">
-                          <img id="ZoomOutBtn" src="./img/zoom_out_icon.png" alt="zoomout">
-                      </div>
-                      <div class="UserTxt">
-                          <!-- <span>阿貴破壞者 : 5207 </span> -->
-                      </div>
-                  </div>
-              </div>
-          
-          
-              
-             </div>
-             
-             <div class="ChatBarContainer">
-              <div class="outline">
+                    </div>
+                    
                   <div class="ChatClass">
                       <img 
                       @mouseenter = "btnMousein" 
@@ -101,7 +96,7 @@
                          <li @click = "ClickChangeSrc" class="item">對所有人<span>(/e)</span></li> 
                       </ul>
                   </div>
-                  <input @keyup= "txtSummit" id="userinput" type="text">
+                  <input @keyup= "txtSummit" id="userinput" type="text" maxlength="20">
                   <div class="ChatImg">
                    <img src="./img/bar_icon_01.png" alt="01" class="Imgitem">
                    <img src="./img/bar_icon_02.png" alt="02" class="Imgitem">
@@ -112,16 +107,156 @@
           
                   </div>
               </div>
-             </div>
-        <input id="noinput" type="hidden" >
+            </div>
+        <input id="noinput">
         </div>
-        <!-- <h1>test : {{chatChannelSrc}}</h1> -->
+
+        <div class="CustomContainer">
+            <div class="question q1">
+                <h1>1.選擇聊天戒指</h1>                
+                <li 
+                @click="handRingList"
+                class="itemSelected" 
+                data-ring="selected"
+                >
+                    <img 
+                    :src="ringSelectedShow[0].url" 
+                    :alt="" >
+                    <span :class="{'noneImg' : ringSelectedShow[0].key === '無'}">{{ringSelectedShow[0].key}}</span>
+                </li>
+
+            </div>
+            <div class="question q2">
+              <h1>2.選擇喜歡的角色圖</h1>
+              <div 
+              @click="handpersonData" 
+              :data-alt="personSelected[0].idx"
+              class="personSelected">
+                <img 
+                :data-alt="personSelected[0].idx"
+                :src="personSelected[0].url" 
+                :alt="personSelected[0].idx">
+              </div>
+            </div>
+            <div class="question q3">
+                <h1>3.輸入ID</h1>
+                <input @keyup="checkInput"
+                 v-model = "game_id" 
+                 id="game_id_input" 
+                 type="text" placeholder="輸入角色名稱">
+                <div class="alertbox">
+                    <p v-show="gameIDAlert" class="IDalert">ID不符合遊戲規則!</p>
+                </div>
+            </div>
+            <div class="RWDremind">
+              <span>建議使用電腦版測試!</span>
+            </div>
+            <div class="personBox" v-show="personBoxBool">
+              <ul class="personList">
+                <li 
+                v-for="list in personBoxRender"
+                :key="list.url"
+                @click="handpersonData"  
+                :data-alt="list.idx"
+                :class="{act: list.act}">
+                <img :data-alt="list.idx"  :src="list.url" :alt="list.idx">
+              </li>
+              </ul>
+            </div>
+            <swiper-container 
+            class="mapSwiper" space-between="10" slides-per-view="3" 
+              watch-slides-progress="true"  
+              loop="true"
+              v-show="!personBoxBool"
+              >
+              <swiper-slide data-map="1" @click="HandImgDataMap">
+                <img src="./img/map/map01.png" />
+              </swiper-slide>
+              <swiper-slide data-map="2" @click="HandImgDataMap">
+                <img src="./img/map/map02.png" />
+              </swiper-slide>
+              <swiper-slide data-map="3" @click="HandImgDataMap">
+                <img src="./img/map/map03.png" />
+              </swiper-slide>
+              <swiper-slide data-map="4" @click="HandImgDataMap">
+                <img src="./img/map/map04.png" />
+              </swiper-slide>
+              <swiper-slide data-map="5" @click="HandImgDataMap">
+                <img src="./img/map/map05.png" />
+              </swiper-slide>
+              <swiper-slide data-map="6" @click="HandImgDataMap">
+                <img src="./img/map/map06.png" />
+              </swiper-slide>
+              <swiper-slide data-map="7" @click="HandImgDataMap">
+                <img src="./img/map/map07.png" />
+              </swiper-slide>
+              <swiper-slide data-map="8" @click="HandImgDataMap">
+                <img src="./img/map/map08.png" />
+              </swiper-slide>
+              <swiper-slide data-map="9" @click="HandImgDataMap">
+                <img src="./img/map/map09.png" />
+              </swiper-slide>
+              <swiper-slide data-map="10" @click="HandImgDataMap">
+                <img src="./img/map/map10.png" />
+              </swiper-slide>
+              <swiper-slide data-map="11" @click="HandImgDataMap">
+                <img src="./img/map/map11.png" />
+              </swiper-slide>
+            </swiper-container> 
+        </div>
 
 
+   
+        <swiper-container
+        style="--swiper-navigation-color: #FFF; --swiper-navigation-size: 27px"
+        id="mapNavigation"
+        v-show="!personBoxBool"
+        thumbs-swiper=".mapSwiper"  navigation="true" loop="true">
+        <swiper-slide class="Getslide" data-map="1">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="2">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="3">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="4">
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="5">
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="6">
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="7">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="8">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="9">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="10">
+          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        </swiper-slide>
+        <swiper-slide class="Getslide" data-map="11">
+          <img src="https://swiperjs.com/demos/images/nature-11.jpg" />
+        </swiper-slide>
+      </swiper-container>
+       
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+
+    </script>
 
 
 
