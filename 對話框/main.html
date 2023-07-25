@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div id="ChatContainer" class="ChatContainer" style="--chatH:4; --chatW:410;">
+            <div id="ChatContainer" class="ChatContainer" style="--chatH:4;">
               <div class="baroutline">
                     <div class="msgContent">
                         <div class="dargbar">
@@ -148,6 +148,9 @@
                     <p v-show="gameIDAlert" class="IDalert">ID不符合遊戲規則!</p>
                 </div>
             </div>
+            <div class="RWDremind">
+              <span>建議使用電腦版測試!</span>
+            </div>
             <div class="personBox" v-show="personBoxBool">
               <ul class="personList">
                 <li 
@@ -164,6 +167,7 @@
             class="mapSwiper" space-between="10" slides-per-view="3" 
               watch-slides-progress="true"  
               loop="true"
+              v-show="!personBoxBool"
               >
               <swiper-slide data-map="1" @click="HandImgDataMap">
                 <img src="./img/map/map01.png" />
@@ -206,6 +210,7 @@
         <swiper-container
         style="--swiper-navigation-color: #FFF; --swiper-navigation-size: 27px"
         id="mapNavigation"
+        v-show="!personBoxBool"
         thumbs-swiper=".mapSwiper"  navigation="true" loop="true">
         <swiper-slide class="Getslide" data-map="1">
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
