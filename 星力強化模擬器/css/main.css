@@ -25,6 +25,12 @@ body {
   margin: 1rem 0;
   position: relative;
 }
+.starContainer label.radio {
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  width: 80px;
+}
 .starContainer label span {
   color: #FFF;
   padding: 3px 7px;
@@ -40,7 +46,11 @@ body {
   border-radius: 3px;
 }
 .starContainer label .strategySelected {
-  width: 300px;
+  width: 320px;
+}
+.starContainer label .strategySelected.disabled {
+  background-color: #bcbcbc;
+  color: #555;
 }
 .starContainer label .equipList, .starContainer label .strategyList {
   position: absolute;
@@ -111,12 +121,6 @@ body {
 .starContainer label .startStar {
   position: relative;
 }
-.starContainer .aimBox span {
-  display: inline-block;
-}
-.starContainer .aimBox .option {
-  display: inline;
-}
 .starContainer .star20Box input, .starContainer .star22Box input {
   padding: 5px;
   width: 50px;
@@ -128,7 +132,27 @@ body {
 .starContainer .star20Box input.equipcost, .starContainer .star20Box input.starcost, .starContainer .star22Box input.equipcost, .starContainer .star22Box input.starcost {
   width: 150px;
 }
-.starContainer .commputeBtn {
+.starContainer .radioBox {
+  margin: 1rem 0;
+  position: relative;
+}
+.starContainer .radioBox .radioTitle {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #FFF;
+}
+.starContainer .radioBox.radio {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.starContainer .radioBox input {
+  width: 15px;
+}
+.starContainer .commputeBox {
+  position: relative;
+  height: 40px;
+}
+.starContainer .commputeBox .commputeBtn {
   cursor: pointer;
   color: #FFF;
   width: 100px;
@@ -139,6 +163,16 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.starContainer .commputeBox .activtyStarbox {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  position: absolute;
+  color: #FFF;
+}
+.starContainer .commputeBox .activtyStarbox span {
+  padding-left: 15px;
 }
 .starContainer .resultBox {
   margin-top: 100px;
@@ -172,9 +206,38 @@ body {
     display: block;
     margin-top: 5px;
   }
+  .starContainer label .equipList, .starContainer label .strategyList {
+    position: absolute;
+    top: 40%;
+    left: 50px;
+    width: 300px;
+    background-color: #999;
+    margin-top: 10px;
+    z-index: 2;
+  }
+  .starContainer label .equipList li, .starContainer label .strategyList li {
+    margin-left: 15px;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  .starContainer label .equipList li.act, .starContainer label .strategyList li.act {
+    font-weight: bold;
+    font-size: 17px;
+  }
 }
 @media (max-width: 576px) {
-  .starContainer .aimBox .option {
+  .starContainer .radioBox .radioTitle {
     display: block;
   }
+  .starContainer .radioBox.radio {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  .starContainer .radioBox input {
+    margin-top: 1rem;
+  }
+}
+.test {
+  color: #FFF;
+  margin-top: 5px;
 }/*# sourceMappingURL=main.css.map */

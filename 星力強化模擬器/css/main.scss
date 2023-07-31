@@ -20,11 +20,19 @@ body{
     padding-bottom: 3rem;
     h1{
         color: #FFF;
-    }    
+    }   
+  
     label{
         display: block;
         margin: 1rem 0;
         position: relative;
+        &.radio{
+            text-align: center;
+            display: inline-block;
+            // border: 1px solid #F00;
+            margin: 0;
+            width: 80px;
+        }
         span{
             color: #FFF;   
             padding: 3px 7px;         
@@ -40,7 +48,11 @@ body{
             border-radius: 3px;
         }
         .strategySelected{
-            width: 300px;
+            width: 320px;
+            &.disabled{
+                background-color: #bcbcbc;
+                color: #555;
+            }
         }
         .equipList,.strategyList{
             // border: 1px solid #F00;
@@ -58,6 +70,7 @@ body{
                 &.act{
                     font-weight: bold;
                     font-size: 17px;
+                    // color: rgb(255, 255, 255);
                 }
                 
             }
@@ -124,15 +137,7 @@ body{
 
 
     }
-    .aimBox{
-        // border: 1px solid;
-        span{
-            display: inline-block;
-        }
-        .option{
-            display: inline;
-        }
-    }
+
     .star20Box,.star22Box{
         input{
             padding: 5px;
@@ -148,18 +153,54 @@ body{
 
 
     }
-    .commputeBtn{
-        cursor: pointer;
-        color: #FFF;
-        width: 100px;
-        padding: 4px;
-        text-align: center;
-        // border: 1px solid;
-        border-radius: 5px;
-        background-color: #222;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+    .radioBox{
+        margin: 1rem 0;
+        position: relative;     
+        .radioTitle{
+            display: inline-block;
+            margin-left: 0.5rem;
+            color: #FFF;
+        }
+
+        &.radio{
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+        input{
+            width: 15px;
+        }
+
+
+    }       
+    .commputeBox{
+        position: relative;
+        // border: 1px solid #F00;
+        height: 40px;
+        .commputeBtn{
+            cursor: pointer;
+            color: #FFF;
+            width: 100px;
+            padding: 4px;
+            text-align: center;
+            // border: 1px solid;
+            border-radius: 5px;
+            background-color: #222;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .activtyStarbox{
+            span{
+                padding-left: 15px;
+            }
+            // border: 1px solid #FF0;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            position: absolute;
+            color: #FFF;
+        }        
+
     }
     .resultBox{
         margin-top: 100px;
@@ -183,6 +224,7 @@ body{
         }
     }
 
+
 }
 @media (max-width: 992px) { 
 .starContainer{
@@ -195,7 +237,26 @@ body{
             display: block;
             margin-top: 5px;
         }
-
+        .equipList,.strategyList{
+            // border: 1px solid #F00;
+            position: absolute;
+            top: 40%;
+            left: 50px;
+            width: 300px;
+            background-color: #999;
+            margin-top: 10px;
+            z-index: 2;
+            li{
+                margin-left: 15px;
+                padding: 15px 0;
+                cursor: pointer;
+                &.act{
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                
+            }
+        }
     }
 }    
 }
@@ -210,10 +271,24 @@ body{
 }
 @media (max-width: 576px) { 
   .starContainer{
-    .aimBox{
-        .option{
+    .radioBox{
+        .radioTitle{
             display: block;
         }
-    }
+        &.radio{
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+        input{
+            margin-top: 1rem;
+        }
+
+
+    }  
   }
+}
+
+.test{
+    color: #FFF;
+    margin-top: 5px;
 }

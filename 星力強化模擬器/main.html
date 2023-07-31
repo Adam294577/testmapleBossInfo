@@ -11,18 +11,30 @@
        <div class="starContainer">
        <h1 class="starTitle">星力強化成本模擬器</h1>
 
-           <label class="aimBox">
-            <span>1.目標:</span>
-            <div class="option">
-                <input type="radio" name="starAim" id="starAim"><span>20星</span>
-                <input type="radio" name="starAim" id="starAim"><span>22星</span>
-                <input type="radio" name="starAim" id="starAim"><span>23星</span>
-                <input type="radio" name="starAim" id="starAim"><span>24星</span>
-                <input type="radio" name="starAim" id="starAim"><span>25星</span>
-            </div>
-            </label>
 
-            <div class="star20Box" v-show="false">
+        <div class="aim radioBox">
+            <span class="radioTitle">1.目標:</span>
+            <label class="aimBox radio">
+                <input @click="handstarAim" data-aim="20" type="radio" name="starAim" id="starAim" :checked="starAim===20"><span>20星</span>
+            </label>
+            <label class="aimBox radio">
+                <input @click="handstarAim" data-aim="22" type="radio" name="starAim" id="starAim" :checked="starAim===22"><span>22星</span>
+            </label>
+            <label class="aimBox radio">
+                <input @click="handstarAim" data-aim="23" type="radio" name="starAim" id="starAim" :checked="starAim===23"><span>23星</span>
+            </label>
+            <label class="aimBox radio">
+                <input @click="handstarAim" data-aim="24" type="radio" name="starAim" id="starAim" :checked="starAim===24"><span>24星</span>
+            </label>
+            <label class="aimBox radio">
+                <input @click="handstarAim" data-aim="25" type="radio" name="starAim" id="starAim" :checked="starAim===25"><span>25星</span>
+            </label>
+        </div>
+
+      
+
+
+            <div class="star20Box" v-show="starAim === 20">
                 <label>
                     <span>2.台幣換楓幣:</span>
                     <span>1 台幣 =</span>
@@ -38,16 +50,13 @@
 
                 <label>
                     <span>4.選擇偷星項目:</span>
-                    <li class="equipSelected">請選擇</li>
-                    <div class="equipList" v-show="false">
-                        <li class="act">請選擇</li>
-                        <li>神秘武器類</li>
-                        <li>神秘防具類</li>
-                        <li>航海防具類</li>
-                        <li>波賽頓飾品</li>
-                        <li>強力魔性戒指</li>
-                        <li>頂培系列</li>
-                        <li>魔性戒指</li>
+                    <li  @click="handequipSelected" class="equipSelected">{{equipSelected}}</li>
+                    <div class="equipList" v-show="equipListBool">
+                        <li 
+                        :class="[{'act':list.act}]"
+                        @click="handequipSelected"
+                        v-for="list in equipList.data" 
+                        :key="list.key">{{list.key}}</li>
                     </div>
                     <span 
                     v-if="equipSelected === '請選擇'"
@@ -61,6 +70,7 @@
                     type="text" 
                     v-model="equipcost"
                     maxlength="9" 
+                    :disabled="equipSelected ==='必防爆的裝備'"
                     @input="InputNumOnly">
                     <span>楓幣</span>
                     <span v-if="equipcost !== '' ">(<span class="equipcostCh">{{equipcost}}</span>)</span>
@@ -69,18 +79,21 @@
                 </label>
 
                 <label>
+                    <!-- strategySelected.key = "皆使用50楓點去執行"; -->
                     <span>6.策略:</span>
-                    <li class="strategySelected">請選擇</li>
-                    <div class="strategyList" v-show="false">
-                        <li class="act">請選擇</li>
-                        <li>每炸裝，皆12星開始點楓幣、楓點</li>
-                        <li>每炸裝，皆先丟15星捲，隨後都丟9楓點</li>
-                        <li>每炸裝，皆先丟16星捲，隨後都丟9楓點</li>
-                        <li>每炸裝，皆先丟17星捲，隨後都丟9楓點</li>
-                        <li>每炸裝，皆先丟18星捲，隨後都丟9楓點</li>
-                        <li>每炸裝，皆先丟19星捲，隨後都丟9楓點</li>
+                    <li @click="handstrategy" 
+                    :class="['strategySelected', {'disabled': true}]"
+                    >{{strategySelected.key}}</li>
+                    <div class="strategyList" v-show="strategyListBool">
+                        <li
+                        @click="handstrategy"
+                        v-for="list in strategyRender"
+                        >
+                        {{list.key}}
+                    </li>
+
                     </div>
-                    <span v-if="strategySelected === '每炸裝，皆12星開始點楓幣、楓點'" 
+                    <span v-if="strategySelected.key === '每炸裝，皆12星開始點楓幣、楓點'" 
                     class="pointORcoinHref">(建議方式)</span>
                     <div class="pointORcoinTable" v-show="false">
                         <h1>以下方式去點選較划算</h1>
@@ -93,8 +106,9 @@
                         </ul>
                     </div>
                 </label>
+                
                 <label>
-                    <span>7.星捲成本估算:</span>
+                    <span>星捲成本估算:</span>
                     <input 
                     class="starcost" 
                     type="text" 
@@ -106,19 +120,32 @@
                     <span v-if="starcost === '' "
                     class="hint">可先查詢拍賣最低價格作為參考</span>
                 </label>
-                <label>
-                    <span>8.一開始的星力為</span>
-                    <input 
-                    class="starStart" 
-                    type="text" 
-                    v-model="starStart"
-                    maxlength="2" 
-                    @input="InputNumOnly">
-                    <span>星</span>
-                </label>
+
+                <div class="radioBox">
+                    <span class="radioTitle">7.一開始的星力為:</span>
+                    <label class="aimBox radio">
+                        <input data-begin="12" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 12"><span>12星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="15" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 15"><span>15星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="16" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 16"><span>16星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="17" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 17"><span>17星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="18" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 18"><span>18星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="19" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 19"><span>19星</span>
+                    </label>
+
+                </div>
             </div>            
 
-            <div class="star22Box" v-show="true">
+            <div class="star22Box" v-show="starAim === 22">
                 <label>
                     <span>2.台幣換楓幣:</span>
                     <span>1 台幣 =</span>
@@ -133,13 +160,20 @@
                 </label>
                 <label>
                     <span>4.策略:</span>
-                    <span>只推薦使用50楓點強化</span>
+                    <span>只使用50楓點強化</span>
                 </label>
-                <label>
-                    <span>5.一開始的星力為</span>
-                    <input type="radio" name="starAimto22" id="starAim"><span>20星</span>
-                    <input type="radio" name="starAimto22" id="starAim"><span>21星</span>
-                </label>                
+
+                <div class="radioBox">
+                    <span class="radioTitle">8.一開始的星力為:</span>
+                    <label class="aimBox radio">
+                        <input data-begin="20" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 20"><span>20星</span>
+                    </label>
+                    <label class="aimBox radio">
+                        <input data-begin="21" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 21"><span>21星</span>
+                    </label>
+
+                </div>
+                
                 <label>
                     <span>6.總共要製作幾件{{22}}星</span>
                     <input 
@@ -153,19 +187,78 @@
                     class="hint">(至少1件)</span>
                 </label>                
             </div>
+            <div class="star23upBox" v-show="false">
+                <label>
+                    <span>2.台幣換楓幣:</span>
+                    <span>1 台幣 =</span>
+                    <input v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
+                    <span>萬</span>
+                </label>
+                <label>
+                    <span>3.楓幣換楓點:</span>
+                    <span>1億 楓幣 =</span>
+                    <input v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
+                    <span>楓點</span>
+                </label>
+
+                <label>
+                    <span>4.策略:</span>
+                    <li class="strategySelected">請選擇</li>
+                    <div class="strategyList" v-show="false">
+                        <li class="act">請選擇</li>
+                        <li>想當勇者，都使用楓點拚目標</li>
+                        <li>皆使用追加/突破30%，拚到目標</li>
+                        <li>皆使用追加/突破50%，拚到目標</li>
+                    </div>
+                    <span class="hint">{{"1."}}演算目標都從22星開始</span>
+                    <span class="hint">{{'2.'}}24升25沒有追加可使用，會直接使用50楓點去演算</span>
+                </label>
+                <label>
+                    <span>5.追加星力成本估算:</span>
+                    <!-- 依據目標顯示追加清單 -->
+                    <span v-if="true"
+                    class="hint">自尋追加/突破的市場價格作為參考</span>
+                    <!-- 依目標顯示input dom -->
+                    <div class="Costunit">使用單位:
+                        <label>台幣
+                            <input type="radio" name="Costunit">
+                        </label>
+                        <label>楓幣
+                            <input type="radio" name="Costunit">
+                        </label>
+                    </div>
+                </label>                
+
+                
+              
+            </div>            
+
             <div class="demoCommpute">
                 <!-- 顯示遊戲中成功、失敗、破壞的特效 -->
             </div>
-            <div class="commputeBtn">執行</div>
+            <div class="commputeBox">
+                <div class="commputeBtn" @click="handStarResult">執行</div>
+                <div class="activtyStarbox">
+                    <input type="checkbox" class="activtyStarBtn" :checked="activtyStarBtn"><span class="activtyStarBtn" >套用15到16星100%活動</span>
+                </div>
+            </div>
             <div class="resultBox" v-show="true">
                 <h1>結果</h1>
-                <p>花費了
-                    <span class="ans">{{"594207"}}楓幣</span>
-                    <span class="and">&</span>
-                    <span class="ans">{{"5207"}}楓點</span>
-                    <span class="totalcost">(總計略等於<span class="ans">{{"5277"}}台幣</span>)<span></span></span>
+                <p>
+                    <!-- 花費了 -->
+                <!-- <span class="ans">{{"594207"}}楓幣</span>
+                    <span class="and">&</span> -->
+                    <!-- <span class="totalcost">(總計略等於<span class="ans">{{"5277"}}台幣</span>)<span></span></span> -->
+                    <div class="test" v-for="ans in ansArrRender" :ans="ans.idx">
+                        <span class="ans">花費了{{ans.total}}楓點</span>
+                        <span v-if="ans.total !== 1500000">上{{starAim}}星</span>
+                        <span v-if="ans.total === 1500000">還沒上{{starAim}}星，白癡遊戲 ˋˊ</span>
+                    </div>
+        
+
                 </p>
             </div>
+            
 
 
        </div>
