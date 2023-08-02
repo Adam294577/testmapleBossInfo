@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" >
        <div class="starContainer">
        <h1 class="starTitle">星力強化成本模擬器</h1>
 
@@ -262,8 +262,54 @@
 
 
        </div>
+
+       <div class="starEffect" >
+        <div class="box" v-if="effectbool">
+            <div class="edge top"></div>
+            <div class="darkBg">
+            </div>
+            <div class="edge down"></div>      
+            <div class="cont">
+            </div>      
+            <img class="whiteword" :src="StarEffectRender.is[0].urlw" alt="">
+            <img class="effectword" :src="StarEffectRender.is[0].url" alt="">
+            <!-- <img class="whiteword" src="./img/suc01.png" alt="">
+            <img class="effectword" src="./img/suc02.png" alt=""> -->
+        </div>
+        <div class="successEffect" v-if="successEffect">
+        <!-- <div class="successEffect" v-if="true"> -->
+            <div class="starPos">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="circle circle01"></div>
+            <div class="circle circle02"></div>
+            <div class="light"></div>
+        </div>        
+
+
+        <div class="EffectBtn">
+            <button data-effect="success" @click="handStarEffect" >成功特效</button>
+            <button data-effect="failed" @click="handStarEffect" >失敗特效</button>
+            <button data-effect="destroyed" @click="handStarEffect">破壞特效</button>
+        </div>
+
+       </div>
+
+       <div class="demo">
+        <!-- <img src="./img/demo03.png" alt=""> -->
+       </div>
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
 </body>
 </html>

@@ -290,16 +290,45 @@ window.onload = () =>{
 
 
 
+            // starEffect
+            const StarEffectData = reactive({data:[
+                {key:'success',urlw:'./img/suc01.png',url:'./img/suc02.png'},
+                {key:'failed',urlw:'./img/fail01.png',url:'./img/fail02.png'},
+                {key:'destroyed',urlw:'./img/des01.png',url:'./img/des02.png'}
+            ]})
+            const StarEffectRender = reactive({is:[]})
+            const effectbool = ref(false)
+            const successEffect = ref(false)
+            const handStarEffect = (el)=>{
 
-            // result
-            const AnsMaplecoin = ref("");
-            const AnsPoint = ref("");
-            const AnsNTD = ref("");
+                if(effectbool.value) return
+                
+                let effect = el.currentTarget.dataset.effect
+                StarEffectRender.is = StarEffectData.data.filter(item=>{
+                    if(item.key === effect) return {urlw:item.urlw , url:item.url};
+                })
+
+                if(effect === 'success'){
+                    successEffect.value = true;
+                }
+
+                console.log(StarEffectRender.is[0]);
+
+      
+                effectbool.value = true
+                setTimeout(()=>{
+                    effectbool.value = false
+                    successEffect.value = false;
+                },1200)
+
+            }
 
             onMounted(()=>{
                 handstarAim()
                 handstarBegin()
             })
+
+           
             return{
                 // 楓幣台幣 input限制
                 NTDtransMaplecoin,
@@ -330,6 +359,12 @@ window.onload = () =>{
                 activtyStarBtn,
                 // test
                 ansArrRender,
+                // starEffect
+                effectbool,
+                successEffect,
+                handStarEffect,
+                StarEffectRender,
+
             }   
         },
 
