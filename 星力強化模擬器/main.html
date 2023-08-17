@@ -75,6 +75,7 @@
                         <li
                         @click="handstrategy"
                         v-for="list in strategyRender"
+                        :key="list.key"
                         >
                         {{list.key}}
                     </li>
@@ -171,14 +172,13 @@
                         <li
                         @click="handstrategy"
                         v-for="list in strategyRender"
-                        >
+                        :key="list.key">
                         {{list.key}}
                     </li>
                     </div>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[3].act }">請選擇策略</p>
                     </div>                     
-                    
                 </label>
                 <div class="radioBox">
                     <span class="radioTitle">5.一開始的星力為:</span>
@@ -270,13 +270,14 @@
             <div class="resultBox" >
                 <h1>結果</h1>
                 <div :class="['costStore', {'half': !starAim23up}]" id="costStoreScroll">
-                    <p v-for="list in costStore.data[0].star23down">
+
+                    <p v-for="list in costStore.data[0].star23down" :key="list.idx">
                         <span>第{{list.idx}}件上{{starAim}}星: 花費</span>
                         <span class="mark">{{list.pointCost}}</span>
                         <span>楓點</span>
-                        <span v-if="list.desTime !==0">，炸了</span>
-                        <span v-show="list.desTime !==0" class="mark">{{list.desTime}}</span>
-                        <span v-if="list.desTime !==0">件裝</span>
+                        <span v-if="list.desTime !== 0">，炸了</span>
+                        <span v-show="list.desTime !== 0" class="mark">{{list.desTime}}</span>
+                        <span v-if="list.desTime !== 0">件裝</span>
                         <span v-show="list.recoverMaplecoinCostCh != 0 " >，花費</span>
                         <span v-show="list.recoverMaplecoinCostCh != 0 "  class="mark">{{list.recoverMaplecoinCostCh}}</span>
                         <span v-show="list.recoverMaplecoinCostCh != 0 " >楓幣</span>                        
@@ -284,36 +285,42 @@
                         <span class="mark">{{list.NTDcost}}</span>
                         <span>台幣)</span>
                     </p>
-                    <p v-for="list in costStore.data[1].star23up">
-                        <span v-show="list.pointCost !== 0" >第{{list.idx}}件上{{starAim}}星: 花費</span>
+
+                    <p v-for="list in costStore.data[1].star23up" :key="list.idx">
+                        <span>第{{list.idx}}件上{{starAim}}星: </span>
+                        <span v-show="list.pointCost !== 0" >花費</span>
                         <span v-show="list.pointCost !== 0"  class="mark">{{list.pointCost}}</span>
                         <span v-show="list.pointCost !== 0" >楓點，</span>
-                        <span v-if="list.use23StarTime !==0">用了</span>
-                        <span v-show="list.use23StarTime !==0" class="mark">{{list.use23StarTime}}</span>
-                        <span v-if="list.use23StarTime !==0">張追加/突破23星</span>       
-                        <span v-if="list.use24StarTime !==0">，用了</span>
-                        <span v-show="list.use24StarTime !==0" class="mark">{{list.use24StarTime}}</span>
-                        <span v-if="list.use24StarTime !==0">張追加/突破24星</span>   
+                        <span v-if="list.use23StarTime !== 0">用了</span>
+                        <span v-show="list.use23StarTime !== 0" class="mark">{{list.use23StarTime}}</span>
+                        <span v-if="list.use23StarTime !== 0">張追加/突破23星</span>       
+                        <span v-if="list.use24StarTime !== 0">，用了</span>
+                        <span v-show="list.use24StarTime !== 0" class="mark">{{list.use24StarTime}}</span>
+                        <span v-if="list.use24StarTime !== 0">張追加/突破24星</span>   
                         <span>(總計</span> 
                         <span class="mark">{{list.NTDcost}}</span>
-                        <span>台幣)</span>                                             
+                        <span>台幣)</span>
+                        <!-- <span>還是沒有點上{{starAim}}星</span> -->
                     </p>
                 </div>
                 <h2 class="nowstar">目前星力: {{nowStarRender}} <span class="costStoreClear" @click="costStoreClear">清空</span></h2>
 
                 <div class="starEffect" v-show="!starAim23up">
-                    <div class="starImg" :data-test="starStatusRender">
+
+                    <div class="starImg">
                         <!-- <img src="./img/star/15.png" alt=""> -->
                         <img :src="starStatusRender[0].url" alt="">
                     </div>
+
                     <div class="box" v-if="effectbool">
                         <div class="edge top"></div>
                         <div class="darkBg"></div>
-                        <div class="edge down"></div>      
-                        <div class="cont"></div>      
+                        <div class="edge down"></div>
+                        <div class="cont"></div>
                         <img class="whiteword" :src="StarEffectRender.is[0].urlw" alt="">
                         <img class="effectword" :src="StarEffectRender.is[0].url" alt="">
                     </div>
+
                     <div class="successEffect" v-if="successEffect">
                         <div class="starPos">
                             <span></span>
@@ -329,7 +336,7 @@
                         <div class="circle circle01"></div>
                         <div class="circle circle02"></div>
                         <div class="light"></div>
-                    </div>        
+                    </div>    
                 </div>  
             </div>
 
