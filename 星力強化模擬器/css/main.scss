@@ -22,7 +22,6 @@ body{
     h1{
         color: #FFF;
     }   
-  
     label{
         display: block;
         margin: 1rem 0;
@@ -32,11 +31,11 @@ body{
             display: inline-block;
             // border: 1px solid #F00;
             margin: 0;
-            width: 80px;
+            width: 75px;
         }
         span{
             color: #FFF;   
-            padding: 3px 7px;         
+            padding: 3px 7px;  
         }
         .equipSelected,.strategySelected{
             cursor: pointer;
@@ -81,15 +80,12 @@ body{
             top: 27%;
             left: 60px;
         }
+        .costCh{
+            position: relative;
+            left: -3px;
+        }
         .hint{
             color:  #FF0;
-            &.equipcostHint{
-                // display: block;
-            }
-        }
-        .equipcostCh{
-            display: inline-block;
-            padding: 0 7px;
         }
         .pointORcoinTable{
             width: 220px;
@@ -150,10 +146,9 @@ body{
 
     }
 
-    .star20Box,.star22Box{
+    .star20Box,.star22Box,.star23upBox{
         input{
             padding: 5px;
-            width: 50px;
             margin-left: 5px;
             &:focus{
                 outline: none;
@@ -161,26 +156,53 @@ body{
             &.equipcost,&.starcost{
                 width: 150px;
             }
+            &.coinInput{
+                width: 50px;
+            }
+            &.addstarcost{
+                width: 80px;
+            }
         }        
 
 
     }
     .radioBox{
         margin: 1rem 0;
-        position: relative;     
+        position: relative;    
+        }         
         .radioTitle{
             display: inline-block;
             margin-left: 0.5rem;
             color: #FFF;
-        }
-
-        &.radio{
-            display: inline-block;
-            margin-left: 0.5rem;
+            padding-right: 10px;
         }
         input{
             width: 15px;
+            // display: none;
         }
+        span{
+            color:#FFF;
+            position: relative;
+            left: 7px;
+        }
+        .mark{
+            color: #FF0;
+            display: block;
+            padding-bottom: 20px;
+        }
+        .alert{
+            margin: 5px;
+            
+            p{
+                display: none;
+                color: #F00;
+                &.act{
+                    display: block;
+                }
+            }
+        }        
+
+
 
 
     }       
@@ -188,7 +210,7 @@ body{
         position: relative;
         // border: 1px solid #F00;
         height: 40px;
-        .commputeBtn{
+        .commputeBtn,.commpute23Btn{
             cursor: pointer;
             color: #FFF;
             width: 100px;
@@ -200,6 +222,12 @@ body{
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+        }
+        .commpute23Btn{
+            z-index: 3;
+            &.doing{
+                z-index: 4;
+            }
         }
         .activtyStarbox{
             span{
@@ -218,8 +246,9 @@ body{
         margin-top: 25px;
         // border: 1px solid #F00;
         padding-bottom: 100px;
+        position: relative;
         h1{
-            margin: 20px 0 10px;
+            margin: 20px 0 30px;
             position: relative;
             text-align: center;
             span{
@@ -248,11 +277,16 @@ body{
             color: #FFF;
             // border: 1px solid #F00;
             background-color: #555;
-            width: 50%;
+            width: 90%;
+            margin: auto;
             height: 200px;
             padding: 10px;
             overflow: hidden;
             overflow-y: scroll;
+            &.half{
+                margin: 0;
+                width: 50%;
+            }
             &::-webkit-scrollbar{
                 width: 10px;
               }
@@ -262,12 +296,13 @@ body{
                 background-color: #777;
               }
             p{
-                padding: 5px
+                padding: 5px;
             }
             .mark{
+                display: inline-block;
                 color: #FF0;
                 font-weight: bold;
-                padding: 0 3px;
+                padding: 0 5px;
             }
         }
         .costStoreClear{
@@ -286,9 +321,17 @@ body{
         }
 
     }
+    .Costunit{
+        display: inline-block;
+        color: #FFF;
+        label{
+            display: inline-block;
+        }
+
+    }
 
 
-}
+
 @media (max-width: 992px) { 
 .starContainer{
     width: 98%;
@@ -350,24 +393,33 @@ body{
 
 //  starEffect
 .starEffect{
-   width: 400px;
-   height: 200px;
-   padding: 10px;
-   background-color: #23a1ad;
-   position: absolute;
-   top: 58%;
-   left: 60%;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    background-color: #23a1ad;
+    top: 75px;
+    left: 60%;
+
 //    display: none;
    
    .box{
     width: 400px;
     height: 100px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     z-index: 1;
     overflow: hidden;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: translate(-50%,-60%) scale(0.8);
+    }
+    .starImg{
+        position: absolute;
+        top: 0;
+        left: 49%;
+        transform: translateX(-49%);
+    }        
+
     .darkBg{
         position: absolute;
         top: 50%;
@@ -599,9 +651,9 @@ body{
 }
 .successEffect{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: translate(-50%,-60%) scale(0.8);
     width: 300px;
     // height: 300px;
     .circle{
@@ -898,16 +950,16 @@ body{
 
     }
 }
-}
+
 @media (max-width: 992px) { 
     .starEffect{
-        margin-top: 10px;
         margin-bottom: 30px;
         width: 80%;
         max-width: 400px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        top: 30px;
         .box{
             transform: translate(-50%,-50%) scale(0.8);
         }

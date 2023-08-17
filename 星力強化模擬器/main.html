@@ -10,41 +10,41 @@
     <div id="app" >
        <div class="starContainer">
             <h1 class="starTitle">星力強化成本模擬器</h1>
-            
-
 
             <div class="aim radioBox">
-            <span class="radioTitle">1.目標:</span>
-            <label class="aimBox radio">
-                <input @click="handstarAim" data-aim="20" type="radio" name="starAim" id="starAim" :checked="starAim===20"><span>20星</span>
-            </label>
-            <label class="aimBox radio">
-                <input @click="handstarAim" data-aim="22" type="radio" name="starAim" id="starAim" :checked="starAim===22"><span>22星</span>
-            </label>
-            <label class="aimBox radio">
-                <input @click="handstarAim" data-aim="23" type="radio" name="starAim" id="starAim" :checked="starAim===23"><span>23星</span>
-            </label>
-            <label class="aimBox radio">
-                <input @click="handstarAim" data-aim="24" type="radio" name="starAim" id="starAim" :checked="starAim===24"><span>24星</span>
-            </label>
-            <label class="aimBox radio">
-                <input @click="handstarAim" data-aim="25" type="radio" name="starAim" id="starAim" :checked="starAim===25"><span>25星</span>
-            </label>
+                <span class="radioTitle">1.目標:</span>
+                <label class="radio">
+                    <input @click="handstarAim" data-aim="20" type="radio" name="starAim" :checked="starAim===20"><span>20星</span>
+                </label>
+                <label class="radio">
+                    <input @click="handstarAim" data-aim="22" type="radio" name="starAim" :checked="starAim===22"><span>22星</span>
+                </label>
+                <label class="radio">
+                    <input @click="handstarAim" data-aim="23" type="radio" name="starAim" :checked="starAim===23"><span>23星</span>
+                </label>
+                <label class="radio">
+                    <input @click="handstarAim" data-aim="24" type="radio" name="starAim" :checked="starAim===24"><span>24星</span>
+                </label>
+                <label class="radio">
+                    <input @click="handstarAim" data-aim="25" type="radio" name="starAim" :checked="starAim===25"><span>25星</span>
+                </label>
             </div>
             <div class="star20Box" v-show="starAim === 20">
+
                 <label>
                     <span>2.台幣換楓幣:</span>
                     <span>1 台幣 =</span>
-                    <input v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
+                    <input class="coinInput" v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
                     <span>萬</span>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[0].act }">轉換不能為0</p>
                     </div>                     
                 </label>
+
                 <label>
                     <span>3.楓幣換楓點:</span>
                     <span>1億 楓幣 =</span>
-                    <input v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
+                    <input class="coinInput" v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
                     <span>楓點</span>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[1].act }">轉換不能為0</p>
@@ -65,8 +65,8 @@
                         <p :class="{'act': checkAlertBool.data[2].act }">請選擇裝備項目</p>
                     </div>
                 </label>
+
                 <label>
-                    <!-- strategySelected.key = "皆使用50楓點去執行"; -->
                     <span>5.策略:</span>
                     <li @click="handstrategy" 
                     :class="['strategySelected', {'disabled': equipSelected ==='必防爆的裝備'}]"
@@ -94,18 +94,14 @@
                     type="text" 
                     v-model.number="equipcost"
                     maxlength="11" 
-                    :disabled="equipSelected ==='必防爆的裝備'"
+                    :disabled="strategySelected.key ==='皆使用50楓點去執行'"
                     @input="InputNumOnly">
                     <span>楓幣</span>
-                    <span v-if="equipcost !== '' ">(<span class="costCh">{{equipcostCh}}</span>)</span>
+                    <span v-if="equipcost !== '' "><span class="costCh">({{equipcostCh}})</span></span>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[4].act }">不能為空</p>
                     </div> 
                 </label>
-
- 
-
-
 
                 <label v-show="strategySelected.starcost">
                     <span>星捲成本估算:</span>
@@ -116,7 +112,7 @@
                     maxlength="11" 
                     @input="InputNumOnly">
                     <span>楓幣</span>
-                    <span v-if="starcost !== '' ">(<span class="costCh">{{starcostCh}}</span>)</span>
+                    <span v-if="starcost !== '' "><span class="costCh">({{starcostCh}})</span></span>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[5].act }">不能為空</p>
                     </div> 
@@ -142,22 +138,28 @@
                     <label class="aimBox radio">
                         <input data-begin="19" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 19"><span>19星</span>
                     </label>
-
                 </div>
-                </div>            
+
+            </div>            
 
             <div class="star22Box" v-show="starAim === 22">
                 <label>
                     <span>2.台幣換楓幣:</span>
                     <span>1 台幣 =</span>
-                    <input v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
+                    <input class="coinInput" v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
                     <span>萬</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[0].act }">轉換不能為0</p>
+                    </div>   
                 </label>
                 <label>
                     <span>3.楓幣換楓點:</span>
                     <span>1億 楓幣 =</span>
-                    <input v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
+                    <input class="coinInput" v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
                     <span>楓點</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[1].act }">轉換不能為0</p>
+                    </div>   
                 </label>
                 <label>
                     <span>4.策略:</span>
@@ -172,14 +174,12 @@
                         >
                         {{list.key}}
                     </li>
-
                     </div>
                     <div class="alert">
                         <p :class="{'act': checkAlertBool.data[3].act }">請選擇策略</p>
                     </div>                     
                     
                 </label>
-
                 <div class="radioBox">
                     <span class="radioTitle">5.一開始的星力為:</span>
                     <label class="aimBox radio">
@@ -188,73 +188,77 @@
                     <label class="aimBox radio">
                         <input data-begin="21" @click="handstarBegin" type="radio" name="starBegin" :checked="starBegin === 21"><span>21星</span>
                     </label>
-
                 </div>
-                
-                <label v-if="false">
-                    <span>6.總共要製作幾件{{22}}星</span>
-                    <input 
-                    class="starStart" 
-                    type="text" 
-                    v-model="equipItem"
-                    maxlength="2" 
-                    @input="InputNumOnly">
-                    <span 
-                    v-if="equipItem === '' "
-                    class="hint">(至少1件)</span>
-                </label>                
             </div>
+
             <div class="star23upBox" v-show="starAim23up">
                 <label>
                     <span>2.台幣換楓幣:</span>
                     <span>1 台幣 =</span>
-                    <input v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
+                    <input class="coinInput" v-model="NTDtransMaplecoin" type="text"  maxlength="4" @input="InputNumOnly">
                     <span>萬</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[0].act }">轉換不能為0</p>
+                    </div>                     
                 </label>
                 <label>
                     <span>3.楓幣換楓點:</span>
                     <span>1億 楓幣 =</span>
-                    <input v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
+                    <input class="coinInput" v-model="MaplecointransPoint" type="text"  maxlength="2" @input="InputNumOnly">
                     <span>楓點</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[1].act }">轉換不能為0</p>
+                    </div>                    
                 </label>
+                <div class="radioBox" >
+                    <span class="radioTitle">4.追加星力/突破(23星)</span>
+                    <label  class="radio">
+                        <input @click="handAddStar23Rate" data-add23star="30" type="radio" name="addStar23" :checked=" addStar23Rate === 30"><span>30%</span>
+                    </label>                
+                    <label class="radio">
+                        <input @click="handAddStar23Rate" data-add23star="50" type="radio" name="addStar23" :checked="addStar23Rate === 50"><span>50%</span>
+                    </label>         
+                    <label class="radio" v-show="starto24bool">
+                        <input @click="handAddStar23Rate" data-add23star="100" type="radio" name="addStar23" :checked="addStar23Rate === 100"><span>100%</span>
+                    </label>         
+                    <input 
+                    class="addstarcost" 
+                    type="text" 
+                    v-model="add23starcost"
+                    maxlength="5" 
+                    @input="InputNumOnly">
+                    <span>台幣</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[6].act }">請選擇追加機率</p>
+                    </div>                      
+                </div>
+                <div class="radioBox" v-show="starto24bool">
+                    <span class="radioTitle">5.追加/突破星力(24星)</span>
+                    <label  class="radio">
+                        <input @click="handAddStar24Rate" data-add24star="30" type="radio" name="addStar24" :checked=" addStar24Rate === 30"><span>30%</span>
+                    </label>                
+                    <label class="radio">
+                        <input @click="handAddStar24Rate" data-add24star="50" type="radio" name="addStar24" :checked=" addStar24Rate === 50"><span>50%</span>
+                    </label>   
+                    <input 
+                    class="addstarcost" 
+                    type="text" 
+                    v-model="add24starcost"
+                    maxlength="5" 
+                    @input="InputNumOnly">
+                    <span>台幣</span>
+                    <div class="alert">
+                        <p :class="{'act': checkAlertBool.data[7].act }">請選擇追加機率</p>
+                    </div>                       
+                </div>
+                <span class="mark">若追加星卷無金額，皆使用50楓點強化!</span>
+                <span v-show="starAim === 25" class="mark">若楓點24上25失敗回23星時，會先使用50楓點做演算</span>
+            </div>    
 
-                <label>
-                    <span>4.策略:</span>
-                    <li class="strategySelected">請選擇</li>
-
-                    <div class="strategyList" v-show="false">
-                        <li class="act">請選擇</li>
-                        <li>皆使用50楓點拚目標</li>
-                        <li>皆使用追加/突破30%，拚到目標</li>
-                        <li>皆使用追加/突破50%，拚到目標</li>
-                    </div>
-                    <span class="hint">{{"1."}}演算目標都從22星開始</span>
-                    <span class="hint">{{'2.'}}24升25沒有追加可使用，會直接使用50楓點去演算</span>
-                </label>
-                <label>
-                    <span>5.追加星力成本估算:</span>
-                    <!-- 依據目標顯示追加清單 -->
-                    <span v-if="true"
-                    class="hint">自尋追加/突破的市場價格作為參考</span>
-                    <!-- 依目標顯示input dom -->
-                    <div class="Costunit">使用單位:
-                        <label>台幣
-                            <input type="radio" name="Costunit">
-                        </label>
-                        <label>楓幣
-                            <input type="radio" name="Costunit">
-                        </label>
-                    </div>
-                </label>                
-
-                
-              
-            </div>            
-
-
-    
             <div class="commputeBox">
-                <!-- <div class="commputeBtn" @click="handStarResult">執行</div> -->
+                <div class="commpute23Btn doing" v-show="hand23upStarResultIng">執行中</div>
+                <div class="commpute23Btn" v-show="starAim23up" @click="hand23upStarResult">執行</div>
+
                 <div class="commputeBtn" @click="handStarResult">執行</div>
                 <div class="commputeBtn" v-show ="directResultBtnShow" @click="directResult">快轉</div>
 
@@ -262,53 +266,78 @@
                     <input type="checkbox" class="activtyStarBtn" :checked="activtyStarBtn"><span class="activtyStarBtn" >套用15到16星100%活動</span>
                 </div>
             </div>
-            <div class="resultBox" v-show="true">
+
+            <div class="resultBox" >
                 <h1>結果</h1>
-                <div class="costStore" id="txtscroll">
-                    <!-- <p>
-                        第{{"n"}}件: 花費<span class="mark">{{pointCost}}</span>楓點
-                        <span v-if="desTime !==0">、炸了<span class="mark">{{desTime}}</span>件裝、花費<span class="mark">{{recoverMaplecoinCostCh}}</span>楓幣</span>
-                        (總計<span class="mark">{{NTDcost}}</span>台幣) 點上了20星
-                    </p> -->
-                    <p v-for="list in costStore.data">
-                        第{{list.idx}}件上{{starAim}}星: 花費<span class="mark">{{list.pointCost}}</span>楓點
-                        <span v-if="list.desTime !==0">、炸了<span class="mark">{{list.desTime}}</span>件裝、花費<span class="mark">{{list.recoverMaplecoinCostCh}}</span>楓幣</span>                        
-                        (總計<span class="mark">{{list.NTDcost}}</span>台幣) 
+                <div :class="['costStore', {'half': !starAim23up}]" id="costStoreScroll">
+                    <p v-for="list in costStore.data[0].star23down">
+                        <span>第{{list.idx}}件上{{starAim}}星: 花費</span>
+                        <span class="mark">{{list.pointCost}}</span>
+                        <span>楓點</span>
+                        <span v-if="list.desTime !==0">，炸了</span>
+                        <span v-show="list.desTime !==0" class="mark">{{list.desTime}}</span>
+                        <span v-if="list.desTime !==0">件裝</span>
+                        <span v-show="list.recoverMaplecoinCostCh != 0 " >，花費</span>
+                        <span v-show="list.recoverMaplecoinCostCh != 0 "  class="mark">{{list.recoverMaplecoinCostCh}}</span>
+                        <span v-show="list.recoverMaplecoinCostCh != 0 " >楓幣</span>                        
+                        <span> (總計</span>
+                        <span class="mark">{{list.NTDcost}}</span>
+                        <span>台幣)</span>
+                    </p>
+                    <p v-for="list in costStore.data[1].star23up">
+                        <span v-show="list.pointCost !== 0" >第{{list.idx}}件上{{starAim}}星: 花費</span>
+                        <span v-show="list.pointCost !== 0"  class="mark">{{list.pointCost}}</span>
+                        <span v-show="list.pointCost !== 0" >楓點，</span>
+                        <span v-if="list.use23StarTime !==0">用了</span>
+                        <span v-show="list.use23StarTime !==0" class="mark">{{list.use23StarTime}}</span>
+                        <span v-if="list.use23StarTime !==0">張追加/突破23星</span>       
+                        <span v-if="list.use24StarTime !==0">，用了</span>
+                        <span v-show="list.use24StarTime !==0" class="mark">{{list.use24StarTime}}</span>
+                        <span v-if="list.use24StarTime !==0">張追加/突破24星</span>   
+                        <span>(總計</span> 
+                        <span class="mark">{{list.NTDcost}}</span>
+                        <span>台幣)</span>                                             
                     </p>
                 </div>
-              
-                <h2>目前星力:{{nowStarRender}} <span class="costStoreClear" @click="costStoreClear">清空</span></h2>
+                <h2 class="nowstar">目前星力: {{nowStarRender}} <span class="costStoreClear" @click="costStoreClear">清空</span></h2>
 
+                <div class="starEffect" v-show="!starAim23up">
+                    <div class="starImg" :data-test="starStatusRender">
+                        <!-- <img src="./img/star/15.png" alt=""> -->
+                        <img :src="starStatusRender[0].url" alt="">
+                    </div>
+                    <div class="box" v-if="effectbool">
+                        <div class="edge top"></div>
+                        <div class="darkBg"></div>
+                        <div class="edge down"></div>      
+                        <div class="cont"></div>      
+                        <img class="whiteword" :src="StarEffectRender.is[0].urlw" alt="">
+                        <img class="effectword" :src="StarEffectRender.is[0].url" alt="">
+                    </div>
+                    <div class="successEffect" v-if="successEffect">
+                        <div class="starPos">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="circle circle01"></div>
+                        <div class="circle circle02"></div>
+                        <div class="light"></div>
+                    </div>        
+                </div>  
+            </div>
+
+            <div class="loadingBox">
 
             </div>
-            <div class="starEffect" >
-                <div class="box" v-if="effectbool">
-                    <div class="edge top"></div>
-                    <div class="darkBg">
-                    </div>
-                    <div class="edge down"></div>      
-                    <div class="cont">
-                    </div>      
-                    <img class="whiteword" :src="StarEffectRender.is[0].urlw" alt="">
-                    <img class="effectword" :src="StarEffectRender.is[0].url" alt="">
-                </div>
-                <div class="successEffect" v-if="successEffect">
-                    <div class="starPos">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="circle circle01"></div>
-                    <div class="circle circle02"></div>
-                    <div class="light"></div>
-                </div>        
-            </div>            
+
+          
        </div>
 
 
@@ -316,12 +345,8 @@
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
 </body>
 </html>
-
-
 
 
 

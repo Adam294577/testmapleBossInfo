@@ -30,7 +30,7 @@ body {
   text-align: center;
   display: inline-block;
   margin: 0;
-  width: 80px;
+  width: 75px;
 }
 .starContainer label span {
   color: #FFF;
@@ -76,12 +76,12 @@ body {
   top: 27%;
   left: 60px;
 }
+.starContainer label .costCh {
+  position: relative;
+  left: -3px;
+}
 .starContainer label .hint {
   color: #FF0;
-}
-.starContainer label .equipcostCh {
-  display: inline-block;
-  padding: 0 7px;
 }
 .starContainer label .pointORcoinTable {
   width: 220px;
@@ -132,38 +132,61 @@ body {
 .starContainer label .alert p.act {
   display: block;
 }
-.starContainer .star20Box input, .starContainer .star22Box input {
+.starContainer .star20Box input, .starContainer .star22Box input, .starContainer .star23upBox input {
   padding: 5px;
-  width: 50px;
   margin-left: 5px;
 }
-.starContainer .star20Box input:focus, .starContainer .star22Box input:focus {
+.starContainer .star20Box input:focus, .starContainer .star22Box input:focus, .starContainer .star23upBox input:focus {
   outline: none;
 }
-.starContainer .star20Box input.equipcost, .starContainer .star20Box input.starcost, .starContainer .star22Box input.equipcost, .starContainer .star22Box input.starcost {
+.starContainer .star20Box input.equipcost, .starContainer .star20Box input.starcost, .starContainer .star22Box input.equipcost, .starContainer .star22Box input.starcost, .starContainer .star23upBox input.equipcost, .starContainer .star23upBox input.starcost {
   width: 150px;
+}
+.starContainer .star20Box input.coinInput, .starContainer .star22Box input.coinInput, .starContainer .star23upBox input.coinInput {
+  width: 50px;
+}
+.starContainer .star20Box input.addstarcost, .starContainer .star22Box input.addstarcost, .starContainer .star23upBox input.addstarcost {
+  width: 80px;
 }
 .starContainer .radioBox {
   margin: 1rem 0;
   position: relative;
 }
-.starContainer .radioBox .radioTitle {
+.starContainer .radioTitle {
   display: inline-block;
   margin-left: 0.5rem;
   color: #FFF;
+  padding-right: 10px;
 }
-.starContainer .radioBox.radio {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-.starContainer .radioBox input {
+.starContainer input {
   width: 15px;
 }
-.starContainer .commputeBox {
+.starContainer span {
+  color: #FFF;
+  position: relative;
+  left: 7px;
+}
+.starContainer .mark {
+  color: #FF0;
+  display: block;
+  padding-bottom: 20px;
+}
+.starContainer .alert {
+  margin: 5px;
+}
+.starContainer .alert p {
+  display: none;
+  color: #F00;
+}
+.starContainer .alert p.act {
+  display: block;
+}
+
+.commputeBox {
   position: relative;
   height: 40px;
 }
-.starContainer .commputeBox .commputeBtn {
+.commputeBox .commputeBtn, .commputeBox .commpute23Btn {
   cursor: pointer;
   color: #FFF;
   width: 100px;
@@ -175,26 +198,34 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-.starContainer .commputeBox .activtyStarbox {
+.commputeBox .commpute23Btn {
+  z-index: 3;
+}
+.commputeBox .commpute23Btn.doing {
+  z-index: 4;
+}
+.commputeBox .activtyStarbox {
   left: 50%;
   transform: translateX(-50%);
   top: 100%;
   position: absolute;
   color: #FFF;
 }
-.starContainer .commputeBox .activtyStarbox span {
+.commputeBox .activtyStarbox span {
   padding-left: 15px;
 }
-.starContainer .resultBox {
+
+.resultBox {
   margin-top: 25px;
   padding-bottom: 100px;
+  position: relative;
 }
-.starContainer .resultBox h1 {
-  margin: 20px 0 10px;
+.resultBox h1 {
+  margin: 20px 0 30px;
   position: relative;
   text-align: center;
 }
-.starContainer .resultBox h1 span {
+.resultBox h1 span {
   cursor: pointer;
   color: #FFF;
   display: inline-block;
@@ -210,36 +241,42 @@ body {
   transform: translateX(-50%);
   top: 120%;
 }
-.starContainer .resultBox h2 {
+.resultBox h2 {
   margin-top: 10px;
   color: #FFF;
 }
-.starContainer .resultBox .costStore {
+.resultBox .costStore {
   color: #FFF;
   background-color: #555;
-  width: 50%;
+  width: 90%;
+  margin: auto;
   height: 200px;
   padding: 10px;
   overflow: hidden;
   overflow-y: scroll;
 }
-.starContainer .resultBox .costStore::-webkit-scrollbar {
+.resultBox .costStore.half {
+  margin: 0;
+  width: 50%;
+}
+.resultBox .costStore::-webkit-scrollbar {
   width: 10px;
 }
-.starContainer .resultBox .costStore::-webkit-scrollbar-thumb {
+.resultBox .costStore::-webkit-scrollbar-thumb {
   width: 3px;
   border-radius: 5px;
   background-color: #777;
 }
-.starContainer .resultBox .costStore p {
+.resultBox .costStore p {
   padding: 5px;
 }
-.starContainer .resultBox .costStore .mark {
+.resultBox .costStore .mark {
+  display: inline-block;
   color: #FF0;
   font-weight: bold;
-  padding: 0 3px;
+  padding: 0 5px;
 }
-.starContainer .resultBox .costStoreClear {
+.resultBox .costStoreClear {
   margin-left: 20px;
   font-size: 16px;
   font-weight: normal;
@@ -251,6 +288,14 @@ body {
   text-align: center;
   border-radius: 5px;
   background-color: #222;
+}
+
+.Costunit {
+  display: inline-block;
+  color: #FFF;
+}
+.Costunit label {
+  display: inline-block;
 }
 
 @media (max-width: 992px) {
@@ -302,25 +347,31 @@ body {
   }
 }
 .starEffect {
+  position: absolute;
   width: 400px;
-  height: 200px;
+  height: 300px;
   padding: 10px;
   background-color: #23a1ad;
-  position: absolute;
-  top: 58%;
+  top: 75px;
   left: 60%;
 }
 .starEffect .box {
   width: 400px;
   height: 100px;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   z-index: 1;
   overflow: hidden;
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -60%) scale(0.8);
 }
-.starEffect .box .darkBg {
+.starEffect .starImg {
+  position: absolute;
+  top: 0;
+  left: 49%;
+  transform: translateX(-49%);
+}
+.starEffect .darkBg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -349,7 +400,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .box .edge {
+.starEffect .edge {
   position: absolute;
   top: 1%;
   border-radius: 100%;
@@ -359,11 +410,11 @@ body {
   background: linear-gradient(90deg, rgba(255, 251, 222, 0.1) 0%, rgb(255, 251, 222) 50%, rgba(255, 251, 222, 0.1) 100%);
   box-shadow: 0 2px 1px rgba(255, 249, 202, 0.3);
 }
-.starEffect .box .edge.top {
+.starEffect .edge.top {
   left: 100%;
   animation: topedge 0.8s 0s 1 forwards linear;
 }
-.starEffect .box .edge.down {
+.starEffect .edge.down {
   box-shadow: 0 -2px 1px rgba(255, 249, 202, 0.3);
   top: 96%;
   left: -100%;
@@ -405,7 +456,7 @@ body {
     left: 0%;
   }
 }
-.starEffect .box .cont {
+.starEffect .cont {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -417,7 +468,7 @@ body {
   transform: translate(-50%, -50%);
   animation: contChange 0.8s 0s ease-in-out 1 forwards;
 }
-.starEffect .box .cont::before {
+.starEffect .cont::before {
   content: "";
   display: block;
   position: absolute;
@@ -431,7 +482,7 @@ body {
   filter: blur(10px);
   animation: contBlurChange 0.8s 0s ease-in-out 1 forwards;
 }
-.starEffect .box .cont::after {
+.starEffect .cont::after {
   content: "";
   display: block;
   width: 100%;
@@ -486,17 +537,17 @@ body {
     width: 100%;
   }
 }
-.starEffect .box .whiteword, .starEffect .box .effectword {
+.starEffect .whiteword, .starEffect .effectword {
   position: absolute;
   z-index: 99;
   top: 50%;
   opacity: 0;
   transform: translateY(-50%);
 }
-.starEffect .box .whiteword {
+.starEffect .whiteword {
   animation: whiteword 0.8s 0s ease-in-out 1 forwards;
 }
-.starEffect .box .effectword {
+.starEffect .effectword {
   z-index: 98;
   animation: effectword 0.8s 0s ease-in-out 1 forwards;
 }
@@ -534,14 +585,15 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect {
+
+.successEffect {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -60%) scale(0.8);
   width: 300px;
 }
-.starEffect .successEffect .circle {
+.successEffect .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -552,10 +604,10 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 251, 222, 0) 0%, rgba(255, 251, 222, 0) 50%, rgba(255, 189, 67, 0.99) 80%, rgba(255, 189, 67, 0.99) 100%);
 }
-.starEffect .successEffect .circle.circle01 {
+.successEffect .circle.circle01 {
   animation: circle01 0.7s linear 0s 1 forwards;
 }
-.starEffect .successEffect .circle.circle02 {
+.successEffect .circle.circle02 {
   width: 250px;
   height: 250px;
   animation: circle02 0.7s linear 0s 1 forwards;
@@ -596,7 +648,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .light {
+.successEffect .light {
   width: 100%;
   height: 100%;
   background-image: url(../img/light.png);
@@ -622,7 +674,7 @@ body {
     transform: scale(2);
   }
 }
-.starEffect .successEffect .starPos span {
+.successEffect .starPos span {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -632,13 +684,13 @@ body {
   transform: translate(-50%, -50%);
   background-position: center;
 }
-.starEffect .successEffect .starPos span::after {
+.successEffect .starPos span::after {
   position: relative;
   content: url(../img//star_yellow.png);
   display: block;
   opacity: 0;
 }
-.starEffect .successEffect .starPos span:nth-child(1)::after {
+.successEffect .starPos span:nth-child(1)::after {
   transform: translate(105px, -115px);
   animation: spirtStar1 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -654,7 +706,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(2)::after {
+.successEffect .starPos span:nth-child(2)::after {
   transform: translate(35px, -150px) rotate(45deg);
   animation: spirtStar2 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -670,7 +722,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(8)::after {
+.successEffect .starPos span:nth-child(8)::after {
   transform: translate(-160px, -80px) rotate(45deg);
   animation: spirtStar8 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -686,7 +738,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(4)::after {
+.successEffect .starPos span:nth-child(4)::after {
   transform: translate(-95px, 100px) rotate(15deg) scale(0.7);
   animation: spirtStar4 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -702,7 +754,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(5)::after {
+.successEffect .starPos span:nth-child(5)::after {
   transform: translate(75px, 123px) rotate(15deg);
   animation: spirtStar5 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -718,7 +770,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(6)::after {
+.successEffect .starPos span:nth-child(6)::after {
   transform: translate(87px, 58px) scale(0.6);
   animation: spirtStar6 0.6s ease-in-out 0.3s 1 forwards;
 }
@@ -734,7 +786,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(7)::after {
+.successEffect .starPos span:nth-child(7)::after {
   content: url(../img//star_org.png);
   transform: translate(105px, 55px);
   animation: spirtStar7 0.6s ease-in-out 0.3s 1 forwards;
@@ -751,7 +803,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(3)::after {
+.successEffect .starPos span:nth-child(3)::after {
   content: url(../img//star_org.png);
   position: relative;
   z-index: -1;
@@ -770,7 +822,7 @@ body {
     opacity: 0;
   }
 }
-.starEffect .successEffect .starPos span:nth-child(9)::after {
+.successEffect .starPos span:nth-child(9)::after {
   content: url(../img//star_org.png);
   transform: translate(-160px, 90px) rotate(45deg);
   animation: spirtStar9 0.6s ease-in-out 0.3s 1 forwards;
@@ -790,13 +842,13 @@ body {
 
 @media (max-width: 992px) {
   .starEffect {
-    margin-top: 10px;
     margin-bottom: 30px;
     width: 80%;
     max-width: 400px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    top: 30px;
   }
   .starEffect .box {
     transform: translate(-50%, -50%) scale(0.8);
