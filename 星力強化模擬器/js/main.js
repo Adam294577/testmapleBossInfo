@@ -59,8 +59,23 @@ window.onload = () =>{
                 Render.reverse()
                 Render = Render.join("").replace("億萬","億").replace("兆億","兆")
                 return Render
-            }              
+            }  
+            const ChineseNumReverse = (num)=>{
+                let data = num + ''
+                let dataArr = data.split('')
+                let NewArr = []
+                let result = ''
+            
+                dataArr.forEach(item=>{
+                    if(item === '萬' || item === '億' || item === '兆') return
+                    NewArr.push(item)
+                })
+                result = Number(NewArr.join(""))
+                return result
+            }
+
             // 楓幣台幣 input限制
+            
             const NTDtransMaplecoin = ref(720)
             const MaplecointransPoint = ref(15)
             const equipcost = ref(0)
@@ -200,6 +215,8 @@ window.onload = () =>{
             handstarAim = (el = null)=>{
                 if(running) return
                 costStoreClear()
+                strategyListBool.value = false
+                equipListBool.value = false
                 add23starcost.value = 0
                 add24starcost.value = 0
                 if(el === null){
@@ -259,9 +276,12 @@ window.onload = () =>{
                 {idx:7 , key:"追加24選項", act:false},
             ]}
             )
+            // loading 
+            const starloadBool = ref(false)
             // 23星以上選項
             const addStar23Rate = ref(30)    
             const addStar24Rate = ref(30)    
+            
             const handAddStar23Rate = (el) =>{
                 let rate = Number(el.currentTarget.dataset.add23star)
                 if(rate === 30){
@@ -395,7 +415,6 @@ window.onload = () =>{
                         return item
                     }
                 })
-                console.log(Filt);
                 return Filt
             })
 
@@ -420,8 +439,8 @@ window.onload = () =>{
             const pointCost = ref(0)
             
             const directResultBtnShow = ref(false)
-            const hand23upStarResultIng = ref(false)
             const handStarResult = ()=>{
+                if(strategyListBool.value || equipListBool.value) return
                 if(checkList(starAim.value) !== 0){
                     return
                 }
@@ -690,6 +709,7 @@ window.onload = () =>{
             }
 
             // 23以上演算區
+            const computed23NoResult = ref(false)
             
             const checkAddStarcost = () =>{
                 if(Number(add23starcost.value) === 0){
@@ -711,14 +731,16 @@ window.onload = () =>{
                 useMaplePointTime3 = 0
                 MaplePointTimeTotal = 0
                 pointCost.value = 0     
-                NTDcost.value = 0
                
+                if(computed23NoResult.value) return
+                NTDcost.value = 0
             }
 
-            const hand23upStarResult = ()=>{
-                if(running) return
-                running = true
-                hand23upStarResultIng.value = true
+            const hand23upStarResult = (el)=>{
+                if(el.currentTarget.innerText === '執行中'){
+                    console.log('stop');
+                    return
+                }
                 
                 let j = 0
                 let use23StarTime = 0
@@ -729,7 +751,7 @@ window.onload = () =>{
                 let MaplePointTimeTotal = 0
                 const showResult = ()=>{
                     // console.log('使用楓點次數',useMaplePointTime);
-                    // console.log('使用楓點挑戰25次數',useMaplePointTime2);
+                    console.log('使用楓點挑戰25次數',useMaplePointTime2);
                     // console.log('成功偷回24星的次數',useMaplePointTime3);
                     // console.log('使用追加23次數',use23StarTime);
                     // console.log('使用追加24次數',use24StarTime);
@@ -737,10 +759,13 @@ window.onload = () =>{
                     pointCost.value =  MaplePointTimeTotal * 50
 
                     // 23星+24星+楓點成本
-                    NTDcost.value = Number((add23starcost.value * use23StarTime)) + Number((add24starcost.value * use24StarTime)) + Number(( ( pointCost.value/ MaplecointransPoint.value  * 100000000) / (NTDtransMaplecoin.value * 10000) ).toFixed(0))
-                    costStore.data[1].star23up.push({idx:createT,NTDcost:NTDcost.value, use23StarTime:use23StarTime , use24StarTime:use24StarTime, pointCost: pointCost.value})
+                    NTDcost.value = ChineseNumReverse(NTDcost.value)
+                    NTDcost.value = NTDcost.value + Number((add23starcost.value * use23StarTime)) + Number((add24starcost.value * use24StarTime)) + Number(( ( pointCost.value/ MaplecointransPoint.value  * 100000000) / (NTDtransMaplecoin.value * 10000) ).toFixed(0))
+                    if(NTDcost.value > 100000){
+                        NTDcost.value = numPriceChinese(NTDcost.value)
+                    }
+                    costStore.data[1].star23up.push({idx:createT,NTDcost:NTDcost.value, use23StarTime:use23StarTime , use24StarTime:use24StarTime, pointCost: pointCost.value , noResult: computed23NoResult.value})
                     setTimeout(Msgscrolldown,10)
-                    console.log(costStore.data);
                 }
                 if(checkList(starAim.value) !== 0) return
 
@@ -754,231 +779,233 @@ window.onload = () =>{
                     add24starcost.value = 0
                 }
                 checkAddStarcost()
-               
-                while(nowStar !== aim){
-
-                    if(j === 50000){
-                        console.log('目標未達成');
-                        createT ++;
-                        showResult()
-                        ClearCompute23upData()
-                        running = false
-                        hand23upStarResultIng.value = false
-                        break;
-                    }
-                    dice = Number((Math.random() * 1).toFixed(4))    
-                    j++;    
-                    console.log(dice); 
-                if(nowStar < 22){
-                    if(chanceTime == 2){
-                        chanceTime = 0
-                        useMaplePointTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log("套用chance");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    } 
-                    if(dice <= 0.3){
-                        chanceTime = 0
-                        useMaplePointTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }else{
-                        chanceTime++;
-                        useMaplePointTime++;
-                        if(nowStar !== 20){
-                            nowStar--;
-                            console.log('目前星力',nowStar);
+                starloadBool.value = true
+                setTimeout(()=>{
+                    while(nowStar !== aim){
+                        if(j === 2000000){
+                            console.log('目標未達成');
+                            createT ++;
+                            computed23NoResult.value = true
+                            showResult()
+                            ClearCompute23upData()
+                            createT--;
+                            starloadBool.value = false
+                            break;
                         }
-
-                        nowStarRender.value = nowStar
-                        continue;                        
-                    }
-                    
-                }
-                if(nowStar === 22){
-                    if(chanceTime === 2){
-                        chanceTime = 0
-                        useMaplePointTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log("套用chance");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }                     
-                    if(dice <= addStar23Rate.value && addStar23Rate.value === 0.03){
-                        console.log('使用楓點上23');
-                        useMaplePointTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log('目前星力',nowStar);
-                        chanceTime = 0
-                        continue;
-                    }
-                    if(dice > addStar23Rate.value && addStar23Rate.value === 0.03){
-                        useMaplePointTime++;
-                        nowStar--;
-                        chanceTime++;
-                        nowStarRender.value = nowStar
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-
-                    if(dice <= addStar23Rate.value * 0.01 && addStar23Rate.value === 30){
-                        use23StarTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        chanceTime = 0
-                        console.log("使用追加23星30%成功");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-                    if( dice > addStar23Rate.value * 0.01 && addStar23Rate.value === 30){
-                        use23StarTime++;
-                        chanceTime = 0
-                        console.log("使用追加23星30%失敗");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-                    if(dice <= addStar23Rate.value * 0.01  && addStar23Rate.value === 50){
-                        use23StarTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        chanceTime = 0
-                        console.log("使用追加23星50%成功");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-                    if( dice > addStar23Rate.value * 0.01 && addStar23Rate.value === 50){
-                        use23StarTime++;
-                        chanceTime = 0
-                        console.log("使用追加23星50%失敗");
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-                    if(addStar23Rate.value === 100){
-                        use23StarTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar     
-                        chanceTime = 0                   
-                        console.log("使用追加23星100%");
-                        console.log('目前星力',nowStar);
-                        continue;                        
-                    }
-                }
-                if(nowStar === 23){
-                    // 若24->25失敗到23 若先50楓點偷回去24更省，無須先用追加24星
-                    if(aim === 25 && chanceTime !== 0){
-                        if(dice <= 0.02){
-                            useMaplePointTime3++;
+                        dice = Number((Math.random() * 1).toFixed(4))    
+                        j++;    
+    
+                        // console.log(dice); 
+                    if(nowStar < 22){
+                        if(chanceTime == 2){
+                            chanceTime = 0
+                            useMaplePointTime++;
                             nowStar++;
                             nowStarRender.value = nowStar
-                            console.log('使用楓點回去24');
-                            console.log('目前星力',nowStar);
+                            // console.log("套用chance");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        } 
+                        if(dice <= 0.3){
+                            chanceTime = 0
+                            useMaplePointTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }else{
+                            chanceTime++;
+                            useMaplePointTime++;
+                            if(nowStar !== 20){
+                                nowStar--;
+                                // console.log('目前星力',nowStar);
+                            }
+    
+                            nowStarRender.value = nowStar
+                            continue;                        
+                        }
+                        
+                    }
+                    if(nowStar === 22){
+                        if(chanceTime === 2){
+                            chanceTime = 0
+                            useMaplePointTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log("套用chance");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }                     
+                        if(dice <= addStar23Rate.value && addStar23Rate.value === 0.03){
+                            // console.log('使用楓點上23');
+                            useMaplePointTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log('目前星力',nowStar);
                             chanceTime = 0
                             continue;
                         }
-                        if(dice >  0.02){
+                        if(dice > addStar23Rate.value && addStar23Rate.value === 0.03){
+                            useMaplePointTime++;
+                            nowStar--;
+                            chanceTime++;
+                            nowStarRender.value = nowStar
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+    
+                        if(dice <= addStar23Rate.value * 0.01 && addStar23Rate.value === 30){
+                            use23StarTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            chanceTime = 0
+                            // console.log("使用追加23星30%成功");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+                        if( dice > addStar23Rate.value * 0.01 && addStar23Rate.value === 30){
+                            use23StarTime++;
+                            chanceTime = 0
+                            // console.log("使用追加23星30%失敗");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+                        if(dice <= addStar23Rate.value * 0.01  && addStar23Rate.value === 50){
+                            use23StarTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            chanceTime = 0
+                            // console.log("使用追加23星50%成功");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+                        if( dice > addStar23Rate.value * 0.01 && addStar23Rate.value === 50){
+                            use23StarTime++;
+                            chanceTime = 0
+                            // console.log("使用追加23星50%失敗");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+                        if(addStar23Rate.value === 100){
+                            use23StarTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar     
+                            chanceTime = 0                   
+                            // console.log("使用追加23星100%");
+                            // console.log('目前星力',nowStar);
+                            continue;                        
+                        }
+                    }
+                    if(nowStar === 23){
+                        // 若24->25失敗到23 若先50楓點偷回去24更省，無須先用追加24星
+                        if(aim === 25 && chanceTime !== 0){
+                            if(dice <= 0.02){
+                                useMaplePointTime3++;
+                                nowStar++;
+                                nowStarRender.value = nowStar
+                                // console.log('使用楓點回去24');
+                                // console.log('目前星力',nowStar);
+                                chanceTime = 0
+                                continue;
+                            }
+                            if(dice >  0.02){
+                                nowStar--;
+                                chanceTime++;
+                                useMaplePointTime++;
+                                nowStarRender.value = nowStar
+                                // console.log('使用楓點沒回去24');
+                                // console.log('目前星力',nowStar);
+                                continue;
+                            }
+                            
+                        }
+    
+    
+                        if(dice <= addStar24Rate.value && addStar24Rate.value === 0.02){
+                            useMaplePointTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log('使用楓點上24');
+                            // console.log('目前星力',nowStar);
+                            chanceTime = 0
+                            continue;
+                        }
+                        if(dice > addStar24Rate.value && addStar24Rate.value === 0.02){
                             nowStar--;
                             chanceTime++;
                             useMaplePointTime++;
                             nowStarRender.value = nowStar
-                            console.log('使用楓點沒回去24');
-                            console.log('目前星力',nowStar);
+                            // console.log('使用楓點沒上24');
+                            // console.log('目前星力',nowStar);
                             continue;
                         }
-                        
+    
+                        if(dice <= addStar24Rate.value * 0.01 && addStar24Rate.value === 30){
+                            use24StarTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            chanceTime = 0
+                            // console.log("使用追加24星30%成功");
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+                        if( dice > addStar24Rate.value * 0.01 && addStar24Rate.value === 30){
+                            use24StarTime++;
+                            // console.log("使用追加24星30%失敗");
+                            // console.log('目前星力',nowStar);
+                            chanceTime = 0
+                            continue;
+                        }
+                        if(dice <= addStar24Rate.value * 0.01  && addStar24Rate.value === 50){
+                            use24StarTime++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log("使用追加24星50%成功");
+                            // console.log('目前星力',nowStar);
+                            chanceTime = 0
+                            continue;
+                        }
+                        if( dice > addStar24Rate.value * 0.01 && addStar24Rate.value === 50){
+                            use24StarTime++;
+                            // console.log("使用追加24星50%失敗");
+                            // console.log('目前星力',nowStar);
+                            chanceTime = 0
+                            continue;
+                        }
                     }
-
-
-                    if(dice <= addStar24Rate.value && addStar24Rate.value === 0.02){
-                        useMaplePointTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log('使用楓點上24');
-                        console.log('目前星力',nowStar);
-                        chanceTime = 0
-                        continue;
+                    if(nowStar === 24){
+                        if(dice <= 0.01){
+                            useMaplePointTime2++;
+                            nowStar++;
+                            nowStarRender.value = nowStar
+                            // console.log('使用楓點上25');
+                            // console.log('目前星力',nowStar);
+                            // console.log('使用楓點挑戰25次數',useMaplePointTime2);
+                            
+                            continue;
+                        }else{
+                            useMaplePointTime2++;
+                            nowStar--;
+                            chanceTime++;
+                            nowStarRender.value = nowStar
+                            // console.log('使用楓點挑戰25次數',useMaplePointTime2);
+                            // console.log('使用楓點沒上25');
+                            // console.log('目前星力',nowStar);
+                            continue;
+                        }
+    
                     }
-                    if(dice > addStar24Rate.value && addStar24Rate.value === 0.02){
-                        nowStar--;
-                        chanceTime++;
-                        useMaplePointTime++;
-                        nowStarRender.value = nowStar
-                        console.log('使用楓點沒上24');
-                        console.log('目前星力',nowStar);
-                        // console.log("down");
-                        continue;
+    
                     }
-
-                    if(dice <= addStar24Rate.value * 0.01 && addStar24Rate.value === 30){
-                        use24StarTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        chanceTime = 0
-                        console.log("使用追加24星30%成功");
-                        console.log('目前星力',nowStar);
-                        continue;
+                    if(nowStar === aim){
+                        console.log('目標達成!');
+                        createT ++;
+                        computed23NoResult.value = false
+                        showResult()
+                        ClearCompute23upData()
                     }
-                    if( dice > addStar24Rate.value * 0.01 && addStar24Rate.value === 30){
-                        use24StarTime++;
-                        console.log("使用追加24星30%失敗");
-                        console.log('目前星力',nowStar);
-                        chanceTime = 0
-                        continue;
-                    }
-                    if(dice <= addStar24Rate.value * 0.01  && addStar24Rate.value === 50){
-                        use24StarTime++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log("使用追加24星50%成功");
-                        console.log('目前星力',nowStar);
-                        chanceTime = 0
-                        continue;
-                    }
-                    if( dice > addStar24Rate.value * 0.01 && addStar24Rate.value === 50){
-                        use24StarTime++;
-                        console.log("使用追加24星50%失敗");
-                        console.log('目前星力',nowStar);
-                        chanceTime = 0
-                        continue;
-                    }
-                }
-                if(nowStar === 24){
-                    if(dice <= 0.01){
-                        useMaplePointTime2++;
-                        nowStar++;
-                        nowStarRender.value = nowStar
-                        console.log('使用楓點上25');
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }else{
-                        useMaplePointTime2++;
-                        nowStar--;
-                        chanceTime++;
-                        nowStarRender.value = nowStar
-                        console.log('使用楓點沒上25');
-                        console.log('目前星力',nowStar);
-                        continue;
-                    }
-
-                }
-
-                }
-                if(nowStar === aim){
-                    console.log('目標達成!');
-                    createT ++;
-                    showResult()
-                    ClearCompute23upData()
-                    running = false
-                    hand23upStarResultIng.value = false
-                }
-            
-                
-
+                        starloadBool.value = false
+                },1)
             }
 
 
@@ -1071,14 +1098,15 @@ window.onload = () =>{
                 recoverMaplecoinCostCh,
                 desTime,
                 // 23以上星捲
-                hand23upStarResultIng,
                 add23starcost,
                 add24starcost,
                 handAddStar23Rate,
                 handAddStar24Rate,
                 addStar23Rate,
                 addStar24Rate,
-                starto24bool
+                starto24bool,
+                // loading
+                starloadBool,
 
             }   
         },

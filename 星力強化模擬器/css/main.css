@@ -17,6 +17,10 @@ body {
   border-radius: 10px;
   padding: 1rem;
   padding-bottom: 3rem;
+  margin-top: 100px;
+}
+.starContainer .starTitle {
+  text-align: center;
 }
 .starContainer h1 {
   color: #FFF;
@@ -250,7 +254,7 @@ body {
   background-color: #555;
   width: 90%;
   margin: auto;
-  height: 200px;
+  height: 230px;
   padding: 10px;
   overflow: hidden;
   overflow-y: scroll;
@@ -289,6 +293,11 @@ body {
   border-radius: 5px;
   background-color: #222;
 }
+.resultBox .symbol {
+  position: relative;
+  left: -1px;
+  font-weight: bold;
+}
 
 .Costunit {
   display: inline-block;
@@ -298,9 +307,28 @@ body {
   display: inline-block;
 }
 
+.loadingBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.7411764706);
+}
+.loadingBox .text {
+  color: #FFF;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 33px;
+}
+
 @media (max-width: 992px) {
   .starContainer {
-    width: 98%;
+    width: 100%;
   }
   .starContainer h1 {
     text-align: center;
@@ -314,7 +342,7 @@ body {
     top: 40%;
     left: 50px;
     width: 300px;
-    background-color: #999;
+    background-color: #ffe8b5;
     margin-top: 10px;
     z-index: 2;
   }
@@ -344,6 +372,18 @@ body {
   }
   .starContainer .radioBox input {
     margin-top: 1rem;
+  }
+  .starContainer .resultBox .nextLine {
+    display: block;
+  }
+  .starContainer .resultBox .nextLine.title {
+    padding-bottom: 5px;
+  }
+  .starContainer .resultBox .nextLine.noresult {
+    padding-left: 7px;
+  }
+  .starContainer .resultBox .nextLine .symbol {
+    display: none;
   }
 }
 .starEffect {
