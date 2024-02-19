@@ -1,0 +1,49 @@
+{"data":{
+    "general":[
+        {"bossName":"巴洛古", "defaultDifficulty":"簡單"},
+        {"bossName":"殘暴炎魔", "defaultDifficulty":"簡單"},
+        {"bossName":"希拉", "defaultDifficulty":"簡單"},
+        {"bossName":"卡翁", "defaultDifficulty":"普通"},
+        {"bossName":"拉圖斯", "defaultDifficulty":"簡單"},
+        {"bossName":"比艾樂", "defaultDifficulty":"普通"},
+        {"bossName":"血腥皇后", "defaultDifficulty":"普通"},
+        {"bossName":"斑斑", "defaultDifficulty":"普通"},
+        {"bossName":"貝倫", "defaultDifficulty":"普通"},
+        {"bossName":"闇黑龍王", "defaultDifficulty":"簡單"},
+        {"bossName":"皮卡啾", "defaultDifficulty":"普通"},
+        {"bossName":"西格諾斯", "defaultDifficulty":"簡單"},
+        {"bossName":"守護天使綠水靈","defaultDifficulty":"普通"}
+    ],
+    "blackMagicLegion":[
+        {"bossName":"凡雷恩","defaultDifficulty":"簡單"},
+        {"bossName":"阿卡伊農","defaultDifficulty":"簡單"},
+        {"bossName":"梅格耐斯","defaultDifficulty":"簡單"},
+        {"bossName":"史烏","defaultDifficulty":"普通"},
+        {"bossName":"戴米安","defaultDifficulty":"普通"},
+        {"bossName":"威爾","defaultDifficulty":"簡單"},
+        {"bossName":"露希妲","defaultDifficulty":"簡單"},
+        {"bossName":"戴斯克","defaultDifficulty":"普通"},
+        {"bossName":"真希拉","defaultDifficulty":"普通"},
+        {"bossName":"頓凱爾","defaultDifficulty":"普通"},
+        {"bossName":"黑魔法師","defaultDifficulty":"困難"}
+    ],
+    "grandis":[
+        {"bossName":"受選的賽蓮","defaultDifficulty":"普通"},
+        {"bossName":"監視者卡洛斯","defaultDifficulty":"簡單"},
+        {"bossName":"咖凌","defaultDifficulty":"簡單"}
+    ],
+    "special":[
+        {"bossName":"桃樂絲","defaultDifficulty":"-"},
+        {"bossName":"烏勒斯","defaultDifficulty":"-"},
+        {"bossName":"亞爾卡努斯","defaultDifficulty":"-"},
+        {"bossName":"烈焰戰狼","defaultDifficulty":"普通"},
+        {"bossName":"終極巨腳怪","defaultDifficulty":"-"}
+    ],
+    "oversea":[
+        {"bossName":"森蘭丸","defaultDifficulty":"普通"},
+        {"bossName":"濃姬","defaultDifficulty":"普通"},
+        {"bossName":"培羅德","defaultDifficulty":"初級"}
+    ]
+
+}
+}

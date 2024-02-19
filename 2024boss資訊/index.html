@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024 新楓之谷 全Boss資訊</title>
+    <meta name="description" content="新楓之谷 2024 全Boss資訊內容">
+    <meta property="og:title" content="新楓之谷-Boss資訊">
+    <meta property="og:description" content="新楓之谷 2024 全Boss資訊內容">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="新楓之谷-Boss資訊">
+    <meta property="twitter:description" content="新楓之谷 2024 全Boss資訊內容">
+    <meta property="twitter:image" content="">
+    <title>新楓之谷-Boss資訊</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./img/maplecloudplayer.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body{
@@ -39,44 +49,32 @@
 <body>
     <div id="app">
         <header class="fixed w-full pt-1 bg-[#222] z-10">
-            <h1 class=" text-xl text-[#FFF] font-bold p-2 ml-4">楓之谷全Boss資訊 Ver 2.1</h1>
-            <h2 class="text-white absolute right-4 top-0 flex items-center"><span>Boss難度:</span> <button class="inline-block ml-8 bg-black rounded-md mt-1 w-[100px] text-center py-2 font-bold text-xl hover:text-[#FF0]">普通</button></h2>
+            <h1 class=" text-xl text-[#FFF] font-bold p-2 ml-4">楓之谷全Boss資訊</h1>
+            <h2 class="text-white absolute right-4 top-0 flex items-center"><span>Boss難度:</span> <button class="inline-block ml-8 bg-black rounded-md mt-1 w-[100px] text-center py-2 font-bold text-xl hover:text-[#FF0]">{{nowBossRender.difficulty}}</button></h2>
             <!-- BossNav -->
             <ul class="flex w-full pt-8 md:pt-2 justify-around relative ">
-                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">一般</li>
-                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">老黑/軍團長</li>
-                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">格蘭蒂斯</li>
-                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">海外</li>
-                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">特殊</li>
+                <li @click="handBossNavCont(null,'general')" class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">一般</li>
+                <li @click="handBossNavCont(null,'blackMagicLegion')" class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">老黑/軍團長</li>
+                <li @click="handBossNavCont(null,'grandis')" class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">格蘭蒂斯</li>
+                <li @click="handBossNavCont(null,'oversea')" class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">海外</li>
+                <li @click="handBossNavCont(null,'special')" class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">特殊</li>
             </ul>
-            <span class="absolute md:text-2xl md:top-4 top-12 left-1/2 -translate-x-1/2 font-bold text-[#FF0] text-xl">守護天使綠水靈</span>
+            <span class="absolute md:text-2xl md:top-4 top-12 left-1/2 -translate-x-1/2 font-bold text-[#FF0] text-xl">{{nowBossRender.name}}</span>
             <!-- BossNavCont -->
-            <div class="bg-[#999] hidden">
-                <ul class=" font-bold flex gap-x-4 gap-y-2 flex-wrap 2xl:flex-nowrap px-8 py-2">
-                    <li class="text-lg cursor-pointer">巴洛古</li>
-                    <li class="text-lg cursor-pointer">殘暴炎魔</li>
-                    <li class="text-lg cursor-pointer">梅格耐斯</li>
-                    <li class="text-lg cursor-pointer">希拉</li>
-                    <li class="text-lg cursor-pointer">卡翁</li>
-                    <li class="text-lg cursor-pointer">拉圖斯</li>
-                    <li class="text-lg cursor-pointer">森蘭丸</li>
-                    <li class="text-lg cursor-pointer">比艾樂</li>
-                    <li class="text-lg cursor-pointer">血腥皇后</li>
-                    <li class="text-lg cursor-pointer">斑斑</li>
-                    <li class="text-lg cursor-pointer">貝倫</li>
-                    <li class="text-lg cursor-pointer">凡雷恩</li>
-                    <li class="text-lg cursor-pointer">闇黑龍王</li>
-                    <li class="text-lg cursor-pointer">阿卡伊農</li>
-                    <li class="text-lg cursor-pointer">皮卡啾</li>
-                    <li class="text-lg cursor-pointer">西格諾斯</li>
-                    <li class="text-lg cursor-pointer text-[#FF0]">守護天使綠水靈</li>
+            <div class="bg-[#666]" v-show="BossNavContBool">
+                <ul class=" font-bold flex gap-x-4 gap-y-2 flex-wrap 2xl:flex-nowrap px-8 py-2 text-white">
+                    <li 
+                    @click="handNowBossRender(null, list.bossName,list.defaultDifficulty)"
+                    :class="['text-lg','cursor-pointer',{'text-[#FF0]': list.bossName === nowBossRender.name}]" v-for="list in BossNavCont.is" :key="list.bossName">
+                    {{list.bossName}}</li>
                 </ul>
             </div>
         </header>
-        <main class="pt-[8rem] md:pt-[6rem]  pb-10">
+        <main class="pt-[8rem] md:pt-[6rem]  pb-10" @click="handBossNavCont(null,'close')">
             <div>
                 <h1 class="text-2xl font-bold text-white text-center py-4">Boss介紹</h1>
-                <img class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" src="./img/boss/banner_守護天使綠水靈.png" alt="">
+                <img v-if="nowBossRender.name !== '烈焰戰狼'" class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" :src="`./img/boss/banner_${nowBossRender.name}.png`" alt="">
+                <img v-if="nowBossRender.name === '烈焰戰狼'" class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" :src="`./img/boss/banner_${nowBossRender.difficulty}${nowBossRender.name}.png`" alt="">
                 <h1 class="text-2xl font-bold text-white text-center py-4">前置任務: <span>[拉姆拉姆]</span></h2>
                 <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
                     <ul class="flex justify-around py-2 border-b-2">
@@ -353,10 +351,11 @@
             <span class="text-white">網頁製作: 池雲寅 </span>
             <span class="text-white">最後更新日期: 2024/02/19 </span>
             <span class="text-white">資料來源: 
-            <a class="text-[#64a0ff]" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4fUZewbIUVC2bJbUN3sEIk-R03D40EY5_9icDMSRXv16KJCp65bis2CHGA9E0JgKIrnx2n-QPoBuB/pubhtml#" target="_blank">楓之谷全Boss資訊 Ver 2.1(音奈製作)</a>
+            <a class="text-[#ff0]" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4fUZewbIUVC2bJbUN3sEIk-R03D40EY5_9icDMSRXv16KJCp65bis2CHGA9E0JgKIrnx2n-QPoBuB/pubhtml#" target="_blank">楓之谷全Boss資訊 Ver 2.1(音奈製作)</a>
             </span>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
