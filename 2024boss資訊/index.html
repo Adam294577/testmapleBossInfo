@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 新楓之谷 全Boss資訊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background: #222;
+            --sb-track-color: #232E33;
+            --sb-thumb-color: #ffffff;
+            --sb-size: 4px;            
+        }
+
+        body::-webkit-scrollbar {
+          width: var(--sb-size)
+        }
+
+        body::-webkit-scrollbar-track {
+          background: var(--sb-track-color);
+          border-radius: 4px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+          background: var(--sb-thumb-color);
+          border-radius: 4px;
+        
+        }
+
+        @supports not selector(::-webkit-scrollbar) {
+          body {
+            scrollbar-color: var(--sb-thumb-color)
+                             var(--sb-track-color);
+          }
+        }        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="fixed w-full pt-1 bg-[#222] z-10">
+            <h1 class=" text-xl text-[#FFF] font-bold p-2 ml-4">楓之谷全Boss資訊 Ver 2.1</h1>
+            <h2 class="text-white absolute right-4 top-0 flex items-center"><span>Boss難度:</span> <button class="inline-block ml-8 bg-black rounded-md mt-1 w-[100px] text-center py-2 font-bold text-xl hover:text-[#FF0]">普通</button></h2>
+            <!-- BossNav -->
+            <ul class="flex w-full pt-8 md:pt-2 justify-around relative ">
+                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">一般</li>
+                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">老黑/軍團長</li>
+                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">格蘭蒂斯</li>
+                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">海外</li>
+                <li class="cursor-pointer font-bold text-lg text-white  bg-black w-[20%] py-2 text-center">特殊</li>
+            </ul>
+            <span class="absolute md:text-2xl md:top-4 top-12 left-1/2 -translate-x-1/2 font-bold text-[#FF0] text-xl">守護天使綠水靈</span>
+            <!-- BossNavCont -->
+            <div class="bg-[#999] hidden">
+                <ul class=" font-bold flex gap-x-4 gap-y-2 flex-wrap 2xl:flex-nowrap px-8 py-2">
+                    <li class="text-lg cursor-pointer">巴洛古</li>
+                    <li class="text-lg cursor-pointer">殘暴炎魔</li>
+                    <li class="text-lg cursor-pointer">梅格耐斯</li>
+                    <li class="text-lg cursor-pointer">希拉</li>
+                    <li class="text-lg cursor-pointer">卡翁</li>
+                    <li class="text-lg cursor-pointer">拉圖斯</li>
+                    <li class="text-lg cursor-pointer">森蘭丸</li>
+                    <li class="text-lg cursor-pointer">比艾樂</li>
+                    <li class="text-lg cursor-pointer">血腥皇后</li>
+                    <li class="text-lg cursor-pointer">斑斑</li>
+                    <li class="text-lg cursor-pointer">貝倫</li>
+                    <li class="text-lg cursor-pointer">凡雷恩</li>
+                    <li class="text-lg cursor-pointer">闇黑龍王</li>
+                    <li class="text-lg cursor-pointer">阿卡伊農</li>
+                    <li class="text-lg cursor-pointer">皮卡啾</li>
+                    <li class="text-lg cursor-pointer">西格諾斯</li>
+                    <li class="text-lg cursor-pointer text-[#FF0]">守護天使綠水靈</li>
+                </ul>
+            </div>
+        </header>
+        <main class="pt-[8rem] md:pt-[6rem]  pb-10">
+            <div>
+                <h1 class="text-2xl font-bold text-white text-center py-4">Boss介紹</h1>
+                <img class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" src="./img/boss/banner_守護天使綠水靈.png" alt="">
+                <h1 class="text-2xl font-bold text-white text-center py-4">前置任務: <span>[拉姆拉姆]</span></h2>
+                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <ul class="flex justify-around py-2 border-b-2">
+                        <li class="text-white font-bold w-full text-center">難度</li>
+                        <li class="text-white font-bold w-full text-center">進場次數</li>
+                        <li class="text-white font-bold w-full text-center">里程</li>
+                        <li class="text-white font-bold w-full text-center">頭目點數</li>
+                        <li class="text-white font-bold w-full text-center">入場需求</li>
+                    </ul>
+                    <ul class="flex justify-around py-1 items-center">
+                        <li class="text-white font-bold w-full text-center">普通模式</li>
+                        <li class="text-white font-bold w-full text-center">3次</li>
+                        <li class="text-white font-bold w-full text-center">5</li>
+                        <li class="text-white font-bold w-full text-center">30</li>
+                        <li class="text-white font-bold w-full text-center">-</li>
+                    </ul>
+                    <ul class="flex justify-around py-1 items-center">
+                        <li class="text-white font-bold w-full text-center">混沌模式</li>
+                        <li class="text-white font-bold w-full text-center">3次</li>
+                        <li class="text-white font-bold w-full text-center">5</li>
+                        <li class="text-white font-bold w-full text-center">70</li>
+                        <li class="text-white font-bold w-full text-center">-</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BossCont -->
+            <h1 class="text-2xl font-bold text-white text-center py-4">Boss資訊<span class="ml-2">(普通)</span></h1>
+                <!-- BossInfo -->
+                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <ul class="flex justify-around py-2 border-b-2">
+                        <li class="text-white font-bold w-full text-center">入場等級</li>
+                        <li class="text-white font-bold w-full text-center">消耗品冷卻</li>
+                        <li class="text-white font-bold w-full text-center">死亡次數</li>
+                        <li class="text-white font-bold w-full text-center">完成次數</li>
+                    </ul>  
+                    <ul class="flex justify-around py-1 items-center">
+                        <li class="text-white font-bold w-full text-center">Lv.210</li>
+                        <li class="text-white font-bold w-full text-center">5秒</li>
+                        <li class="text-white font-bold w-full text-center">個人5次</li>
+                        <li class="text-white font-bold w-full text-center">全模式每週1次</li>
+                    </ul>                                  
+                </div>
+                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md mt-4">
+                    <ul class="flex justify-around py-2 border-b-2">
+                        <li class="text-white font-bold w-full text-center">怪物資訊</li>
+                        <li class="text-white font-bold w-full text-center">血量</li>
+                        <li class="text-white font-bold w-full text-center">防禦</li>
+                        <li class="text-white font-bold w-full text-center">屬性減半</li>
+                    </ul>  
+                    <ul class="flex justify-around py-1 items-center">
+                        <li class="text-white font-bold w-full text-center">
+                            <span>Lv.220</span><span class="block">守護天使綠水靈</span>
+                        </li>
+                        <li class="text-white font-bold w-full text-center">5兆</li>
+                        <li class="text-white font-bold w-full text-center">300%</li>
+                        <li class="text-white font-bold w-full text-center">O</li>
+                    </ul>  
+                </div>                
+                <div class="">
+                    <h1 class="text-2xl font-bold text-white text-center py-4">特殊條件</h2>
+                    <ol class="list-decimal max-w-[1000px] mx-auto">
+                        <li class="text-white">常駐減傷 15%</li>
+                        <li class="text-white">每分鐘恢復血量1% (500億)</li>
+                    </ol>
+
+                </div>                     
+                <!-- BossBonusGeneral -->
+                <h1 class="text-2xl font-bold text-white text-center py-4">保底掉落物</h1>
+                <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <ul class="py-4">
+                        <li class="h-[65px] flex items-center">
+                            <div class="flex items-center w-[35%]">
+                                <img class="w-[35px] mx-4" src="./img/item/強烈的力量結晶.png" alt="">
+                                <p class="font-bold">強烈的力量結晶</p>
+                            </div>
+                            <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12 md:w-[20%]">
+                                <span class="font-bold relative">一般伺服器: <span class="absolute left-[80%] w-[150px] text-center">3911萬4492</span></span>
+                                <span class="font-bold relative">ReBoot伺服器: <span class="absolute left-[80%] w-[150px] text-center">1億9557萬2460</span></span>
+                            </div>
+                        </li>
+                        <li class="h-[65px] flex items-center">
+                            <div class="flex items-center w-[35%]">
+                                <img class="w-[35px] mx-4 scale-125" src="./img/item/可疑附加方塊.png" alt="">
+                                <p class="font-bold">可疑附加方塊</p>
+                            </div>
+                            <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12">
+                                <p class="font-bold text-xl lg:text-2xl">x3</p>
+                            </div>
+                        </li>
+                        <li class="h-[65px] flex items-center">
+                            <div class="flex items-center w-[35%]">
+                                <img class="w-[35px] mx-4" src="./img/item/艾爾達氣息.png" alt="">
+                                <p class="font-bold">艾爾達氣息</p>
+                            </div>
+                            <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12">
+                                <p class="font-bold text-xl lg:text-2xl">x70</p>
+                            </div>
+                        </li>
+                        <li class="h-[65px] flex items-center">
+                            <div class="flex items-center w-[35%]">
+                                <p class="font-bold ml-16">其他</p>
+                            </div>
+                            <div class="relative md:relative -left-12">
+                                <p class="font-bold">
+                                    <span>輪迴星火 150級</span>
+                                    <span>、</span>
+                                    <span>超級藥水</span>
+                                    <span>、</span>
+                                    <span>咒文的痕跡</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+                <!-- BossBonusGeneral -->
+                <h1 class="text-2xl font-bold text-white text-center py-4">獎勵類掉落物</h1>
+                <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <div class="space-y-2">
+                        <ul class="row flex justify-around w-full">
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/太初.png" alt="">
+                                <span class="font-bold">太初</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">-</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/名譽.png" alt="">
+                                <span class="font-bold">名譽</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/小經驗.png" alt="">
+                                <span class="font-bold">小經驗</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/天氣50.png" alt="">
+                                <span class="font-bold">天氣50%</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/閃藍.png" alt="">
+                                <span class="font-bold">閃藍</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/閃紅.png" alt="">
+                                <span class="font-bold">閃紅</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                        </ul>
+                        <ul class="row flex justify-around w-full">
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/紅火.png" alt="">
+                                <span class="font-bold">紅火</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/紫火.png" alt="">
+                                <span class="font-bold">紫火</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/黑火.png" alt="">
+                                <span class="font-bold">黑火</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/強力.png" alt="">
+                                <span class="font-bold">強力</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/永遠.png" alt="">
+                                <span class="font-bold">永遠</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/暗黑.png" alt="">
+                                <span class="font-bold">暗黑</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                        </ul>
+                        <ul class="row flex justify-around w-full">
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/優質武器.png" alt="">
+                                <span class="font-bold">優質武器</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/優質飾品.png" alt="">
+                                <span class="font-bold">優質飾品</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/優質寵物.png" alt="">
+                                <span class="font-bold">優質寵物</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/優質飾品.png" alt="">
+                                <span class="font-bold">飾品</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/混沌.png" alt="">
+                                <span class="font-bold">驚訝混沌</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/匠人.png" alt="">
+                                <span class="font-bold">匠人氣息</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                        </ul>
+                        <ul class="row flex justify-around w-full">
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/綠玉.png" alt="">
+                                <span class="font-bold">綠玉</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/紅玉.png" alt="">
+                                <span class="font-bold">紅玉</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/黑玉.png" alt="">
+                                <span class="font-bold">黑玉</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/白玉.png" alt="">
+                                <span class="font-bold">白玉</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/紅祈禱.png" alt="">
+                                <span class="font-bold">紅祈禱</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                            <li class="flex flex-col items-center w-1/6">
+                                <img src="./img/item/綠祈禱.png" alt="">
+                                <span class="font-bold">綠祈禱</span>
+                                <span class="bg-[#ccffcc] inline-block w-full text-center font-bold text-xl">✓</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>           
+                <!-- BossBonusImportant -->
+                <h1 class="text-2xl font-bold text-white text-center py-4">特殊類掉落物</h1>
+                <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <ul class="">
+                        <li class="h-[60px] flex items-center">
+                            <div class="w-[10%]">
+                                <img  class="mx-auto" src="./img/item/守護者天使戒指.png" alt="">
+                            </div>
+                            <span class="inline-block w-[15%] font-bold text-center" >戒指</span>
+                            <span class="inline-block w-[60%] font-bold" >Lv.160－守護者天使戒指</span>
+                        </li>
+                        <li class="h-[60px] flex items-center">
+                            <div class="w-[10%]">
+                                <img  class="mx-auto" src="./img/item/守護天使綠水靈噴泉.png" alt="">
+                            </div>
+                            <span class="inline-block w-[15%] font-bold text-center" >家具</span>
+                            <span class="inline-block w-[60%] font-bold" >守護天使綠水靈噴泉</span>
+                        </li>
+                    </ul>
+                </div>
+        </main>
+        <footer class="fixed w-full bottom-0  bg-black space-x-4 text-center px-8 hidden lg:flex">
+            
+            <span class="text-white">網頁製作: 池雲寅 </span>
+            <span class="text-white">最後更新日期: 2024/02/19 </span>
+            <span class="text-white">資料來源: 
+            <a class="text-[#64a0ff]" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4fUZewbIUVC2bJbUN3sEIk-R03D40EY5_9icDMSRXv16KJCp65bis2CHGA9E0JgKIrnx2n-QPoBuB/pubhtml#" target="_blank">楓之谷全Boss資訊 Ver 2.1(音奈製作)</a>
+            </span>
+        </footer>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
