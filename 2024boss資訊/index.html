@@ -132,18 +132,25 @@
             </div>               
                 <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md mt-4">
                     <ul class="flex justify-around border-b-2">
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">怪物資訊</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs hidden md:block">怪物等級</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">怪物名稱</li>
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs">血量</li>
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs">防禦</li>
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs">屬性減半</li>
                     </ul>  
-                    <ul class="flex justify-around py-1 items-center">
+                    <ul 
+                    class="flex justify-around py-1 items-center"
+                    v-for="list in MosInfoRender" :key="list.key"
+                    >
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs hidden md:block">
+                            <span class="hidden md:inline-block">Lv.{{list.Lv}}</span>
+                        </li>                    
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs">
-                            <span>Lv.220</span><span class="block">守護天使綠水靈</span>
+                            <span class="md:hidden">Lv.{{list.Lv}}</span><span class="block md:inline-block md:ml" v-html="list.name"></span>
                         </li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">5兆</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">300%</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">O</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.hp"></li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.defense"></li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.half"></li>
                     </ul>  
                 </div>                
                 <div class="">

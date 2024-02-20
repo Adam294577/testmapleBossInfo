@@ -74,9 +74,18 @@ window.onload = () =>{
                 if(key.length === 0) return key
                 return key[0]
             })
+            const MosInfoRender = computed(()=>{
+                let key = BossDifficultyRender.value.mosInfo ?? []
+                if(key.length === 0) return key
+                key = key.map(item=>{
+                   item.key = `${item.name}${item.hp}` 
+                   return item
+                })
+                return key              
+            })
             setTimeout(()=>{
-                console.log(ShowJoinInfo.value);
-            },2000)
+                console.log(MosInfoRender.value);
+            },1000)
             // 特殊BOSS資訊處理
             const BossJoinConditionTitle = computed(()=>{
                 let bossName = nowBossRender.value.name
@@ -98,7 +107,7 @@ window.onload = () =>{
                     `
                 }
                 return html
-            })            
+            })         
             
             onMounted(()=>{
                 const api = axios.create({
@@ -141,7 +150,8 @@ window.onload = () =>{
                 // 特殊BOSS資訊處理
                 BossJoinConditionTitle,
                 // Boss資訊
-                ShowJoinInfo
+                ShowJoinInfo,
+                MosInfoRender,
             }   
         },
 

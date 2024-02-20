@@ -33,6 +33,6 @@
     {"bossName":"終極巨腳怪","defaultDifficulty":"-","mission":"[終極怪物公園]","type":"special"},
     {"bossName":"森蘭丸","defaultDifficulty":"普通","mission":"[紋櫻公主的呼喚]","type":"oversea"},
     {"bossName":"濃姬","defaultDifficulty":"普通","mission":"[濃姬]","type":"oversea"},
-    {"bossName":"培羅德","defaultDifficulty":"初級","mission":"[培羅德]","type":"oversea"}
+    {"bossName":"培羅德","defaultDifficulty":"頂級","mission":"[培羅德]","type":"oversea"}
     ]
 }
