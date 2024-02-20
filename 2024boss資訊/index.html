@@ -69,7 +69,7 @@
             <div class="bg-[#666]" v-show="BossNavContBool">
                 <ul class=" font-bold flex gap-x-4 gap-y-2 flex-wrap 2xl:flex-nowrap px-8 py-2 text-white">
                     <li 
-                    @click="handNowBossRender(null, list.bossName,list.defaultDifficulty)"
+                    @click="handNowBossRender(null, list.bossName,list.defaultDifficulty,list.mission)"
                     :class="['text-lg','cursor-pointer',{'text-[#FF0]': list.bossName === nowBossRender.name}]" v-for="list in BossNavCont.is" :key="list.bossName">
                     {{list.bossName}}</li>
                 </ul>
@@ -80,62 +80,70 @@
                 <h1 class="text-2xl font-bold text-white text-center py-4">Boss介紹</h1>
                 <img v-if="nowBossRender.name !== '烈焰戰狼'" class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" :src="`./img/boss/banner_${nowBossRender.name}.png`" alt="">
                 <img v-if="nowBossRender.name === '烈焰戰狼'" class="mx-auto py-2 max-w-[300px] lg:max-w-[500px]" :src="`./img/boss/banner_${nowBossRender.difficulty}${nowBossRender.name}.png`" alt="">
-                <h1 class="text-2xl font-bold text-white text-center py-4">前置任務: <span>[拉姆拉姆]</span></h2>
-                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
-                    <ul class="flex justify-around py-2 border-b-2">
-                        <li class="text-white font-bold w-full text-center">難度</li>
-                        <li class="text-white font-bold w-full text-center">進場次數</li>
-                        <li class="text-white font-bold w-full text-center">里程</li>
-                        <li class="text-white font-bold w-full text-center">頭目點數</li>
-                        <li class="text-white font-bold w-full text-center">入場需求</li>
+                <h1  class="text-2xl font-bold text-white text-center py-4">{{BossJoinConditionTitle}}: <span>{{nowBossRender.mission}}</span></h2>
+                <div 
+                v-if="ShowBossRuleInfo[0].rule.length !== 0 " 
+                class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md"
+                >
+                    <ul class="flex justify-around border-b-2">
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">難度</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">進場次數</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">里程</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">頭目點數</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">入場需求</li>
                     </ul>
-                    <ul class="flex justify-around py-1 items-center">
-                        <li class="text-white font-bold w-full text-center">普通模式</li>
-                        <li class="text-white font-bold w-full text-center">3次</li>
-                        <li class="text-white font-bold w-full text-center">5</li>
-                        <li class="text-white font-bold w-full text-center">30</li>
-                        <li class="text-white font-bold w-full text-center">-</li>
+                    <ul 
+                    class="flex justify-around py-1 items-center" 
+                    v-for="list in ShowBossRuleInfo" :key="list.rule[0].key"
+                    >
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">{{list.rule[0].mode}}</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">{{list.rule[0].joinTimes}}</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">{{list.rule[0].males}}</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">{{list.rule[0].bossPts}}</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">{{list.rule[0].joinRule}}</li>
                     </ul>
-                    <ul class="flex justify-around py-1 items-center">
-                        <li class="text-white font-bold w-full text-center">混沌模式</li>
-                        <li class="text-white font-bold w-full text-center">3次</li>
-                        <li class="text-white font-bold w-full text-center">5</li>
-                        <li class="text-white font-bold w-full text-center">70</li>
-                        <li class="text-white font-bold w-full text-center">-</li>
-                    </ul>
+                </div>
+                <div 
+                v-if="ShowBossRuleMsg !== ''" 
+                class="mx-auto max-w-[1000px] font-bold lg:text-base text-xs px-8 pt-4" 
+                v-html="ShowBossRuleMsg"
+                >
                 </div>
             </div>
             <!-- BossCont -->
-            <h1 class="text-2xl font-bold text-white text-center py-4">Boss資訊<span class="ml-2">(普通)</span></h1>
-                <!-- BossInfo -->
-                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
-                    <ul class="flex justify-around py-2 border-b-2">
-                        <li class="text-white font-bold w-full text-center">入場等級</li>
-                        <li class="text-white font-bold w-full text-center">消耗品冷卻</li>
-                        <li class="text-white font-bold w-full text-center">死亡次數</li>
-                        <li class="text-white font-bold w-full text-center">完成次數</li>
-                    </ul>  
-                    <ul class="flex justify-around py-1 items-center">
-                        <li class="text-white font-bold w-full text-center">Lv.210</li>
-                        <li class="text-white font-bold w-full text-center">5秒</li>
-                        <li class="text-white font-bold w-full text-center">個人5次</li>
-                        <li class="text-white font-bold w-full text-center">全模式每週1次</li>
-                    </ul>                                  
-                </div>
+            <h1 class="text-2xl font-bold text-white text-center py-2">Boss資訊<span class="ml-2" v-show="nowBossRender.difficulty !== '-'">({{nowBossRender.difficulty}})</span></h1>
+            <div 
+            class="border-2 mt-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
+                <ul class="flex justify-around border-b-2">
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">入場等級</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">時間限制</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">消耗品冷卻</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">死亡次數</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">完成次數</li>
+                </ul>  
+                <ul 
+                class="flex justify-around items-center">
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">Lv{{ShowJoinInfo.Lv}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.timeLimit}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.cd}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.deadTimes}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.finishTimes}}</li>
+                </ul>                                  
+            </div>               
                 <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md mt-4">
-                    <ul class="flex justify-around py-2 border-b-2">
-                        <li class="text-white font-bold w-full text-center">怪物資訊</li>
-                        <li class="text-white font-bold w-full text-center">血量</li>
-                        <li class="text-white font-bold w-full text-center">防禦</li>
-                        <li class="text-white font-bold w-full text-center">屬性減半</li>
+                    <ul class="flex justify-around border-b-2">
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">怪物資訊</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">血量</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">防禦</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">屬性減半</li>
                     </ul>  
                     <ul class="flex justify-around py-1 items-center">
-                        <li class="text-white font-bold w-full text-center">
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">
                             <span>Lv.220</span><span class="block">守護天使綠水靈</span>
                         </li>
-                        <li class="text-white font-bold w-full text-center">5兆</li>
-                        <li class="text-white font-bold w-full text-center">300%</li>
-                        <li class="text-white font-bold w-full text-center">O</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">5兆</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">300%</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">O</li>
                     </ul>  
                 </div>                
                 <div class="">
@@ -354,13 +362,17 @@
         <footer class="fixed w-full bottom-0  bg-black space-x-4 text-center px-8 hidden lg:flex">
             
             <span class="text-white">網頁製作: 池雲寅 </span>
-            <span class="text-white">最後更新日期: 2024/02/19 </span>
+            <span class="text-white">最後更新日期: 2024/02/20 </span>
             <span class="text-white absolute right-4">資料來源: 
             <a class="text-[#ff0]" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4fUZewbIUVC2bJbUN3sEIk-R03D40EY5_9icDMSRXv16KJCp65bis2CHGA9E0JgKIrnx2n-QPoBuB/pubhtml#" target="_blank">楓之谷全Boss資訊 Ver 2.1(音奈製作)</a>
             </span>
         </footer>
     </div>
+    <!-- Object.groupBy為較新api 要串接此CDN -->
+    <script crossorigin="anonymous" integrity="sha512-4onBOReBl8Ahp9q5ckJwB70wFMa1q74/L2TDh/Lpk0f26ftYp7DPM7KXJheocprl4cicFk9ZshZ8V/Gwkv1ccA==" src="https://lib.baomitu.com/core-js/3.35.0/minified.js"></script>
+    <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <!-- vue -->
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
