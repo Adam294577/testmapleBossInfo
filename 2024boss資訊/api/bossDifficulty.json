@@ -14,7 +14,7 @@
     {"bossName":"殘暴炎魔", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"殘暴炎魔-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"火焰之眼的碎片"}],
-            "ruleSec":[{"key":"殘暴炎魔-簡單模式","Lv":"50","timeLimit":"20分鐘","cd":"15秒","deadTimes":"個人50次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"殘暴炎魔-簡單模式","Lv":"50","timeLimit":"20分鐘","cd":"15秒","deadTimes":"個人50次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"55","name":"弱化的殘暴炎魔","hp":"478萬7520","defense":"25%","half":"X"},
                 {"Lv":"50","name":"殘暴炎魔的手臂","hp":"5萬","defense":"25%","half":"X"}
@@ -22,7 +22,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"殘暴炎魔-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"1","joinRule":"火焰之眼"}],
-            "ruleSec":[{"key":"殘暴炎魔-普通模式","Lv":"90","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"殘暴炎魔-普通模式","Lv":"90","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"110","name":"殘暴炎魔","hp":"700萬","defense":"40%","half":"O"},
                 {"Lv":"110","name":"殘暴炎魔的手臂","hp":"70萬","defense":"40%","half":"O"}
@@ -72,7 +72,7 @@
     {"bossName":"拉圖斯", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"拉圖斯-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"拉圖斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人50次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"拉圖斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人50次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"125","name":"拉圖斯的時鐘","hp":"3億","defense":"50%","half":"O"},
                 {"Lv":"125","name":"拉圖斯","hp":"1億","defense":"50%","half":"O"}
@@ -80,7 +80,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"拉圖斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"拉圖斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"拉圖斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"155","name":"拉圖斯的時鐘","hp":"124.5億","defense":"90%","half":"O"},
                 {"Lv":"155","name":"拉圖斯","hp":"41.5億","defense":"90%","half":"O"}
@@ -328,14 +328,14 @@
     {"bossName":"梅格耐斯","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"梅格耐斯-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"梅格耐斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"梅格耐斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"110","name":"梅格耐斯","hp":"4億","defense":"50%","half":"O"}
             ]             
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"梅格耐斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"梅格耐斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"簡單/普通每日1次"}],
+            "ruleSec":[{"key":"梅格耐斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"簡單/普通<br>每日1次"}],
             "mosInfo":[
                 {"Lv":"130","name":"梅格耐斯","hp":"60億","defense":"50%","half":"O"}
             ]              

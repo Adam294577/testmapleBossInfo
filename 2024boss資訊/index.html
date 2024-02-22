@@ -83,7 +83,7 @@
                 <h1  class="text-2xl font-bold text-white text-center py-4">{{BossJoinConditionTitle}}: <span>{{nowBossRender.mission}}</span></h2>
                 <div 
                 v-if="ShowBossRuleInfo[0].rule.length !== 0 " 
-                class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md"
+                class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md"
                 >
                     <ul class="flex justify-around border-b-2">
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">難度</li>
@@ -113,7 +113,7 @@
             <!-- BossCont -->
             <h1 class="text-2xl font-bold text-white text-center py-2">Boss資訊<span class="ml-2" v-show="nowBossRender.difficulty !== '-'">({{nowBossRender.difficulty}})</span></h1>
             <div 
-            class="border-2 mt-2 w-[90%] mx-auto max-w-[1000px] rounded-md">
+            class="border-2 mt-2 w-[95%] mx-auto max-w-[1000px] rounded-md">
                 <ul class="flex justify-around border-b-2">
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">入場等級</li>
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">時間限制</li>
@@ -127,16 +127,16 @@
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.timeLimit}}</li>
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.cd}}</li>
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.deadTimes}}</li>
-                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.finishTimes}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 " v-html="ShowJoinInfo.finishTimes"></li>
                 </ul>                                  
             </div>               
-                <div class="border-2 w-[90%] mx-auto max-w-[1000px] rounded-md mt-4">
+                <div class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md mt-4">
                     <ul class="flex justify-around border-b-2">
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs hidden md:block">怪物等級</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">怪物名稱</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">血量</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">防禦</li>
-                        <li class="text-white font-bold w-full text-center lg:text-base text-xs">屬性減半</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 hidden md:block">怪物等級</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">怪物名稱</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">血量</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">防禦</li>
+                        <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2">屬性減半</li>
                     </ul>  
                     <ul 
                     class="flex justify-around py-1 items-center"
@@ -164,7 +164,7 @@
                 <div class="hidden">
                     <!-- BossBonusGeneral -->
                     <h1 class="text-2xl font-bold text-white text-center py-4">保底掉落物</h1>
-                    <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <div class="bg-[#ffcb99] w-[95%] mx-auto max-w-[1000px] rounded-md">
                         <ul class="py-4">
                             <li class="h-[65px] flex items-center">
                                 <div class="flex items-center w-[35%]">
@@ -213,7 +213,7 @@
                     </div>
                     <!-- BossBonusGeneral -->
                     <h1 class="text-2xl font-bold text-white text-center py-4">獎勵類掉落物</h1>
-                    <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <div class="bg-[#ffcb99] w-[95%] mx-auto max-w-[1000px] rounded-md">
                         <div class="space-y-2">
                             <ul class="row flex justify-around w-full">
                                 <li class="flex flex-col items-center w-1/6">
@@ -347,7 +347,7 @@
                     </div>           
                     <!-- BossBonusImportant -->
                     <h1 class="text-2xl font-bold text-white text-center py-4">特殊類掉落物</h1>
-                    <div class="bg-[#ffcb99] w-[90%] mx-auto max-w-[1000px] rounded-md">
+                    <div class="bg-[#ffcb99] w-[95%] mx-auto max-w-[1000px] rounded-md">
                         <ul class="">
                             <li class="h-[60px] flex items-center">
                                 <div class="w-[10%]">
