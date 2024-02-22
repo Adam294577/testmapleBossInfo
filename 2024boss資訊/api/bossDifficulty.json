@@ -14,7 +14,7 @@
     {"bossName":"殘暴炎魔", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"殘暴炎魔-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"火焰之眼的碎片"}],
-            "ruleSec":[{"key":"殘暴炎魔-簡單模式","Lv":"50","timeLimit":"20分鐘","cd":"15秒","deadTimes":"個人50次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"殘暴炎魔-簡單模式","Lv":"50","timeLimit":"20分鐘","cd":"15秒","deadTimes":"個人50次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"55","name":"弱化的殘暴炎魔","hp":"478萬7520","defense":"25%","half":"X"},
                 {"Lv":"50","name":"殘暴炎魔的手臂","hp":"5萬","defense":"25%","half":"X"}
@@ -22,7 +22,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"殘暴炎魔-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"1","joinRule":"火焰之眼"}],
-            "ruleSec":[{"key":"殘暴炎魔-普通模式","Lv":"90","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"殘暴炎魔-普通模式","Lv":"90","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"110","name":"殘暴炎魔","hp":"700萬","defense":"40%","half":"O"},
                 {"Lv":"110","name":"殘暴炎魔的手臂","hp":"70萬","defense":"40%","half":"O"}
@@ -72,7 +72,7 @@
     {"bossName":"拉圖斯", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"拉圖斯-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"拉圖斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人50次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"拉圖斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人50次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"125","name":"拉圖斯的時鐘","hp":"3億","defense":"50%","half":"O"},
                 {"Lv":"125","name":"拉圖斯","hp":"1億","defense":"50%","half":"O"}
@@ -80,7 +80,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"拉圖斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"拉圖斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"拉圖斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"155","name":"拉圖斯的時鐘","hp":"124.5億","defense":"90%","half":"O"},
                 {"Lv":"155","name":"拉圖斯","hp":"41.5億","defense":"90%","half":"O"}
@@ -165,7 +165,7 @@
     {"bossName":"闇黑龍王", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"闇黑龍王-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"敢死隊榮譽象徵"}],
-            "ruleSec":[{"key":"闇黑龍王-簡單模式","Lv":"130","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人10次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"闇黑龍王-簡單模式","Lv":"130","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"130","name":"闇黑龍王","hp":"8億1760萬","defense":"40%","half":"X"},
                 {"Lv":"130","name":"闇黑龍王的左頭","hp":"1億","defense":"40%","half":"X"},
@@ -174,7 +174,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"闇黑龍王-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"敢死隊榮譽象徵"}],
-            "ruleSec":[{"key":"闇黑龍王-普通模式","Lv":"130","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"闇黑龍王-普通模式","Lv":"130","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"160","name":"闇黑龍王","hp":"20.9億","defense":"40%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的左頭","hp":"3.3億","defense":"40%","half":"X"},
@@ -183,7 +183,7 @@
         },
         {"idx":2,"is":"混沌",
             "rule":[{"key":"闇黑龍王-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"敢死隊榮譽象徵"}],
-            "ruleSec":[{"key":"闇黑龍王-混沌模式","Lv":"135","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"闇黑龍王-混沌模式","Lv":"135","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"160","name":"闇黑龍王","hp":"200億","defense":"50%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的左頭","hp":"33億","defense":"50%","half":"X"},
@@ -220,7 +220,7 @@
     {"bossName":"西格諾斯", "Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"西格諾斯-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"5","bossPts":"5","joinRule":"-"}],
-            "ruleSec":[{"key":"西格諾斯-簡單模式","Lv":"165","timeLimit":"30分鐘","cd":"6秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"西格諾斯-簡單模式","Lv":"165","timeLimit":"30分鐘","cd":"6秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"140","name":"西格諾斯","hp":"105億","defense":"100%","half":"O"},
                 {"Lv":"140","name":"上級騎士A","hp":"2.5億","defense":"35%","half":"X"},
@@ -237,7 +237,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"西格諾斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"5","bossPts":"5","joinRule":"-"}],
-            "ruleSec":[{"key":"西格諾斯-普通模式","Lv":"165","timeLimit":"30分鐘","cd":"6秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"西格諾斯-普通模式","Lv":"165","timeLimit":"30分鐘","cd":"6秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"190","name":"西格諾斯","hp":"630億","defense":"100%","half":"O"},
                 {"Lv":"177","name":"上級騎士A","hp":"2.5億","defense":"35%","half":"X"},
@@ -262,14 +262,14 @@
     {"bossName":"守護天使綠水靈","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"守護天使綠水靈-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"30","joinRule":"-"}],
-            "ruleSec":[{"key":"守護天使綠水靈-普通模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"守護天使綠水靈-普通模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"220","name":"守護天使綠水靈","hp":"5兆","defense":"300%","half":"O"}
             ]              
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"守護天使綠水靈-混沌模式","mode":"混沌模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"守護天使綠水靈-混沌模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"守護天使綠水靈-混沌模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"220","name":"守護天使綠水靈","hp":"90兆","defense":"300%","half":"O"}
             ]              
@@ -278,7 +278,7 @@
     {"bossName":"凡雷恩","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"凡雷恩-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"凡雷恩-簡單模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"凡雷恩-簡單模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"120","name":"凡雷恩","hp":"7億","defense":"50%","half":"X"},
                 {"Lv":"120","name":"教官鮑爾","hp":"150萬","defense":"20%","half":"X"},
@@ -288,7 +288,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"凡雷恩-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"凡雷恩-普通模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"凡雷恩-普通模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"120","name":"凡雷恩","hp":"63億","defense":"80%","half":"X"},
                 {"Lv":"127","name":"教官鮑爾","hp":"3000萬","defense":"20%","half":"X"},
@@ -298,7 +298,7 @@
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"凡雷恩-困難模式","mode":"困難模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"凡雷恩-困難模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"凡雷恩-困難模式","Lv":"125","timeLimit":"30分鐘","cd":"30秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"120","name":"凡雷恩","hp":"105億","defense":"90%","half":"X"},
                 {"Lv":"140","name":"教官鮑爾","hp":"6000萬","defense":"50%","half":"X"},
@@ -310,7 +310,7 @@
     {"bossName":"阿卡伊農","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"阿卡伊農-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"阿卡伊農-簡單模式","Lv":"140","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"阿卡伊農-簡單模式","Lv":"140","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"130","name":"阿卡伊農","hp":"21億","defense":"60%","half":"X"},
                 {"Lv":"130","name":"異界的祭司","hp":"2000萬","defense":"物90% / 魔10%","half":"X"}
@@ -318,7 +318,7 @@
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"阿卡伊農-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"阿卡伊農-普通模式","Lv":"140","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"阿卡伊農-普通模式","Lv":"140","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"170","name":"阿卡伊農","hp":"126億","defense":"90%","half":"X"},
                 {"Lv":"140","name":"異界的祭司","hp":"1億","defense":"物200% / 魔10%","half":"X"}
@@ -328,14 +328,14 @@
     {"bossName":"梅格耐斯","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"梅格耐斯-簡單模式","mode":"簡單模式","joinTimes":"無限","males":"-","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"梅格耐斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"梅格耐斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"110","name":"梅格耐斯","hp":"4億","defense":"50%","half":"O"}
             ]             
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"梅格耐斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"梅格耐斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"簡單/普通<br>每日1次"}],
+            "ruleSec":[{"key":"梅格耐斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"130","name":"梅格耐斯","hp":"60億","defense":"50%","half":"O"}
             ]              
@@ -351,7 +351,7 @@
     {"bossName":"史烏","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"史烏-普通模式","mode":"普通模式","joinTimes":"無限","males":"5","bossPts":"20","joinRule":"-"}],
-            "ruleSec":[{"key":"史烏-普通模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"史烏-普通模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"210","name":"黑暗天堂核心","hp":"4000億","defense":"300%","half":"O"},
                 {"Lv":"210","name":"史烏(二階)","hp":"4000億","defense":"300%","half":"O"},
@@ -364,7 +364,7 @@
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"史烏-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
-            "ruleSec":[{"key":"史烏-困難模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"史烏-困難模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"210","name":"黑暗天堂核心","hp":"1.6兆","defense":"300%","half":"O"},
                 {"Lv":"210","name":"史烏(二階)","hp":"6.8兆","defense":"300%","half":"O"},
@@ -379,7 +379,7 @@
     {"bossName":"戴米安","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"戴米安-普通模式","mode":"普通模式","joinTimes":"無限","males":"5","bossPts":"20","joinRule":"-"}],
-            "ruleSec":[{"key":"戴米安-普通模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"戴米安-普通模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"210","name":"戴米安(一階)","hp":"8400億","defense":"300%","half":"O"},
                 {"Lv":"210","name":"戴米安(二階)","hp":"3600億","defense":"300%","half":"O"}
@@ -387,7 +387,7 @@
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"戴米安-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
-            "ruleSec":[{"key":"戴米安-困難模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"戴米安-困難模式","Lv":"190","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"210","name":"戴米安(一階)","hp":"25.2兆","defense":"300%","half":"O"},
                 {"Lv":"210","name":"戴米安(二階)","hp":"10.8兆","defense":"300%","half":"O"}
@@ -397,27 +397,27 @@
     {"bossName":"威爾","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"威爾-簡單模式","mode":"簡單模式","joinTimes":"3次","males":"5","bossPts":"30","joinRule":"-"}],
-            "ruleSec":[{"key":"威爾-簡單模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"威爾-簡單模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"235","name":"威爾(一階)","hp":"5.6兆 (兩區各2.8兆)","defense":"300%","half":"O"},
+                {"Lv":"235","name":"威爾(一階)","hp":"5.6兆<span class='md:inline block '>(兩區各2.8兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"235","name":"威爾(二階)","hp":"4.2兆","defense":"300%","half":"O"},
                 {"Lv":"235","name":"威爾(三階)","hp":"7兆","defense":"300%","half":"O"}
             ]                
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"威爾-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
-            "ruleSec":[{"key":"威爾-普通模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"威爾-普通模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"250","name":"威爾(一階)","hp":"8.4兆 (兩區各4.2兆)","defense":"300%","half":"O"},
+                {"Lv":"250","name":"威爾(一階)","hp":"8.4兆<span class='md:inline block '>(兩區各4.2兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(二階)","hp":"6.3兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(三階)","hp":"10.5兆","defense":"300%","half":"O"}
             ]               
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"威爾-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
-            "ruleSec":[{"key":"威爾-困難模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"威爾-困難模式","Lv":"235","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"250","name":"威爾(一階)","hp":"42兆 (兩區各21兆)","defense":"300%","half":"O"},
+                {"Lv":"250","name":"威爾(一階)","hp":"42兆<span class='md:inline block '>(兩區各21兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(二階)","hp":"31.5兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(三階)","hp":"52.5兆","defense":"300%","half":"O"}
             ]               
@@ -426,35 +426,35 @@
     {"bossName":"露希妲","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"露希妲-簡單模式","mode":"簡單模式","joinTimes":"3次","males":"5","bossPts":"30","joinRule":"-"}],
-            "ruleSec":[{"key":"露希妲-簡單模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"露希妲-簡單模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"230","name":"露希妲(一階)","hp":"6兆","defense":"300%","half":"O"},
                 {"Lv":"230","name":"露希妲(二階)","hp":"6兆","defense":"300%","half":"O"},
-                {"Lv":"230","name":"惡夢石巨人(一階)","hp":"650億","defense":"10%","half":"X"},
-                {"Lv":"230","name":"惡夢石巨人(二階)","hp":"450億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"650億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"450億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"650億","defense":"10%","half":"X"}
             ]              
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"露希妲-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
-            "ruleSec":[{"key":"露希妲-普通模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"露希妲-普通模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"230","name":"露希妲(一階)","hp":"12兆","defense":"300%","half":"O"},
                 {"Lv":"230","name":"露希妲(二階)","hp":"12兆","defense":"300%","half":"O"},
-                {"Lv":"230","name":"惡夢石巨人(一階)","hp":"1500億","defense":"10%","half":"X"},
-                {"Lv":"230","name":"惡夢石巨人(二階)","hp":"1000億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"1500億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"1000億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"1500億","defense":"10%","half":"X"}
             ]            
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"露希妲-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
-            "ruleSec":[{"key":"露希妲-困難模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"露希妲-困難模式","Lv":"220","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"230","name":"露希妲(一階)","hp":"50.8兆","defense":"300%","half":"O"},
                 {"Lv":"230","name":"露希妲(二階)","hp":"54兆","defense":"300%","half":"O"},
                 {"Lv":"230","name":"露希妲(三階)","hp":"12兆8079億","defense":"300%","half":"O"},
-                {"Lv":"230","name":"惡夢石巨人(一階)","hp":"6000億","defense":"10%","half":"X"},
-                {"Lv":"230","name":"惡夢石巨人(二階)","hp":"2000億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"6000億","defense":"10%","half":"X"},
+                {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"2000億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"6000億","defense":"10%","half":"X"}
             ]            
         }
@@ -462,7 +462,7 @@
     {"bossName":"戴斯克","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"戴斯克-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
-            "ruleSec":[{"key":"戴斯克-普通模式","Lv":"245","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"戴斯克-普通模式","Lv":"245","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"255","name":"戴斯克","hp":"25.5兆","defense":"300%","half":"O"},
                 {"Lv":"255","name":"幻覺","hp":"100億","defense":"300%","half":"O"},
@@ -471,7 +471,7 @@
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"戴斯克-混沌模式","mode":"混沌模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"戴斯克-混沌模式","Lv":"245","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"戴斯克-混沌模式","Lv":"245","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"255","name":"戴斯克","hp":"127.5兆","defense":"300%","half":"O"},
                 {"Lv":"255","name":"幻覺","hp":"300億","defense":"300%","half":"O"},
@@ -482,7 +482,7 @@
     {"bossName":"真希拉","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"真希拉-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
-            "ruleSec":[{"key":"真希拉-普通模式","Lv":"250","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"真希拉-普通模式","Lv":"250","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"250","name":"真希拉","hp":"88兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"慾望的現身","hp":"1億","defense":"300%","half":"O"},
@@ -492,7 +492,7 @@
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"真希拉-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"真希拉-困難模式","Lv":"250","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"真希拉-困難模式","Lv":"250","timeLimit":"30分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"250","name":"真希拉","hp":"176兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"慾望的現身","hp":"1億","defense":"300%","half":"O"},
@@ -504,7 +504,7 @@
     {"bossName":"頓凱爾","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"頓凱爾-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
-            "ruleSec":[{"key":"頓凱爾-普通模式","Lv":"255","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"頓凱爾-普通模式","Lv":"255","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"250","name":"親衛隊長頓凱爾","hp":"26兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"墮落勇士","hp":"100億","defense":"300%","half":"O"}
@@ -512,7 +512,7 @@
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"頓凱爾-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"頓凱爾-困難模式","Lv":"255","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"頓凱爾-困難模式","Lv":"255","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"265","name":"親衛隊長頓凱爾","hp":"157.5兆","defense":"300%","half":"O"},
                 {"Lv":"265","name":"墮落勇士","hp":"300億","defense":"300%","half":"O"}
@@ -522,7 +522,7 @@
     {"bossName":"黑魔法師","Difficulty":[
         {"idx":0,"is":"困難",
             "rule":[{"key":"黑魔法師-困難模式","mode":"困難模式","joinTimes":"3次","males":"30","bossPts":"-","joinRule":"命運的碎片"}],
-            "ruleSec":[{"key":"黑魔法師-困難模式","Lv":"255","timeLimit":"60分鐘","cd":"10秒","deadTimes":"個人12次","finishTimes":"全模式每月1次"}],
+            "ruleSec":[{"key":"黑魔法師-困難模式","Lv":"255","timeLimit":"60分鐘","cd":"10秒","deadTimes":"個人12次","finishTimes":"全模式<span class='md:inline block '>每月1次</span>"}],
             "mosInfo":[
                 {"Lv":"265","name":"創造的伊恩<br>破壞的亞達巴特","hp":"63兆","defense":"300%","half":"O"},
                 {"Lv":"275","name":"黑魔法師(二階)","hp":"115.5兆","defense":"300%","half":"O"},
@@ -532,7 +532,7 @@
         },
         {"idx":1,"is":"極限",
             "rule":[{"key":"黑魔法師-極限模式","mode":"極限模式","joinTimes":"3次","males":"30","bossPts":"-","joinRule":"命運的碎片"}],
-            "ruleSec":[{"key":"黑魔法師-極限模式","Lv":"255","timeLimit":"60分鐘","cd":"10秒","deadTimes":"個人12次","finishTimes":"全模式每月1次"}],
+            "ruleSec":[{"key":"黑魔法師-極限模式","Lv":"255","timeLimit":"60分鐘","cd":"10秒","deadTimes":"個人12次","finishTimes":"全模式<span class='md:inline block '>每月1次</span>"}],
             "mosInfo":[
                 {"Lv":"275","name":"創造的伊恩<br>破壞的亞達巴特","hp":"1260兆","defense":"300%","half":"O"},
                 {"Lv":"280","name":"黑魔法師(二階)","hp":"1470兆","defense":"300%","half":"O"},
@@ -544,16 +544,16 @@
     {"bossName":"受選的賽蓮","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"受選的賽蓮-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"受選的賽蓮-普通模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"受選的賽蓮-普通模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"270","name":"受選的賽蓮(一階)","hp":"52.5兆","defense":"380%","half":"O"},
-                {"Lv":"270","name":"受選的賽蓮(二階)","hp":"155.5兆","defense":"380%","half":"O"},
+                {"Lv":"270","name":"受選的賽蓮<br>(一階)","hp":"52.5兆","defense":"380%","half":"O"},
+                {"Lv":"270","name":"受選的賽蓮<br>(二階)","hp":"155.5兆","defense":"380%","half":"O"},
                 {"Lv":"270","name":"奈洛塔的力量","hp":"1.8兆","defense":"380%","half":"O"}
             ]            
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"受選的賽蓮-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"受選的賽蓮-困難模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"受選的賽蓮-困難模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"275","name":"受選的賽蓮(一階)","hp":"126兆","defense":"380%","half":"O"},
                 {"Lv":"275","name":"受選的賽蓮(二階)","hp":"360兆","defense":"380%","half":"O"},
@@ -562,7 +562,7 @@
         },
         {"idx":2,"is":"極限",
             "rule":[{"key":"受選的賽蓮-極限模式","mode":"極限模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"受選的賽蓮-極限模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"受選的賽蓮-極限模式","Lv":"260","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"275","name":"受選的賽蓮(一階)","hp":"1489兆","defense":"380%","half":"O"},
                 {"Lv":"280","name":"受選的賽蓮(二階)","hp":"5800兆","defense":"380%","half":"O"},
@@ -573,37 +573,37 @@
     {"bossName":"監視者卡洛斯","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"監視者卡洛斯-簡單模式","mode":"簡單模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"監視者卡洛斯-簡單模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"監視者卡洛斯-簡單模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"270","name":"監視者卡洛斯(一階)","hp":"94.5兆","defense":"330%","half":"O"},
-                {"Lv":"270","name":"監視者卡洛斯(二階)","hp":"262.5兆","defense":"330%","half":"O"},
+                {"Lv":"270","name":"監視者卡洛斯<span class='md:inline block '>(一階)</span>","hp":"94.5兆","defense":"330%","half":"O"},
+                {"Lv":"270","name":"監視者卡洛斯<span class='md:inline block '>(二階)</span>","hp":"262.5兆","defense":"330%","half":"O"},
                 {"Lv":"270","name":"監視者的爪牙","hp":"5.5兆","defense":"330%","half":"O"}
             ]               
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"監視者卡洛斯-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"監視者卡洛斯-普通模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"監視者卡洛斯-普通模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"275","name":"監視者卡洛斯(一階)","hp":"336兆","defense":"330%","half":"O"},
-                {"Lv":"280","name":"監視者卡洛斯(二階)","hp":"720兆","defense":"380%","half":"O"},
+                {"Lv":"275","name":"監視者卡洛斯<span class='md:inline block '>(一階)</span>","hp":"336兆","defense":"330%","half":"O"},
+                {"Lv":"280","name":"監視者卡洛斯<span class='md:inline block '>(二階)</span>","hp":"720兆","defense":"380%","half":"O"},
                 {"Lv":"280","name":"監視者的爪牙","hp":"5.5兆","defense":"380%","half":"O"}
             ]               
         },
         {"idx":2,"is":"混沌",
             "rule":[{"key":"監視者卡洛斯-混沌模式","mode":"混沌模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"監視者卡洛斯-混沌模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"監視者卡洛斯-混沌模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"285","name":"監視者卡洛斯(一階)","hp":"1200兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"監視者卡洛斯(二階)","hp":"4800兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"監視者卡洛斯<span class='md:inline block '>(一階)</span>","hp":"1200兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"監視者卡洛斯<span class='md:inline block '>(二階)</span>","hp":"4800兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"監視者的爪牙","hp":"5.5兆","defense":"380%","half":"O"}
             ]               
         },
         {"idx":3,"is":"極限",
             "rule":[{"key":"監視者卡洛斯-極限模式","mode":"極限模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"監視者卡洛斯-極限模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"監視者卡洛斯-極限模式","Lv":"265","timeLimit":"30分鐘","cd":"10秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
-                {"Lv":"285","name":"監視者卡洛斯(一階)","hp":"6720兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"監視者卡洛斯(二階)","hp":"2京4000兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"監視者卡洛斯<span class='md:inline block '>(一階)</span>","hp":"6720兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"監視者卡洛斯<span class='md:inline block '>(二階)</span>","hp":"2京4000兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"監視者的爪牙","hp":"5.5兆","defense":"380%","half":"O"}
             ]                  
         }
@@ -611,58 +611,58 @@
     {"bossName":"咖凌","Difficulty":[
         {"idx":0,"is":"簡單",
             "rule":[{"key":"咖凌-簡單模式","mode":"簡單模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"咖凌-簡單模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"咖凌-簡單模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"275","name":"檮杌","hp":"96兆","defense":"380%","half":"O"},
                 {"Lv":"275","name":"混沌","hp":"96兆","defense":"380%","half":"O"},
                 {"Lv":"275","name":"窮奇","hp":"96兆","defense":"380%","half":"O"},
                 {"Lv":"275","name":"咖凌(二階)","hp":"105兆","defense":"380%","half":"O"},
                 {"Lv":"275","name":"咖凌(三階)","hp":"132兆","defense":"380%","half":"O"},
-                {"Lv":"275","name":"被死亡圍繞的檮杌","hp":"132兆","defense":"380%","half":"O"},
-                {"Lv":"275","name":"被死亡圍繞的混沌","hp":"132兆","defense":"380%","half":"O"},
-                {"Lv":"275","name":"被死亡圍繞的窮奇","hp":"132兆","defense":"380%","half":"O"}
+                {"Lv":"275","name":"被死亡圍繞的<span class='md:inline block '>檮杌</span>","hp":"132兆","defense":"380%","half":"O"},
+                {"Lv":"275","name":"被死亡圍繞的<span class='md:inline block '>混沌</span>","hp":"132兆","defense":"380%","half":"O"},
+                {"Lv":"275","name":"被死亡圍繞的<span class='md:inline block '>窮奇</span>","hp":"132兆","defense":"380%","half":"O"}
             ]              
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"咖凌-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"咖凌-普通模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"咖凌-普通模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"285","name":"檮杌","hp":"400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"混沌","hp":"400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"窮奇","hp":"400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(二階)","hp":"468兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(三階)","hp":"536兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的檮杌","hp":"536兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的混沌","hp":"536兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的窮奇","hp":"536兆","defense":"380%","half":"O"}
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>檮杌</span>","hp":"536兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>混沌</span>","hp":"536兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>窮奇</span>","hp":"536兆","defense":"380%","half":"O"}
             ]             
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"咖凌-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"咖凌-困難模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"咖凌-困難模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"285","name":"檮杌","hp":"1400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"混沌","hp":"1400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"窮奇","hp":"1400兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(二階)","hp":"2500兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(三階)","hp":"5000兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的檮杌","hp":"2500兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的混沌","hp":"2500兆","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的窮奇","hp":"2500兆","defense":"380%","half":"O"}
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>檮杌</span>","hp":"2500兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>混沌</span>","hp":"2500兆","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>窮奇</span>","hp":"2500兆","defense":"380%","half":"O"}
             ]             
         },
         {"idx":3,"is":"極限",
             "rule":[{"key":"咖凌-極限模式","mode":"極限模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
-            "ruleSec":[{"key":"咖凌-極限模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式每週1次"}],
+            "ruleSec":[{"key":"咖凌-極限模式","Lv":"275","timeLimit":"30分鐘","cd":"10秒","deadTimes":"團隊1000分","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"285","name":"檮杌","hp":"9500兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"混沌","hp":"9500兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"窮奇","hp":"9500兆","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(二階)","hp":"?","defense":"380%","half":"O"},
                 {"Lv":"285","name":"咖凌(三階)","hp":"?","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的檮杌","hp":"?","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的混沌","hp":"?","defense":"380%","half":"O"},
-                {"Lv":"285","name":"被死亡圍繞的窮奇","hp":"?","defense":"380%","half":"O"}
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>檮杌</span>","hp":"?","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>混沌</span>","hp":"?","defense":"380%","half":"O"},
+                {"Lv":"285","name":"被死亡圍繞的<span class='md:inline block'>窮奇</span>","hp":"?","defense":"380%","half":"O"}
             ]             
         }
     ]},
@@ -744,14 +744,14 @@
     {"bossName":"森蘭丸","Difficulty":[
         {"idx":0,"is":"普通",
             "rule":[{"key":"森蘭丸-普通模式","mode":"普通模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"森蘭丸-普通模式","Lv":"120","timeLimit":"60分鐘","cd":"0秒","deadTimes":"無限","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"森蘭丸-普通模式","Lv":"120","timeLimit":"60分鐘","cd":"0秒","deadTimes":"無限","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"129","name":"森蘭丸","hp":"10億","defense":"物55% / 魔52%","half":"X"}
             ]                
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"森蘭丸-困難模式","mode":"困難模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"-"}],
-            "ruleSec":[{"key":"森蘭丸-困難模式","Lv":"180","timeLimit":"60分鐘","cd":"0秒","deadTimes":"無限","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"森蘭丸-困難模式","Lv":"180","timeLimit":"60分鐘","cd":"0秒","deadTimes":"無限","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"195","name":"森蘭丸","hp":"105億","defense":"物55% / 魔52%","half":"X"}
             ]             
@@ -773,7 +773,7 @@
     {"bossName":"培羅德","Difficulty":[
         {"idx":0,"is":"初級",
             "rule":[{"key":"培羅德-初級模式","mode":"初級模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"見下方說明"}],
-            "ruleSec":[{"key":"培羅德-初級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"培羅德-初級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"200","name":"培羅德(一階)","hp":"5000萬","defense":"250%","half":"O"},
                 {"Lv":"210","name":"培羅德(二階)","hp":"5000萬","defense":"250%","half":"O"},
@@ -785,7 +785,7 @@
         },
         {"idx":1,"is":"中級",
             "rule":[{"key":"培羅德-中級模式","mode":"中級模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"見下方說明"}],
-            "ruleSec":[{"key":"培羅德-中級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"培羅德-中級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"200","name":"培羅德(一階)","hp":"30億","defense":"250%","half":"O"},
                 {"Lv":"210","name":"培羅德(二階)","hp":"30億","defense":"250%","half":"O"},
@@ -797,7 +797,7 @@
         },
         {"idx":2,"is":"高級",
             "rule":[{"key":"培羅德-高級模式","mode":"高級模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"見下方說明"}],
-            "ruleSec":[{"key":"培羅德-高級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"培羅德-高級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"200","name":"培羅德(一階)","hp":"750億","defense":"250%","half":"O"},
                 {"Lv":"210","name":"培羅德(二階)","hp":"750億","defense":"250%","half":"O"},
@@ -809,7 +809,7 @@
         },
         {"idx":3,"is":"頂級",
             "rule":[{"key":"培羅德-頂級模式","mode":"頂級模式","joinTimes":"1","males":"1","bossPts":"-","joinRule":"見下方說明"}],
-            "ruleSec":[{"key":"培羅德-頂級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式每日1次"}],
+            "ruleSec":[{"key":"培羅德-頂級模式","Lv":"180","timeLimit":"30分鐘30秒","cd":"15秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"200","name":"培羅德(一階)","hp":"3500億","defense":"250%","half":"O"},
                 {"Lv":"210","name":"培羅德(二階)","hp":"3500億","defense":"250%","half":"O"},
