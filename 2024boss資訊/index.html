@@ -124,9 +124,9 @@
                 <ul 
                 class="flex justify-around items-center">
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">Lv{{ShowJoinInfo.Lv}}</li>
-                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.timeLimit}}</li>
-                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.cd}}</li>
-                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 ">{{ShowJoinInfo.deadTimes}}</li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 " v-html="ShowJoinInfo.timeLimit"></li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 " v-html="ShowJoinInfo.cd"></li>
+                    <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 " v-html="ShowJoinInfo.deadTimes"></li>
                     <li class="text-white font-bold w-full text-center lg:text-base text-xs py-2 " v-html="ShowJoinInfo.finishTimes"></li>
                 </ul>                                  
             </div>               

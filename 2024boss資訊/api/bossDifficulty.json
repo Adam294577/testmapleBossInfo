@@ -673,14 +673,14 @@
             "mosInfo":[
                 {"Lv":"210","name":"桃樂絲","hp":"8400億","defense":"250%","half":"X"},
                 {"Lv":"190","name":"托托","hp":"105億","defense":"80%","half":"X"},
-                {"Lv":"200","name":"照在鏡中的桃樂絲","hp":"63億","defense":"80%","half":"X"}
+                {"Lv":"200","name":"照在鏡中的<span class='md:inline block'>桃樂絲</span>","hp":"63億","defense":"80%","half":"X"}
             ]               
         }
     ]},
     {"bossName":"烏勒斯","Difficulty": [
         {"idx":0,"is":"普通",
             "rule":[{"key":"烏勒斯-普通模式","mode":"普通模式","joinTimes":"3次","males":"-","bossPts":"-","joinRule":"狩獵300隻怪"}],
-            "ruleSec":[{"key":"烏勒斯-普通模式","Lv":"100","timeLimit":"10分鐘","cd":"限量20瓶-0秒","deadTimes":"個人1次","finishTimes":"帳號每天3次"}],
+            "ruleSec":[{"key":"烏勒斯-普通模式","Lv":"100","timeLimit":"10分鐘","cd":"限量20瓶 <span class='md:inline block '>0秒</span>","deadTimes":"個人1次","finishTimes":"帳號每天3次"}],
             "mosInfo":[
                 {"Lv":"130","name":"烏勒斯","hp":"2兆6252億2362萬4000","defense":"10%","half":"X"}
             ]              
@@ -691,12 +691,12 @@
             "rule":[],
             "ruleSec":[{"key":"亞爾卡努斯","Lv":"101","timeLimit":"2分鐘","cd":"0秒","deadTimes":"個人1次","finishTimes":"無限次數"}],
             "mosInfo":[
-                {"Lv":"101","name":"亞爾卡努斯(一階)","hp":"60億","defense":"50%","half":"O"},
-                {"Lv":"101","name":"亞爾卡努斯(二階)","hp":"150億","defense":"100%","half":"O"},
-                {"Lv":"101","name":"亞爾卡努斯(三階)","hp":"1500億","defense":"150%","half":"O"},
-                {"Lv":"101","name":"亞爾卡努斯(四階)","hp":"1.5兆","defense":"200%","half":"O"},
-                {"Lv":"101","name":"亞爾卡努斯(五階)","hp":"10.5兆","defense":"250%","half":"O"},
-                {"Lv":"101","name":"亞爾卡努斯(六階)","hp":"<span class=''>每條血1兆</span>","defense":"300%","half":"X"}
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(一階)</span>","hp":"60億","defense":"50%","half":"O"},
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(二階)</span>","hp":"150億","defense":"100%","half":"O"},
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(三階)</span>","hp":"1500億","defense":"150%","half":"O"},
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(四階)</span>","hp":"1.5兆","defense":"200%","half":"O"},
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(五階)</span>","hp":"10.5兆","defense":"250%","half":"O"},
+                {"Lv":"101","name":"亞爾卡努斯<span class='md:inline block'>(六階)</span>","hp":"<span class=''>每條血1兆</span>","defense":"300%","half":"X"}
             ]                
         }
     ]},
@@ -729,15 +729,15 @@
             "ruleSec":[{"key":"終極巨腳怪","Lv":"260","timeLimit":"20秒","cd":"0秒","deadTimes":"個人1次","finishTimes":"帳號每天1次"}],
             "mosInfo":[
                 {"Lv":"260","name":"終極巨腳怪","hp":"15兆","defense":"300%","half":"O"},
-                {"Lv":"260","name":"未知的鹿角兔","hp":"5000億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的綠水靈","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的變異史萊姆","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的始祖鳥","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的雷電鳥","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的毒蛇","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的蝮蛇","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的劍齒虎","hp":"200億","defense":"10%","half":"O"},
-                {"Lv":"260","name":"未知的精銳劍齒虎","hp":"200億","defense":"10%","half":"O"}
+                {"Lv":"260","name":"未知的<span class='md:inline block'>鹿角兔</span>","hp":"5000億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>綠水靈</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>變異史萊姆</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>始祖鳥</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>雷電鳥</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>毒蛇</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>蝮蛇</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>劍齒虎</span>","hp":"200億","defense":"10%","half":"O"},
+                {"Lv":"260","name":"未知的<span class='md:inline block'>精銳劍齒虎</span>","hp":"200億","defense":"10%","half":"O"}
             ]                
         }
     ]},
