@@ -96,14 +96,14 @@ window.onload = () =>{
                 return result              
             })
             const BonusInfoAbsoluteRender = computed(()=>{
-                let disableData = ["巴洛古"]
+                let disableData = ["巴洛古","桃樂絲","烏勒斯","亞爾卡努斯","終極巨腳怪","烈焰戰狼","培羅德"]
                 if(disableData.includes(nowBossRender.value.name)) return []
                 let result = BossDifficultyRender.value.bonusInfo.absolute
                 return result
 
             })
             const BonusInfoParticularRender = computed(()=>{
-                let disableData = ["巴洛古"]
+                let disableData = ["巴洛古","桃樂絲","烏勒斯","亞爾卡努斯","終極巨腳怪","烈焰戰狼","培羅德"]
                 if(disableData.includes(nowBossRender.value.name)) return []
                 let particularData = [
                     {idx:0,name:'太初',active:"-"},

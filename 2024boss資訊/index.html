@@ -376,7 +376,7 @@
                                 </div>
                                 <div class="relative md:relative -left-12">
                                     <p class="font-bold w-[350px] lg:w-[650px]">
-                                        <span class="mx-1 text-sm" v-for="list in BonusInfoAbsoluteRender.other">
+                                        <span class="mx-1 text-sm" v-for="list in BonusInfoAbsoluteRender.other" :key="list">
                                             {{list}}
                                         </span>
                                     </p>
