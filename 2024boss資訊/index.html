@@ -153,9 +153,8 @@
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.half"></li>
                     </ul>  
                 </div> 
-                <div v-show="ARCInfoRender.length !== 0">
-
-                    <h1 class="text-2xl font-bold text-white text-center py-4">{{"祕法符文"}}增幅({{"ARC"}})</h2>
+                <div v-if="ARCInfoRender.length !== 0">
+                    <h1 class="text-2xl font-bold text-white text-center py-4">祕法符文增幅(ARC)</h1>
                     <div class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md">
                             <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
                                 <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">祕法增傷</li>
@@ -191,12 +190,138 @@
                                 <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[7]}}</li>
                                 <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[8]}}</li>
                             </ul>  
-    
-    
                     </div>                   
                 </div>               
+                <div v-if="AUTInfoRender.length !== 0">
+                    <h1 class="text-2xl font-bold text-white text-center pt-4">真實符文增幅(AUT)</h1>
+                    <h1 class="my-2 font-bold text-white text-center text-sm">白字:符文增幅 <span class="ml-2 text-[#FF0]">黃字</span>:自身AUT</h1>
+
+                    <div v-if="AUTInfoRender.length >= 1">
+                        <h1 class="text-2xl font-bold text-white text-center py-2">{{AUTInfoRender[0].stage}}</h1>
+                        <div class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md">
+                                <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">5%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">10%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">20%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">30%</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[0]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[1]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[2]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[3]}}</li>                                
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">40%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">50%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">60%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">70%</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[4]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[5]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[6]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[7]}}</li>                                
+                                </ul>  
+                                <ul class="md:flex justify-around md:border-b-2 flex-wrap md:flex-nowrap hidden">
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[0]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[1]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[2]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[3]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[4]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[5]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[6]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[7]}}</li>
+                                </ul>  
+                                <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">80%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">90%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">100%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">105%</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[8]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[9]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[10]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[11]}}</li>                                 
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">110%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">115%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">120%</li>
+                                    <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">125%</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[12]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[13]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[14]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[0].data[15]}}</li>                                 
+                                </ul>  
+                                <ul class="md:flex justify-around flex-wrap md:flex-nowrap hidden">
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[8]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[9]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[10]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[11]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[12]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[13]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[14]}}</li>
+                                    <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[0].data[15]}}</li>
+                                </ul>  
+                        </div>   
+                    </div>
+                    <div v-if="AUTInfoRender.length >= 2">
+                        <h1 class="text-2xl font-bold text-white text-center py-2">二階</h1>
+                        <div class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md">
+                            <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">5%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">10%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">20%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2">30%</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[0]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[1]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[2]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[3]}}</li>                                
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">40%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">50%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">60%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">70%</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[4]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[5]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[6]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[7]}}</li>                                
+                            </ul>  
+                            <ul class="md:flex justify-around md:border-b-2 flex-wrap md:flex-nowrap hidden">
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[0]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[1]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[2]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[3]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[4]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[5]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[6]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[7]}}</li>
+                            </ul>  
+                            <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">80%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">90%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">100%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">105%</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[8]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[9]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[10]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[11]}}</li>                                 
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">110%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">115%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">120%</li>
+                                <li class="text-white font-bold w-[25%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">125%</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[12]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[13]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[14]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2 md:hidden">{{AUTInfoRender[1].data[15]}}</li>                                 
+                            </ul>  
+                            <ul class="md:flex justify-around flex-wrap md:flex-nowrap hidden">
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[8]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[9]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[10]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[11]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[12]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[13]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[14]}}</li>
+                                <li class="text-[#FF0] font-bold w-[25%] text-center lg:text-base text-xs py-2">{{AUTInfoRender[1].data[15]}}</li>
+                            </ul>  
+                    </div>                    
+                    </div>
+                      
+                </div>               
                 <div class="hidden">
-                    <h1 class="text-2xl font-bold text-white text-center py-4">特殊條件</h2>
+                    <h1 class="text-2xl font-bold text-white text-center py-4">特殊條件</h1>
                     <ol class="list-decimal lg:max-w-[1000px] mx-auto max-w-[600px] pl-8">
                         <li class="text-white">常駐減傷 15%</li>
                         <li class="text-white">每分鐘恢復血量1% (500億)</li>
@@ -412,7 +537,7 @@
         <footer class="fixed w-full bottom-0  bg-black space-x-4 text-center px-8 hidden lg:flex">
             
             <span class="text-white">網頁製作: 池雲寅 </span>
-            <span class="text-white">最後更新日期: 2024/02/21 </span>
+            <span class="text-white">最後更新日期: 2024/02/24 </span>
             <span class="text-white absolute right-4">資料來源: 
             <a class="text-[#ff0]" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4fUZewbIUVC2bJbUN3sEIk-R03D40EY5_9icDMSRXv16KJCp65bis2CHGA9E0JgKIrnx2n-QPoBuB/pubhtml#" target="_blank">楓之谷全Boss資訊 Ver 2.1(音奈製作)</a>
             </span>

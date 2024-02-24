@@ -89,8 +89,14 @@ window.onload = () =>{
                 let result = BossDifficultyRender.value.ARC
                 return result              
             })
+            const AUTInfoRender = computed(()=>{
+                let useData = ["受選的賽蓮","監視者卡洛斯","咖凌"]
+                if(!useData.includes(nowBossRender.value.name)) return []
+                let result = BossDifficultyRender.value.AUT
+                return result              
+            })
             setInterval(()=>{
-                // console.log(ARCInfoRender.value);
+                // console.log(AUTInfoRender.value);
             },1000)
             // 特殊BOSS資訊處理
             const BossJoinConditionTitle = computed(()=>{
@@ -159,6 +165,7 @@ window.onload = () =>{
                 ShowJoinInfo,
                 MosInfoRender,
                 ARCInfoRender,
+                AUTInfoRender
             }   
         },
 
