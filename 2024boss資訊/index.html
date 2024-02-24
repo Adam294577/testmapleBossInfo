@@ -336,17 +336,17 @@
                             <li class="h-[65px] flex items-center">
                                 <div class="flex items-center w-[35%]">
                                     <img class="w-[35px] mx-4" src="./img/item/強烈的力量結晶.png" alt="">
-                                    <p class="font-bold">強烈的力量結晶</p>
+                                    <p class="font-bold md:text-base text-xs">強烈的力量結晶</p>
                                 </div>
                                 <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12 md:w-[20%]">
-                                    <span class="font-bold relative">一般伺服器: <span class="absolute left-[80%] w-[150px] text-center">{{BonusInfoAbsoluteRender.money}}</span></span>
-                                    <span class="font-bold relative">ReBoot伺服器: <span class="absolute left-[80%] w-[150px] text-center">{{BonusInfoAbsoluteRender.RbMoney}}</span></span>
+                                    <span class="font-bold relative md:text-base text-xs">一般伺服器: <span class="absolute left-[80%] w-[150px] text-center">{{BonusInfoAbsoluteRender.money}}</span></span>
+                                    <span class="font-bold relative md:text-base text-xs">ReBoot伺服器: <span class="absolute left-[80%] w-[150px] text-center">{{BonusInfoAbsoluteRender.RbMoney}}</span></span>
                                 </div>
                             </li>
                             <li class="h-[65px] flex items-center">
                                 <div class="flex items-center w-[35%]">
                                     <img class="w-[35px] mx-4 scale-125" :src="`./img/item/可疑的方塊.png`" alt="">
-                                    <p class="font-bold">可疑的方塊</p>
+                                    <p class="font-bold md:text-base text-xs">可疑的方塊</p>
                                 </div>
                                 <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12">
                                     <p class="font-bold text-xl lg:text-2xl">x{{BonusInfoAbsoluteRender.cubeNum}}</p>
@@ -355,7 +355,7 @@
                             <li class="h-[65px] flex items-center">
                                 <div class="flex items-center w-[35%]">
                                     <img class="w-[35px] mx-4 scale-125" :src="`./img/item/可疑的附加方塊.png`" alt="">
-                                    <p class="font-bold">可疑的附加方塊</p>
+                                    <p class="font-bold md:text-base text-xs">可疑的附加方塊</p>
                                 </div>
                                 <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12">
                                     <p class="font-bold text-xl lg:text-2xl">x{{BonusInfoAbsoluteRender.addcubeNum}}</p>
@@ -364,18 +364,18 @@
                             <li class="h-[65px] flex items-center">
                                 <div class="flex items-center w-[35%]">
                                     <img class="w-[35px] mx-4" src="./img/item/艾爾達氣息.png" alt="">
-                                    <p class="font-bold">艾爾達氣息</p>
+                                    <p class="font-bold md:text-base text-xs">艾爾達氣息</p>
                                 </div>
                                 <div class="ml-2 flex flex-col space-y-2 w-[30%] md:relative -left-12">
                                     <p class="font-bold text-xl lg:text-2xl">x{{BonusInfoAbsoluteRender.hexa}}</p>
                                 </div>
                             </li>
                             <li class="h-[65px] flex items-center">
-                                <div class="flex items-center w-[35%]">
-                                    <p class="font-bold ml-16">其他</p>
+                                <div class="flex items-center w-[25%]">
+                                    <p class="font-bold md:text-base text-xs mx-auto">其他</p>
                                 </div>
-                                <div class="relative md:relative -left-12">
-                                    <p class="font-bold w-[350px] lg:w-[650px]">
+                                <div class="relative md:relative">
+                                    <p class="font-bold w-[300px] lg:w-[650px]">
                                         <span class="mx-1 text-sm" v-for="list in BonusInfoAbsoluteRender.other" :key="list">
                                             {{list}}
                                         </span>
