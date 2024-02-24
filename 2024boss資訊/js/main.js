@@ -83,8 +83,14 @@ window.onload = () =>{
                 })
                 return key              
             })
-            setTimeout(()=>{
-                console.log(MosInfoRender.value);
+            const ARCInfoRender = computed(()=>{
+                let useData = ["露希妲","威爾","戴斯克","頓凱爾","真希拉","黑魔法師"]
+                if(!useData.includes(nowBossRender.value.name)) return []
+                let result = BossDifficultyRender.value.ARC
+                return result              
+            })
+            setInterval(()=>{
+                // console.log(ARCInfoRender.value);
             },1000)
             // 特殊BOSS資訊處理
             const BossJoinConditionTitle = computed(()=>{
@@ -152,6 +158,7 @@ window.onload = () =>{
                 // Boss資訊
                 ShowJoinInfo,
                 MosInfoRender,
+                ARCInfoRender,
             }   
         },
 

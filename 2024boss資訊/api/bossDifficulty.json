@@ -402,7 +402,8 @@
                 {"Lv":"235","name":"威爾(一階)","hp":"5.6兆<span class='md:inline block '>(兩區各2.8兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"235","name":"威爾(二階)","hp":"4.2兆","defense":"300%","half":"O"},
                 {"Lv":"235","name":"威爾(三階)","hp":"7兆","defense":"300%","half":"O"}
-            ]                
+            ],
+            "ARC":[0,60,170,280,395,560,620,730,840]
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"威爾-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
@@ -411,7 +412,8 @@
                 {"Lv":"250","name":"威爾(一階)","hp":"8.4兆<span class='md:inline block '>(兩區各4.2兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(二階)","hp":"6.3兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(三階)","hp":"10.5兆","defense":"300%","half":"O"}
-            ]               
+            ],
+            "ARC":[0,80,230,380,535,760,840,990,1140]               
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"威爾-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
@@ -420,7 +422,8 @@
                 {"Lv":"250","name":"威爾(一階)","hp":"42兆<span class='md:inline block '>(兩區各21兆)</span>","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(二階)","hp":"31.5兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"威爾(三階)","hp":"52.5兆","defense":"300%","half":"O"}
-            ]               
+            ],
+            "ARC":[0,80,230,380,535,760,840,990,1140]                      
         }
     ]},
     {"bossName":"露希妲","Difficulty":[
@@ -433,7 +436,8 @@
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"650億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"450億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"650億","defense":"10%","half":"X"}
-            ]              
+            ],
+            "ARC":[0,40,110,180,255,360,400,470,540]  
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"露希妲-普通模式","mode":"普通模式","joinTimes":"3次","males":"5","bossPts":"40","joinRule":"-"}],
@@ -444,7 +448,8 @@
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"1500億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"1000億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"1500億","defense":"10%","half":"X"}
-            ]            
+            ],
+            "ARC":[0,40,110,180,255,360,400,470,540]          
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"露希妲-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
@@ -456,7 +461,8 @@
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(一階)</span>","hp":"6000億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢石巨人<span class='md:inline block '>(二階)</span>","hp":"2000億","defense":"10%","half":"X"},
                 {"Lv":"230","name":"惡夢毒菇菇","hp":"6000億","defense":"10%","half":"X"}
-            ]            
+            ],
+            "ARC":[0,40,110,180,255,360,400,470,540]            
         }
     ]},
     {"bossName":"戴斯克","Difficulty":[
@@ -467,7 +473,8 @@
                 {"Lv":"255","name":"戴斯克","hp":"25.5兆","defense":"300%","half":"O"},
                 {"Lv":"255","name":"幻覺","hp":"100億","defense":"300%","half":"O"},
                 {"Lv":"255","name":"緊抓的手","hp":"300億","defense":"300%","half":"O"}
-            ]              
+            ],
+            "ARC":[0,75,220,365,515,730,805,950,1095]
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"戴斯克-混沌模式","mode":"混沌模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
@@ -475,8 +482,9 @@
             "mosInfo":[
                 {"Lv":"255","name":"戴斯克","hp":"127.5兆","defense":"300%","half":"O"},
                 {"Lv":"255","name":"幻覺","hp":"300億","defense":"300%","half":"O"},
-                {"Lv":"255","name":"緊抓的手","hp":"無敵狀態","defense":"300%","half":"O"}
-            ]             
+                {"Lv":"255","name":"緊抓的手","hp":"-","defense":"無敵狀態","half":"O"}
+            ],
+            "ARC":[0,75,220,365,515,730,805,950,1095]             
         }
     ]},
     {"bossName":"真希拉","Difficulty":[
@@ -488,7 +496,8 @@
                 {"Lv":"250","name":"慾望的現身","hp":"1億","defense":"300%","half":"O"},
                 {"Lv":"250","name":"死靈戴米安","hp":"186億8869萬","defense":"300%","half":"O"},
                 {"Lv":"250","name":"死靈史烏","hp":"186億8869萬","defense":"300%","half":"O"}
-            ]             
+            ],
+            "ARC":[0,85,250,410,575,820,905,1070,1230]           
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"真希拉-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
@@ -498,7 +507,8 @@
                 {"Lv":"250","name":"慾望的現身","hp":"1億","defense":"300%","half":"O"},
                 {"Lv":"250","name":"死靈戴米安","hp":"186億8869萬","defense":"300%","half":"O"},
                 {"Lv":"250","name":"死靈史烏","hp":"186億8869萬","defense":"300%","half":"O"}
-            ]               
+            ],
+            "ARC":[0,90,270,450,630,900,990,1170,1350]               
         }
     ]},
     {"bossName":"頓凱爾","Difficulty":[
@@ -508,7 +518,8 @@
             "mosInfo":[
                 {"Lv":"250","name":"親衛隊長頓凱爾","hp":"26兆","defense":"300%","half":"O"},
                 {"Lv":"250","name":"墮落勇士","hp":"100億","defense":"300%","half":"O"}
-            ]               
+            ],
+            "ARC":[0,85,255,425,595,850,935,1105,1275]              
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"頓凱爾-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
@@ -516,7 +527,8 @@
             "mosInfo":[
                 {"Lv":"265","name":"親衛隊長頓凱爾","hp":"157.5兆","defense":"300%","half":"O"},
                 {"Lv":"265","name":"墮落勇士","hp":"300億","defense":"300%","half":"O"}
-            ]             
+            ],
+            "ARC":[0,85,255,425,595,850,935,1105,1275]    
         }
     ]},
     {"bossName":"黑魔法師","Difficulty":[
@@ -528,7 +540,8 @@
                 {"Lv":"275","name":"黑魔法師(二階)","hp":"115.5兆","defense":"300%","half":"O"},
                 {"Lv":"275","name":"黑魔法師(三階)","hp":"157.5兆","defense":"300%","half":"O"},
                 {"Lv":"265","name":"黑魔法師(四階)","hp":"140兆","defense":"300%","half":"O"}
-            ]             
+            ],
+            "ARC":[0,135,400,660,925,1320,1455,"X","X"]
         },
         {"idx":1,"is":"極限",
             "rule":[{"key":"黑魔法師-極限模式","mode":"極限模式","joinTimes":"3次","males":"30","bossPts":"-","joinRule":"命運的碎片"}],
@@ -538,7 +551,8 @@
                 {"Lv":"280","name":"黑魔法師(二階)","hp":"1470兆","defense":"300%","half":"O"},
                 {"Lv":"280","name":"黑魔法師(三階)","hp":"1575兆","defense":"300%","half":"O"},
                 {"Lv":"280","name":"黑魔法師(四階)","hp":"1680兆","defense":"300%","half":"O"}
-            ]             
+            ],
+            "ARC":[0,135,400,660,925,1320,1455,"X","X"]             
         }
     ]},
     {"bossName":"受選的賽蓮","Difficulty":[

@@ -152,7 +152,49 @@
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.defense"></li>
                         <li class="text-white font-bold w-full text-center lg:text-base text-xs" v-html="list.half"></li>
                     </ul>  
-                </div>                
+                </div> 
+                <div v-show="ARCInfoRender.length !== 0">
+
+                    <h1 class="text-2xl font-bold text-white text-center py-4">{{"祕法符文"}}增幅({{"ARC"}})</h2>
+                    <div class="border-2 w-[95%] mx-auto max-w-[1000px] rounded-md">
+                            <ul class="flex justify-around md:border-b-2 flex-wrap md:flex-nowrap">
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">祕法增傷</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">10%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">30%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">60%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">70%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">祕法需求</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[0]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[1]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[2]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[3]}}</li>                            
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">80%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">100%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">110%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">130%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 border-t-2 md:border-t-0">150%</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[4]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[5]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[6]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[7]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2 md:hidden">{{ARCInfoRender[8]}}</li>                            
+                            </ul>  
+                            <ul class="md:flex justify-around flex-wrap md:flex-nowrap hidden">
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">祕法需求</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[0]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[1]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[2]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[3]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[4]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[5]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[6]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[7]}}</li>
+                                <li class="text-white font-bold w-[20%] text-center lg:text-base text-xs py-2">{{ARCInfoRender[8]}}</li>
+                            </ul>  
+    
+    
+                    </div>                   
+                </div>               
                 <div class="hidden">
                     <h1 class="text-2xl font-bold text-white text-center py-4">特殊條件</h2>
                     <ol class="list-decimal lg:max-w-[1000px] mx-auto max-w-[600px] pl-8">
