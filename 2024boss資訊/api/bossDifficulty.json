@@ -8,7 +8,18 @@
                 {"Lv":"44","name":"地獄巴洛古","hp":"5萬","defense":"25%","half":"X"},
                 {"Lv":"44","name":"小巴洛古","hp":"5萬","defense":"25%","half":"X"},
                 {"Lv":"44","name":"迷你巴洛古","hp":"2800","defense":"25%","half":"X"}
-            ]
+            ],
+            "bonusInfo":{
+                "absolute":{},
+                "particular":[],
+                "important":[
+                    {"ItemName":"Lv.78~95-巴洛古系列武器","ItemCategory":"武器","urlName":"巴洛古系列武器"},
+                    {"ItemName":"Lv.68-巴洛古的毛鞋","ItemCategory":"鞋子","urlName":"巴洛古的毛鞋"},
+                    {"ItemName":"Lv.58-貝恩系列武器","ItemCategory":"武器","urlName":"貝恩系列武器"},
+                    {"ItemName":"Lv.58-巴洛古的皮鞋","ItemCategory":"鞋子","urlName":"巴洛古的皮鞋"},
+                    {"ItemName":"巴洛古尖角椅子","ItemCategory":"家具","urlName":"巴洛古尖角椅子"}
+                ]
+        }            
         }
     ]},
     {"bossName":"殘暴炎魔", "Difficulty":[
@@ -18,7 +29,17 @@
             "mosInfo":[
                 {"Lv":"55","name":"弱化的殘暴炎魔","hp":"478萬7520","defense":"25%","half":"X"},
                 {"Lv":"50","name":"殘暴炎魔的手臂","hp":"5萬","defense":"25%","half":"X"}
-            ]            
+            ],
+            "bonusInfo":{
+                    "absolute":{"money":"11萬5800","RbMoney":"11萬5800","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","特殊藥水","頭目名譽勳章(150)"]},
+                    "particular":[22,23],
+                    "important":[
+                        {"ItemName":"Lv.110-凝聚力量的結晶石","ItemCategory":"臉飾","urlName":"凝聚力量的結晶石"},
+                        {"ItemName":"Lv.100-水中信紙眼飾","ItemCategory":"眼飾","urlName":"水中信紙眼飾"},
+                        {"ItemName":"Lv.50-殘暴炎魔頭盔","ItemCategory":"帽子","urlName":"殘暴炎魔頭盔"},
+                        {"ItemName":"Lv.10-殘暴炎魔的樹枝","ItemCategory":"短杖","urlName":"殘暴炎魔的樹枝"}
+                    ]
+            }
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"殘暴炎魔-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"1","joinRule":"火焰之眼"}],
@@ -26,7 +47,18 @@
             "mosInfo":[
                 {"Lv":"110","name":"殘暴炎魔","hp":"700萬","defense":"40%","half":"O"},
                 {"Lv":"110","name":"殘暴炎魔的手臂","hp":"70萬","defense":"40%","half":"O"}
-            ]            
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"35萬4800","RbMoney":"177萬4000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.110-殘暴炎魔系列武器","ItemCategory":"武器","urlName":"殘暴炎魔系列武器"},
+                    {"ItemName":"Lv.110-凝聚力量的結晶石","ItemCategory":"臉飾","urlName":"凝聚力量的結晶石"},
+                    {"ItemName":"Lv.100-水中信紙眼飾","ItemCategory":"眼飾","urlName":"水中信紙眼飾"},
+                    {"ItemName":"Lv.50-殘暴炎魔頭盔","ItemCategory":"帽子","urlName":"殘暴炎魔頭盔"},
+                    {"ItemName":"Lv.10-殘暴炎魔的樹枝","ItemCategory":"短杖","urlName":"殘暴炎魔的樹枝"}
+                ]
+        }               
         },
         {"idx":2,"is":"混沌",
             "rule":[{"key":"殘暴炎魔-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"10","joinRule":"火焰之眼"}],
@@ -34,7 +66,23 @@
             "mosInfo":[
                 {"Lv":"180","name":"混沌殘暴炎魔","hp":"840億","defense":"100%","half":"O"},
                 {"Lv":"180","name":"殘暴炎魔的手臂","hp":"105億","defense":"100%","half":"O"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"705萬9750","RbMoney":"3529萬8750","addcubeNum":0,"cubeNum":12,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-憤怒的殘暴炎魔的頭盔","ItemCategory":"武器","urlName":"憤怒的殘暴炎魔的頭盔"},
+                    {"ItemName":"Lv.150-憤怒的殘暴炎魔的披風","ItemCategory":"武器","urlName":"憤怒的殘暴炎魔的披風"},
+                    {"ItemName":"Lv.150-憤怒的殘暴炎魔的腰帶","ItemCategory":"武器","urlName":"憤怒的殘暴炎魔的腰帶"},
+                    {"ItemName":"Lv.110-殘暴炎魔系列武器","ItemCategory":"武器","urlName":"殘暴炎魔系列武器"},
+                    {"ItemName":"Lv.110-凝聚力量的結晶石","ItemCategory":"臉飾","urlName":"凝聚力量的結晶石"},
+                    {"ItemName":"Lv.100-水中信紙眼飾","ItemCategory":"眼飾","urlName":"水中信紙眼飾"},
+                    {"ItemName":"Lv.100-混沌殘暴炎魔頭盔","ItemCategory":"帽子","urlName":"殘暴炎魔頭盔"},
+                    {"ItemName":"Lv.50-混沌殘暴炎魔的樹枝","ItemCategory":"短杖","urlName":"殘暴炎魔的樹枝"},
+                    {"ItemName":"炎魔之手","ItemCategory":"點武","urlName":"炎魔之手"},
+                    {"ItemName":"炎魔之手桌子","ItemCategory":"家具","urlName":"炎魔之手桌子"}
+                ]
+        }                           
         }
     ]},
     {"bossName":"希拉", "Difficulty":[
@@ -45,7 +93,20 @@
                 {"Lv":"110","name":"希拉","hp":"5億","defense":"50%","half":"O"},
                 {"Lv":"115","name":"致命祭壇","hp":"800萬","defense":"50%","half":"X"},
                 {"Lv":"110","name":"精銳骷髏騎士","hp":"315萬","defense":"30%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"46萬3500","RbMoney":"231萬7500","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.120-死靈系列武器","ItemCategory":"武器","urlName":"死靈系列武器"},
+                    {"ItemName":"Lv.120-死靈系列帽子","ItemCategory":"帽子","urlName":"死靈系列帽子"},
+                    {"ItemName":"Lv.120-死靈系列套服","ItemCategory":"套服","urlName":"死靈系列套服"},
+                    {"ItemName":"Lv.120-死靈系列鞋子","ItemCategory":"鞋子","urlName":"死靈系列鞋子"},
+                    {"ItemName":"Lv.120-死靈系列手套","ItemCategory":"手套","urlName":"死靈系列手套"},
+                    {"ItemName":"Lv.0-永生之石","ItemCategory":"口袋","urlName":"永生之石"},
+                    {"ItemName":"暗黑之魂","ItemCategory":"寵物","urlName":"暗黑之魂"}
+                ]
+        }                           
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"希拉-困難模式","mode":"困難模式","joinTimes":"無限","males":"5","bossPts":"5","joinRule":"-"}],
@@ -56,7 +117,22 @@
                 {"Lv":"188","name":"致命祭壇","hp":"1億","defense":"100%","half":"X"},
                 {"Lv":"188","name":"血牙","hp":"2760萬","defense":"100%","half":"X"},
                 {"Lv":"185","name":"精銳骷髏騎士","hp":"6900萬","defense":"100%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"667萬7700","RbMoney":"3338萬8500","addcubeNum":0,"cubeNum":9,"hexa":0,"other":["咒文的痕跡","輪迴星火130級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-地獄火耳環","ItemCategory":"武器","urlName":"地獄火耳環"},
+                    {"ItemName":"Lv.120-死靈系列武器","ItemCategory":"武器","urlName":"死靈系列武器"},
+                    {"ItemName":"Lv.120-死靈系列帽子","ItemCategory":"帽子","urlName":"死靈系列帽子"},
+                    {"ItemName":"Lv.120-死靈系列套服","ItemCategory":"套服","urlName":"死靈系列套服"},
+                    {"ItemName":"Lv.120-死靈系列鞋子","ItemCategory":"鞋子","urlName":"死靈系列鞋子"},
+                    {"ItemName":"Lv.120-死靈系列手套","ItemCategory":"手套","urlName":"死靈系列手套"},
+                    {"ItemName":"Lv.0-永生之石","ItemCategory":"口袋","urlName":"永生之石"},
+                    {"ItemName":"希拉方尖碑造型立燈","ItemCategory":"口袋","urlName":"希拉方尖碑造型立燈"},
+                    {"ItemName":"暗黑之魂","ItemCategory":"寵物","urlName":"暗黑之魂"}
+                ]
+        }                             
         }
     ]},
     {"bossName":"卡翁", "Difficulty":[
@@ -66,7 +142,15 @@
             "mosInfo":[
                 {"Lv":"180","name":"卡翁","hp":"16.8億","defense":"60%","half":"O"},
                 {"Lv":"179","name":"雨刷","hp":"666萬6400","defense":"20%","half":"X"}
-            ]               
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"72萬4200","RbMoney":"362萬1000","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[],
+                "important":[
+                    {"ItemName":"卡翁零件(2~8個)","ItemCategory":"其他","urlName":"卡翁零件"},
+                    {"ItemName":"卡翁吸塵器","ItemCategory":"家具","urlName":"卡翁吸塵器"}
+                ]
+        }                             
         }
     ]},
     {"bossName":"拉圖斯", "Difficulty":[
@@ -76,7 +160,12 @@
             "mosInfo":[
                 {"Lv":"125","name":"拉圖斯的時鐘","hp":"3億","defense":"50%","half":"O"},
                 {"Lv":"125","name":"拉圖斯","hp":"1億","defense":"50%","half":"O"}
-            ] 
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"39萬6500","RbMoney":"198萬2500","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[],
+                "important":[]
+        }              
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"拉圖斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
@@ -84,7 +173,14 @@
             "mosInfo":[
                 {"Lv":"155","name":"拉圖斯的時鐘","hp":"124.5億","defense":"90%","half":"O"},
                 {"Lv":"155","name":"拉圖斯","hp":"41.5億","defense":"90%","half":"O"}
-            ]           
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"154萬3700","RbMoney":"771萬8500","addcubeNum":0,"cubeNum":3,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[],
+                "important":[
+                    {"ItemName":"拉圖斯的時間椅子","ItemCategory":"椅子","urlName":"拉圖斯的時間椅子"}
+                ]
+        }                     
         },
         {"idx":2,"is":"混沌",
             "rule":[{"key":"拉圖斯-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"30","joinRule":"-"}],
@@ -92,7 +188,16 @@
             "mosInfo":[
                 {"Lv":"190","name":"拉圖斯的時鐘","hp":"3780億","defense":"250%","half":"O"},
                 {"Lv":"190","name":"拉圖斯","hp":"1260億","defense":"250%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"2008萬8150","RbMoney":"1億0044萬0750","addcubeNum":1,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[],
+                "important":[
+                    {"ItemName":"拉圖斯的時間椅子","ItemCategory":"椅子","urlName":"拉圖斯的時間椅子"},
+                    {"ItemName":"Lv.145-拉圖斯標誌","ItemCategory":"眼飾","urlName":"拉圖斯標誌"},
+                    {"ItemName":"拉圖斯壁鐘","ItemCategory":"家具","urlName":"拉圖斯壁鐘"}
+                ]
+        }  
         }
     ]},
     {"bossName":"比艾樂", "Difficulty":[
@@ -101,14 +206,33 @@
             "ruleSec":[{"key":"比艾樂-普通模式","Lv":"125","timeLimit":"15分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"每日1次"}],
             "mosInfo":[
                 {"Lv":"120","name":"比艾樂","hp":"3.15億","defense":"50%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"56萬0800","RbMoney":"280萬4000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)","名譽勳章(10)","一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"開心的比艾樂","ItemCategory":"椅子","urlName":"開心的比艾樂"},
+                    {"ItemName":"Lv.70-比艾樂帽","ItemCategory":"帽子","urlName":"比艾樂帽"}
+                ]
+        }                          
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"比艾樂-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"10","joinRule":"古木鑰匙"}],
             "ruleSec":[{"key":"比艾樂-混沌模式","Lv":"180","timeLimit":"20分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"每週1次"}],
             "mosInfo":[
                 {"Lv":"190","name":"混沌比艾樂","hp":"800億","defense":"80%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"731萬3306","RbMoney":"3656萬6530","addcubeNum":1,"cubeNum":13,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水","頭目名譽勳章(150)","一格多拉世輪石頭","混炎一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-嘲弄的碎片","ItemCategory":"碎片","urlName":"嘲弄的碎片"},
+                    {"ItemName":"開心的比艾樂","ItemCategory":"椅子","urlName":"開心的比艾樂"},
+                    {"ItemName":"Lv.70-比艾樂帽","ItemCategory":"帽子","urlName":"比艾樂帽"},
+                    {"ItemName":"Lv.140-混沌比艾樂帽","ItemCategory":"帽子","urlName":"比艾樂帽"},
+                    {"ItemName":"比艾樂傘架","ItemCategory":"家具","urlName":"比艾樂傘架"}
+                ]
+        }                       
         }
     ]},
     {"bossName":"血腥皇后", "Difficulty":[
@@ -118,7 +242,15 @@
             "mosInfo":[
                 {"Lv":"120","name":"血腥皇后","hp":"3.15億","defense":"50%","half":"O"},
                 {"Lv":"120","name":"魅惑之鏡","hp":"550萬","defense":"70%","half":"O"}
-            ]                
+            ],   
+            "bonusInfo":{
+                "absolute":{"money":"56萬0800","RbMoney":"280萬4000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)","名譽勳章(10)","一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"怕怕皇后","ItemCategory":"椅子","urlName":"怕怕皇后"},
+                    {"ItemName":"Lv.70-皇后的皇冠","ItemCategory":"帽子","urlName":"皇后的皇冠"}
+                ]
+        }                    
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"血腥皇后-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"10","joinRule":"古木鑰匙"}],
@@ -126,7 +258,18 @@
             "mosInfo":[
                 {"Lv":"190","name":"混沌血腥皇后","hp":"1400億","defense":"120%","half":"O"},
                 {"Lv":"190","name":"魅惑之鏡","hp":"5.5億","defense":"70%","half":"O"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"768萬2035","RbMoney":"3841萬0175","addcubeNum":1,"cubeNum":13,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水","頭目名譽勳章(150)","一格多拉世輪石頭","混炎一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-吶喊的碎片","ItemCategory":"碎片","urlName":"吶喊的碎片"},
+                    {"ItemName":"怕怕皇后","ItemCategory":"椅子","urlName":"怕怕皇后"},
+                    {"ItemName":"Lv.70-皇后的皇冠","ItemCategory":"帽子","urlName":"皇后的皇冠"},
+                    {"ItemName":"Lv.140-混沌皇后的皇冠","ItemCategory":"帽子","urlName":"皇后的皇冠"},
+                    {"ItemName":"血腥皇后梳妝台","ItemCategory":"家具","urlName":"血腥皇后梳妝台"}
+                ]
+            }      
         }        
     ]},
     {"bossName":"斑斑", "Difficulty":[
@@ -135,7 +278,15 @@
             "ruleSec":[{"key":"斑斑-普通模式","Lv":"125","timeLimit":"8分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"每日1次"}],
             "mosInfo":[
                 {"Lv":"120","name":"斑斑","hp":"3.15億","defense":"50%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"56萬0800","RbMoney":"280萬4000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)","名譽勳章(10)","一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"與斑斑一起","ItemCategory":"椅子","urlName":"與斑斑一起"},
+                    {"ItemName":"Lv.70-斑斑頭盔","ItemCategory":"帽子","urlName":"斑斑頭盔"}
+                ]
+            }                             
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"斑斑-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"10","joinRule":"古木鑰匙"}],
@@ -143,7 +294,18 @@
             "mosInfo":[
                 {"Lv":"190","name":"混沌斑斑","hp":"1000億","defense":"100%","half":"O"},
                 {"Lv":"190","name":"混沌斑斑的無意識","hp":"8億","defense":"100%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"769萬3781","RbMoney":"3846萬8905","addcubeNum":1,"cubeNum":13,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水","頭目名譽勳章(150)","一格多拉世輪石頭","混炎一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-時間碎片","ItemCategory":"碎片","urlName":"時間碎片"},
+                    {"ItemName":"與斑斑一起","ItemCategory":"椅子","urlName":"與斑斑一起"},
+                    {"ItemName":"Lv.70-斑斑頭盔","ItemCategory":"帽子","urlName":"斑斑頭盔"},
+                    {"ItemName":"Lv.140-混沌斑斑頭盔","ItemCategory":"帽子","urlName":"斑斑頭盔"},
+                    {"ItemName":"斑斑的發條鐘","ItemCategory":"家具","urlName":"斑斑的發條鐘"}
+                ]
+            }                          
         }        
     ]},
     {"bossName":"貝倫", "Difficulty":[
@@ -152,14 +314,33 @@
             "ruleSec":[{"key":"貝倫-普通模式","Lv":"125","timeLimit":"15分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"每日1次"}],
             "mosInfo":[
                 {"Lv":"130","name":"貝倫","hp":"5.5億","defense":"55%","half":"O"}
-            ]               
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"56萬0800","RbMoney":"280萬4000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)","名譽勳章(10)","一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"奇岩礦石之椅","ItemCategory":"椅子","urlName":"奇岩礦石之椅"},
+                    {"ItemName":"Lv.100-貝倫的頭盔","ItemCategory":"帽子","urlName":"貝倫的頭盔"}
+                ]
+            }                           
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"貝倫-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"10","joinRule":"古木鑰匙"}],
             "ruleSec":[{"key":"貝倫-混沌模式","Lv":"180","timeLimit":"20分鐘","cd":"0秒","deadTimes":"個人5次","finishTimes":"每週1次"}],
             "mosInfo":[
                 {"Lv":"190","name":"混沌貝倫","hp":"2000億","defense":"200%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"907萬0003","RbMoney":"4535萬0015","addcubeNum":1,"cubeNum":15,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水","頭目名譽勳章(150)","一格多拉世輪石頭","混炎一格多拉世輪石頭"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-破滅的碎片","ItemCategory":"碎片","urlName":"破滅的碎片"},
+                    {"ItemName":"奇岩礦石之椅","ItemCategory":"椅子","urlName":"奇岩礦石之椅"},
+                    {"ItemName":"Lv.100-貝倫的頭盔","ItemCategory":"帽子","urlName":"貝倫的頭盔"},
+                    {"ItemName":"Lv.140-混沌貝倫的頭盔","ItemCategory":"帽子","urlName":"貝倫的頭盔"},
+                    {"ItemName":"貝倫熔岩浴缸","ItemCategory":"家具","urlName":"貝倫熔岩浴缸"}
+                ]
+            }                           
         }        
     ]},
     {"bossName":"闇黑龍王", "Difficulty":[
@@ -170,7 +351,15 @@
                 {"Lv":"130","name":"闇黑龍王","hp":"8億1760萬","defense":"40%","half":"X"},
                 {"Lv":"130","name":"闇黑龍王的左頭","hp":"1億","defense":"40%","half":"X"},
                 {"Lv":"130","name":"闇黑龍王的右頭","hp":"1億","defense":"40%","half":"X"}
-            ]               
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"51萬1000","RbMoney":"255萬5000","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-戴雅希杜斯耳環","ItemCategory":"耳環","urlName":"戴雅希杜斯耳環"},
+                    {"ItemName":"Lv.110-銀花戒指","ItemCategory":"戒指","urlName":"銀花戒指"}
+                ]
+            }                              
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"闇黑龍王-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"敢死隊榮譽象徵"}],
@@ -179,7 +368,16 @@
                 {"Lv":"160","name":"闇黑龍王","hp":"20.9億","defense":"40%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的左頭","hp":"3.3億","defense":"40%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的右頭","hp":"3.3億","defense":"40%","half":"X"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"58萬6600","RbMoney":"293萬3000","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-戴雅希杜斯耳環","ItemCategory":"耳環","urlName":"戴雅希杜斯耳環"},
+                    {"ItemName":"Lv.120-闇黑龍王項鍊","ItemCategory":"墜飾","urlName":"闇黑龍王項鍊"},
+                    {"ItemName":"Lv.110-銀花戒指","ItemCategory":"戒指","urlName":"銀花戒指"}
+                ]
+            }                              
         },
         {"idx":2,"is":"混沌",
             "rule":[{"key":"闇黑龍王-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"敢死隊榮譽象徵"}],
@@ -188,7 +386,17 @@
                 {"Lv":"160","name":"闇黑龍王","hp":"200億","defense":"50%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的左頭","hp":"33億","defense":"50%","half":"X"},
                 {"Lv":"160","name":"闇黑龍王的右頭","hp":"33億","defense":"50%","half":"X"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"78萬3300","RbMoney":"391萬6500","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-戴雅希杜斯耳環","ItemCategory":"耳環","urlName":"戴雅希杜斯耳環"},
+                    {"ItemName":"Lv.120-混沌闇黑龍王的項鍊","ItemCategory":"墜飾","urlName":"混沌闇黑龍王的項鍊"},
+                    {"ItemName":"Lv.110-銀花戒指","ItemCategory":"戒指","urlName":"銀花戒指"},
+                    {"ItemName":"闇黑龍王噴泉","ItemCategory":"家具","urlName":"闇黑龍王噴泉"}
+                ]
+            }                         
         }
     ]},
     {"bossName":"皮卡啾", "Difficulty":[
@@ -202,7 +410,16 @@
                 {"Lv":"180","name":"輝沁","hp":"11.85億","defense":"60%","half":"冰加倍 火減半"},
                 {"Lv":"180","name":"穆寧","hp":"11.85億","defense":"60%","half":"火加倍 冰減半"},
                 {"Lv":"180","name":"艾莉爾","hp":"15.8億","defense":"60%","half":"毒物無減半"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"81萬3700","RbMoney":"406萬8500","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.140-金花草腰帶","ItemCategory":"腰帶","urlName":"金花草腰帶"},
+                    {"ItemName":"Lv.140-粉紅聖杯","ItemCategory":"口袋","urlName":"粉紅聖杯"},
+                    {"ItemName":"Lv.135-黑豆標記","ItemCategory":"眼飾","urlName":"黑豆標記"}
+                ]
+            }                           
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"皮卡啾-混沌模式","mode":"混沌模式","joinTimes":"無限","males":"5","bossPts":"5","joinRule":"-"}],
@@ -214,7 +431,21 @@
                 {"Lv":"180","name":"混沌輝沁","hp":"252億","defense":"160%","half":"冰加倍 火減半"},
                 {"Lv":"180","name":"混沌穆寧","hp":"252億","defense":"160%","half":"火加倍 冰減半"},
                 {"Lv":"180","name":"混沌艾莉爾","hp":"378億","defense":"160%","half":"毒物無減半"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"763萬0700","RbMoney":"3815萬3500","addcubeNum":0,"cubeNum":9,"hexa":0,"other":["咒文的痕跡","輪迴星火130級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.140-金花草腰帶","ItemCategory":"腰帶","urlName":"金花草腰帶"},
+                    {"ItemName":"Lv.140-粉紅聖杯","ItemCategory":"口袋","urlName":"粉紅聖杯"},
+                    {"ItemName":"Lv.135-黑豆標記","ItemCategory":"眼飾","urlName":"黑豆標記"},
+                    {"ItemName":"Lv.135-混沌皮卡啾帽","ItemCategory":"帽子","urlName":"混沌皮卡啾帽"},
+                    {"ItemName":"Lv.135-黑啾帽","ItemCategory":"帽子","urlName":"黑啾帽"},
+                    {"ItemName":"Lv.135-混沌皮卡啾套裝","ItemCategory":"套服","urlName":"混沌皮卡啾套裝"},
+                    {"ItemName":"Lv.135-黑啾套裝","ItemCategory":"套服","urlName":"黑啾套裝"},
+                    {"ItemName":"皮卡啾沙發","ItemCategory":"家具","urlName":"皮卡啾沙發"}
+                ]
+            }                           
         }
     ]},
     {"bossName":"西格諾斯", "Difficulty":[
@@ -233,7 +464,15 @@
                 {"Lv":"140","name":"伊麗娜","hp":"10.5億","defense":"60%","half":"火加倍"},
                 {"Lv":"140","name":"伊卡勒特","hp":"10.5億","defense":"60%","half":"聖加倍"},
                 {"Lv":"140","name":"鷹眼","hp":"10.5億","defense":"60%","half":"毒加倍"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"530萬7400","RbMoney":"2653萬7000","addcubeNum":0,"cubeNum":11,"hexa":0,"other":["咒文的痕跡","輪迴星火140級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.140-黑色破壞的碎片","ItemCategory":"碎片","urlName":"黑色破壞的碎片"},
+                    {"ItemName":"Lv.140-黑色守護的碎片","ItemCategory":"碎片","urlName":"黑色守護的碎片"}
+                ]
+            }                        
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"西格諾斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"5","bossPts":"5","joinRule":"-"}],
@@ -256,7 +495,17 @@
                 {"Lv":"188","name":"覺醒伊麗娜","hp":"63億","defense":"60%","half":"火加倍"},
                 {"Lv":"188","name":"覺醒伊卡勒特","hp":"63億","defense":"60%","half":"聖加倍"},
                 {"Lv":"188","name":"覺醒鷹眼","hp":"63億","defense":"60%","half":"毒加倍"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"870萬9400","RbMoney":"4354萬7000","addcubeNum":0,"cubeNum":11,"hexa":0,"other":["咒文的痕跡","輪迴星火140級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.140-黑色破壞的碎片","ItemCategory":"碎片","urlName":"黑色破壞的碎片"},
+                    {"ItemName":"Lv.140-黑色守護的碎片","ItemCategory":"碎片","urlName":"黑色守護的碎片"},
+                    {"ItemName":"Lv.140-女皇系列肩膀","ItemCategory":"肩膀","urlName":"女皇系列肩膀"},
+                    {"ItemName":"西格諾斯娃娃置物架","ItemCategory":"家具","urlName":"西格諾斯娃娃置物架"}
+                ]
+            }                             
         }
     ]},
     {"bossName":"守護天使綠水靈","Difficulty":[
@@ -265,14 +514,29 @@
             "ruleSec":[{"key":"守護天使綠水靈-普通模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"220","name":"守護天使綠水靈","hp":"5兆","defense":"300%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"3911萬4492","RbMoney":"1億9557萬2460","addcubeNum":3,"cubeNum":0,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水"]},
+                "particular":[1,2,3,4,5,9,10,18],
+                "important":[
+                    {"ItemName":"Lv.160-守護者天使戒指","ItemCategory":"碎片","urlName":"守護者天使戒指"}
+                ]
+            }                        
         },
         {"idx":1,"is":"混沌",
             "rule":[{"key":"守護天使綠水靈-混沌模式","mode":"混沌模式","joinTimes":"3次","males":"5","bossPts":"70","joinRule":"-"}],
             "ruleSec":[{"key":"守護天使綠水靈-混沌模式","Lv":"210","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"全模式<span class='md:inline block '>每週1次</span>"}],
             "mosInfo":[
                 {"Lv":"220","name":"守護天使綠水靈","hp":"90兆","defense":"300%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"1億2045萬0252","RbMoney":"6億0225萬1260","addcubeNum":9,"cubeNum":0,"hexa":70,"other":["咒文的痕跡","輪迴星火150級","超級藥水"]},
+                "particular":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20],
+                "important":[
+                    {"ItemName":"Lv.160-守護者天使戒指","ItemCategory":"碎片","urlName":"守護者天使戒指"},
+                    {"ItemName":"守護天使綠水靈噴泉","ItemCategory":"家具","urlName":"守護天使綠水靈噴泉"}
+                ]
+            }                           
         }
     ]},
     {"bossName":"凡雷恩","Difficulty":[
@@ -284,7 +548,12 @@
                 {"Lv":"120","name":"教官鮑爾","hp":"150萬","defense":"20%","half":"X"},
                 {"Lv":"120","name":"教官萊諾","hp":"150萬","defense":"20%","half":"X"},
                 {"Lv":"120","name":"迷你要塞","hp":"150萬","defense":"30%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"61萬2900","RbMoney":"306萬4500","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","超級藥水","頭目名譽勳章(150)","獅子王的皇家獎牌"]},
+                "particular":[22,23],
+                "important":[]
+            }                            
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"凡雷恩-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
@@ -294,7 +563,12 @@
                 {"Lv":"127","name":"教官鮑爾","hp":"3000萬","defense":"20%","half":"X"},
                 {"Lv":"127","name":"教官萊諾","hp":"3000萬","defense":"20%","half":"X"},
                 {"Lv":"123","name":"迷你要塞","hp":"5000萬","defense":"50%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"84萬4700","RbMoney":"422萬3500","addcubeNum":0,"cubeNum":3,"hexa":0,"other":["咒文的痕跡","輪迴星火120級","超級藥水","頭目名譽勳章(150)","獅子王的皇家獎牌"]},
+                "particular":[22,23],
+                "important":[]
+            }                           
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"凡雷恩-困難模式","mode":"困難模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
@@ -304,7 +578,23 @@
                 {"Lv":"140","name":"教官鮑爾","hp":"6000萬","defense":"50%","half":"X"},
                 {"Lv":"140","name":"教官萊諾","hp":"6000萬","defense":"50%","half":"X"},
                 {"Lv":"135","name":"迷你要塞","hp":"1.25億","defense":"70%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"141萬9500","RbMoney":"709萬7500","addcubeNum":0,"cubeNum":3,"hexa":0,"other":["咒文的痕跡","輪迴星火130級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-皇家凡雷恩系列武器","ItemCategory":"武器","urlName":"皇家凡雷恩系列武器"},
+                    {"ItemName":"Lv.130-皇家凡雷恩系列帽子","ItemCategory":"帽子","urlName":"皇家凡雷恩系列帽子"},
+                    {"ItemName":"Lv.130-皇家凡雷恩系列套服","ItemCategory":"套服","urlName":"皇家凡雷恩系列套服"},
+                    {"ItemName":"Lv.130-皇家凡雷恩系列鞋子","ItemCategory":"鞋子","urlName":"皇家凡雷恩系列鞋子"},
+                    {"ItemName":"Lv.130-皇家凡雷恩系列手套","ItemCategory":"手套","urlName":"皇家凡雷恩系列手套"},
+                    {"ItemName":"Lv.130-皇家凡雷恩系列披風","ItemCategory":"披風","urlName":"皇家凡雷恩系列披風"},
+                    {"ItemName":"Lv.110-伊菲亞的戒指","ItemCategory":"戒指","urlName":"伊菲亞的戒指"},
+                    {"ItemName":"Lv.110-伊菲亞的耳環","ItemCategory":"耳環","urlName":"伊菲亞的耳環"},
+                    {"ItemName":"Lv.110-伊菲亞的項鍊","ItemCategory":"項鍊","urlName":"伊菲亞的項鍊"},
+                    {"ItemName":"凍結的獅子雕像","ItemCategory":"家具","urlName":"凍結的獅子雕像"}
+                ]
+            }                          
         }
     ]},
     {"bossName":"阿卡伊農","Difficulty":[
@@ -314,7 +604,14 @@
             "mosInfo":[
                 {"Lv":"130","name":"阿卡伊農","hp":"21億","defense":"60%","half":"X"},
                 {"Lv":"130","name":"異界的祭司","hp":"2000萬","defense":"物90% / 魔10%","half":"X"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"66萬7400","RbMoney":"333萬7000","addcubeNum":0,"cubeNum":2,"hexa":0,"other":["咒文的痕跡","輪迴星火130級","特殊藥水","頭目名譽勳章(150)"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.120-梅克奈特墜飾","ItemCategory":"墜飾","urlName":"梅克奈特墜飾"}
+                ]
+            }                             
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"阿卡伊農-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
@@ -322,7 +619,15 @@
             "mosInfo":[
                 {"Lv":"170","name":"阿卡伊農","hp":"126億","defense":"90%","half":"X"},
                 {"Lv":"140","name":"異界的祭司","hp":"1億","defense":"物200% / 魔10%","half":"X"}
-            ]               
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"146萬0300","RbMoney":"730萬1500","addcubeNum":0,"cubeNum":3,"hexa":0,"other":["咒文的痕跡","輪迴星火130級","超級藥水","頭目名譽勳章(150)"]},
+                "particular":[0,22,23],
+                "important":[
+                    {"ItemName":"Lv.140-支配者墜飾","ItemCategory":"墜飾","urlName":"支配者墜飾"},
+                    {"ItemName":"Lv.120-梅克奈特墜飾","ItemCategory":"墜飾","urlName":"梅克奈特墜飾"}
+                ]
+            }                           
         }
     ]},
     {"bossName":"梅格耐斯","Difficulty":[
@@ -331,21 +636,63 @@
             "ruleSec":[{"key":"梅格耐斯-簡單模式","Lv":"115","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人5次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"110","name":"梅格耐斯","hp":"4億","defense":"50%","half":"O"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"41萬8300","RbMoney":"209萬1500","addcubeNum":0,"cubeNum":1,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","特殊藥水","頭目名譽勳章(150)","影子商團硬幣"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-水晶溫杜斯胸章","ItemCategory":"胸章","urlName":"水晶溫杜斯胸章"},
+                    {"ItemName":"Lv.130-皇家暗黑合金護肩","ItemCategory":"肩膀","urlName":"皇家暗黑合金護肩"},
+                    {"ItemName":"Lv.130-凱撒","ItemCategory":"武器","urlName":"凱撒"},
+                    {"ItemName":"Lv.130-超新星系列腰帶","ItemCategory":"腰帶","urlName":"超新星系列腰帶"},
+                    {"ItemName":"Lv.130-超新星系列鞋子","ItemCategory":"鞋子","urlName":"超新星系列鞋子"},
+                    {"ItemName":"Lv.130-超新星系列披風","ItemCategory":"披風","urlName":"超新星系列披風"},
+                    {"ItemName":"Lv.130-赫力席母精銳系列腰帶","ItemCategory":"腰帶","urlName":"赫力席母精銳系列腰帶"}
+                ]
+            }                           
         },
         {"idx":1,"is":"普通",
             "rule":[{"key":"梅格耐斯-普通模式","mode":"普通模式","joinTimes":"無限","males":"1","bossPts":"-","joinRule":"-"}],
             "ruleSec":[{"key":"梅格耐斯-普通模式","Lv":"155","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人10次","finishTimes":"簡單/普通<span class='md:inline block '>每日1次</span>"}],
             "mosInfo":[
                 {"Lv":"130","name":"梅格耐斯","hp":"60億","defense":"50%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"150萬1700","RbMoney":"750萬8500","addcubeNum":0,"cubeNum":3,"hexa":0,"other":["咒文的痕跡","輪迴星火110級","超級藥水","頭目名譽勳章(150)","影子商團硬幣"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.130-水晶溫杜斯胸章","ItemCategory":"胸章","urlName":"水晶溫杜斯胸章"},
+                    {"ItemName":"Lv.130-皇家暗黑合金護肩","ItemCategory":"肩膀","urlName":"皇家暗黑合金護肩"},
+                    {"ItemName":"Lv.130-凱撒","ItemCategory":"武器","urlName":"凱撒"},
+                    {"ItemName":"Lv.130-超新星系列腰帶","ItemCategory":"腰帶","urlName":"超新星系列腰帶"},
+                    {"ItemName":"Lv.130-超新星系列鞋子","ItemCategory":"鞋子","urlName":"超新星系列鞋子"},
+                    {"ItemName":"Lv.130-超新星系列披風","ItemCategory":"披風","urlName":"超新星系列披風"},
+                    {"ItemName":"Lv.130-赫力席母精銳系列腰帶","ItemCategory":"腰帶","urlName":"赫力席母精銳系列腰帶"}
+                ]
+            }                            
         },
         {"idx":2,"is":"困難",
             "rule":[{"key":"梅格耐斯-困難模式","mode":"困難模式","joinTimes":"無限","males":"5","bossPts":"20","joinRule":"-"}],
             "ruleSec":[{"key":"梅格耐斯-困難模式","Lv":"175","timeLimit":"30分鐘","cd":"5秒","deadTimes":"個人15次","finishTimes":"每週1次"}],
             "mosInfo":[
                 {"Lv":"190","name":"梅格耐斯","hp":"1200億","defense":"120%","half":"O"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"881萬9007","RbMoney":"4409萬5035","addcubeNum":1,"cubeNum":14,"hexa":0,"other":["咒文的痕跡","輪迴星火150級","超級藥水","頭目名譽勳章(150)","梅格耐斯金幣","影子商團硬幣"]},
+                "particular":[22,23],
+                "important":[
+                    {"ItemName":"Lv.150-被詛咒的凱撒利恩","ItemCategory":"武器","urlName":"被詛咒的凱撒利恩"},
+                    {"ItemName":"Lv.150-塔蘭特系列披風","ItemCategory":"披風","urlName":"塔蘭特系列披風"},
+                    {"ItemName":"Lv.130-水晶溫杜斯胸章","ItemCategory":"胸章","urlName":"水晶溫杜斯胸章"},
+                    {"ItemName":"Lv.130-皇家暗黑合金護肩","ItemCategory":"肩膀","urlName":"皇家暗黑合金護肩"},
+                    {"ItemName":"Lv.130-凱撒","ItemCategory":"武器","urlName":"凱撒"},
+                    {"ItemName":"Lv.130-超新星系列腰帶","ItemCategory":"腰帶","urlName":"超新星系列腰帶"},
+                    {"ItemName":"Lv.130-超新星系列鞋子","ItemCategory":"鞋子","urlName":"超新星系列鞋子"},
+                    {"ItemName":"Lv.130-超新星系列披風","ItemCategory":"披風","urlName":"超新星系列披風"},
+                    {"ItemName":"Lv.130-赫力席母精銳系列腰帶","ItemCategory":"腰帶","urlName":"赫力席母精銳系列腰帶"},
+                    {"ItemName":"梅格耐斯尖角椅子","ItemCategory":"家具","urlName":"梅格耐斯尖角椅子"}
+                ]
+            }                          
         }
     ]},
     {"bossName":"史烏","Difficulty":[
@@ -360,7 +707,14 @@
                 {"Lv":"190","name":"自爆藍(封印)","hp":"10億","defense":"50%","half":"物無減半"},
                 {"Lv":"190","name":"自爆黃(緩速)","hp":"10億","defense":"50%","half":"物無減半"},
                 {"Lv":"190","name":"自爆綠(混亂)","hp":"10億","defense":"50%","half":"物無減半"}
-            ]              
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"2720萬7040","RbMoney":"1億3603萬5200","addcubeNum":3,"cubeNum":0,"hexa":50,"other":["咒文的痕跡","輪迴星火150級","超級藥水"]},
+                "particular":[1,2,3,4,5,9,18],
+                "important":[
+                    {"ItemName":"Lv.160-特殊能量硬幣(S級)","ItemCategory":"硬幣","urlName":"特殊能量硬幣"}
+                ]
+            }                           
         },
         {"idx":1,"is":"困難",
             "rule":[{"key":"史烏-困難模式","mode":"困難模式","joinTimes":"3次","males":"5","bossPts":"60","joinRule":"-"}],
@@ -373,7 +727,20 @@
                 {"Lv":"190","name":"自爆藍(封印)","hp":"20億","defense":"50%","half":"物無減半"},
                 {"Lv":"190","name":"自爆黃(緩速)","hp":"20億","defense":"50%","half":"物無減半"},
                 {"Lv":"190","name":"自爆綠(混亂)","hp":"20億","defense":"50%","half":"物無減半"}
-            ]             
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"8750萬3781","RbMoney":"4億3751萬8905","addcubeNum":8,"cubeNum":0,"hexa":50,"other":["咒文的痕跡","輪迴星火150級","超級藥水"]},
+                "particular":[1,2,3,4,5,6,7,8,9,10,15,16,19],
+                "important":[
+                    {"ItemName":"Lv.160-口紅控制器標誌","ItemCategory":"臉飾","urlName":"口紅控制器標誌"},
+                    {"ItemName":"Lv.120-受損的黑心臟","ItemCategory":"心臟","urlName":"受損的黑心臟"},
+                    {"ItemName":"Lv.10-史烏機器人","ItemCategory":"機器人","urlName":"史烏機器人"},
+                    {"ItemName":"Lv.160-航海師武器箱","ItemCategory":"武器","urlName":"航海師武器箱"},
+                    {"ItemName":"Lv.160-航海師防具箱","ItemCategory":"防具","urlName":"航海師防具箱"},
+                    {"ItemName":"Lv.160-特殊能量硬幣(S級)","ItemCategory":"硬幣","urlName":"特殊能量硬幣"},
+                    {"ItemName":"殺人鯨兔子娃娃抱枕","ItemCategory":"家具","urlName":"殺人鯨兔子娃娃抱枕"}
+                ]
+            }                            
         }
     ]},
     {"bossName":"戴米安","Difficulty":[
@@ -391,7 +758,20 @@
             "mosInfo":[
                 {"Lv":"210","name":"戴米安(一階)","hp":"25.2兆","defense":"300%","half":"O"},
                 {"Lv":"210","name":"戴米安(二階)","hp":"10.8兆","defense":"300%","half":"O"}
-            ]            
+            ],
+            "bonusInfo":{
+                "absolute":{"money":"8750萬3781","RbMoney":"4億3751萬8905","addcubeNum":8,"cubeNum":0,"hexa":50,"other":["咒文的痕跡","輪迴星火150級","超級藥水"]},
+                "particular":[1,2,3,4,5,6,7,8,9,10,15,16,19],
+                "important":[
+                    {"ItemName":"Lv.160-口紅控制器標誌","ItemCategory":"臉飾","urlName":"口紅控制器標誌"},
+                    {"ItemName":"Lv.120-受損的黑心臟","ItemCategory":"心臟","urlName":"受損的黑心臟"},
+                    {"ItemName":"Lv.10-史烏機器人","ItemCategory":"機器人","urlName":"史烏機器人"},
+                    {"ItemName":"Lv.160-航海師武器箱","ItemCategory":"武器","urlName":"航海師武器箱"},
+                    {"ItemName":"Lv.160-航海師防具箱","ItemCategory":"防具","urlName":"航海師防具箱"},
+                    {"ItemName":"Lv.160-特殊能量硬幣(S級)","ItemCategory":"硬幣","urlName":"特殊能量硬幣"},
+                    {"ItemName":"殺人鯨兔子娃娃抱枕","ItemCategory":"家具","urlName":"殺人鯨兔子娃娃抱枕"}
+                ]
+            }                        
         }
     ]},
     {"bossName":"威爾","Difficulty":[

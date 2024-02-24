@@ -95,12 +95,72 @@ window.onload = () =>{
                 let result = BossDifficultyRender.value.AUT
                 return result              
             })
+            const BonusInfoAbsoluteRender = computed(()=>{
+                let disableData = ["巴洛古"]
+                if(disableData.includes(nowBossRender.value.name)) return []
+                let result = BossDifficultyRender.value.bonusInfo.absolute
+                return result
+
+            })
+            const BonusInfoParticularRender = computed(()=>{
+                let disableData = ["巴洛古"]
+                if(disableData.includes(nowBossRender.value.name)) return []
+                let particularData = [
+                    {idx:0,name:'太初',active:"-"},
+                    {idx:1,name:'名譽',active:"-"},
+                    {idx:2,name:'小經驗',active:"-"},
+                    {idx:3,name:'天氣50',active:"-"},
+                    {idx:4,name:'閃藍',active:"-"},
+                    {idx:5,name:'閃紅',active:"-"},
+                    {idx:6,name:'紅火',active:"-"},
+                    {idx:7,name:'紫火',active:"-"},
+                    {idx:8,name:'黑火',active:"-"},
+                    {idx:9,name:'強力',active:"-"},
+                    {idx:10,name:'永遠',active:"-"},
+                    {idx:11,name:'暗黑',active:"-"},
+                    {idx:12,name:'優質武器',active:"-"},
+                    {idx:13,name:'優質飾品',active:"-"},
+                    {idx:14,name:'優質寵物',active:"-"},
+                    {idx:15,name:'飾品',active:"-"},
+                    {idx:16,name:'驚訝混沌',active:"-"},
+                    {idx:17,name:'匠人氣息',active:"-"},
+                    {idx:18,name:'綠玉',active:"-"},
+                    {idx:19,name:'紅玉',active:"-"},
+                    {idx:20,name:'黑玉',active:"-"},
+                    {idx:21,name:'白玉',active:"-"},
+                    {idx:22,name:'紅祈禱',active:"-"},
+                    {idx:23,name:'綠祈禱',active:"-"},
+                ]
+                let activeData = BossDifficultyRender.value.bonusInfo.particular
+                let RootAbyss = ["比艾樂","血腥皇后","斑斑","貝倫"]
+                particularData.forEach(item=>{
+                    activeData.includes(item.idx) ? item.active = "✓" : item.active = "-"
+                    
+                })
+                if(RootAbyss.includes(nowBossRender.value.name) && nowBossRender.value.difficulty === "混沌"){
+                    particularData[4].active = "商店販售"
+                    particularData[5].active = "商店販售"
+                }
+                
+                return particularData
+
+            })
+            const BonusInfoImportantRender = computed(()=>{
+                let result = BossDifficultyRender.value.bonusInfo?.important ?? []
+                if(result.length === 0) return []
+                result.map(item=>{
+                    item.bindkey = `${nowBossRender.value.difficulty}${item.urlName}`
+                    return item
+                })
+                
+                return result
+            })
             setInterval(()=>{
-                // console.log(AUTInfoRender.value);
+                // console.log(BonusInfoImportantRender.value);
             },1000)
             // 特殊BOSS資訊處理
             const BossJoinConditionTitle = computed(()=>{
-                let bossName = nowBossRender.value.name
+                let bossName = nowBossRender.value.name 
                 if(bossName === '終極巨腳怪' || bossName === '烈焰戰狼') return 'Boss入場'
                 return '前置任務'
             })
@@ -165,7 +225,10 @@ window.onload = () =>{
                 ShowJoinInfo,
                 MosInfoRender,
                 ARCInfoRender,
-                AUTInfoRender
+                AUTInfoRender,
+                BonusInfoAbsoluteRender,
+                BonusInfoParticularRender,
+                BonusInfoImportantRender,
             }   
         },
 
